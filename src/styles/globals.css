@@ -47,12 +47,12 @@ button {
 
 ul,
 li {
-	list-style: none;
+  list-style: none;
 }
 
 a:focus,
 a:active,
-button:focus, 
+button:focus,
 button:active {
   outline: none;
 }
@@ -68,3 +68,7 @@ footer {
 }
 
 /* conainer 1420 */
+
+body {
+	overflow: hidden;
+}

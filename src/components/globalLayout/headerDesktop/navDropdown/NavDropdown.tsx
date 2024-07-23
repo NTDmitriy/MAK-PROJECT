@@ -1,5 +1,6 @@
 "use client";
 
+import { useStopScroll } from "@/hooks/useStopScroll";
 import clsx from "clsx";
 import {
 	FC,
@@ -25,11 +26,11 @@ export const NavDropdown: FC<PropsWithChildren<INavDropdown>> = ({
   centered,
   ...rest
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
   const [headerDimensions, setHeaderDimensions] = useState<{
-    height: number | null;
     left: number | null;
     width: number | null;
-  }>({ height: null, left: null, width: null });
+  }>({ left: null, width: null });
 
   const headerRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -37,21 +38,23 @@ export const NavDropdown: FC<PropsWithChildren<INavDropdown>> = ({
   const handleMouseEnter = useCallback(() => {
     if (headerRef.current) {
       setHeaderDimensions({
-        height: headerRef.current.offsetHeight,
         left: headerRef.current.offsetLeft,
         width: headerRef.current.offsetWidth,
       });
     }
+    setIsHovered(true);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setIsHovered(false);
   }, []);
 
   useLayoutEffect(() => {
     if (
       dropdownRef.current &&
-      headerDimensions.height !== null &&
       headerDimensions.left !== null &&
       headerDimensions.width !== null
     ) {
-      dropdownRef.current.style.top = `${headerDimensions.height}px`;
       if (!centered) {
         dropdownRef.current.style.paddingLeft = `${headerDimensions.left}px`;
       } else {
@@ -60,10 +63,12 @@ export const NavDropdown: FC<PropsWithChildren<INavDropdown>> = ({
         }px`;
       }
     }
-  }, [headerDimensions]);
+  }, [headerDimensions, centered]);
+
+  useStopScroll(isHovered);
 
   return (
-    <>
+    <div onMouseLeave={handleMouseLeave}>
       <div
         {...rest}
         className={clsx(styles.dropdown__init, className)}
@@ -72,10 +77,9 @@ export const NavDropdown: FC<PropsWithChildren<INavDropdown>> = ({
       >
         {children}
       </div>
-
       <div className={styles.dropdown} ref={dropdownRef}>
         {content}
       </div>
-    </>
+    </div>
   );
 };

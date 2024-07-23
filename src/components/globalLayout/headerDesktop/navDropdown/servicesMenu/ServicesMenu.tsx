@@ -3,6 +3,7 @@
 import NavLinkDropdown from "@/components/ui/links/navLinkDropdown/NavLinkDropdown";
 import { SERVISES_DASHBOARD } from "@/config/pages.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
+import clsx from 'clsx';
 import Link from "next/link";
 import {
 	FC,
@@ -94,7 +95,7 @@ const CustomTabPanel = (props: ITabPanelProps) => {
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
-      className={className}
+      className={clsx(className)}
       {...other}
     >
       {value === index && <>{children} </>}

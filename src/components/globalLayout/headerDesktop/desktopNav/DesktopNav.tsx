@@ -1,7 +1,7 @@
 import {
 	IconDownArray,
 	IconHome,
-	IconUsefulBellNav,
+	IconUsefulBellNav
 } from "@/components/ui/icons";
 import NavLink from "@/components/ui/links/navLink/NavLink";
 import { DASHBOARD_PAGES } from "@/config/pages.config";
@@ -24,7 +24,7 @@ export const DesktopNav: FC<PropsWithChildren<IDesktopNav>> = ({
         <IconHome />
       </NavLink>
       <NavLink href={DASHBOARD_PAGES.CASES}>Кейсы</NavLink>
-      <NavDropdown content={<ServicesMenu />}>
+      <NavDropdown centered={true} content={<ServicesMenu />}>
         <NavLink href={DASHBOARD_PAGES.SERVICES}>
           Услуги <IconDownArray />
         </NavLink>

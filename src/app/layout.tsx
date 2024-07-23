@@ -1,4 +1,4 @@
-import { HeaderDesktop } from "@/components/globalLoyout/headerDesktop/HeaderDesktop";
+import { HeaderDesktop } from "@/components/globalLayout/headerDesktop/HeaderDesktop";
 import { inter, roboto } from "@/config/fonts.config";
 import "@/styles/globals.css";
 import clsx from "clsx";
@@ -23,7 +23,7 @@ export default function RootLayout({
       >
         <div className="page">
           <HeaderDesktop />
-          {children}
+          <main>{children}</main>
           <footer>footer</footer>
         </div>
       </body>
