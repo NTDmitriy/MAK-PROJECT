@@ -24,6 +24,7 @@ export const useStopScroll = (condition: boolean) => {
   useEffect(() => {
     const scrollHeight =
       document.body.clientHeight - document.documentElement.clientHeight;
+
     if (scrollHeight !== 0) {
       document.body.style.overflow = condition ? "hidden" : "auto";
       document.body.style.paddingRight = condition ? `${scrollWidth}px` : "0px";
