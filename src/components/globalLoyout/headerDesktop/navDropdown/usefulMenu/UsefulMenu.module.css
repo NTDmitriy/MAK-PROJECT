@@ -1,0 +1,13 @@
+.content {
+  --menu-width: 330px;
+  --gap: 20px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  max-width: var(--menu-width);
+  width: 100%;
+}

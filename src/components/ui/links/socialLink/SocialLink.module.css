@@ -1,0 +1,37 @@
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--social-color);
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+  .link::before {
+    content: attr(data-tooltip);
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0.4;
+    width: max-content;
+    color: var(--text-primary);
+    position: absolute;
+    transform: translateY(40px);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
+    font-size: 12;
+  }
+  .link:hover::before {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(34px);
+  }
+  .link:hover {
+    background-color: var(--text-primary);
+    color: var(--background-loyout);
+  }
+}
+

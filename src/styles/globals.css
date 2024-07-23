@@ -1,0 +1,70 @@
+:root {
+  --background-color: #0e0e0e;
+  --background-loyout: rgba(22, 22, 22, 0.8);
+  --text-primary: #fff;
+  --text-secondery: #cacaca;
+  --text-third: #1e1e1e;
+  --accent-color: #ffde00;
+  --accent-color-rgb: 255 222 0;
+  --social-color: #505050;
+  --font-family: "Roboto", sans-serif;
+  --second-family: "Babes Neue Bold", sans-serif;
+  --third-family: "Inter", sans-serif;
+  --border-radius: 10px;
+}
+
+@font-face {
+  font-family: "Babes Neue Bold";
+  src: url("/fonts/BebasNeueBold.woff2") format("woff2"),
+    url("/fonts/BebasNeueBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100dvw;
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--background-color);
+  min-width: 360px;
+}
+
+a,
+button {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a:focus,
+a:active,
+button:focus, 
+button:active {
+  outline: none;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* conainer 1420 */

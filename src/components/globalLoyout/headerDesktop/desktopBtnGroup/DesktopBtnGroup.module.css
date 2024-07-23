@@ -1,0 +1,16 @@
+.btn__group {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(20px, 2.2dvw, 40px);
+}
+
+.social__btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.button__wrapper {
+  min-width: clamp(140px, 11dvw, 200px);
+}

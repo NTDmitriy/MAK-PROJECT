@@ -1,0 +1,12 @@
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+
+.bell {
+	position: absolute;
+	right: 6px;
+	top: -20px;
+}

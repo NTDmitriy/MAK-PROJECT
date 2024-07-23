@@ -1,0 +1,18 @@
+.header {
+	position: sticky;
+	width: 100%;
+	top: 0;
+	z-index: 5;
+  padding: 0 clamp(20px, 2.1dvw, 40px);
+  display: grid;
+  grid-template-columns: 1fr 54px 1fr;
+  align-content: center;
+  gap: 16px;
+  backdrop-filter: blur(8px);
+  background: var(--background-loyout);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
