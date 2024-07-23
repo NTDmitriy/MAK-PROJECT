@@ -1,0 +1,51 @@
+.button {
+  position: relative;
+  font-family: var(--third-family);
+  font-weight: 200;
+  font-size: clamp(14px, 1.3dvw, 20px);
+  line-height: 100%;
+  text-align: center;
+  color: var(--text-third);
+  border: 2px solid;
+  background: linear-gradient(
+    90deg,
+    #f4a21a 0%,
+    #ffde00 15%,
+    #f4a21a 35%,
+    #ffde00 70%,
+		#f4a21a 83%,
+    #ffde00 100%
+  );
+
+  background-size: 300% 100%;
+  padding: clamp(16px, 1.5dvw, 20px) 10px;
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  transition: color 0.4s ease-in-out, border-color 0.3s ease-in-out,
+    transform 0.1s ease-in-out;
+		border: 2px solid transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+
+@media (hover: hover) {
+  .button:hover {
+    color: var(--text-third);
+    background-position: 100% 0;
+  }
+
+  .button:focus {
+    border-color: #fff
+  }
+  .button:active {
+    transform: scale(0.95);
+  }
+}
+
+@media (hover: none) {
+  .button:active {
+    transform: scale(0.95);
+  }
+}
+

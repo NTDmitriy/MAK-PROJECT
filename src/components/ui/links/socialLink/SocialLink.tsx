@@ -20,7 +20,7 @@ export const SocialLink: FC<PropsWithChildren<ISocialLink>> = ({
     <Link
       data-tooltip={tooltip}
       href={href}
-      className={clsx(styles.button, className)}
+      className={clsx(styles.link, className)}
       {...rest}
     >
       {icon}

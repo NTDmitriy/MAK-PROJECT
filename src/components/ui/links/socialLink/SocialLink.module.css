@@ -5,9 +5,11 @@
   background-color: var(--social-color);
   width: 40px;
   aspect-ratio: 1;
+  border: 1px solid transparent;
   border-radius: 50%;
   position: relative;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 }
 
 @media (hover: hover) {
@@ -35,3 +37,6 @@
   }
 }
 
+.link:focus {
+	border-color: #fff;
+}
