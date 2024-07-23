@@ -14,5 +14,6 @@ export const SeconderyButton: FC<PropsWithChildren<IButton>> = ({
     <button className={clsx(styles.button, className)} {...rest}>
       {children}
     </button>
+		
   );
 };

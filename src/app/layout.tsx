@@ -1,7 +1,5 @@
 import { HeaderDesktop } from "@/components/globalLayout/headerDesktop/HeaderDesktop";
-import { inter, roboto } from "@/config/fonts.config";
 import "@/styles/globals.css";
-import clsx from "clsx";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 
@@ -18,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={clsx(roboto.className, inter.className)}
+        // className={clsx(roboto.className, inter.className)}
         suppressHydrationWarning={true}
       >
         <div className="page">

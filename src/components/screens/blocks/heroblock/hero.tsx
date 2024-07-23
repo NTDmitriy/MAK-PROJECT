@@ -1,9 +1,6 @@
-
-"use client";
-
-import {FC} from 'react';
-import styles from './hero.module.css';
 import { Container } from "@/components/ui/container/Container";
+import { FC } from 'react';
+import styles from './hero.module.css';
 
 interface heroProps {
   content: {
