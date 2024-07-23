@@ -10,7 +10,6 @@
       var(--tab-content-gap) + var(--tab-panel-item-gap)
   );
   gap: var(--tab-content-gap);
-	
 
 }
 
@@ -23,35 +22,31 @@
   width: 100%;
 }
 
-/* .button {
-  border: 1px solid transparent;
-  border-radius: var(--border-radius);
-  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 17px;
-  padding: 18px 25px 18px 20px;
-}
-
-.button.active {
-  box-shadow: inset 2px 2px 12px 0 rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.array {
-  margin-left: auto;
-} */
-
 .tab__panel {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
   justify-items: start;
   align-items: center;
   width: 100%;
+	max-height: calc(100dvh - 200px);
+	height: 100%;
+	overflow-y: auto;
   gap: var(--tab-panel-item-gap);
+	padding-right: 10px;
+}
+
+.tab__panel::-webkit-scrollbar {
+  width: 6px;
+	padding-left: 6px;
+}
+
+.tab__panel::-webkit-scrollbar-track {
+  background-color: #000;
+  border-radius: 14px;
+}
+.tab__panel::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 14px;
 }
 
 .tab__panel:empty {

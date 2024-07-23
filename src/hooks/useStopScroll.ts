@@ -1,21 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const useStopScroll = () => {
+export const useStopScroll = (condition: boolean) => {
+  const [scrollWidth, setScrollWidth] = useState(0);
+
   useEffect(() => {
-    const scrollbarWidth = getScrollbarWidth();
-    
-    // Сохраняем текущие стили
-    const originalOverflow = document.body.style.overflow;
-    const originalPaddingRight = document.body.style.paddingRight;
+    const getScrollWidth = () => {
+      let div = document.createElement("div");
+      div.style.overflowY = "scroll";
+      div.style.width = "50px";
+      div.style.height = "50px";
 
-    // Применяем новые стили
-    document.body.style.overflow = 'hidden';
-    document.body.style.paddingRight = `${scrollbarWidth}px`;
+      document.body.append(div);
+      let scrollWidth = div.offsetWidth - div.clientWidth;
 
-    // Восстанавливаем исходные стили при размонтировании
-    return () => {
-      document.body.style.overflow = originalOverflow;
-      document.body.style.paddingRight = originalPaddingRight;
+      div.remove();
+      return scrollWidth;
     };
+
+    const width = getScrollWidth();
+    setScrollWidth(width);
   }, []);
+
+  useEffect(() => {
+    const scrollHeight =
+      document.body.clientHeight - document.documentElement.clientHeight;
+    if (scrollHeight !== 0) {
+      document.body.style.overflow = condition ? "hidden" : "auto";
+      document.body.style.paddingRight = condition ? `${scrollWidth}px` : "0px";
+    }
+  }, [condition, scrollWidth]);
 };
