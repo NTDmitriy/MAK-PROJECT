@@ -1,9 +1,14 @@
-import { Container } from "@/components/ui/container/Container";
 import { NextPage } from "next";
+import PromotionReasons from "../blocks/heroblock/hero";
+import { block_promotion1 } from "@/config/blocks.config";
 
 const TestPage: NextPage = () => {
   return (
-		<Container>123</Container>
+
+
+      <PromotionReasons content={block_promotion1} />
+
+
 
   );
 };
