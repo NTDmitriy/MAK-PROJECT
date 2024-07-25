@@ -1,9 +1,19 @@
-import { block_promotion1 } from "@/config/blocks.config";
-import { NextPage } from "next";
-import Hero from "../blocks/heroblock/hero";
+import { Hero } from "@/components/sections/hero/Hero";
+import { FC } from "react";
 
-const TestPage: NextPage = () => {
-  return <Hero content={block_promotion1} />;
+interface ITestPage {
+  content: Record<string, any>;
+}
+
+const TestPage: FC<ITestPage> = ({ content }) => {
+  return (
+    <>
+      <Hero
+        basicContent={content.hero.basic}
+        productContent={content.hero.info}
+      />
+    </>
+  );
 };
 
 export default TestPage;

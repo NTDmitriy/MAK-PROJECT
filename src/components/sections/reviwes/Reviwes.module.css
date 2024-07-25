@@ -1,0 +1,9 @@
+.reviwes__section {
+	background-color: #fff;
+	color: var(--text-third);
+	padding-top: 100px;
+}
+
+.reviwes__title {
+	color: var(--text-third);
+}
