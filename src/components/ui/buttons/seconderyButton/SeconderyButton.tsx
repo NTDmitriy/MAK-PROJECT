@@ -1,5 +1,3 @@
-"use client";
-
 import { IButton } from "@/interfaces/button.interface";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";

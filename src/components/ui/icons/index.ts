@@ -2,6 +2,8 @@ import { IconDownArray } from "./genericIcons/IconDownArray";
 import { IconHome } from "./genericIcons/IconHome";
 import { IconLogo } from "./genericIcons/IconLogo";
 import { IconRightArray } from "./genericIcons/IconRightArray";
+import { IconTelegramBlue } from "./genericIcons/IconTelegramBlue";
+import { IconTitleSecondery } from "./genericIcons/IconTitleSecondery";
 import { IconAdvertisementNav } from "./serviseIcons/IconAdvertisementNav";
 import { IconForceNav } from "./serviseIcons/IconForceNav";
 import { IconSeoNav } from "./serviseIcons/IconSeoNav";
@@ -18,9 +20,25 @@ import { IconUsefulNav } from "./usefulIcons/IconUsefulNav";
 import { IconVacanciesNav } from "./usefulIcons/IconVacanciesNav";
 
 export {
-	IconAboutNav, IconAdvertisementNav, IconArticlesNav, IconDownArray, IconEMail, IconForceNav, IconHome,
-	IconLogo, IconPartnersNav, IconPhone, IconRightArray, IconSeoNav, IconTelegram, IconUsefulBellNav,
+	IconAboutNav,
+	IconAdvertisementNav,
+	IconArticlesNav,
+	IconDownArray,
+	IconEMail,
+	IconForceNav,
+	IconHome,
+	IconLogo,
+	IconPartnersNav,
+	IconPhone,
+	IconRightArray,
+	IconSeoNav,
+	IconTelegram,
+	IconTelegramBlue,
+	IconTitleSecondery,
+	IconUsefulBellNav,
 	IconUsefulNav,
-	IconVacanciesNav, IconWebDevNav, IconWhatsApp
+	IconVacanciesNav,
+	IconWebDevNav,
+	IconWhatsApp
 };
 

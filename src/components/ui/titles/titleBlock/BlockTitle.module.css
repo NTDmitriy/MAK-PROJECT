@@ -1,0 +1,131 @@
+.title__wrapper {
+  position: relative;
+  padding-top: 14px;
+	margin-top: 10px;
+  padding-bottom: clamp(40px, 6.7dvw, 135px);
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: left;
+  color: var(--text-primary);
+}
+
+.title {
+  font-family: var(--third-family);
+  font-weight: 900;
+  font-size: 60px;
+  font-size: clamp(24px, 3.5dvw, 60px);
+  line-height: 133%;
+z-index: 2;
+  text-align: left;
+}
+.title__right,
+.title__wrapper {
+  text-align: right;
+  order: 1;
+}
+
+.title__left::before,
+.title__right::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 100dvw;
+  height: 2px;
+  background-color: #353535;
+  z-index: 1;
+}
+
+.title__left::before {
+  left: 16.5px;
+}
+
+.title__right::before {
+  right: 16.5px;
+}
+
+.icon {
+  color: #353535;
+  position: absolute;
+  top: -8px;
+  z-index: 2;
+}
+
+.icon__left {
+  left: 0;
+}
+
+.icon__right {
+  right: 0;
+}
+
+.title__wrapper__flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.descr { 
+  width: 35%;
+  font-family: var(--font-family);
+  font-weight: 100;
+  font-size: 20px;
+  font-size: clamp(14px, 2dvw, 20px);
+  line-height: 130%;
+  text-align: right;
+	z-index: 1; 
+  padding-top: 16px;
+}
+.align__left {
+  text-align: left;
+}
+.background__text {
+	position: absolute;
+	top: -20px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: clamp(200px, 17dvw,240px);
+  line-height: 108%;
+  -webkit-text-stroke: 1px #353535;
+  color: transparent;
+	z-index: 1;
+	opacity: 0.5;
+}
+.background__text.left {
+	left: calc(50% - 50dvw);
+}
+.background__text.right {
+	right:  calc(50% - 50dvw);
+}
+
+
+@media screen and (max-width: 1024px) {
+  .title__wrapper__flex {
+    flex-direction: column;
+  }
+
+  .title__right {
+    order: unset;
+    text-align: left;
+  }
+
+  .descr {
+    width: 100%;
+    padding-top: 0;
+    text-align: left;
+  }
+  .title__wrapper {
+    padding-left: 0;
+  }
+  .title__left::before {
+    left: unset;
+    right: 16.5px;
+  }
+  .icon__left {
+    left: unset;
+    right: 0;
+  }
+
+	.background__text {
+		display: none;
+	}
+}
