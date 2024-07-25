@@ -12,3 +12,8 @@ export type THeroInfo = {
   description: string;
 	image: string;
 };
+
+export type THowWorks = {
+  title: string;
+  description:string;
+}
