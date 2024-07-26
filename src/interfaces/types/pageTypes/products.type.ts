@@ -5,10 +5,11 @@ export type THeroBasic = {
     accentOrder: number;
   };
   description: string;
+  img : string;
 };
 
 export type THeroInfo = {
   title: string;
   description: string;
-	image: string;
+  image: string;
 };
