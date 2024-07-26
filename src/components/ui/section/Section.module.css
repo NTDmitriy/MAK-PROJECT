@@ -1,5 +1,5 @@
 .section {
   width: 100%;
   max-width: 100dvw;
-  padding: clamp(15px, 3dvw, 50px) 0;
+  margin-bottom: clamp(30px, 5.3dvw, 100px) ;
 }

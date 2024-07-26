@@ -1,10 +1,17 @@
-import { Reviwes } from "@/components/sections/reviwes/Reviwes";
-import { NextPage } from "next";
+import { Hero } from "@/components/sections/hero/Hero";
+import { FC } from "react";
 
-const TestPage2: NextPage = () => {
+interface ITestPage {
+  content: Record<string, any>;
+}
+
+const TestPage2: FC<ITestPage> = ({ content }) => {
   return (
     <>
-      <Reviwes />
+      <Hero
+        basicContent={content.hero.basic}
+   
+      />
     </>
   );
 };
