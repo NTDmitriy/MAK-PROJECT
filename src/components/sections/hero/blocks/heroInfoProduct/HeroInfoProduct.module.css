@@ -1,0 +1,66 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    min-height: 400px;
+    min-width: 380px;
+}
+
+.text {
+max-width: 48vw;
+font-family: var(--font-family);
+font-weight: 100;
+font-size: 20px;
+}
+
+.title {
+font-family: var(--third-family);
+font-weight: 900;
+font-size: clamp(24px,5.5dvw,60px);
+max-width: 48vw;
+}
+.image {
+    width: 100%; /* Make the image take the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+}
+.imagecontainer {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: 0;
+    max-width: 100%; /* Ensure the container doesn't exceed its parent's width */
+    display: block;
+}
+
+.background {
+    background: url(/images/hero_background.webp);
+}
+
+
+@media screen and (max-width:960px) {
+    .imagecontainer {
+        position: relative;
+        order: -1;
+        transform: unset;
+        margin: 0 auto;
+        display: block;
+       
+    }
+
+    .image {
+        max-width: 340px;
+        height: 180px;
+    }
+
+    .title,.text {
+        max-width: 100%;
+        
+    }
+
+    .text {
+        margin-bottom: 30px;
+    }
+    
+}

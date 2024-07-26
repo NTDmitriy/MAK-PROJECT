@@ -10,5 +10,11 @@ interface IHeroInfoService {
 }
 
 export const HeroInfoService: FC<IHeroInfoService> = ({ info }) => {
-  return <>{info && <Container></Container>}</>;
+  return <>{info && <Container>
+    
+    
+    
+    
+    
+    </Container>}</>;
 };

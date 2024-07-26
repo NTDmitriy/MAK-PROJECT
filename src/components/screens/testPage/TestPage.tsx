@@ -1,4 +1,6 @@
 import { Hero } from "@/components/sections/hero/Hero";
+import { HowWorks } from "@/components/sections/howWorks/HowWorks";
+
 import { FC } from "react";
 
 interface ITestPage {
@@ -12,7 +14,10 @@ const TestPage: FC<ITestPage> = ({ content }) => {
         basicContent={content.hero.basic}
         productContent={content.hero.info}
       />
+      <HowWorks />
     </>
+
+    
   );
 };
 

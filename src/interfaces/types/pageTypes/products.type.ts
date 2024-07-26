@@ -11,5 +11,6 @@ export type THeroBasic = {
 export type THeroInfo = {
   title: string;
   description: string;
-  image: string;
+	image: string;
 };
+
