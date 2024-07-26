@@ -40,7 +40,6 @@ body {
 body {
   color: var(--text-primary);
   background: var(--background-color);
-  min-width: 380px;
 }
 
 a,

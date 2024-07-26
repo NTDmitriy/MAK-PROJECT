@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/hero/Hero";
 import { HowWorks } from "@/components/sections/howWorks/HowWorks";
+import { WhyUs } from "@/components/sections/whyUs/WhyUs";
 
 import { FC } from "react";
 
@@ -15,6 +16,7 @@ const TestPage: FC<ITestPage> = ({ content }) => {
         productContent={content.hero.info}
       />
       <HowWorks />
+      <WhyUs />
     </>
 
     

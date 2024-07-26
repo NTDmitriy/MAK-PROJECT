@@ -4,6 +4,7 @@
     justify-content: center;
     position: relative;
     min-height: 400px;
+    padding: 0 20px;
     min-width: 380px;
 }
 
@@ -15,10 +16,21 @@ font-size: 20px;
 }
 
 .title {
+    position: relative;
 font-family: var(--third-family);
 font-weight: 900;
 font-size: clamp(24px,5.5dvw,60px);
 max-width: 48vw;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 10px;
+    height: 100%;
+    background-color: #FFDE00;
 }
 .image {
     width: 100%; /* Make the image take the full width of its container */
@@ -35,6 +47,7 @@ max-width: 48vw;
 }
 
 .background {
+    margin-top: 90px;
     background: url(/images/hero_background.webp);
 }
 
@@ -44,17 +57,24 @@ max-width: 48vw;
         position: relative;
         order: -1;
         transform: unset;
-        margin: 0 auto;
+        
         display: block;
        
     }
 
+
+    .background {
+        margin-top: 20px;
+        background: url(/images/hero_background.webp);
+    }
+
     .image {
-        max-width: 340px;
+        width: 340px;
         height: 180px;
     }
 
     .title,.text {
+        margin-top: 15px;
         max-width: 100%;
         
     }
@@ -62,5 +82,8 @@ max-width: 48vw;
     .text {
         margin-bottom: 30px;
     }
-    
+    .content {
+        min-width: unset;
+        padding: 15px;
+    }
 }
