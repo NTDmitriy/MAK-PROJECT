@@ -1,22 +1,20 @@
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    min-height: 400px;
-    padding: 0 20px;
-    min-width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: 400px;
 }
 
 .text {
-max-width: 48vw;
-font-family: var(--font-family);
-font-weight: 100;
-font-size: 20px;
+  max-width: 48vw;
+  font-family: var(--font-family);
+  font-weight: 100;
+  font-size: 20px;
 }
 
 .title {
-    position: relative;
+position: relative;
 font-family: var(--third-family);
 font-weight: 900;
 font-size: clamp(24px,5.5dvw,60px);
@@ -33,17 +31,17 @@ max-width: 48vw;
     background-color: #FFDE00;
 }
 .image {
-    width: 100%; /* Make the image take the full width of its container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
   display: block;
 }
 .imagecontainer {
-    position: absolute;
-    top: 50%;
-    transform: translate(0,-50%);
-    right: 0;
-    max-width: 100%; /* Ensure the container doesn't exceed its parent's width */
-    display: block;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+  max-width: 100%;
+  display: block;
 }
 
 .background {
@@ -51,6 +49,14 @@ max-width: 48vw;
     background: url(/images/hero_background.webp);
 }
 
+@media screen and (max-width: 960px) {
+  .imagecontainer {
+    position: relative;
+    order: -1;
+    transform: unset;
+    margin: 0 auto;
+    display: block;
+  }
 
 @media screen and (max-width:960px) {
     .imagecontainer {
@@ -73,7 +79,7 @@ max-width: 48vw;
         height: 180px;
     }
 
-    .title,.text {
+    .title.text {
         margin-top: 15px;
         max-width: 100%;
         
@@ -86,4 +92,4 @@ max-width: 48vw;
         min-width: unset;
         padding: 15px;
     }
-}
+  }

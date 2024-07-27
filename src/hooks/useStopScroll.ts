@@ -1,3 +1,4 @@
+'use'
 import { useEffect, useState } from "react";
 
 export const useStopScroll = (condition: boolean) => {
@@ -22,10 +23,14 @@ export const useStopScroll = (condition: boolean) => {
   }, []);
 
   useEffect(() => {
-    const scrollHeight =
-      document.body.clientHeight - document.documentElement.clientHeight;
+ 
+		const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+	
+
 
     if (scrollHeight !== 0) {
+      document.documentElement.style.overflow = condition ? "hidden" : "auto";
       document.body.style.overflow = condition ? "hidden" : "auto";
       document.body.style.paddingRight = condition ? `${scrollWidth}px` : "0px";
     }

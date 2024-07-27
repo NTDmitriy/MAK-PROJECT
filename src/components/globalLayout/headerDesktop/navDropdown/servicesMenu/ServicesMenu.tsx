@@ -1,7 +1,8 @@
 "use client";
 
 import NavLinkDropdown from "@/components/ui/links/navLinkDropdown/NavLinkDropdown";
-import { SERVISES_DASHBOARD } from "@/config/pages.config";
+import { SERVISES_NAV_BAR_CONFIG } from "@/config/navbar.config";
+import { DASHBOARD_PAGES } from "@/config/urlConfig/all-pages.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import clsx from 'clsx';
 import Link from "next/link";
@@ -28,7 +29,7 @@ export const ServicesMenu: FC<PropsWithChildren<IGenericElementProps>> = ({
     <>
       <div {...rest} className={styles.content}>
         <ul role="tablist" className={styles.tablist}>
-          {SERVISES_DASHBOARD.map((service, index) => (
+          {SERVISES_NAV_BAR_CONFIG.map((service, index) => (
             <li key={index}>
               <NavLinkDropdown
                 role="tab"
@@ -40,14 +41,14 @@ export const ServicesMenu: FC<PropsWithChildren<IGenericElementProps>> = ({
                 arrayRight={true}
                 isActive={value === index ? true : false}
               >
-                {service.icon({})}
+							{service.icon({})}
                 {service.name}
               </NavLinkDropdown>
             </li>
           ))}
         </ul>
 
-        {SERVISES_DASHBOARD.map((service, index) => (
+        {SERVISES_NAV_BAR_CONFIG.map((service, index) => (
           <CustomTabPanel
             className={styles.tab__panel}
             key={index}
@@ -56,7 +57,7 @@ export const ServicesMenu: FC<PropsWithChildren<IGenericElementProps>> = ({
           >
             {service.childrens.map((child, childIndex) => (
               <Link
-                href={child.url}
+                href={`${DASHBOARD_PAGES.SERVICES.url}${child.url}` }
                 key={childIndex}
                 className={styles.tab__panel__item}
               >
