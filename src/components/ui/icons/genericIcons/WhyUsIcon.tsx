@@ -1,6 +1,6 @@
 import { SVGProps } from "react";
 
-export const HowWorksIcon = (props: SVGProps<SVGSVGElement>) => {
+export const WhyUsIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
   <path d="M18.375 1.5H6.5625C3.76656 1.5 1.5 3.76655 1.5 6.56247V23.4375C1.5 26.2335 3.76656 28.5 6.5625 28.5H23.4375C26.2334 28.5 28.5 26.2335 28.5 23.4375V14.1562M26.8125 5.71873L15 17.5312L11.625 14.1562" stroke="url(#paint0_linear_653_832)" strokeWidth="1.5" />

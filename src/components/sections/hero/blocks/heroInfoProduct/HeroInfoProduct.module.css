@@ -4,7 +4,6 @@
   justify-content: center;
   position: relative;
   min-height: 400px;
-  min-width: 380px;
 }
 
 .text {
@@ -15,10 +14,21 @@
 }
 
 .title {
-  font-family: var(--third-family);
-  font-weight: 900;
-  font-size: clamp(24px, 5.5dvw, 60px);
-  max-width: 48vw;
+position: relative;
+font-family: var(--third-family);
+font-weight: 900;
+font-size: clamp(24px,5.5dvw,60px);
+max-width: 48vw;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 10px;
+    height: 100%;
+    background-color: #FFDE00;
 }
 .image {
   width: 100%;
@@ -35,7 +45,8 @@
 }
 
 .background {
-  background: url(/images/hero_background.webp);
+    margin-top: 90px;
+    background: url(/images/hero_background.webp);
 }
 
 @media screen and (max-width: 960px) {
@@ -47,17 +58,38 @@
     display: block;
   }
 
-  .image {
-    max-width: 340px;
-    height: 180px;
-  }
+@media screen and (max-width:960px) {
+    .imagecontainer {
+        position: relative;
+        order: -1;
+        transform: unset;
+        
+        display: block;
+       
+    }
 
-  .title,
-  .text {
-    max-width: 100%;
-  }
 
-  .text {
-    margin-bottom: 30px;
+    .background {
+        margin-top: 20px;
+        background: url(/images/hero_background.webp);
+    }
+
+    .image {
+        width: 340px;
+        height: 180px;
+    }
+
+    .title.text {
+        margin-top: 15px;
+        max-width: 100%;
+        
+    }
+
+    .text {
+        margin-bottom: 30px;
+    }
+    .content {
+        min-width: unset;
+        padding: 15px;
+    }
   }
-}
