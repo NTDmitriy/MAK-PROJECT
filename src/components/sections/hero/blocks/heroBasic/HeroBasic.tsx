@@ -9,7 +9,7 @@ interface IHeroBasic {
 }
 
 export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
-  const { title, description, img } = basicContent;
+  const { title, description, image } = basicContent;
 
   return (
     <Container className={styles.hero__container}>
@@ -38,11 +38,11 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
       <div className={styles.img__wrapper}>
         <picture>
           <source
-            srcSet={`/images/${img}-295x191.webp`}
+            srcSet={`/images/${image}-295x191.webp`}
             media="(max-width: 1024px)"
           />
-          <source srcSet={`/images/${img}-1360x870.webp`} />
-          <img className={styles.img} src={`/images/${img}-1360x870.jpg`} />
+          <source srcSet={`/images/${image}-1360x870.webp`} />
+          <img className={styles.img} src={`/images/${image}-1360x870.jpg`} />
         </picture>
       </div>
     </Container>

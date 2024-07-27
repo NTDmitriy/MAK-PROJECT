@@ -12,7 +12,7 @@ interface IReviwes extends IGenericElementProps {
 
 export const Reviwes: FC<IReviwes> = ({ className, reviwes, ...rest }) => {
   return (
-    <Section {...rest} className={clsx(className, styles.reviwes__section)}>
+    <Section {...rest} className={clsx(className, styles.reviwes__section)} style={{marginTop: '100px'}}>
       <Container>
         <BlockTitle
           leftSide={true}
@@ -23,7 +23,7 @@ export const Reviwes: FC<IReviwes> = ({ className, reviwes, ...rest }) => {
           Что говорят наши клиенты
         </BlockTitle>
 
-				<div>123</div>
+				
       </Container>
     </Section>
   );

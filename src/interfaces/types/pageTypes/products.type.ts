@@ -5,7 +5,7 @@ export type THeroBasic = {
     accentOrder: number;
   };
   description: string;
-  img : string;
+  image : string;
 };
 
 export type THeroInfo = {
@@ -13,4 +13,14 @@ export type THeroInfo = {
   description: string;
 	image: string;
 };
+
+
+
+export type TCases = {
+  title: string;
+  description: string;
+	image: string;
+	instruments: string[];
+};
+
 

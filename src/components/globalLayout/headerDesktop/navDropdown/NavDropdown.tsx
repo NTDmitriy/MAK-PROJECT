@@ -2,11 +2,13 @@
 
 import { useStopScroll } from "@/hooks/useStopScroll";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
 import {
 	FC,
 	PropsWithChildren,
 	ReactNode,
 	useCallback,
+	useEffect,
 	useLayoutEffect,
 	useRef,
 	useState,
@@ -34,19 +36,22 @@ export const NavDropdown: FC<PropsWithChildren<INavDropdown>> = ({
 
   const headerRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const pathName = usePathname();
 
   const handleMouseEnter = useCallback(() => {
-    if (headerRef.current) {
+    if (headerRef.current && dropdownRef.current) {
       setHeaderDimensions({
         left: headerRef.current.offsetLeft,
         width: headerRef.current.offsetWidth,
       });
+      dropdownRef.current.classList.remove(styles.hidden);
     }
     setIsHovered(true);
   }, []);
 
   const handleMouseLeave = useCallback(() => {
     setIsHovered(false);
+    if (dropdownRef.current) dropdownRef.current.classList.add(styles.hidden);
   }, []);
 
   useLayoutEffect(() => {
@@ -65,6 +70,11 @@ export const NavDropdown: FC<PropsWithChildren<INavDropdown>> = ({
     }
   }, [headerDimensions, centered]);
 
+  useEffect(() => {
+    if (dropdownRef.current)
+      return dropdownRef.current.classList.add(styles.hidden);
+  }, [pathName]);
+
   useStopScroll(isHovered);
 
   return (
@@ -77,7 +87,7 @@ export const NavDropdown: FC<PropsWithChildren<INavDropdown>> = ({
       >
         {children}
       </div>
-      <div className={styles.dropdown} ref={dropdownRef}>
+      <div className={clsx(styles.dropdown, styles.hidden)} ref={dropdownRef}>
         {content}
       </div>
     </div>

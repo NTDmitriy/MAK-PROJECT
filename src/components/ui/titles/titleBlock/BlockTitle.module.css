@@ -33,6 +33,7 @@ z-index: 2;
   height: 2px;
   background-color: #353535;
   z-index: 1;
+
 }
 
 .title__left::before {
@@ -90,6 +91,7 @@ z-index: 2;
 	z-index: 1;
 	opacity: 0.5;
 }
+
 .background__text.left {
 	left: calc(50% - 50dvw);
 }

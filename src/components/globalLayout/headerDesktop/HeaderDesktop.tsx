@@ -10,6 +10,7 @@ export const HeaderDesktop: FC<PropsWithChildren<IGenericElementProps>> = ({
   className,
   ...rest
 }) => {
+
   return (
     <header {...rest} className={clsx(styles.header, className)}>
       <DesktopNav />
