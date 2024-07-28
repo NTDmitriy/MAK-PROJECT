@@ -54,7 +54,7 @@
   gap: 10px;
   top: 30px;
   left: 30px;
-  padding-right: 40px;
+ 
 }
 
 .instruments {
@@ -89,6 +89,7 @@
   font-size: clamp(14px, 1.35dvw, 20px);
   line-height: 120%;
   color: var(--text-secondery);
+	padding-right: 40px;
 }
 
 .case1 .case__text {
@@ -115,6 +116,10 @@
 	.case1 .case__text {
 		max-width: unset;
 	} 
+
+	.instruments {
+		gap: 10px;
+	}
 }
 @media screen and (max-width: 576px) {
   .cases {
@@ -135,6 +140,9 @@
 
 
   .case__descr {
-    padding-right: 30px;
+    padding-right: 20px;
   }
+	.case__text {
+		padding-right: 0;
+	}
 }

@@ -30,8 +30,8 @@ export const useStopScroll = (condition: boolean) => {
 
 
     if (scrollHeight !== 0) {
-      document.documentElement.style.overflow = condition ? "hidden" : "auto";
-      document.body.style.overflow = condition ? "hidden" : "auto";
+      document.documentElement.style.overflowY = condition ? "hidden" : "auto";
+      document.body.style.overflowY = condition ? "hidden" : "auto";
       document.body.style.paddingRight = condition ? `${scrollWidth}px` : "0px";
     }
   }, [condition, scrollWidth]);
