@@ -14,9 +14,12 @@ export const HeroInfoProduct: FC<IHeroInfoProduct> = ({ infoContent }) => {
         <div className={styles.background}>
           <Container>
             <div className={styles.content}>
-              <h3 className={styles.title}>{infoContent.title}</h3>
-              <p className={styles.text}> {infoContent.description}</p>
-              <picture className={styles.imagecontainer}>
+              <div className={styles.descr}>
+                <h3 className={styles.title}>{infoContent.title}</h3>
+                <p className={styles.text}> {infoContent.description}</p>
+              </div>
+
+              <picture>
                 <source
                   type="image/webp"
                   srcSet={`/images/${infoContent.image}.webp`}

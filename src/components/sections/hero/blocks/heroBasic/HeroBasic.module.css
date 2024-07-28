@@ -3,6 +3,8 @@
   padding-top: var(--pt);
   padding-bottom: 120px;
   position: relative;
+
+	
 }
 
 .title {
@@ -33,8 +35,10 @@
 }
 
 .btn_grop {
+	position: relative;
   display: flex;
   gap: 40px;
+	z-index: 1;
 }
 
 .button {
@@ -47,16 +51,17 @@
 
 .img__wrapper {
   position: absolute;
-  top: -50px;
+  top: -85px;
   right: calc(50% - 50dvw);
   max-width: 1360px;
   z-index: -1;
-  margin-right: 50px;
+
 }
 
 .img {
   opacity: 54%;
   width: clamp(700px, 71dvw, 1360px);
+
 }
 
 @media screen and (max-width: 1024px) {

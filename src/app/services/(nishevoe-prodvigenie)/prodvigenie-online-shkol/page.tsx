@@ -1,11 +1,13 @@
+import { PromotionOnlineSchoolPage } from "@/components/screens/promotion/promotionOnlineSchool/PromotionOnlineSchoolPage";
+import { onlineSchoolsPromotion } from "@/config/contentConfig/servises/promotion/onlineSchools.config";
 import { NextPage } from "next";
 
-const Test2: NextPage = () => {
+const PromotionOnlineSchool: NextPage = () => {
   return (
     <>
-      <p>продвижение онлайн школ</p>
+      <PromotionOnlineSchoolPage content={onlineSchoolsPromotion} />
     </>
   );
 };
 
-export default Test2;
+export default PromotionOnlineSchool;

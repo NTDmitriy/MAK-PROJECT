@@ -1,12 +1,12 @@
 .title__wrapper {
   position: relative;
   padding-top: 14px;
-	margin-top: 10px;
   padding-bottom: clamp(40px, 6.7dvw, 135px);
   padding-left: 50px;
   padding-right: 50px;
   text-align: left;
   color: var(--text-primary);
+	min-height: 100%;
 }
 
 .title {
@@ -15,8 +15,9 @@
   font-size: 60px;
   font-size: clamp(24px, 3.5dvw, 60px);
   line-height: 133%;
-z-index: 2;
+  z-index: 2;
   text-align: left;
+	
 }
 .title__right,
 .title__wrapper {
@@ -33,7 +34,6 @@ z-index: 2;
   height: 2px;
   background-color: #353535;
   z-index: 1;
-
 }
 
 .title__left::before {
@@ -65,7 +65,7 @@ z-index: 2;
   gap: 10px;
 }
 
-.descr { 
+.descr {
   width: 35%;
   font-family: var(--font-family);
   font-weight: 100;
@@ -73,32 +73,31 @@ z-index: 2;
   font-size: clamp(14px, 2dvw, 20px);
   line-height: 130%;
   text-align: right;
-	z-index: 1; 
+  z-index: 1;
   padding-top: 16px;
 }
 .align__left {
   text-align: left;
 }
 .background__text {
-	position: absolute;
-	top: -20px;
+  position: absolute;
+  top: -20px;
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: clamp(200px, 17dvw,240px);
+  font-size: clamp(200px, 17dvw, 240px);
   line-height: 108%;
   -webkit-text-stroke: 1px #353535;
   color: transparent;
-	z-index: 1;
-	opacity: 0.5;
+  z-index: 1;
+  opacity: 0.5;
 }
 
 .background__text.left {
-	left: calc(50% - 50dvw);
+  left: calc(50% - 50dvw);
 }
 .background__text.right {
-	right:  calc(50% - 50dvw);
+  right: calc(50% - 50dvw);
 }
-
 
 @media screen and (max-width: 1024px) {
   .title__wrapper__flex {
@@ -109,6 +108,29 @@ z-index: 2;
     order: unset;
     text-align: left;
   }
+  .icon__left {
+    left: unset;
+    right: 0;
+  }
+
+  .icon {
+    transform: rotate(90deg);
+    top: -66px;
+    right: 45px;
+  }
+
+  .icon g {
+    width: 30px;
+		transform-origin: 16px 52px;
+    transform: scale(0.9) rotate(-90deg);
+  }
+
+  .title__right::before,
+  .title__left::before {
+    left: unset;
+    right: calc(10px + 110px);
+    width: calc(100dvw - (10px * 2 + 110px));
+  }
 
   .descr {
     width: 100%;
@@ -117,17 +139,10 @@ z-index: 2;
   }
   .title__wrapper {
     padding-left: 0;
-  }
-  .title__left::before {
-    left: unset;
-    right: 16.5px;
-  }
-  .icon__left {
-    left: unset;
-    right: 0;
+
   }
 
-	.background__text {
-		display: none;
-	}
+  .background__text {
+    display: none;
+  }
 }
