@@ -11,7 +11,7 @@ export const IconTitleSecondery = (props: SVGProps<SVGSVGElement>) => {
       {...props}
     >
       <rect x="16.3301" width="2" height="18" fill="currentColor" />
-      <g clip-path="url(#clip0_3047_112)">
+      <g clipPath="url(#clip0_3047_112)">
         <path
           d="M17.5 34.0098L35 44.0098V64.0098L17.5 74.0098L0 64.0098V44.0098L17.5 34.0098Z"
           fill="url(#paint0_linear_3047_112)"
