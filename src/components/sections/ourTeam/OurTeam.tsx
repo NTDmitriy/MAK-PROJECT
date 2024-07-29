@@ -13,11 +13,14 @@ export  const OurTeam: FC  = () => {
         
         <Container>
         <BlockTitle 
-        className={styles.title_main}
+        //прям сюда спан ?
         leftSide={true}
+        descrSideway="Ключевые лица компании и их навыки <br />
+        "
         background="КОМАНДА"
         >Наша команда
-        <p className={styles.title_text}>Ключевые лица компании <br /> и их навыки</p></BlockTitle>
+        
+        </BlockTitle>
     <div>
         <div className={styles.container}>
             <div className={styles.head_container}>
