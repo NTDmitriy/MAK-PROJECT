@@ -1,0 +1,145 @@
+.container {
+    display: flex;
+    gap: 25px;
+}
+
+.title_text {
+    position: absolute;
+    top: 43px;
+    right: 0;
+    font-family: var(--font-family);
+font-weight: 100;
+font-size: clamp(15px,1.3dvw,8px);
+line-height: 130%;
+color: #fff;
+}
+
+
+
+.head_container {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+}
+
+.title {
+    font-family: var(--second-family);
+font-weight: 700;
+font-size: clamp(50px,1.3dvw,20px);
+margin-bottom: 5px;
+}
+
+.skills {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.skill_name {
+    border: 1px solid #FFDE00;
+    padding: 5px 8px;
+    font-family: var(--font-family);
+font-weight: 200;
+font-size: 14px;
+font-variant: small-caps;
+}
+
+.image {
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.achievment {
+background: linear-gradient(to right, #FFDE00, #FFBB00, #FF7A00);
+font-family: var(--font-family);
+font-weight: 200;
+font-size: 24px;
+line-height: 120%;
+color: #161616;
+initial-letter: 15px;
+padding: 5px 5px;
+text-indent: 10px;
+margin-bottom: 20px;
+}
+
+.descr {
+    font-family: var(--font-family);
+font-weight: 200;
+font-size: 20px;
+margin-bottom: 15px;
+}
+
+.quote {
+    font-family: var(--font-family);
+font-style: italic;
+font-weight: 200;
+font-size: 24px;
+line-height: 130%;
+text-align: right;
+color: #ffde00;
+}
+.quote_span {
+    margin-right: 10px;
+}
+
+.worker {
+    display: flex;
+}
+
+.worker_info {
+    padding: 15px 15px 0 15px;
+    min-height: 200px;
+}
+
+.worker_name {
+    margin-bottom: 10px;
+    font-family: var(--second-family);
+font-weight: 700;
+font-size: 30px;
+}
+
+.worker_descr {
+    margin-bottom: 15px;
+    font-family: var(--font-family);
+font-weight: 200;
+font-size: 16px;
+}
+
+.worker_info {
+    background: url(/images/worker_bg.png);
+    width: 100%;
+}
+
+.workers_container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.image {
+    width: 200px;
+    height: 100%;
+}
+
+
+@media screen and (max-width:1200px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .head_container {
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .descr {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .title_text {
+        top: 33px;
+    }
+}
