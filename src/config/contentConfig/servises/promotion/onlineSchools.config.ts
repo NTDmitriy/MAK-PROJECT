@@ -1,3 +1,5 @@
+import { allReviwes } from "../../reviwes.config";
+
 export const onlineSchoolsPromotion = {
   hero: {
     basic: {
@@ -68,4 +70,5 @@ export const onlineSchoolsPromotion = {
       },
     ],
   },
+  reviwes: allReviwes,
 };

@@ -1,0 +1,96 @@
+.slide {
+  max-width: 460px;
+  transform-style: preserve-3d;
+}
+.slide .reviwe__wrapper {
+  transform: scale(0.9);
+  opacity: 0.5;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.swiper-slide-fully-visible .reviwe__wrapper {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.custom-navigation {
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.slider-button {
+  outline: none;
+  border: none;
+  aspect-ratio: 1;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: var(--accent-color);
+}
+
+.slider-button.prev svg {
+  transform: rotate(180deg);
+}
+
+.scrollbar {
+  top: 0;
+  background: rgba(0, 0, 0, 0.1);
+  height: 8px;
+  border-radius: 4px;
+}
+
+.swiper-scrollbar-drag {
+  max-width: 20px;
+
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1024px) {
+  .custom-navigation {
+    margin-top: -40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .custom-navigation {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .slide {
+    max-width: 285px;
+  }
+}
+
+.progressbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 5.25px;
+  width: 100%;
+  background: linear-gradient(90deg, #f4a21a 0%, #ffde00 50%, #f4a21a 100%);
+}
+
+.progressbar-fill {
+	position: absolute;
+	transition: width 0.5s ease-in-out;
+  z-index: 1;
+	min-height: 5.25px;
+  background: linear-gradient(270deg, #ff7a00 13.48%, #ffde00 100%);
+}
+
+.progressbar-fill::before {
+  content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAyMyAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQyMV8xMDkyKSI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMV80MjFfMTA5MikiPgo8cGF0aCBkPSJNMTcuODA2MiAtMTYuMjVMMjkuMDcxNyAzLjI2MjQyTDYuNTMwMzcgMTYuMjc2N0wtNC43MzUxMyAtMy4yMzU3NkwxNy44MDYyIC0xNi4yNVoiIGZpbGw9IiNGRjdBMDAiLz4KPC9nPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzQyMV8xMDkyIj4KPHJlY3Qgd2lkdGg9IjIyLjEiIGhlaWdodD0iMTMiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjg5OTkwMikiLz4KPC9jbGlwUGF0aD4KPGNsaXBQYXRoIGlkPSJjbGlwMV80MjFfMTA5MiI+CjxyZWN0IHdpZHRoPSIyNi4wMjYiIGhlaWdodD0iMjYuMDMyNSIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0ibWF0cml4KDAuODY2MDI2IDAuNSAwIDEgMC44OTk5MDIgLTE5LjUwNTkpIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==");
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}

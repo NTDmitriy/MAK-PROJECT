@@ -1,7 +1,7 @@
 .title__wrapper {
   position: relative;
   padding-top: 14px;
-  padding-bottom: clamp(40px, 6.7dvw, 135px);
+  padding-bottom: clamp(40px, 6.7dvw, 100px);
   padding-left: 50px;
   padding-right: 50px;
   text-align: left;
@@ -138,6 +138,7 @@
     text-align: left;
   }
   .title__wrapper {
+		margin-top: 30px;
     padding-left: 0;
 
   }

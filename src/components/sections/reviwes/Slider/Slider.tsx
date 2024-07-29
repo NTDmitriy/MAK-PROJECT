@@ -1,56 +1,72 @@
 "use client";
 
-import { EffectCoverflow, Virtual } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
+import { Container } from "@/components/ui/container/Container";
+import { FC, useRef, useState } from "react";
 import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/navigation";
+import "swiper/css/mousewheel";
 import "swiper/css/pagination";
-import "swiper/css/virtual";
+import { Mousewheel, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Reviwe } from "../Review/Reviwe";
+import { IReviwes } from "../Reviwes";
+import { NavigationButtons } from "./NavigationButtons";
+import "./Slider.css";
 
-export const Slider = () => {
+export const Slider: FC<IReviwes> = ({ reviwes }) => {
+  const sliderRef = useRef<any>(null);
+  const [progress, setProgress] = useState(0);
+
+  const updateProgress = (index: number) => {
+    const totalSlides = reviwes.length;
+    const progressPercentage = ((index + 1) / totalSlides) * 100;
+    setProgress(progressPercentage);
+  };
+
   return (
-    <Swiper
-      style={{ padding: "30px 0" }}
-      effect={"coverflow"}
-      grabCursor={true}
-      centeredSlides={true}
-      slidesPerView={"auto"}
-      speed={3200}
-      loop={true}
-      loopAdditionalSlides={5}
-      modules={[EffectCoverflow, Virtual]}
-      coverflowEffect={{
-        rotate: 20,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-      }}
-      autoplay={{
-        delay: 2000,
-        disableOnInteraction: false,
-      }}
-      className="my-swiper"
-    >
-      <SwiperSlide>1</SwiperSlide>
-      <SwiperSlide>2</SwiperSlide>
-      <SwiperSlide>3</SwiperSlide>
-      <SwiperSlide>4</SwiperSlide>
-      <SwiperSlide>5</SwiperSlide> <SwiperSlide>1</SwiperSlide>
-      <SwiperSlide>2</SwiperSlide>
-      <SwiperSlide>3</SwiperSlide>
-      <SwiperSlide>4</SwiperSlide>
-      <SwiperSlide>5</SwiperSlide> <SwiperSlide>1</SwiperSlide>
-      <SwiperSlide>2</SwiperSlide>
-      <SwiperSlide>3</SwiperSlide>
-      <SwiperSlide>4</SwiperSlide>
-      <SwiperSlide>5</SwiperSlide> <SwiperSlide>1</SwiperSlide>
-      <SwiperSlide>2</SwiperSlide>
-      <SwiperSlide>3</SwiperSlide>
-      <SwiperSlide>4</SwiperSlide>
-      <SwiperSlide>5</SwiperSlide>
-    </Swiper>
+    <>
+      {reviwes && (
+        <>
+          <Container>
+            <NavigationButtons sliderRef={sliderRef} />
+          </Container>
+
+          <Swiper
+            modules={[Mousewheel, Pagination]}
+            slidesPerView={"auto"}
+            initialSlide={3}
+            speed={800}
+            spaceBetween={0}
+            breakpoints={{
+              768: { spaceBetween: 20 },
+            }}
+            loop={true}
+            loopAddBlankSlides={true}
+            centeredSlides={true}
+            roundLengths={true}
+            mousewheel={true}
+            grabCursor={true}
+            watchSlidesProgress={true}
+            ref={sliderRef}
+            onSlideChange={(swiper) => {
+              updateProgress(swiper.realIndex);
+            }}
+          >
+            {reviwes.map((item, index: number) => (
+              <SwiperSlide key={index} className={"slide"}>
+                <div className="reviwe__wrapper">
+                  <Reviwe reviwe={item} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="progressbar">
+            <div
+              className="progressbar-fill"
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
+        </>
+      )}
+    </>
   );
 };
