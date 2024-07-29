@@ -1,5 +1,6 @@
 .button {
   position: relative;
+	z-index: 1;
   font-family: var(--third-family);
   font-weight: 200;
   font-size: clamp(14px, 1.3dvw, 20px);
