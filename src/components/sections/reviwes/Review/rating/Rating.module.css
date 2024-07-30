@@ -1,0 +1,20 @@
+.rating {
+  padding: 8px 10px 5px;
+
+  background: #f7f7f7;
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 120%;
+  color: #161616;
+  width: fit-content;
+}
+
+
+@media screen and (max-width: 1024px) {
+	.rating {
+		padding: 4px 6px 1px;
+	
+	}
+}

@@ -2,6 +2,18 @@
   max-width: 460px;
   transform-style: preserve-3d;
 }
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto;
+}
+.reviwe__wrapper  {
+	height: 100%;
+}
+
 .slide .reviwe__wrapper {
   transform: scale(0.9);
   opacity: 0.5;
@@ -14,6 +26,7 @@
 }
 
 .custom-navigation {
+	margin-top: -50px;
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
@@ -32,10 +45,20 @@
   justify-content: center;
   background-color: #fff;
   color: var(--accent-color);
+	transition: transform .3s ease-in-out;
 }
 
 .slider-button.prev svg {
   transform: rotate(180deg);
+}
+
+@media (hover:hover) {
+	.slider-button:hover {
+		transform: scale(1.1);
+	}
+}
+.slider-button:active {
+	transform: scale(0.95);
 }
 
 .scrollbar {
@@ -49,23 +72,6 @@
   max-width: 20px;
 
   border-radius: 4px;
-}
-
-@media screen and (max-width: 1024px) {
-  .custom-navigation {
-    margin-top: -40px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .custom-navigation {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .slide {
-    max-width: 285px;
-  }
 }
 
 .progressbar {
@@ -91,6 +97,21 @@
   width: 20px;
   height: 20px;
   top: 0;
-  right: 0;
+  right: 3px;
   z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .custom-navigation {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+  .slide {
+    max-width: 285px;
+  }
 }

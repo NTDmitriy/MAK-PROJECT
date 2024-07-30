@@ -1,0 +1,17 @@
+.more {
+	display: block;
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 120%;
+  color: #f4a21a;
+  cursor: pointer;
+	padding: 3px 3px 3px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (hover:hover) {
+  .more:hover {
+    transform: scale(1.1);
+  }
+}

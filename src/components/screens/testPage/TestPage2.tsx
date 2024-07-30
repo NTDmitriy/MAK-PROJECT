@@ -1,4 +1,5 @@
 import { Reviwes } from "@/components/sections/reviwes/Reviwes";
+import { Popup } from "@/components/ui/modals/popup/Popup";
 import { FC } from "react";
 
 interface ITestPage {
@@ -8,7 +9,8 @@ interface ITestPage {
 const TestPage2: FC<ITestPage> = ({ content }) => {
   return (
     <>
-      <Reviwes reviwes={content.reviwes}/>
+      <Popup />
+      <Reviwes reviwes={content.reviwes} />
     </>
   );
 };
