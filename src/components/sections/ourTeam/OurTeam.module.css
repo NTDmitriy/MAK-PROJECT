@@ -1,3 +1,6 @@
+
+
+
 .container {
     display: flex;
     gap: 25px;
@@ -12,6 +15,7 @@ font-weight: 100;
 font-size: clamp(15px,1.3dvw,8px);
 line-height: 130%;
 color: #fff;
+transition: all 0.3s linear;
 }
 
 
@@ -36,10 +40,14 @@ margin-bottom: 5px;
     flex-wrap: wrap;
 }
 
+
+
 .skill_name {
     border: 1px solid #FFDE00;
     padding: 5px 8px;
     font-family: var(--font-family);
+    color: #fff;
+    transition: all 0.3s linear;
 font-weight: 200;
 font-size: 14px;
 font-variant: small-caps;
@@ -62,6 +70,8 @@ color: #161616;
 initial-letter: 15px;
 padding: 5px 5px;
 text-indent: 10px;
+color: #fff;
+transition: all 0.3s linear;
 margin-bottom: 20px;
 }
 
@@ -85,10 +95,6 @@ color: #ffde00;
     margin-right: 10px;
 }
 
-.worker {
-    display: flex;
-}
-
 .worker_info {
     padding: 15px 15px 0 15px;
     min-height: 200px;
@@ -97,20 +103,65 @@ color: #ffde00;
 .worker_name {
     margin-bottom: 10px;
     font-family: var(--second-family);
+
 font-weight: 700;
 font-size: 30px;
+color: #fff;
+transition: all 0.3s linear;
 }
 
 .worker_descr {
     margin-bottom: 15px;
     font-family: var(--font-family);
 font-weight: 200;
+color: #fff;
+transition: all 0.3s linear;
 font-size: 16px;
+}
+
+
+
+.worker {
+    display: flex;
+    height: 100%;
+    cursor: pointer;
+    max-height: 210px;
+    transition: all 0.4s linear;
+    position: relative;
+}
+
+.worker::after {
+    content: '';
+    width: 2px;
+    background-color: transparent;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -2px;
+    transition: all 0.3s linear;
+}
+
+.worker:hover::after {
+    background-color: #FFDE00;
 }
 
 .worker_info {
     background: url(/images/worker_bg.png);
     width: 100%;
+    background-size: cover; /* Для корректного отображения фона */
+    transition: all 0.4s linear;
+}
+
+.worker:hover .worker_info {
+    background: url(/images/worker_bg_hover.png);
+    transition: all 0.4s linear;
+}
+
+.worker:hover .worker_descr,
+.worker:hover .worker_info,
+.worker:hover .worker_name,
+.worker:hover .skill_name {
+    color: #161616;
 }
 
 .workers_container {
@@ -124,6 +175,24 @@ font-size: 16px;
     height: 100%;
 }
 
+
+.img_container {
+    max-width: 700px; /* Ширина контейнера */
+    max-height: 540px; /* Высота контейнера */
+    display: flex; /* Центрирование содержимого */
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+    overflow: hidden; /* Обрезка излишков, если необходимо */
+}
+
+.image_main {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%; /* Сохранение пропорций изображения */ 
+    object-fit: contain; /* Умещение изображения внутри контейнера без обрезки */
+    display: block; /* Убирает лишние отступы вокруг изображения */
+    margin-bottom: 25px;
+}
 
 @media screen and (max-width:1200px) {
     .container {
