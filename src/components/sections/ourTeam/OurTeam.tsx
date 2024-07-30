@@ -82,7 +82,7 @@ export const OurTeam: FC = () => {
             <Container>
                 <BlockTitle
                     leftSide={true}
-                    descrSideway="Ключевые лица компании и их навыки <br />"
+                    descrSideway="Ключевые лица компании и их навыки"
                     background="КОМАНДА"
                 >
                     Наша команда
@@ -146,5 +146,4 @@ export const OurTeam: FC = () => {
             </Container>
         </Section>
     );
-}
 
