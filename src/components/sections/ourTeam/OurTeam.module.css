@@ -116,7 +116,7 @@
   display: flex;
   height: 100%;
   cursor: pointer;
-  max-height: 210px;
+  max-height: 200px;
   transition: all 0.4s linear;
   position: relative;
 }
@@ -158,12 +158,15 @@
 .workers_container {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .image {
   width: 200px;
-  height: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  
 }
 
 .img_container {

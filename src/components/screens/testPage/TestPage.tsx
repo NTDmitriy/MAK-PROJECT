@@ -1,8 +1,5 @@
-import { Hero } from "@/components/sections/hero/Hero";
-import { HowWorks } from "@/components/sections/howWorks/HowWorks";
+import { OurPartners } from "@/components/sections/ourPartners/OurPartners";
 import { OurTeam } from "@/components/sections/ourTeam/OurTeam";
-import { WhyUs } from "@/components/sections/whyUs/WhyUs";
-import { WhyUsServices } from "@/components/sections/whyUsServices/WhyUsServices";
 
 import { FC } from "react";
 
@@ -21,6 +18,7 @@ const TestPage: FC<ITestPage> = ({ content }) => {
       <WhyUs />
       <WhyUsServices /> */}
       <OurTeam />
+      <OurPartners />
     </>
 
     
