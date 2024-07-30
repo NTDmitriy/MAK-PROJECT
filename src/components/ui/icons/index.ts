@@ -1,3 +1,4 @@
+import IconClose from "./genericIcons/IconClose";
 import { IconDownArray } from "./genericIcons/IconDownArray";
 import { IconHome } from "./genericIcons/IconHome";
 import { IconLogo } from "./genericIcons/IconLogo";
@@ -22,8 +23,7 @@ import { IconVacanciesNav } from "./usefulIcons/IconVacanciesNav";
 export {
 	IconAboutNav,
 	IconAdvertisementNav,
-	IconArticlesNav,
-	IconDownArray,
+	IconArticlesNav, IconClose, IconDownArray,
 	IconEMail,
 	IconForceNav,
 	IconHome,

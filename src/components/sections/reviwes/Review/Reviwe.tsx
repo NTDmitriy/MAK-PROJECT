@@ -1,18 +1,21 @@
-import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
+import { SeconderyLinkButton } from "@/components/ui/links/seconderyLinkButton/SeconderyLinkButton";
 import { TReviwe } from "@/interfaces/types/pageTypes/products.type";
 import clsx from "clsx";
 import { FC } from "react";
+import { ButtonMore } from "./buttonMore/ButtonMore";
+import { RatingStars } from "./rating/Rating";
 import styles from "./Reviwe.module.css";
 
 interface IReviwe {
   reviwe: TReviwe;
+	isFull?: boolean;
 }
 
-export const Reviwe: FC<IReviwe> = ({ reviwe }) => {
+export const Reviwe: FC<IReviwe> = ({ reviwe, isFull }) => {
   const { avatar, name, position, rating, text, caseUrl } = reviwe;
 
   return (
-    <div className={clsx(styles.reviwe)}>
+    <div className={clsx(styles.reviwe, isFull ? styles.reviwe__full : '')}>
       <div className={styles.head}>
         <img
           className={styles.avatar}
@@ -25,15 +28,15 @@ export const Reviwe: FC<IReviwe> = ({ reviwe }) => {
         </div>
       </div>
       <div className={styles.desrc}>
-        <div className={styles.rating}></div>
-        <div className={styles.revive__text}>{text}</div>
-        <p className={styles.revive__text__more}>Читать полностью</p>
+        <RatingStars rating={rating} />
+        <div className={styles.reviwe__text}>{text}</div>
+				{!isFull &&  <ButtonMore reviwe={reviwe} />}	
       </div>
       <div className={styles.btn__group}>
         {caseUrl && (
-          <SeconderyButton className={styles.btn}>
+          <SeconderyLinkButton className={styles.btn} href={caseUrl}>
             Смотреть кейс{" "}
-          </SeconderyButton>
+          </SeconderyLinkButton>
         )}
       </div>
     </div>

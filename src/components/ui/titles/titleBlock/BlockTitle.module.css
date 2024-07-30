@@ -1,7 +1,7 @@
 .title__wrapper {
   position: relative;
   padding-top: 14px;
-  padding-bottom: clamp(40px, 6.7dvw, 100px);
+  padding-bottom: clamp(40px, 6.7dvw, 135px);
   padding-left: 50px;
   padding-right: 50px;
   text-align: left;

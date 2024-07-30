@@ -26,13 +26,9 @@ export const useStopScroll = (condition: boolean) => {
  
 		const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-	
-
-
     if (scrollHeight !== 0) {
       document.documentElement.style.overflowY = condition ? "hidden" : "auto";
-      document.body.style.overflowY = condition ? "hidden" : "auto";
-      document.body.style.paddingRight = condition ? `${scrollWidth}px` : "0px";
+      document.documentElement.style.paddingRight = condition ? `${scrollWidth}px` : "0px";
     }
   }, [condition, scrollWidth]);
 };
