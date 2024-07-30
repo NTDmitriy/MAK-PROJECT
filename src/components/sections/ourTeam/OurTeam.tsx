@@ -1,5 +1,3 @@
-'use client'
-
 import { Container } from "@/components/ui/container/Container";
 import { QouteIcon } from "@/components/ui/icons/genericIcons/QouteIcon";
 import { Section } from "@/components/ui/section/Section";
@@ -148,4 +146,4 @@ export const OurTeam: FC = () => {
             </Container>
         </Section>
     );
-}
+

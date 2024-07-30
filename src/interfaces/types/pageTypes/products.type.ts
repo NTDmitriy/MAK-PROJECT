@@ -28,5 +28,5 @@ export type TReviwe = {
   avatar: string;
   rating: number;
   text: string;
-  caseUrl?: string;
+  caseUrl?: string | null;
 };
