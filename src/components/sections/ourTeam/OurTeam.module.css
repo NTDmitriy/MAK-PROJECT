@@ -1,217 +1,207 @@
-
-
-
 .container {
-    display: flex;
-    gap: 25px;
+  display: flex;
+  gap: 25px;
 }
 
 .title_text {
-    position: absolute;
-    top: 43px;
-    right: 0;
-    font-family: var(--font-family);
-font-weight: 100;
-font-size: clamp(15px,1.3dvw,8px);
-line-height: 130%;
-color: #fff;
-transition: all 0.3s linear;
+  position: absolute;
+  top: 43px;
+  right: 0;
+  font-family: var(--font-family);
+  font-weight: 100;
+  font-size: clamp(15px, 1.3dvw, 8px);
+  line-height: 130%;
+  color: #fff;
+  transition: all 0.3s linear;
 }
 
-
-
 .head_container {
-    display: flex;
-    flex-direction: column;
-    max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
 }
 
 .title {
-    font-family: var(--second-family);
-font-weight: 700;
-font-size: clamp(50px,1.3dvw,20px);
-margin-bottom: 5px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: clamp(50px, 1.3dvw, 20px);
+  margin-bottom: 5px;
 }
 
 .skills {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
-
-
 .skill_name {
-    border: 1px solid #FFDE00;
-    padding: 5px 8px;
-    font-family: var(--font-family);
-    color: #fff;
-    transition: all 0.3s linear;
-font-weight: 200;
-font-size: 14px;
-font-variant: small-caps;
+  border: 1px solid #ffde00;
+  padding: 5px 8px;
+  font-family: var(--font-family);
+  color: #fff;
+  transition: all 0.3s linear;
+  font-weight: 200;
+  font-size: 14px;
+  font-variant: small-caps;
 }
 
 .image {
-    margin-bottom: 15px;
-    display: block;
-    width: 100%;
-    height: 100%;
+  margin-bottom: 15px;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .achievment {
-background: linear-gradient(to right, #FFDE00, #FFBB00, #FF7A00);
-font-family: var(--font-family);
-font-weight: 200;
-font-size: 24px;
-line-height: 120%;
-color: #161616;
-initial-letter: 15px;
-padding: 5px 5px;
-text-indent: 10px;
-color: #fff;
-transition: all 0.3s linear;
-margin-bottom: 20px;
+  background: linear-gradient(to right, #ffde00, #ffbb00, #ff7a00);
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 120%;
+  color: #161616;
+  initial-letter: 15px;
+  padding: 5px 5px;
+  text-indent: 10px;
+  color: #fff;
+  transition: all 0.3s linear;
+  margin-bottom: 20px;
 }
 
 .descr {
-    font-family: var(--font-family);
-font-weight: 200;
-font-size: 20px;
-margin-bottom: 15px;
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 .quote {
-    font-family: var(--font-family);
-font-style: italic;
-font-weight: 200;
-font-size: 24px;
-line-height: 130%;
-text-align: right;
-color: #ffde00;
+  font-family: var(--font-family);
+  font-style: italic;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: right;
+  color: #ffde00;
 }
 .quote_span {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .worker_info {
-    padding: 15px 15px 0 15px;
-    min-height: 200px;
+  padding: 15px 15px 0 15px;
+  min-height: 200px;
 }
 
 .worker_name {
-    margin-bottom: 10px;
-    font-family: var(--second-family);
+  margin-bottom: 10px;
+  font-family: var(--second-family);
 
-font-weight: 700;
-font-size: 30px;
-color: #fff;
-transition: all 0.3s linear;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+  transition: all 0.3s linear;
 }
 
 .worker_descr {
-    margin-bottom: 15px;
-    font-family: var(--font-family);
-font-weight: 200;
-color: #fff;
-transition: all 0.3s linear;
-font-size: 16px;
+  margin-bottom: 15px;
+  font-family: var(--font-family);
+  font-weight: 200;
+  color: #fff;
+  transition: all 0.3s linear;
+  font-size: 16px;
 }
 
-
-
 .worker {
-    display: flex;
-    height: 100%;
-    cursor: pointer;
-    max-height: 210px;
-    transition: all 0.4s linear;
-    position: relative;
+  display: flex;
+  height: 100%;
+  cursor: pointer;
+  max-height: 210px;
+  transition: all 0.4s linear;
+  position: relative;
 }
 
 .worker::after {
-    content: '';
-    width: 2px;
-    background-color: transparent;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -2px;
-    transition: all 0.3s linear;
+  content: "";
+  width: 2px;
+  background-color: transparent;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -2px;
+  transition: all 0.3s linear;
 }
 
 .worker:hover::after {
-    background-color: #FFDE00;
+  background-color: #ffde00;
 }
 
 .worker_info {
-    background: url(/images/worker_bg.png);
-    width: 100%;
-    background-size: cover; /* Для корректного отображения фона */
-    transition: all 0.4s linear;
+  background: url(/images/worker_bg.png);
+  width: 100%;
+  background-size: cover; /* Для корректного отображения фона */
+  transition: all 0.4s linear;
 }
 
 .worker:hover .worker_info {
-    background: url(/images/worker_bg_hover.png);
-    transition: all 0.4s linear;
+  background: url(/images/worker_bg_hover.png);
+  transition: all 0.4s linear;
 }
 
 .worker:hover .worker_descr,
 .worker:hover .worker_info,
 .worker:hover .worker_name,
 .worker:hover .skill_name {
-    color: #161616;
+  color: #161616;
 }
 
 .workers_container {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .image {
-    width: 200px;
-    height: 100%;
+  width: 200px;
+  height: 100%;
 }
 
-
 .img_container {
-    max-width: 700px; /* Ширина контейнера */
-    max-height: 540px; /* Высота контейнера */
-    display: flex; /* Центрирование содержимого */
-    align-items: center; /* Центрирование по вертикали */
-    justify-content: center; /* Центрирование по горизонтали */
-    overflow: hidden; /* Обрезка излишков, если необходимо */
+  max-width: 700px; /* Ширина контейнера */
+  max-height: 540px; /* Высота контейнера */
+  display: flex; /* Центрирование содержимого */
+  align-items: center; /* Центрирование по вертикали */
+  justify-content: center; /* Центрирование по горизонтали */
+  overflow: hidden; /* Обрезка излишков, если необходимо */
 }
 
 .image_main {
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%; /* Сохранение пропорций изображения */ 
-    object-fit: contain; /* Умещение изображения внутри контейнера без обрезки */
-    display: block; /* Убирает лишние отступы вокруг изображения */
-    margin-bottom: 25px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%; /* Сохранение пропорций изображения */
+  object-fit: contain; /* Умещение изображения внутри контейнера без обрезки */
+  display: block; /* Убирает лишние отступы вокруг изображения */
+  margin-bottom: 25px;
 }
 
-@media screen and (max-width:1200px) {
-    .container {
-        flex-direction: column;
-        justify-content: center;
-    }
-    .head_container {
-        max-width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-    .descr {
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    .title_text {
-        top: 33px;
-    }
-    .achievment {
-        text-align: center;
-    }
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .head_container {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .descr {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .title_text {
+    top: 33px;
+  }
+  .achievment {
+    text-align: center;
+  }
 }
