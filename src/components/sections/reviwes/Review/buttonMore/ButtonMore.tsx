@@ -11,7 +11,7 @@ interface IButtonMore {
 export const ButtonMore: FC<PropsWithChildren<IButtonMore>> = ({ reviwe }) => {
   return (
     <Popup
-      initComponent={<span className={styles.more}>Читать полностью</span>}
+      initComponent={<button className={styles.more}>Читать полностью</button>}
       contentComponent={<Reviwe reviwe={reviwe} isFull={true} />}
     />
   );

@@ -1,6 +1,6 @@
 .section {
   width: 100%;
   max-width: 100dvw;
-
+	overflow: hidden;
   margin-bottom: clamp(50px, 5.3dvw, 100px) ;
 }

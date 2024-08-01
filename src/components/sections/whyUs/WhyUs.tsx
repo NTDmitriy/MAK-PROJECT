@@ -11,9 +11,7 @@ export const WhyUs: FC = () => {
     <Container>
       <BlockTitle
         leftSide={false}
-        descrSideway=""
-        background=""
-        className={styles.whyUs__title}
+
       >
         Почему нас выбирают
       </BlockTitle>

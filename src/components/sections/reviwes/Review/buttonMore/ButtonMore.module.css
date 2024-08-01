@@ -8,6 +8,10 @@
   cursor: pointer;
 	padding: 3px 3px 3px 0;
   transition: transform 0.3s ease-in-out;
+	max-width: fit-content;
+  background: none;
+  outline: none;
+  border: none;
 }
 
 @media (hover:hover) {

@@ -1,10 +1,7 @@
 .hero__container {
-  --pt: 140px;
-  padding-top: var(--pt);
-  padding-bottom: 120px;
+  padding-top: clamp(30px, 8dvw ,140px);
+  padding-bottom: clamp(80px, 8dvw ,120px);
   position: relative;
-
-	
 }
 
 .title {
@@ -13,7 +10,7 @@
   font-size: 70px;
   font-size: clamp(24px, 3.7dvw, 70px);
   line-height: 114%;
-  max-width: 1024px;
+
   margin-bottom: clamp(10px, 2.65dvw, 50px);
 }
 
@@ -51,7 +48,7 @@
 
 .img__wrapper {
   position: absolute;
-  top: -85px;
+  bottom: -5px;
   right: calc(50% - 50dvw);
   max-width: 1360px;
   z-index: -1;
@@ -68,6 +65,7 @@
   .hero__container {
     display: flex;
     flex-direction: column;
+		padding-top: 30px;
   }
 
   .img__wrapper {

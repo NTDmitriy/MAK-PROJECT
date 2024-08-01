@@ -5,7 +5,7 @@ import { NextPage } from "next";
 const Test2: NextPage = () => {
   return (
     <>
-      <TestPage2 content={onlineSchoolsPromotion} />
+      <>нишевое продвижение</>
     </>
   );
 };

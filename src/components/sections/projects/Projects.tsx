@@ -21,7 +21,6 @@ export const Projects: FC<PropsWithChildren<ICases>> = ({
     <Section
       {...rest}
       className={clsx(styles.hero, className)}
-      style={{ padding: "100px 0 0 0" }}
     >
       <Container>
         <BlockTitle
