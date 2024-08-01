@@ -5,7 +5,7 @@ import { FC } from "react";
 import styles from "./OurClients.module.css";
 
 const icons = [
-  { image: "/images/client1.svg" },
+  { image: "/images/client1.svg"},
   { image: "/images/client2.svg" },
   { image: "/images/client3.svg" },
   { image: "/images/client4.svg" },
@@ -26,8 +26,9 @@ export const OurClients: FC = () => {
           Наши Партнеры
         </BlockTitle>
         <div className={styles.container}>
-          {icons.map((icon) => (
+          {icons.map((icon, index) => (
             <img
+            key={index}
               src={icon.image}
               className={`${styles.image} ${styles.hoverable}`}
             />

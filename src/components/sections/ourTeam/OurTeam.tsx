@@ -80,7 +80,7 @@ export const OurTeam: FC = () => {
     ];
 
     return (
-        <Section>
+        <Section className={styles.ourteam}>
             <Container>
                 <BlockTitle
                     leftSide={true}

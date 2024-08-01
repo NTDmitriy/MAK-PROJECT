@@ -1,4 +1,5 @@
 import { OurClients } from "@/components/sections/ourPartners/OurClients";
+import { OurServices } from "@/components/sections/ourServices/OurServices";
 import { OurTeam } from "@/components/sections/ourTeam/OurTeam";
 
 import { FC } from "react";
@@ -19,6 +20,7 @@ const TestPage: FC<ITestPage> = ({ content }) => {
       <WhyUsServices /> */}
       <OurTeam />
       <OurClients />
+      <OurServices />
     </>
 
     

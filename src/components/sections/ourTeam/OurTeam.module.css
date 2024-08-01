@@ -103,6 +103,9 @@
   transition: all 0.3s linear;
 }
 
+.ourteam {
+  padding-top: 50px;
+}
 .worker_descr {
   margin-bottom: 15px;
   font-family: var(--font-family);
