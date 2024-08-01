@@ -12,12 +12,12 @@ export const HeaderDesktop: FC<PropsWithChildren<IGenericElementProps>> = ({
 }) => {
 
   return (
-    <header {...rest} className={clsx(styles.header, className)}>
+    <div {...rest} className={clsx(styles.desktop, className)}>
       <DesktopNav />
       <div className={styles.logo}>
         <IconLogo />
       </div>
       <DesktopBtnGroup />
-    </header>
+    </div>
   );
 };

@@ -48,7 +48,7 @@ export const MobileSubMenu: FC<PropsWithChildren<IGenericElementProps>> = ({
                   <Link
                     href={`${subMenuContent.url}${page.url}`}
                     className={styles.link}
-										onClick={handleClose}
+                    onClick={handleClose}
                   >
                     <span className={styles.page__icon}>
                       {page.icon && <page.icon />}
@@ -61,7 +61,12 @@ export const MobileSubMenu: FC<PropsWithChildren<IGenericElementProps>> = ({
                       onClick={() => handleOpenDropdown(index)}
                     >
                       <span className={styles.sub__btn}>
-                        <IconRightArray className={styles.svg} />
+                        <IconRightArray
+                          className={clsx(
+                            styles.svg,
+                            openDropdown === index ? styles.open : ""
+                          )}
+                        />
                       </span>
                     </button>
                   )}
@@ -79,7 +84,7 @@ export const MobileSubMenu: FC<PropsWithChildren<IGenericElementProps>> = ({
                           <Link
                             href={`${subMenuContent.url}${subPage.url}`}
                             className={styles.sub__item__link}
-														onClick={handleClose}
+                            onClick={handleClose}
                           >
                             {subPage.name}
                           </Link>

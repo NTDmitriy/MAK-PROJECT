@@ -1,0 +1,24 @@
+.header {
+	position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+}
+
+@media screen and (max-width: 1024px) {
+  .header .desktop {
+		display: none;
+	}
+
+	.header {
+		position: static;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+
+	
+  .header .mobile {
+		display: none;
+	}
+}

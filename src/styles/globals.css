@@ -67,3 +67,6 @@ footer {
   margin-top: auto;
 }
 
+.stop__scroll {
+	overflow: hidden;
+}

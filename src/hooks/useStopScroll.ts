@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useEffect, useState } from "react";
 
 export const useStopScroll = (condition: boolean) => {
@@ -23,13 +23,16 @@ export const useStopScroll = (condition: boolean) => {
   }, []);
 
   useEffect(() => {
- 
-		const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
 
     if (scrollHeight !== 0) {
-      document.body.style.overflowY = condition ? "hidden" : "auto";
+      if (condition) document.body.classList.add("stop__scroll");
       document.body.style.paddingRight = condition ? `${scrollWidth}px` : "0px";
     }
+    return () => {
+      document.body.classList.remove("stop__scroll");
+    };
   }, [condition, scrollWidth]);
 };
-

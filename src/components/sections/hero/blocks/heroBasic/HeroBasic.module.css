@@ -2,6 +2,7 @@
   padding-top: clamp(30px, 8dvw ,140px);
   padding-bottom: clamp(80px, 8dvw ,120px);
   position: relative;
+
 }
 
 .title {
