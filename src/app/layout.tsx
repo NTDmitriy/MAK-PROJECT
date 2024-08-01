@@ -1,5 +1,4 @@
-import { HeaderDesktop } from "@/components/layout/headerDesktop/HeaderDesktop";
-import { HeaderMobile } from "@/components/layout/headerMobile/HeaderMobile";
+import { Header } from "@/components/layout/header/Header";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
@@ -18,8 +17,7 @@ export default function RootLayout({
     <html lang="ru">
       <body suppressHydrationWarning={true}>
         <div className="page">
-          <HeaderDesktop />
-          <HeaderMobile />
+          <Header />
           <main>{children}</main>
           <footer>footer</footer>
         </div>

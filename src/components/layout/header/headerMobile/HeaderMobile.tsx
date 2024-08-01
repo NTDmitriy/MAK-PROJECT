@@ -14,7 +14,7 @@ export const HeaderMobile: FC<PropsWithChildren<IGenericElementProps>> = ({
   ...rest
 }) => {
   return (
-    <header {...rest} className={clsx(styles.header, className)}>
+    <div {...rest} className={clsx(styles.mobile, className)}>
       <Link className={styles.button} href={DASHBOARD_PAGES.HOME.url}>
         <IconHomeNav />
       </Link>
@@ -23,6 +23,6 @@ export const HeaderMobile: FC<PropsWithChildren<IGenericElementProps>> = ({
       <button className={styles.button}>Обсудить проект</button>
 
       <BottomNavigation />
-    </header>
+    </div>
   );
 };

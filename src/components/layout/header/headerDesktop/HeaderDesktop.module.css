@@ -1,0 +1,25 @@
+.desktop {
+  padding: 0 clamp(20px, 2.1dvw, 40px);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 54px 1fr;
+  align-content: center;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.desktop::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: var(--background-loyout);
+  backdrop-filter: blur(8px);
+  z-index: -1;
+}

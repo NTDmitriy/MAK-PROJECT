@@ -100,7 +100,13 @@
 
 .svg {
   transform: rotate(90deg);
+	transition: transform .3s ease-in-out;
 }
+
+.svg.open {
+  transform: rotate(270deg);
+}
+
 
 .button__shadow:active span {
   background-color: rgba(248, 248, 248, 0.2);
