@@ -103,6 +103,9 @@
   transition: all 0.3s linear;
 }
 
+.ourteam {
+  padding-top: 50px;
+}
 .worker_descr {
   margin-bottom: 15px;
   font-family: var(--font-family);
@@ -116,7 +119,7 @@
   display: flex;
   height: 100%;
   cursor: pointer;
-  max-height: 210px;
+  max-height: 200px;
   transition: all 0.4s linear;
   position: relative;
 }
@@ -164,23 +167,26 @@
 .image {
   width: 200px;
   height: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+
 }
 
 .img_container {
-  max-width: 700px; /* Ширина контейнера */
-  max-height: 540px; /* Высота контейнера */
-  display: flex; /* Центрирование содержимого */
-  align-items: center; /* Центрирование по вертикали */
-  justify-content: center; /* Центрирование по горизонтали */
-  overflow: hidden; /* Обрезка излишков, если необходимо */
+  max-width: 700px; 
+  max-height: 540px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  overflow: hidden
 }
 
 .image_main {
   max-width: 100%;
   max-height: 100%;
-  width: 100%; /* Сохранение пропорций изображения */
-  object-fit: contain; /* Умещение изображения внутри контейнера без обрезки */
-  display: block; /* Убирает лишние отступы вокруг изображения */
+  width: 100%; 
+  object-fit: contain; 
+  display: block; 
   margin-bottom: 25px;
 }
 
