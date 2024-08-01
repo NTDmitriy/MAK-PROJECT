@@ -19,14 +19,14 @@ export const HeroInfoProduct: FC<IHeroInfoProduct> = ({ infoContent }) => {
                 <p className={styles.text}> {infoContent.description}</p>
               </div>
 
-              <picture>
+              <picture >
                 <source
                   type="image/webp"
                   srcSet={`/images/${infoContent.image}.webp`}
                 />
-                <img
+                <img className={styles.image}
                   src={`/images/${infoContent.image}.jpg`}
-                  className={styles.image}
+                  
                   alt="Онлайн-школы и инфобизнес"
                 />
               </picture>

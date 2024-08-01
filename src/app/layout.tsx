@@ -1,7 +1,5 @@
-
-
-
-import { HeaderDesktop } from "@/components/globalLayout/headerDesktop/HeaderDesktop";
+import { HeaderDesktop } from "@/components/layout/headerDesktop/HeaderDesktop";
+import { HeaderMobile } from "@/components/layout/headerMobile/HeaderMobile";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
@@ -18,12 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body
-        // className={clsx(roboto.className, inter.className)}
-        suppressHydrationWarning={true}
-      >
+      <body suppressHydrationWarning={true}>
         <div className="page">
           <HeaderDesktop />
+          <HeaderMobile />
           <main>{children}</main>
           <footer>footer</footer>
         </div>

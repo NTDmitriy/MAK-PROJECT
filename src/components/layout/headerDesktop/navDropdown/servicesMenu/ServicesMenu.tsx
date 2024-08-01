@@ -1,10 +1,9 @@
 "use client";
 
 import NavLinkDropdown from "@/components/ui/links/navLinkDropdown/NavLinkDropdown";
-import { SERVISES_NAV_BAR_CONFIG } from "@/config/navbar.config";
 import { DASHBOARD_PAGES } from "@/config/urlConfig/all-pages.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
-import clsx from 'clsx';
+import clsx from "clsx";
 import Link from "next/link";
 import {
 	FC,
@@ -19,7 +18,7 @@ export const ServicesMenu: FC<PropsWithChildren<IGenericElementProps>> = ({
   className,
   ...rest
 }) => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState<number | null>(null);
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -29,7 +28,7 @@ export const ServicesMenu: FC<PropsWithChildren<IGenericElementProps>> = ({
     <>
       <div {...rest} className={styles.content}>
         <ul role="tablist" className={styles.tablist}>
-          {SERVISES_NAV_BAR_CONFIG.map((service, index) => (
+          {DASHBOARD_PAGES.SERVICES.childrens.map((service, index) => (
             <li key={index}>
               <NavLinkDropdown
                 role="tab"
@@ -41,41 +40,46 @@ export const ServicesMenu: FC<PropsWithChildren<IGenericElementProps>> = ({
                 arrayRight={true}
                 isActive={value === index ? true : false}
               >
-							{service.icon({})}
+                <service.icon />
                 {service.name}
               </NavLinkDropdown>
             </li>
           ))}
         </ul>
-
-        {SERVISES_NAV_BAR_CONFIG.map((service, index) => (
-          <CustomTabPanel
-            className={styles.tab__panel}
-            key={index}
-            value={value}
-            index={index}
-          >
-            {service.childrens.map((child, childIndex) => (
-              <Link
-                href={`${DASHBOARD_PAGES.SERVICES.url}${child.url}` }
-                key={childIndex}
-                className={styles.tab__panel__item}
+        {value !== null && (
+          <>
+            {DASHBOARD_PAGES.SERVICES.childrens.map((service, index) => (
+              <CustomTabPanel
+                className={styles.tab__panel}
+                key={index}
+                value={value}
+                index={index}
               >
-                <img
-                  src={`/images/${child.image}.png`}
-                  alt={child.name}
-                  title={child.name}
-                />
-                <div className={styles.item__descr__wrapper}>
-                  <h3 className={styles.item__descr__title}>{child.name}</h3>
-                  <p className={styles.item__descr__text}>
-                    {child.description}
-                  </p>
-                </div>
-              </Link>
+                {service.childrens.map((child, childIndex) => (
+                  <Link
+                    href={`${DASHBOARD_PAGES.SERVICES.url}${child.url}`}
+                    key={childIndex}
+                    className={styles.tab__panel__item}
+                  >
+                    <img
+                      src={`/images/${child.image}.jpg`}
+                      alt={child.name}
+                      title={child.name}
+                    />
+                    <div className={styles.item__descr__wrapper}>
+                      <h3 className={styles.item__descr__title}>
+                        {child.name}
+                      </h3>
+                      <p className={styles.item__descr__text}>
+                        {child.description}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </CustomTabPanel>
             ))}
-          </CustomTabPanel>
-        ))}
+          </>
+        )}
       </div>
     </>
   );

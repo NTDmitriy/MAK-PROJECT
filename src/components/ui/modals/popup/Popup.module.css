@@ -63,12 +63,6 @@
   opacity: 0;
 }
 
-.init_button {
-  max-width: fit-content;
-  background: none;
-  outline: none;
-  border: none;
-}
 
 .drawer.open {
   visibility: unset;

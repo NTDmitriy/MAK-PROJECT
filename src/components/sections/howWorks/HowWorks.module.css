@@ -42,10 +42,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .how_works {
-    padding-top: 30px;
-  }
-
 	.card_container {
 		gap: 40px;
 	}

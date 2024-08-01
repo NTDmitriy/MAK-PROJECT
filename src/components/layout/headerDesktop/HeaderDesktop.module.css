@@ -1,8 +1,8 @@
 .header {
-	position: sticky;
-	width: 100%;
-	top: 0;
-	z-index: 5;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 5;
   padding: 0 clamp(20px, 2.1dvw, 40px);
   display: grid;
   grid-template-columns: 1fr 54px 1fr;
@@ -17,10 +17,8 @@
   align-items: center;
 }
 
-
 @media screen and (max-width: 1024px) {
-
-	.header {
-		display: none;
-	}
+  .header {
+    display: none;
+  }
 }

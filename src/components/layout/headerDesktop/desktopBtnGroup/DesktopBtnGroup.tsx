@@ -7,13 +7,12 @@ import {
 } from "@/components/ui/icons";
 import { SocialLink } from "@/components/ui/links/socialLink/SocialLink";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
+import { IGenericElementProps } from "@/interfaces/elements.interface";
 import clsx from "clsx";
-import { FC, HTMLAttributes, PropsWithChildren } from "react";
+import { FC, PropsWithChildren } from "react";
 import styles from "./DesktopBtnGroup.module.css";
 
-interface IDesktopBtnGroup extends HTMLAttributes<HTMLElement> {}
-
-export const DesktopBtnGroup: FC<PropsWithChildren<IDesktopBtnGroup>> = ({
+export const DesktopBtnGroup: FC<PropsWithChildren<IGenericElementProps>> = ({
   className,
   ...rest
 }) => {

@@ -87,8 +87,11 @@ export const NavDropdown: FC<PropsWithChildren<INavDropdown>> = ({
       >
         {children}
       </div>
+
       <div className={clsx(styles.dropdown, styles.hidden)} ref={dropdownRef}>
-        {content}
+       
+					{content}
+					
       </div>
     </div>
   );

@@ -30,19 +30,11 @@
   margin: 0;
 }
 
-html,
-body {
-  max-width: 100dvw;
-  font-style: normal;
-  
-}
-html {
-	overflow-x: hidden;
-}
-
 body {
   color: var(--text-primary);
+	font-style: normal;
   background: var(--background-color);
+
 }
 
 a,
@@ -74,3 +66,4 @@ button:active {
 footer {
   margin-top: auto;
 }
+
