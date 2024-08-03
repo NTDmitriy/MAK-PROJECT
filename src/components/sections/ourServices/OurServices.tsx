@@ -1,12 +1,31 @@
 import { Container } from "@/components/ui/container/Container";
+import { WhyUsIcon } from "@/components/ui/icons/genericIcons/WhyUsIcon";
+import NavLink from "@/components/ui/links/navLink/NavLink";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
+import { PROMOTION_DASHBOARD_PAGES } from "@/config/urlConfig/promotion-pages.config";
 import { FC } from "react";
 import styles from "./OurServices.module.css";
-import { IconOurServicesRound } from "@/components/ui/icons/serviseIcons/IconOurServicesRound";
-import { WhyUsIcon } from "@/components/ui/icons/genericIcons/WhyUsIcon";
-
 export const OurServices: FC = () => {
+  const {
+    name: promoName,
+    url: promoUrl,
+    childrens: promoChildrens,
+  } = PROMOTION_DASHBOARD_PAGES.PROMOTION as Promotion;
+
+  interface Child {
+    name: string;
+    url: string;
+    image: string;
+    description: string;
+  }
+
+  interface Promotion {
+    name: string;
+    url: string;
+    childrens: Child[];
+  }
+
   return (
     <Section>
       <Container>
@@ -15,18 +34,34 @@ export const OurServices: FC = () => {
           background="НАШИ УСЛУГИ"
           descrSideway={
             <>
-              <span key="1">Наши решения адаптированы под различные ниши и помогают</span>
-              <span key="2" className={styles.yellow}>
-                 эффективно привлекать клиентов 
+              <span key="1">
+                Наши решения адаптированы под различные ниши и помогают
               </span>
-               <span key="3">и повышать узнаваемость вашего бренда</span>
+              <span key="2" className={styles.yellow}>
+                эффективно привлекать клиентов
+              </span>
+              <span key="3">и повышать узнаваемость вашего бренда</span>
             </>
           }
         >
           Наши услуги
         </BlockTitle>
         <div className={styles.container}>
-        <div className={`${styles.card} ${styles.card1}`} >
+          <NavLink href={promoUrl}>
+            <div className={`${styles.card} ${styles.card4}`}>
+              <div className={styles.round_icon}></div>
+              <h3 className={styles.title}>{promoName}</h3>
+              
+                <div className={styles.round_icon}></div>
+                
+                {promoChildrens.map((child, index) => (
+                  <p className={styles.text}>{child.name}</p>
+                ))}
+                <WhyUsIcon width={90} height={90} className={styles.icon} />
+              
+            </div>
+          </NavLink>
+          {/* <div className={`${styles.card} ${styles.card1}`} >
           <div className={styles.round_icon}></div>
             <h3 className={styles.title}>Реклама</h3>
             <p className={styles.text}>Яндекс Директ</p>
@@ -64,11 +99,9 @@ export const OurServices: FC = () => {
             width={90}
             height={90}
             className={styles.icon}/>
-        </div>
-        <div className={styles.form }>                                                                                                                     
-          
-        </div>
-        <div className={`${styles.card} ${styles.card4}`} >
+        </div> */}
+          <div className={styles.form}></div>
+          {/* <div className={`${styles.card} ${styles.card4}`} >
         <div className={styles.round_icon}></div>
             <h3 className={styles.title}>Нишевое продвижение</h3>
             <p className={styles.text}>Онлайн-школ</p>
@@ -80,12 +113,9 @@ export const OurServices: FC = () => {
             width={90}
             height={90}
             className={styles.icon}/>
+        </div> */}
         </div>
-      
-        
-      </div>
       </Container>
-      
     </Section>
   );
 };
