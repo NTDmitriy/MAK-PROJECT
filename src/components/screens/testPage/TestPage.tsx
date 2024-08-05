@@ -1,6 +1,8 @@
+import FAQ from "@/components/sections/faq/FAQ";
 import { OurClients } from "@/components/sections/ourPartners/OurClients";
 import { OurServices } from "@/components/sections/ourServices/OurServices";
 import { OurTeam } from "@/components/sections/ourTeam/OurTeam";
+import FAQ_HOME_PAGE from "@/config/contentConfig/FAQ/homePageFaq";
 
 import { FC } from "react";
 
@@ -18,9 +20,10 @@ const TestPage: FC<ITestPage> = ({ content }) => {
       <HowWorks />
       <WhyUs />
       <WhyUsServices /> */}
-      <OurTeam />
+      {/* <OurTeam />
       <OurClients />
-      <OurServices />
+      <OurServices /> */}
+      <FAQ items={FAQ_HOME_PAGE} />
     </>
 
     

@@ -1,0 +1,67 @@
+
+
+.icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transition: transform 0.3s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+
+.container {
+    gap: 20px;
+    display: flex;
+}
+
+.form {
+    min-width: 50%;
+    background-color: aqua;
+}
+
+.accordion {
+    position: relative;
+
+    width: 100%;
+    
+}
+
+.section {
+    padding: 50px 50px;
+}
+
+.title {
+    max-width: 500px;
+    font-family: var(--second-family);
+font-weight: 700;
+font-size: clamp(20px,5.3dvw,30px);
+margin-bottom: 15px;
+}
+
+.accordionContent {
+    font-family: var(--font-family);
+font-weight: 200;
+font-size: 16px;
+}
+
+.accordionItem {
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 30px;
+    background-color: #161616;
+    padding: 30px 20px 20px 20px;
+}
+
+@media screen and (max-width:1280px) {
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .form {
+        min-height: 100px;
+        min-width: 100px;
+    }
+}
