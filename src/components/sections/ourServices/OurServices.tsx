@@ -47,21 +47,19 @@ export const OurServices: FC = () => {
           Наши услуги
         </BlockTitle>
         <div className={styles.container}>
-          <NavLink href={promoUrl}>
+          
             <div className={`${styles.card} ${styles.card4}`}>
               <div className={styles.round_icon}></div>
               <h3 className={styles.title}>{promoName}</h3>
               
                 <div className={styles.round_icon}></div>
                 
-                {promoChildrens.map((child, index) => (
-                  <p className={styles.text}>{child.name}</p>
-                ))}
+                
                 <WhyUsIcon width={90} height={90} className={styles.icon} />
               
             </div>
-          </NavLink>
-          {/* <div className={`${styles.card} ${styles.card1}`} >
+          
+           <div className={`${styles.card} ${styles.card1}`} >
           <div className={styles.round_icon}></div>
             <h3 className={styles.title}>Реклама</h3>
             <p className={styles.text}>Яндекс Директ</p>
@@ -99,9 +97,9 @@ export const OurServices: FC = () => {
             width={90}
             height={90}
             className={styles.icon}/>
-        </div> */}
+        </div> 
           <div className={styles.form}></div>
-          {/* <div className={`${styles.card} ${styles.card4}`} >
+          <div className={`${styles.card} ${styles.card4}`} >
         <div className={styles.round_icon}></div>
             <h3 className={styles.title}>Нишевое продвижение</h3>
             <p className={styles.text}>Онлайн-школ</p>
@@ -113,7 +111,7 @@ export const OurServices: FC = () => {
             width={90}
             height={90}
             className={styles.icon}/>
-        </div> */}
+        </div> 
         </div>
       </Container>
     </Section>
