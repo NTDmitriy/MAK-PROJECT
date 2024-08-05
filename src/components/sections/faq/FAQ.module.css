@@ -37,7 +37,7 @@
     max-width: 500px;
     font-family: var(--second-family);
 font-weight: 700;
-font-size: clamp(20px,5.3dvw,30px);
+font-size: clamp(20px,3dvw,30px);
 margin-bottom: 15px;
 }
 
