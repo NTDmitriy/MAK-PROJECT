@@ -6,17 +6,17 @@ import { Container } from '@/components/ui/container/Container';
 import { Section } from '@/components/ui/section/Section';
 import { BlockTitle } from '@/components/ui/titles/titleBlock/BlockTitle';
 
-interface AccordionItemProps {
+interface IFAQ {
     title: string;
     descr: string;
     isOpenByDefault?: boolean;
 }
 
 interface AccordionProps {
-    items: AccordionItemProps[];
+    items: IFAQ[];
 }
 
-const AccordionItem: FC<AccordionItemProps> = ({ title, descr, isOpenByDefault = false }) => {
+const AccordionItem: FC<IFAQ> = ({ title, descr, isOpenByDefault = false }) => {
     const [isOpen, setIsOpen] = useState(isOpenByDefault);
 
     useEffect(() => {
@@ -42,10 +42,9 @@ const AccordionItem: FC<AccordionItemProps> = ({ title, descr, isOpenByDefault =
     );
 };
 
-const Accordion: FC<AccordionProps> = ({ items }) => {
+const FAQ_Accordion: FC<AccordionProps> = ({ items }) => {
     return (
         <Section className={styles.section}>
-            
             <Container>
             <BlockTitle
                 leftSide={false}
@@ -70,4 +69,4 @@ const Accordion: FC<AccordionProps> = ({ items }) => {
     );
 };
 
-export default Accordion;
+export default FAQ_Accordion;
