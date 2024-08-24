@@ -3,6 +3,7 @@ import { THomeScreen } from "@/interfaces/types/screens/screens.type";
 import { FC, PropsWithChildren } from "react";
 import { HookFormProvider } from "../ui/forms/HookFormProvider";
 import { MainForm } from "../ui/forms/mainForm/MainForm";
+import { OurTeam } from "../sections/ourTeam/OurTeam";
 
 interface IHomeScreen {
   content: THomeScreen;
@@ -15,7 +16,8 @@ export const HomeScreen: FC<PropsWithChildren<IHomeScreen>> = ({ content }) => {
       <Projects cases={content.projects} />*/}
 
       {/* <Reviwes reviwes={content.reviwes} /> */}
-      {/*<OurTeam />
+      <OurTeam />
+      {/*
       <OurClients />
       <Faq faq={content.faq} />
       <Blog isPreview={true} headline={true} />
