@@ -1,37 +1,31 @@
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TReviwe } from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
-import { FC } from "react";
-
-import { Container } from "@/components/ui/container/Container";
-import { TReviwe } from "@/interfaces/types/pageTypes/products.type";
+import { FC, PropsWithChildren } from "react";
 import styles from "./Reviwes.module.css";
-import { Slider } from "./Slider/Slider";
+import { Slider } from "./slider/Slider";
 
 export interface IReviwes extends IGenericElementProps {
   reviwes: TReviwe[];
 }
 
-export const Reviwes: FC<IReviwes> = ({ className, reviwes, ...rest }) => {
+export const Reviwes: FC<PropsWithChildren<IReviwes>> = ({ className, reviwes, ...rest }) => {
   return (
     <>
       {reviwes && (
-        <Section
-          {...rest}
-          className={clsx(styles.reviwes__section, className)}
-          style={{ marginTop: "100px"}}
-        >
-          <Container>
-            <BlockTitle
-              leftSide={true}
-              descrSideway="Отзывы и оценки от наших клиентов"
-              background="ОТЗЫВЫ"
-              className={styles.reviwes__title}
-            >
-              Что говорят наши клиенты
-            </BlockTitle>
-          </Container>
+        <Section {...rest} className={clsx(styles.reviwes, styles.inner)}>
+          <BlockTitle
+            leftSide={true}
+            descrSideway="Отзывы и оценки от наших клиентов"
+            background="ОТЗЫВЫ"
+						bgLessVisibility={true}
+            className={styles.reviwes__title}
+          >
+            Что говорят наши клиенты
+          </BlockTitle>
+
 
           <Slider reviwes={reviwes} />
         </Section>

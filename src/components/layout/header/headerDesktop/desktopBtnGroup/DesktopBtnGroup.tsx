@@ -1,10 +1,5 @@
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
-import {
-	IconEMail,
-	IconPhone,
-	IconTelegram,
-	IconWhatsApp,
-} from "@/components/ui/icons";
+import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { SocialLink } from "@/components/ui/links/socialLink/SocialLink";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
@@ -22,22 +17,22 @@ export const DesktopBtnGroup: FC<PropsWithChildren<IGenericElementProps>> = ({
         <SocialLink
           href={`${CONTACTS_PUBLIC.TELEGRAM}`}
           tooltip={"Написать в Telegram"}
-          icon={<IconTelegram />}
+          icon={<DynamicSvg name="IconTelegram" />}
         />
         <SocialLink
           href={`${CONTACTS_PUBLIC.WHATSAPP}`}
           tooltip={"Написать в WhatsApp"}
-          icon={<IconWhatsApp />}
+          icon={<DynamicSvg name="IconWhatsApp" />}
         />
         <SocialLink
           href={`mailto:${CONTACTS_PUBLIC.EMAIL}`}
           tooltip={"Написать на E-mail"}
-          icon={<IconEMail />}
+          icon={<DynamicSvg name="IconEMail" />}
         />
         <SocialLink
           href={`tel:${CONTACTS_PUBLIC.PHONE}`}
           tooltip={"Позвонить"}
-          icon={<IconPhone />}
+          icon={<DynamicSvg name="IconPhone" />}
         />
       </div>
 

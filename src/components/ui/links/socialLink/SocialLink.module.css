@@ -4,7 +4,7 @@
   justify-content: center;
   background-color: var(--social-color);
   width: 40px;
-	max-height: 40px;
+  max-height: 40px;
   aspect-ratio: 1;
   border: 1px solid transparent;
   border-radius: 50%;
@@ -23,9 +23,12 @@
     color: var(--text-primary);
     position: absolute;
     transform: translateY(40px);
+    font-family: var(--font-family);
+    font-weight: 200;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
       visibility 0.3s ease-in-out;
-    font-size: 12;
+    font-size: 12px;
+		background-color: var(--background-loyout);
   }
   .link:hover::before {
     visibility: visible;
@@ -38,6 +41,6 @@
   }
 }
 
-.link:focus {
-	border-color: #fff;
+.link:focus-visible  {
+  border-color: #fff;
 }

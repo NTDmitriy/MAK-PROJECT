@@ -1,6 +1,6 @@
 .hero__container {
-  padding-top: clamp(30px, 8dvw ,140px);
-  padding-bottom: clamp(80px, 8dvw ,120px);
+  padding-top: clamp(70px, 9dvw, 180px);
+  padding-bottom: clamp(60px, 8dvw ,120px);
   position: relative;
 
 }
@@ -66,13 +66,13 @@
   .hero__container {
     display: flex;
     flex-direction: column;
-		padding-top: 30px;
+
   }
 
   .img__wrapper {
     position: relative;
     top: 0;
-    right: calc(50% - 50dvw);
+  
     margin-right: 0;
     align-self: flex-end;
     margin-bottom: -35px;

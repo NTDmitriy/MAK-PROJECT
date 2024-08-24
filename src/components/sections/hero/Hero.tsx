@@ -1,16 +1,21 @@
 import { Section } from "@/components/ui/section/Section";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
-import { THeroInfo, type THeroBasic } from "@/interfaces/types/pageTypes/products.type";
+import {
+	THeroInfo,
+	THeroInfoService,
+	type THeroBasic,
+} from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./Hero.module.css";
 import { HeroBasic } from "./blocks/heroBasic/HeroBasic";
 import { HeroInfoProduct } from "./blocks/heroInfoProduct/HeroInfoProduct";
+import { HeroInfoService } from "./blocks/heroInfoService/HeroInfoService";
 
 interface IHero extends IGenericElementProps {
   basicContent: THeroBasic;
   productContent?: THeroInfo;
-  serviceContent?: Record<string, any>;
+  serviceContent?: THeroInfoService;
 }
 
 export const Hero: FC<PropsWithChildren<IHero>> = ({
@@ -23,10 +28,8 @@ export const Hero: FC<PropsWithChildren<IHero>> = ({
   return (
     <Section {...rest} className={clsx(styles.hero, className)}>
       {basicContent && <HeroBasic basicContent={basicContent} />}
-      {productContent && <HeroInfoProduct infoContent={productContent} />}
-
-      {/*
-      {serviceContent && <HeroInfoService info={serviceContent} />} */}
+      {productContent && <HeroInfoProduct info={productContent} />}
+      {serviceContent && <HeroInfoService info={serviceContent} />}
     </Section>
   );
 };

@@ -1,72 +1,38 @@
-'use client'
-import { useState, useEffect, FC } from 'react';
-import styles from './FAQ.module.css';
-import { IconFAQ } from '@/components/ui/icons/usefulIcons/IconFAQ';
-import { Container } from '@/components/ui/container/Container';
-import { Section } from '@/components/ui/section/Section';
-import { BlockTitle } from '@/components/ui/titles/titleBlock/BlockTitle';
+import { Accordion } from "@/components/ui/accordion/Accordion";
+import { Container } from "@/components/ui/container/Container";
+import { Section } from "@/components/ui/section/Section";
+import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
+import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TAccordionItem } from "@/interfaces/types/block/products.type";
+import { FC, PropsWithChildren } from "react";
+import styles from "./Faq.module.css";
 
-interface IFAQ {
-    title: string;
-    descr: string;
-    isOpenByDefault?: boolean;
+interface IFaq extends IGenericElementProps {
+  faq: TAccordionItem[];
 }
 
-interface AccordionProps {
-    items: IFAQ[];
-}
-
-const AccordionItem: FC<IFAQ> = ({ title, descr, isOpenByDefault = false }) => {
-    const [isOpen, setIsOpen] = useState(isOpenByDefault);
-
-    useEffect(() => {
-        setIsOpen(isOpenByDefault);
-    }, [isOpenByDefault]);
-
-    const toggleAccordion = () => {
-        setIsOpen(!isOpen);
-    };
-
-    return (
-        <div className={styles.accordionItem} onClick={toggleAccordion}>
-            <div className={styles.accordionHeader} >
-                <h3 className={styles.title}>{title}</h3>
-                <span className={`${styles.icon} ${isOpen ? styles.rotate : ''}`}><IconFAQ /></span>
+const Faq: FC<PropsWithChildren<IFaq>> = ({ faq }) => {
+  return (
+    <>
+      {faq && faq.length > 0 && (
+        <Section>
+          <BlockTitle
+            leftSide={false}
+            descrSideway="Ответы на самые распространенные вопросы наших клиентов"
+            background="FAq"
+          >
+            Часто задаваемые вопросы
+          </BlockTitle>
+          <Container>
+            <div className={styles.container}>
+              <Accordion items={faq} />
+              <div className={styles.form}>1234</div>
             </div>
-            {isOpen && (
-                <div className={styles.accordionContent}>
-                    <p>{descr}</p>
-                </div>
-            )}
-        </div>
-    );
-};
-
-const FAQ_Accordion: FC<AccordionProps> = ({ items }) => {
-    return (
-        <Section className={styles.section}>
-            <Container>
-            <BlockTitle
-                leftSide={false}
-                descrSideway="Ответы на самые распространенные вопросы наших клиентов"
-                >Часто задаваемые вопросы</BlockTitle>
-                <div className={styles.container}>
-            <div className={styles.accordion}>
-            {items.map((item, index) => (
-                <AccordionItem
-                    key={index}
-                    title={item.title}
-                    descr={item.descr}
-                    isOpenByDefault={index === 0}
-                />
-            ))}
-            </div>
-            <div className={styles.form}></div>
-            </div>
-            </Container>
+          </Container>
         </Section>
-        
-    );
+      )}
+    </>
+  );
 };
 
-export default FAQ_Accordion;
+export default Faq;

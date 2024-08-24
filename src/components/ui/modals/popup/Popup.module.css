@@ -1,13 +1,22 @@
 .drawer {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  inset: 0px;
   z-index: 100;
   visibility: hidden;
-  transition: visibility 0.3s ease-in-out;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 150%);
+  transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+	border: none;
+	cursor:auto;
+
 }
+
+.drawer::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+
+}
+
 
 .content {
   background-color: #fff;
@@ -20,11 +29,9 @@
   max-height: calc(100% - 200px);
   max-width: 800px;
   width: 100%;
-  transform: translateY(100dvh);
   transition: transform 0.3s ease-in-out;
   z-index: 100;
-  margin-left: 10px;
-  margin-right: 10px;
+
 }
 
 .close {
@@ -32,11 +39,17 @@
   border: none;
   color: var(--accent-color);
   padding: 10px;
-  position: absolute;
+  position: absolute;	
+	z-index: 99;
   top: 1%;
   right: 1%;
   transition: transform 0.3s ease-in-out;
 }
+
+.close:focus-visible  {
+	transform: scale(1.2);
+	
+} 
 
 .close svg {
 	transition: transform 0.3s ease-in-out;
@@ -48,30 +61,19 @@
   }
 }
 
-.backdrop {
-  position: fixed;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  inset: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-tap-highlight-color: transparent;
-  z-index: -1;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-
 
 .drawer.open {
   visibility: unset;
 }
 
-.drawer.open .content {
-  transform: translateY(0);
+.drawer.open  {
+	transform: translate(-50%, -50%);
 }
 
-.drawer.open .backdrop {
-  opacity: 1;
+
+@media screen and (max-width: 768px) {
+	.drawer {
+		width: 100%;
+	
+	}
 }

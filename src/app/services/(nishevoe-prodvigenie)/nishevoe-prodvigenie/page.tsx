@@ -1,13 +1,11 @@
-import TestPage2 from "@/components/screens/testPage/TestPage2";
-import { onlineSchoolsPromotion } from "@/config/contentConfig/servises/promotion/onlineSchools.config";
+import { ServiceScreen } from "@/components/screens/ServiceScreen";
+import { PROMOTION_COMMON_CONFIG } from "@/config/content-config/servises/promotion/promotion-common/promotion-common.config";
 import { NextPage } from "next";
 
-const Test2: NextPage = () => {
-  return (
-    <>
-      <>нишевое продвижение</>
-    </>
-  );
+const PromotionPage: NextPage = () => {
+  const content = PROMOTION_COMMON_CONFIG;
+
+  return <>{content && <ServiceScreen content={content} />}</>;
 };
 
-export default Test2;
+export default PromotionPage;

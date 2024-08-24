@@ -7,7 +7,8 @@ import "swiper/css/mousewheel";
 import "swiper/css/pagination";
 import { Mousewheel, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Reviwe } from "../Review/Reviwe";
+
+import { Reviwe } from "@/components/ui/review/Reviwe";
 import { IReviwes } from "../Reviwes";
 import { NavigationButtons } from "./NavigationButtons";
 import "./Slider.css";

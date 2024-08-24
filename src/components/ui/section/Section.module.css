@@ -1,6 +1,7 @@
 .section {
   width: 100%;
   max-width: 100dvw;
-	overflow-x: hidden;
-  margin-bottom: clamp(50px, 5.3dvw, 100px) ;
+  /* overflow-x: hidden; */
+  padding-top: clamp(25px, 3dvw, 50px);
+  padding-bottom: clamp(25px, 3dvw, 50px);
 }

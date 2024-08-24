@@ -9,7 +9,7 @@ export const Section: FC<PropsWithChildren<IGenericElementProps>> = ({
   ...rest
 }) => {
   return (
-    <section {...rest} className={clsx(styles.section, className)}>
+    <section className={clsx(styles.section, className)} {...rest}>
       {children}
     </section>
   );
