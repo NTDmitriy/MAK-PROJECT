@@ -1,13 +1,7 @@
 
-.nav {
+
+.nav__list {
   display: flex;
   align-items: center;
-	width: 100%;
 }
 
-
-.bell {
-	position: absolute;
-	right: 6px;
-	top: -20px;
-}

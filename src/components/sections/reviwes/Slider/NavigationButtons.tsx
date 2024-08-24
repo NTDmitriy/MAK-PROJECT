@@ -1,14 +1,12 @@
-
-import { IconRightArray } from "@/components/ui/icons";
 import { FC } from "react";
-import './Slider.css';
+import { DynamicSvg } from "../../../ui/dynamicSvg/DynamicSvg";
+import "./Slider.css";
 
 interface INavigationButtons {
   sliderRef: React.RefObject<any>;
 }
 
 export const NavigationButtons: FC<INavigationButtons> = ({ sliderRef }) => {
-
   const handleNext = () => {
     if (sliderRef.current && sliderRef.current.swiper) {
       sliderRef.current.swiper.slideNext();
@@ -23,8 +21,12 @@ export const NavigationButtons: FC<INavigationButtons> = ({ sliderRef }) => {
 
   return (
     <div className="custom-navigation">
-      <button onClick={handlePrev} className="slider-button prev"><IconRightArray /></button>
-      <button onClick={handleNext} className="slider-button next"><IconRightArray /></button>
+      <button onClick={handlePrev} className="slider-button prev">
+        <DynamicSvg name="IconRightArray" />
+      </button>
+      <button onClick={handleNext} className="slider-button next">
+        <DynamicSvg name="IconRightArray" />
+      </button>
     </div>
   );
 };

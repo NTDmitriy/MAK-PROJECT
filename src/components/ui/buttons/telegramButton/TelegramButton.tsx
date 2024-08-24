@@ -1,7 +1,8 @@
 import { IButton } from "@/interfaces/button.interface";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
-import { IconTelegramBlue } from "../../icons";
+
+import { DynamicSvg } from "../../dynamicSvg/DynamicSvg";
 import styles from "./TelegramButton.module.css";
 
 export const TelegramButton: FC<PropsWithChildren<IButton>> = ({
@@ -10,7 +11,7 @@ export const TelegramButton: FC<PropsWithChildren<IButton>> = ({
 }) => {
   return (
     <button className={clsx(styles.button, className)} {...rest}>
-      <IconTelegramBlue /> Telegram
+      <DynamicSvg name="IconTelegramBlue" /> Telegram
     </button>
   );
 };

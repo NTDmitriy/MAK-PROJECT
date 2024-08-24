@@ -1,0 +1,27 @@
+.more {
+	background: none;
+  outline: none;
+  border: none;
+	display: block;
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  color: #f4a21a;
+  cursor: pointer;
+	padding: 3px 3px 3px 0;
+  transition: transform 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+	border-bottom: 2px solid transparent;
+	max-width: fit-content;
+
+}
+
+.more:focus-visible  {
+	border-color: #f4a21a;
+}
+
+@media (hover:hover) {
+  .more:hover {
+    transform: scale(1.1);
+  }
+}

@@ -1,7 +1,7 @@
 import { PrimaryButton } from "@/components/ui/buttons/primaryButton/PrimaryButton";
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { Container } from "@/components/ui/container/Container";
-import { THeroBasic } from "@/interfaces/types/pageTypes/products.type";
+import { THeroBasic } from "@/interfaces/types/block/products.type";
 import { FC } from "react";
 import styles from "./HeroBasic.module.css";
 interface IHeroBasic {
@@ -38,11 +38,10 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
       <div className={styles.img__wrapper}>
         <picture>
           <source
-            srcSet={`/images/${image}-295x191.webp`}
+            srcSet={`/images/services/${image}-295x191.webp`}
             media="(max-width: 1024px)"
           />
-          <source srcSet={`/images/${image}-1360x870.webp`} />
-          <img className={styles.img} src={`/images/${image}-1360x870.jpg`} />
+          <img className={styles.img} src={`/images/services/${image}-1360x870.webp`} />
         </picture>
       </div>
     </Container>

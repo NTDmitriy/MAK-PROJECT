@@ -2,35 +2,28 @@ import { Container } from "@/components/ui/container/Container";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
-import { TCases } from "@/interfaces/types/pageTypes/products.type";
-import clsx from "clsx";
+import { TCases } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren } from "react";
-import styles from "./Projects.module.css";
-import { Cases } from "./blocks/cases/Сases";
+import { Cases } from "./cases/Сases";
 
-interface ICases extends IGenericElementProps {
+interface IProjects extends IGenericElementProps {
   cases: TCases[];
 }
 
-export const Projects: FC<PropsWithChildren<ICases>> = ({
+export const Projects: FC<PropsWithChildren<IProjects>> = ({
   className,
   cases,
   ...rest
 }) => {
   return (
-    <Section
-      {...rest}
-      className={clsx(styles.hero, className)}
-    >
-      <Container>
-        <BlockTitle
-          leftSide={true}
-          descrSideway="Примеры кейсов и результатов, которых мы достигли для наших клиентов"
-        >
-          Наши проекты
-        </BlockTitle>
-        {cases && <Cases cases={cases} />}
-      </Container>
+    <Section {...rest}>
+      <BlockTitle
+        leftSide={true}
+        descrSideway="Примеры кейсов и результатов, которых мы достигли для наших клиентов"
+      >
+        Наши проекты
+      </BlockTitle>
+      <Container>{cases && <Cases cases={cases} />}</Container>
     </Section>
   );
 };

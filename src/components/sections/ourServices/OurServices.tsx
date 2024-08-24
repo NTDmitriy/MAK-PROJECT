@@ -1,118 +1,84 @@
 import { Container } from "@/components/ui/container/Container";
-import { WhyUsIcon } from "@/components/ui/icons/genericIcons/WhyUsIcon";
-import NavLink from "@/components/ui/links/navLink/NavLink";
+import { DynamicSvg, TSvgMapKeys } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { PROMOTION_DASHBOARD_PAGES } from "@/config/urlConfig/promotion-pages.config";
-import { FC } from "react";
+import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
+import { SERVICES_DASHBOARD_PAGES } from "@/config/url-config/servises-pages.config";
+import Link from "next/link";
+import { FC, PropsWithChildren } from "react";
+
+import { Tooltip } from "@/components/ui/tooltip/Tooltip";
+import { IGenericElementProps } from "@/interfaces/elements.interface";
 import styles from "./OurServices.module.css";
-export const OurServices: FC = () => {
-  const {
-    name: promoName,
-    url: promoUrl,
-    childrens: promoChildrens,
-  } = PROMOTION_DASHBOARD_PAGES.PROMOTION as Promotion;
 
-  interface Child {
-    name: string;
-    url: string;
-    image: string;
-    description: string;
-  }
-
-  interface Promotion {
-    name: string;
-    url: string;
-    childrens: Child[];
-  }
+export const OurServices: FC<PropsWithChildren<IGenericElementProps>> = ({
+  className,
+  ...rest
+}) => {
+  const services = SERVICES_DASHBOARD_PAGES.SERVICES;
+  const { childrens, url } = services;
 
   return (
-    <Section>
+    <Section className={className} {...rest}>
+      <BlockTitle
+        leftSide={true}
+        background="НАШИ УСЛУГИ"
+        descrSideway={
+          <>
+            Наши решения адаптированы под различные ниши и помогают
+            <span className="accent">эффективно привлекать клиентов</span> и
+            повышать узнаваемость вашего бренда
+          </>
+        }
+      >
+        Наши услуги
+      </BlockTitle>
       <Container>
-        <BlockTitle
-          leftSide={true}
-          background="НАШИ УСЛУГИ"
-          descrSideway={
-            <>
-              <span key="1">
-                Наши решения адаптированы под различные ниши и помогают
-              </span>
-              <span key="2" className={styles.yellow}>
-                эффективно привлекать клиентов
-              </span>
-              <span key="3">и повышать узнаваемость вашего бренда</span>
-            </>
-          }
-        >
-          Наши услуги
-        </BlockTitle>
-        <div className={styles.container}>
-          
-            <div className={`${styles.card} ${styles.card4}`}>
-              <div className={styles.round_icon}></div>
-              <h3 className={styles.title}>{promoName}</h3>
-              
-                <div className={styles.round_icon}></div>
-                
-                
-                <WhyUsIcon width={90} height={90} className={styles.icon} />
-              
-            </div>
-          
-           <div className={`${styles.card} ${styles.card1}`} >
-          <div className={styles.round_icon}></div>
-            <h3 className={styles.title}>Реклама</h3>
-            <p className={styles.text}>Яндекс Директ</p>
-            <p className={styles.text}>ВКонтакте</p>
-            <p className={styles.text}>Google Ads</p>
-            <p className={styles.text}>Telegram Ads</p>
+        <ul className={styles.list}>
+          {childrens &&
+            childrens.map((service, index) => (
+              <li key={index} className={styles.card}>
+                <Link href={service.url} className={styles.head__link}>
+                  <span className={styles.link__border}>{service.name}</span>
 
-            <WhyUsIcon 
-            width={90}
-            height={90}
-            className={styles.icon}/>
-        </div>
-        <div className={`${styles.card} ${styles.card2}`} >
-        <div className={styles.round_icon}></div>
-            <h3 className={styles.title}>cоздаение сайтов</h3>
-            <p className={styles.text}>Wordpress</p>
-            <p className={styles.text}>Tilda</p>
-            <p className={styles.text}>ModX</p>
-            <p className={styles.text}>На самописной CMS</p>
-            
-            <WhyUsIcon 
-            width={90}
-            height={90}
-            className={styles.icon}/>
-        </div>
-        <div className={`${styles.card} ${styles.card3}`} >
-        <div className={styles.round_icon}></div>
-            <h3 className={styles.title}>трафик и SEO</h3>
-            <p className={styles.text}>Инфлюенс (i)</p>
-            <p className={styles.text}>Посевы (i)</p>
-            <p className={styles.text}>Email рассылки по базам</p>
-            <p className={styles.text}>SEO-продвижение</p>
-            
-            <WhyUsIcon 
-            width={90}
-            height={90}
-            className={styles.icon}/>
-        </div> 
+                  <div className={styles.round_icon}></div>
+                </Link>
+                <div className={styles.product__list__wrapper}>
+                  <ul className={styles.product__list}>
+                    {service.childrens.map((subService, index) => (
+                      <li key={index}>
+                        <Link href={subService.url} className={styles.link}>
+                          <span className={styles.link__border}>
+                            {subService.smallName
+                              ? subService.smallName
+                              : subService.name}
+                          </span>
+
+                          {(subService.url ===
+                            SEO_DASHBOARD_PAGES.SEO_INFLUENCE.url ||
+                            subService.url ===
+                              SEO_DASHBOARD_PAGES.SEO_POSEVY.url) && (
+                            <Tooltip
+                              className={styles.tooltip}
+                              text={subService.description}
+                            />
+                          )}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  {service.icon && (
+                    <DynamicSvg
+                      name={service.icon as TSvgMapKeys}
+                      className={styles.icon}
+                    />
+                  )}
+                </div>
+              </li>
+            ))}
+
           <div className={styles.form}></div>
-          <div className={`${styles.card} ${styles.card4}`} >
-        <div className={styles.round_icon}></div>
-            <h3 className={styles.title}>Нишевое продвижение</h3>
-            <p className={styles.text}>Онлайн-школ</p>
-            <p className={styles.text}>Магазинов на маркетплейсах</p>
-            <p className={styles.text}>Строительных компаний</p>
-            <p className={styles.text}>Медицинских учреждений</p>
-            
-            <WhyUsIcon 
-            width={90}
-            height={90}
-            className={styles.icon}/>
-        </div> 
-        </div>
+        </ul>
       </Container>
     </Section>
   );

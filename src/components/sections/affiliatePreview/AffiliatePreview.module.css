@@ -1,0 +1,74 @@
+.content {
+  padding: clamp(25px, 5dvw, 50px) 30px;
+  background-image: url(/images/ourclients-bg.webp);
+}
+
+.title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: clamp(20px, 2.2dvw, 40px);
+  line-height: 100%;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.btn__wrap {
+  max-width: 460px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.list {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 10px 20px 22px;
+  font-family: var(--font-family);
+  font-weight: 100;
+  font-size: clamp(14px, 2.2dvw, 24px);
+  line-height: 115%;
+  color: #fff;
+	width: calc((100% - 20px) / 3);
+}
+
+.item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  background: linear-gradient(180deg, #f4a21a 0%, #ffde00 50%, #f4a21a 100%);
+  opacity: 0.4;
+  height: 100%;
+}
+
+.icon {
+  width: 36px;
+}
+
+
+@media screen and (max-width:1024px) {
+	.list {
+		flex-direction: column;
+	}
+	.item {
+		width: 100%
+	}
+	
+}
+@media screen and (max-width:768px) {
+
+	.item {
+		flex-direction: row;
+		align-items: center;
+	}
+	
+}

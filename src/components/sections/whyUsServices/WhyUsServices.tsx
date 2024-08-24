@@ -1,81 +1,36 @@
 import { Container } from "@/components/ui/container/Container";
-import { WhyUsServicesIcon } from "@/components/ui/icons/genericIcons/WhyUsServicesIcon";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { FC } from "react";
+import { DynamicSvg } from "../../ui/dynamicSvg/DynamicSvg";
 import styles from "./WhyUsServices.module.css";
+
+const whyUsServicesArr = [
+  "Опытная команда специалистов",
+  "Индивидуальный подход к каждому проекту",
+  "Прозрачность и честность",
+  "Использование современных решений",
+  "Высокая эффективность и результативность",
+  "Ежедневная отчетность и подробная аналитика",
+];
 
 export const WhyUsServices: FC = () => {
   return (
     <Section>
+      <BlockTitle leftSide={false}>
+        Почему выбирают нас для продвижения
+      </BlockTitle>
       <Container>
-        <BlockTitle
-          leftSide={false}
-          descrSideway=""
-          background=""
-          className={styles.whyUs__title}
-        >
-          Почему выбирают нас для продвижения
-        </BlockTitle>
-
-        <div className={styles.card_container}>
-          <div className={styles.card}>
-            <div className={styles.title_container}>
-              <span className={styles.after}>
-                <WhyUsServicesIcon />
+        <ul className={styles.list}>
+          {whyUsServicesArr.map((item, index) => (
+            <li key={index} className={styles.item}>
+              <span className={styles.icon}>
+                <DynamicSvg name="IconWhyUsServices" />
               </span>
-              <h3 className={styles.title}>Опытная команда специалистов</h3>
-            </div>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.title_container}>
-              <span className={styles.after}>
-                <WhyUsServicesIcon />
-              </span>
-              <h3 className={styles.title}>
-                Индивидуальный подход к каждому проекту
-              </h3>
-            </div>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.title_container}>
-              <span className={styles.after}>
-                <WhyUsServicesIcon />
-              </span>
-              <h3 className={styles.title}>Прозрачность и честность</h3>
-            </div>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.title_container}>
-              <span className={styles.after}>
-                <WhyUsServicesIcon />
-              </span>
-              <h3 className={styles.title}>
-                Использование современных решений
-              </h3>
-            </div>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.title_container}>
-              <span className={styles.after}>
-                <WhyUsServicesIcon />
-              </span>
-              <h3 className={styles.title}>
-                Высокая эффективность и результативность
-              </h3>
-            </div>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.title_container}>
-              <span className={styles.after}>
-                <WhyUsServicesIcon />
-              </span>
-              <h3 className={styles.title}>
-                Ежедневная отчетность и подробная аналитика
-              </h3>
-            </div>
-          </div>
-        </div>
+              <h3 className={styles.title}>{item}</h3>
+            </li>
+          ))}
+        </ul>
       </Container>
     </Section>
   );

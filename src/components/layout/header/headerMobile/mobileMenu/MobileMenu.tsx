@@ -1,69 +1,79 @@
 "use client";
-import { IconRightArray } from "@/components/ui/icons";
-import { DASHBOARD_PAGES } from "@/config/urlConfig/all-pages.config";
-import { useStopScroll } from "@/hooks/useStopScroll";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
-import { useMobileMenu } from "@/store/mobile-menu.store";
-import clsx from "clsx";
-import Link from "next/link";
-import { FC, PropsWithChildren } from "react";
-import { HeadMenu } from "../headMenu/HeadMenu";
-import { MobileSubMenu } from "../mobileSubMenu/MobileSubMenu";
-import { SocialButtons } from "../socialButtons/SocialButtons";
-import styles from "./MobileMenu.module.css";
 
-export const MobileMenu: FC<PropsWithChildren<IGenericElementProps>> = ({
+import { IDashboardItem } from "@/config/url-config/all-pages.config";
+import { IGenericElementProps } from "@/interfaces/elements.interface";
+import {
+	cloneElement,
+	FC,
+	PropsWithChildren,
+	ReactElement,
+	useState,
+} from "react";
+
+import clsx from "clsx";
+
+import styles from "./MobileMenu.module.css";
+import { MobileMenuHead } from "./mobileMenuHead/MobileMenuHead";
+
+import { useStopScroll } from "@/hooks/useStopScroll";
+import { useMobileMenu } from "@/store/mobile-menu.store";
+import { MobileMenuItem } from "./mobileMenuItem/MobileMenuItem";
+import { MobileMenuSocials } from "./mobileMenuSocials/MobileMenuSocials";
+
+interface IMobileMenu extends IGenericElementProps {
+  pages?: IDashboardItem[];
+  menuName?: string;
+  isSubMenu?: boolean;
+}
+
+export const MobileMenu: FC<PropsWithChildren<IMobileMenu>> = ({
   children,
   className,
+  pages,
+  menuName,
+  isSubMenu,
   ...rest
 }) => {
-  const pagesArray = DASHBOARD_PAGES.toArray();
+  const [open, setOpen] = useState<boolean>(false);
+  const { menuOpen, handleOpen } = useMobileMenu();
 
-  const { open, handleOpen, handleClose, handleOpenSubMenu } = useMobileMenu();
-
-  useStopScroll(open);
+  useStopScroll(menuOpen);
 
   return (
     <>
-      <button {...rest} className={clsx(className)} onClick={handleOpen}>
-        {children}
-      </button>
+      {children && (
+        <>
+          {cloneElement(children as ReactElement, {
+            onClick: () => {
+              setOpen(true), handleOpen();
+            },
+          })}
+        </>
+      )}
 
-      <nav className={clsx(styles.nav, open ? styles.open : "")}>
-        <HeadMenu />
-
-        <ul className={styles.menu__list}>
-          {pagesArray.map((page, index) => (
-            <li className={styles.menu__item} key={index}>
-              <Link
-                href={page.url}
-                className={styles.link}
-                onClick={handleClose}
-              >
-                <span className={styles.page__icon}>
-                  {page.icon && <page.icon />}
-                </span>
-                <span className={styles.page__name}>{page.name}</span>
-              </Link>
-              {page.childrens && (
-                <>
-                  <button
-                    className={styles.button__shadow}
-                    onClick={() => handleOpenSubMenu(page)}
-                  >
-                    <span className={styles.sub__btn}>
-                      <IconRightArray />
-                    </span>
-                  </button>
-                </>
-              )}
-            </li>
-          ))}
-        </ul>
-
-        <SocialButtons />
+      <nav
+        className={clsx(styles.nav, open && menuOpen ? styles.open : "")}
+        {...rest}
+      >
+        <div className={styles.nav__content}>
+          <MobileMenuHead closeSubMenu={() => setOpen(false)}>
+            {menuName && menuName}
+          </MobileMenuHead>
+          {pages && (
+            <ul className={styles.menu__list}>
+              {pages.map((page, index) => (
+                <MobileMenuItem
+                  key={index}
+                  index={index}
+                  page={page}
+                  isSubMenuItem={isSubMenu}
+                />
+              ))}
+            </ul>
+          )}
+          <MobileMenuSocials />
+        </div>
       </nav>
-      <MobileSubMenu />
     </>
   );
 };

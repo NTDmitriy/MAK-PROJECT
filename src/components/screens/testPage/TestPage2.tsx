@@ -1,4 +1,5 @@
-import { Reviwes } from "@/components/sections/reviwes/Reviwes";
+
+import { Projects } from "@/components/sections/projects/Projects";
 import { FC } from "react";
 
 interface ITestPage {
@@ -8,7 +9,9 @@ interface ITestPage {
 const TestPage2: FC<ITestPage> = ({ content }) => {
   return (
     <>
-      <Reviwes reviwes={content.reviwes} />
+		<Projects cases={content.projects}/>
+      {/* <OurServices /> */}
+      {/* <Reviwes reviwes={content.reviwes} /> */}
     </>
   );
 };

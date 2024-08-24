@@ -1,0 +1,29 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 2px 2px 12px 0 rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  width: 40px;
+  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  aspect-ratio: 1;
+}
+
+.button__shadow {
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 60%;
+  min-height: 100%;
+}
+
+.btn,
+.button__shadow:active span {
+  background-color: rgba(248, 248, 248, 0.2);
+}

@@ -1,15 +1,18 @@
 import { Container } from "@/components/ui/container/Container";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { FC } from "react";
+import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { FC, PropsWithChildren } from "react";
 import styles from "./HowWorks.module.css";
 
-export const HowWorks: FC = () => {
+export const HowWorks: FC<PropsWithChildren<IGenericElementProps>> = ({
+  className,
+  ...rest
+}) => {
   return (
-    <Section className={styles.how_works}>
+    <Section className={className} {...rest}>
+      <BlockTitle leftSide={true}>Как мы работаем</BlockTitle>
       <Container>
-        <BlockTitle leftSide={true}>Как мы работаем</BlockTitle>
-
         <div className={styles.card_container}>
           <div className={styles.card}>
             <div className={styles.title_container}>

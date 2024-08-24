@@ -2,7 +2,7 @@
   position: relative;
 	z-index: 1;
   font-family: var(--third-family);
-  font-weight: 200;
+  font-weight: 300;
   font-size: clamp(14px, 1.3dvw, 20px);
   line-height: 100%;
   text-align: center;
@@ -46,7 +46,7 @@
     transform: scaleX(1);
   }
 
-  .button:focus {
+  .button:focus-visible {
     background-color: rgba(225, 225, 225, 0.2);
   }
 

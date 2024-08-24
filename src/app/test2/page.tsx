@@ -1,11 +1,11 @@
 import TestPage2 from "@/components/screens/testPage/TestPage2";
-import { onlineSchoolsPromotion } from "@/config/contentConfig/servises/promotion/onlineSchools.config";
+import { ONLINE_SCHOOL_CONFIG } from "@/config/content-config/servises/promotion/online-schools/online-schools.config";
 import { NextPage } from "next";
 
 const Test2: NextPage = () => {
   return (
     <>
-      <TestPage2 content={onlineSchoolsPromotion} />
+      <TestPage2 content={ONLINE_SCHOOL_CONFIG} />
     </>
   );
 };

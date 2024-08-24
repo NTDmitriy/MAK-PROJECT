@@ -1,12 +1,13 @@
 .button {
+	display: block;
   position: relative;
   font-family: var(--third-family);
-  font-weight: 200;
+  font-weight: 300;
   font-size: clamp(14px, 1.3dvw, 20px);
   line-height: 100%;
   text-align: center;
   color: var(--text-third);
-  border: 1px solid;
+  border: 1px solid transparent;
   background: linear-gradient(
     90deg,
     #f4a21a 0%,
@@ -33,7 +34,7 @@
     background-position: 100% 0;
   }
 
-  .button:focus {
+  .button:focus-visible{
     border-color: #fff
   }
 
