@@ -1,3 +1,8 @@
+import {
+	FORM_TYPE,
+	FormController,
+} from "@/components/ui/forms/FormController";
+import { Popup } from "@/components/ui/modals/popup/Popup";
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import clsx from "clsx";
@@ -14,11 +19,17 @@ export const HeaderMobile: FC<PropsWithChildren<IGenericElementProps>> = ({
   return (
     <div {...rest} className={clsx(styles.header, className)}>
       <Link className={styles.button} href={DASHBOARD_PAGES.HOME.url}>
-        <DynamicSvg name="IconHomeNav"  />
+        <DynamicSvg name="IconHomeNav" />
       </Link>
 
-			<DynamicSvg name="IconLogo"  />
-      <button className={styles.button}>Обсудить проект</button>
+      <DynamicSvg name="IconLogo" />
+
+      <Popup
+        initComponent={
+          <button className={styles.button}>Обсудить проект</button>
+        }
+        contentComponent={<FormController formType={FORM_TYPE.MAIN_FORM} />}
+      />
 
       <BottomNavigation />
     </div>

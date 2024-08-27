@@ -7,6 +7,10 @@ import { SERVICES_DASHBOARD_PAGES } from "@/config/url-config/servises-pages.con
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 
+import {
+	FORM_TYPE,
+	FormController,
+} from "@/components/ui/forms/FormController";
 import { Tooltip } from "@/components/ui/tooltip/Tooltip";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import styles from "./OurServices.module.css";
@@ -77,7 +81,9 @@ export const OurServices: FC<PropsWithChildren<IGenericElementProps>> = ({
               </li>
             ))}
 
-          <div className={styles.form}></div>
+          <div className={styles.form}>
+            <FormController formType={FORM_TYPE.FAQ_FORM} />
+          </div>
         </ul>
       </Container>
     </Section>

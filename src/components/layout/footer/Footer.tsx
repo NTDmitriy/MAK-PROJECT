@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/container/Container";
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
+import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
 import { SocialLink } from "@/components/ui/links/socialLink/SocialLink";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
@@ -34,7 +35,8 @@ export const Footer: FC<PropsWithChildren<IGenericElementProps>> = ({
             </div>
             <div className={clsx(styles.head__item, styles.social__item)}>
               <div className={styles.head__social}>
-                <div className={styles.form}></div>
+
+								<FormController formType={FORM_TYPE.SING_UP_FORM}  />
                 <div className={styles.social__btns}>
                   <SocialLink
                     className={styles.btn}

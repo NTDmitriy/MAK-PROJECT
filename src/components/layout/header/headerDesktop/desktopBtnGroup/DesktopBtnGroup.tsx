@@ -1,6 +1,8 @@
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
+import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
 import { SocialLink } from "@/components/ui/links/socialLink/SocialLink";
+import { Popup } from "@/components/ui/modals/popup/Popup";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import clsx from "clsx";
@@ -37,7 +39,10 @@ export const DesktopBtnGroup: FC<PropsWithChildren<IGenericElementProps>> = ({
       </div>
 
       <div className={styles.button__wrapper}>
-        <SeconderyButton> Обсудить проект</SeconderyButton>
+        <Popup
+          initComponent={<SeconderyButton> Обсудить проект</SeconderyButton>}
+          contentComponent={<FormController formType={FORM_TYPE.MAIN_FORM} />}
+        />
       </div>
     </div>
   );

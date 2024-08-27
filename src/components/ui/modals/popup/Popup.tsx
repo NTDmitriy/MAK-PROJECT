@@ -1,3 +1,4 @@
+"use client";
 import { useStopScroll } from "@/hooks/useStopScroll";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { Dialog, Slide } from "@mui/material";
@@ -19,8 +20,6 @@ interface IPopup extends IGenericElementProps {
   contentComponent: ReactNode;
 }
 
-
-
 const Transition = forwardRef(function Transition(
   props: TransitionProps & {
     children: ReactElement<any, any>;
@@ -41,7 +40,7 @@ export const Popup: FC<IPopup> = ({ initComponent, contentComponent }) => {
     setOpen(false);
   };
 
-	useStopScroll(open)
+  useStopScroll(open);
 
   return (
     <>
@@ -57,14 +56,14 @@ export const Popup: FC<IPopup> = ({ initComponent, contentComponent }) => {
             backdropFilter: "blur(8px)",
           },
           "& .MuiPaper-root": {
-            maxWidth: 'unset',
-						marginLeft: '16px',
-						marginRight: '16px',
+            maxWidth: "unset",
+            marginLeft: "16px",
+            marginRight: "16px",
           },
         }}
         open={open}
         TransitionComponent={Transition}
-				disableScrollLock={true}
+        disableScrollLock={true}
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >

@@ -1,6 +1,12 @@
 import { PrimaryButton } from "@/components/ui/buttons/primaryButton/PrimaryButton";
-import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { Container } from "@/components/ui/container/Container";
+import {
+	FORM_TYPE,
+	FormController,
+} from "@/components/ui/forms/FormController";
+import { SeconderyLinkButton } from "@/components/ui/links/seconderyLinkButton/SeconderyLinkButton";
+import { Popup } from "@/components/ui/modals/popup/Popup";
+import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { THeroBasic } from "@/interfaces/types/block/products.type";
 import { FC } from "react";
 import styles from "./HeroBasic.module.css";
@@ -30,10 +36,27 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
       </h1>
       <p className={styles.descr}>{description}</p>
       <div className={styles.btn_grop}>
-        <PrimaryButton className={styles.button}>Заказать звонок</PrimaryButton>
-        <SeconderyButton className={styles.button__tg}>
+        <Popup
+          initComponent={
+            <PrimaryButton className={styles.button}>
+              Заказать звонок
+            </PrimaryButton>
+          }
+          contentComponent={
+            <FormController
+              formType={FORM_TYPE.COMPLEX_FORM}
+              title="Свяжитесь с нами"
+            />
+          }
+        />
+
+        <SeconderyLinkButton
+          href={CONTACTS_PUBLIC.TELEGRAM}
+          target="_blank"
+          className={styles.button__tg}
+        >
           Связаться через Telegram
-        </SeconderyButton>
+        </SeconderyLinkButton>
       </div>
       <div className={styles.img__wrapper}>
         <picture>
@@ -41,7 +64,10 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
             srcSet={`/images/services/${image}-295x191.webp`}
             media="(max-width: 1024px)"
           />
-          <img className={styles.img} src={`/images/services/${image}-1360x870.webp`} />
+          <img
+            className={styles.img}
+            src={`/images/services/${image}-1360x870.webp`}
+          />
         </picture>
       </div>
     </Container>

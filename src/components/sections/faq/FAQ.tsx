@@ -1,5 +1,9 @@
 import { Accordion } from "@/components/ui/accordion/Accordion";
 import { Container } from "@/components/ui/container/Container";
+import {
+	FORM_TYPE,
+	FormController,
+} from "@/components/ui/forms/FormController";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
@@ -26,7 +30,12 @@ const Faq: FC<PropsWithChildren<IFaq>> = ({ faq }) => {
           <Container>
             <div className={styles.container}>
               <Accordion items={faq} />
-              <div className={styles.form}>1234</div>
+              <div className={styles.form}>
+                <FormController
+                  formType={FORM_TYPE.FAQ_FORM}
+                  areaVisible={true}
+                />
+              </div>
             </div>
           </Container>
         </Section>

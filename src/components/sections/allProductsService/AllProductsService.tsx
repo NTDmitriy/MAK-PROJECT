@@ -59,8 +59,8 @@ export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
                       {item.description && (
                         <p className={styles.text}>{item.description}</p>
                       )}
-                      <PrimaryLinkButton href={`/services${item.url}`}>
-                        Подробнее об услуге{" "}
+                      <PrimaryLinkButton href={`${item.url}`}>
+                        Подробнее об услуге
                       </PrimaryLinkButton>
                     </div>
                   </li>

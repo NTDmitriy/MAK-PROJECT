@@ -2,7 +2,7 @@
   position: relative;
   font-family: var(--third-family);
   font-weight: 300;
-  font-size: clamp(14px, 1.3dvw, 20px);
+  font-size: clamp(14px, 1.3dvw, 19px);
   line-height: 100%;
   text-align: center;
   color: var(--text-third);

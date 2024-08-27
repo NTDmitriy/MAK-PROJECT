@@ -25,9 +25,11 @@ import IconMenu from "@/assets/svg/iconMenu.svg";
 import IconOurServicesRound from "@/assets/svg/iconOurServicesRound.svg";
 import IconPartnersNav from "@/assets/svg/iconPartnersNav.svg";
 import IconPhone from "@/assets/svg/iconPhone.svg";
+import iconPhoneYellow from "@/assets/svg/iconPhoneYellow.svg";
 import IconQoute from "@/assets/svg/iconQoute.svg";
 import IconReviwesNav from "@/assets/svg/iconReviwesNav.svg";
 import IconRightArray from "@/assets/svg/iconRightArray.svg";
+import IconSend from "@/assets/svg/iconSend.svg";
 import IconSeoNav from "@/assets/svg/iconSeoNav.svg";
 import IconServicesNav from "@/assets/svg/iconServicesNav.svg";
 import IconTelegram from "@/assets/svg/iconTelegram.svg";
@@ -48,6 +50,8 @@ import {
 import IconWhyUsServices from "@/assets/svg/iconWhyUsServices.svg";
 
 export const svgMap = {
+  IconSend,
+  iconPhoneYellow,
   IconCheck,
   IconHeroLogo,
   IconDzen,
