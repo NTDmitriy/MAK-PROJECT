@@ -1,5 +1,4 @@
 import { THomeScreen } from "@/interfaces/types/screens/screens.type";
-
 import { FC, PropsWithChildren } from "react";
 import { AffiliatePreview } from "../sections/affiliatePreview/AffiliatePreview";
 import { Blog } from "../sections/blog/Blog";
