@@ -16,16 +16,16 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="ru" >
-      <Providers>
-        <body >
-          <div className="page" suppressHydrationWarning={true}>
+    <html lang="ru">
+      <body suppressHydrationWarning={true}>
+        <div className="page">
+          <Providers>
             <Header />
             <main>{children}</main>
             <Footer />
-          </div>
-        </body>
-      </Providers>
+          </Providers>
+        </div>
+      </body>
     </html>
   );
 }

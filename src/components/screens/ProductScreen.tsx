@@ -1,7 +1,7 @@
-import { DetailServices } from "@/components/sections/detailServices/DetailServices";
 import { THeroInfo } from "@/interfaces/types/block/products.type";
 import { TProductScreen } from "@/interfaces/types/screens/screens.type";
 import { FC, PropsWithChildren } from "react";
+import { DetailServices } from "../sections/detailServices/DetailServices";
 import { Hero } from "../sections/hero/Hero";
 import { HowWorks } from "../sections/howWorks/HowWorks";
 import { Projects } from "../sections/projects/Projects";
@@ -23,8 +23,8 @@ export const ProductScreen: FC<PropsWithChildren<IProductScreen>> = ({
       <DetailServices detailContent={content.detialServices} />
       <HowWorks />
       <WhyUs />
-      <Projects cases={content.projects} />
-      ФОРМА!!
+      <Projects cases={content.projects} formVisible={true}/>
+    
       <Reviwes reviwes={content.reviwes} />
     </>
   );

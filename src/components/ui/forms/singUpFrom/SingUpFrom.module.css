@@ -1,0 +1,12 @@
+.form {
+	background-color: #fff ;
+	display: grid;
+	grid-template-columns: 1fr 60px;
+	width: 100%;
+	
+}
+
+.submit {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

@@ -1,6 +1,8 @@
 import { PrimaryButton } from "@/components/ui/buttons/primaryButton/PrimaryButton";
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { Container } from "@/components/ui/container/Container";
+import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
+import { Popup } from "@/components/ui/modals/popup/Popup";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { FC, PropsWithChildren } from "react";
 import styles from "./HeroBasic.module.css";
@@ -18,9 +20,19 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
           маркетинга
         </p>
         <div className={styles.btn_grop}>
-          <PrimaryButton className={styles.button}>
-            Заказать звонок
-          </PrimaryButton>
+          <Popup
+            initComponent={
+              <PrimaryButton className={styles.button}>
+                Заказать звонок
+              </PrimaryButton>
+            }
+            contentComponent={
+              <FormController
+                formType={FORM_TYPE.COMPLEX_FORM}
+                title="Свяжитесь с нами"
+              />
+            }
+          />
           <SeconderyButton className={styles.button__tg}>
             Связаться через Telegram
           </SeconderyButton>

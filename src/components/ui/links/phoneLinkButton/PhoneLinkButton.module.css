@@ -1,0 +1,70 @@
+.button {
+  position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+  font-family: var(--third-family);
+  font-weight: 300;
+  font-size: clamp(14px, 1.3dvw, 20px);
+  line-height: 100%;
+  text-align: center;
+  color: var(--text-third);
+  padding: clamp(8px, 1.5dvw, 14px) 10px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #FF7A00;
+  transition: border-color 0.5s ease-in-out, transform .1s ease-in-out;
+}
+
+.button::before,
+.button::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+	width: 100%;
+	height: 100%;
+  bottom: 0px;
+  right: 0px;
+	transition:  transform .3s ease-in;
+	opacity: .3;
+	border-color: var(--text-third);
+	transform: scale(0)
+}
+.button::before {
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+	transform-origin: left bottom;
+
+}
+.button::after {
+  border-top-width: 2px;
+  border-right-width: 2px;
+	transform-origin: right top;
+}
+
+@media (hover: hover) {
+  .button:hover {
+    border-color: transparent;
+  }
+  .button:hover::before,
+  .button:hover::after {
+		transform: scale(1)
+		
+  }
+  .button:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+  }
+  .button:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+  }
+  .button:focus-visible {
+    background-color: rgba(225, 225, 225, 0.2);
+  }
+}
+
+.button:active {
+  transform: scale(0.98);
+}

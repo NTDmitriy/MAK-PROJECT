@@ -1,6 +1,11 @@
 import { PrimaryButton } from "@/components/ui/buttons/primaryButton/PrimaryButton";
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { Container } from "@/components/ui/container/Container";
+import {
+	FORM_TYPE,
+	FormController,
+} from "@/components/ui/forms/FormController";
+import { Popup } from "@/components/ui/modals/popup/Popup";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
@@ -19,6 +24,9 @@ export const DetailServices: FC<PropsWithChildren<IDetailServices>> = ({
   ...rest
 }) => {
   const { title, services } = detailContent;
+
+  const subServicesArray = services.map((service) => service.title);
+
   return (
     <>
       {services && services.length > 0 && (
@@ -37,17 +45,14 @@ export const DetailServices: FC<PropsWithChildren<IDetailServices>> = ({
                     <img
                       className={styles.img}
                       src={`/images/services/${service.image}.webp`}
-                      alt="Онлайн-школы и инфобизнес"
+                      alt={service.title}
                     />
                   </li>
                 ))}
               </ul>
 
               <div className={styles.sticky}>
-                <h5 className={styles.sticky__title}>
-
-                  ОБРАТИТЕ ВНИМАНИЕ!
-                </h5>
+                <h5 className={styles.sticky__title}>ОБРАТИТЕ ВНИМАНИЕ!</h5>
                 <p className={styles.sticky__text}>
                   Мы предлагаем как полный комплекс услуг по продвижению вашей
                   онлайн-школы, так и отдельные решения по вашему выбору. Вы
@@ -55,8 +60,30 @@ export const DetailServices: FC<PropsWithChildren<IDetailServices>> = ({
                   воспользоваться нашим полным пакетом для максимальной
                   эффективности.
                 </p>
-                <SeconderyButton className={clsx(styles.sticky__button, styles.inner)}>Выбрать услугу</SeconderyButton>
-                <PrimaryButton>Заказать комплекс услуг</PrimaryButton>
+
+                <Popup
+                  initComponent={
+                    <SeconderyButton
+                      className={clsx(styles.sticky__button, styles.inner)}
+                    >
+                      Выбрать услугу
+                    </SeconderyButton>
+                  }
+                  contentComponent={
+                    <FormController
+                      formType={FORM_TYPE.STEP_FORM}
+                      subServices={subServicesArray}
+                    />
+                  }
+                />
+                <Popup
+                  initComponent={
+                    <PrimaryButton>Заказать комплекс услуг</PrimaryButton>
+                  }
+                  contentComponent={
+                    <FormController formType={FORM_TYPE.COMPLEX_FORM} />
+                  }
+                />
               </div>
             </div>
           </Container>
