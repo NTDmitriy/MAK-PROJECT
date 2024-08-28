@@ -1,12 +1,129 @@
-
-
-
-
-
 .content {
     background-color: rebeccapurple;
 }
 
 .content_hero {
-    background-image: url(/images/cases/case-wb-hero.webp);
+    background-image: url(/images/cases/cases-frontend-hero.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 746px;
+   
+}
+
+.hero_title {
+font-family: var(--third-family);
+font-weight: 900;
+font-size: clamp(30px,3.1dvw,70px);
+margin-bottom: 30px;
+}
+
+.content_hero {
+    padding: 50px 50px 50px 50px;
+    margin-bottom: 25px;
+}
+
+.text {
+font-family: var(--font-family);
+font-weight: 100;
+font-size: clamp(15px,2dvw,30px);
+color: #fff;
+max-width: 1054px;
+}
+
+.picture_content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.text_info {
+    font-family: var(--font-family);
+    font-weight: 100;
+    font-size: clamp(15px,2dvw,30px);
+    color: #fff;
+    max-width: 1054px;
+    list-style-type:disc;
+    }
+
+    .text_full {
+        font-family: var(--font-family);
+    font-weight: 100;
+    font-size: clamp(15px,2dvw,30px);
+    color: #fff;
+    max-width: 100%;
+    list-style-type:disc;
+    }
+
+.text_info_yellow {
+
+        font-family: var(--font-family);
+        font-weight: 100;
+        font-size: clamp(15px,2dvw,30px);
+        color: #FFDE00;
+        max-width: 1054px;
+        list-style-type:disc;
+
+}
+.tasks {
+    padding: 25px 0 30px 0px;
+}
+
+.image__main {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 25px;
+  }
+
+
+.text_bg {
+    background: #161616;
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: clamp(25px,2.2dvw,40px);
+line-height: 150%;
+padding: 8px 0 8px 0;
+color: #fff;
+margin-bottom: 20px;
+padding-left: 15px;
+}
+.text_list {
+    padding-left: 30px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+.title {
+position: relative;
+padding-left: 75px;
+font-family: var(--third-family);
+font-weight: 900;
+font-size: clamp(30px,2.2dvw,60px);
+line-height: 133%;
+color: #fff;
+margin-bottom: 20px;
+}
+
+.title::after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    left: 0;
+    min-height: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    max-height: 60px;
+    width: 100%;
+    display: block;
+    background: #ffde00;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .content_hero {
+        min-height: 546px;
+    }
 }
