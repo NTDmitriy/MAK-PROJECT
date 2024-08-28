@@ -3,8 +3,9 @@ import { Section } from "@/components/ui/section/Section"
 import { IGenericElementProps } from "@/interfaces/elements.interface"
 import { FC, PropsWithChildren } from "react"
 import styles from './Frontend-dev-case.module.css'
+import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController"
 
-export const Frontend_dev_case: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const FRONTEND_DEV_CASE: FC<PropsWithChildren<IGenericElementProps>> = ({
     className,
     ...rest
 }
@@ -26,16 +27,20 @@ export const Frontend_dev_case: FC<PropsWithChildren<IGenericElementProps>> = ({
         <li className={styles.text_info}>Повышение конверсии посадочных страниц для улучшения показателей вовлеченности и регистрации.</li>
         </ul>
     </div>
-    <div className={styles.tasks}>
-        <h3 className={styles.title}>
+    </Container>
+    <div className={styles.tasks__problems}>
+        <Container className={styles.problems_content}>
+        <h3 className={`${styles.title} ${styles.title_problems}`}>
         Проблематика
         </h3>
-        <p className={styles.text}>До начала проекта столкнулись со следующими проблемами:</p>
+        <p className={`${styles.text} ${styles.text_problems}` }>До начала проекта столкнулись со следующими проблемами:</p>
         <ul className={styles.text_list}>
-        <li className={styles.text_info}>Низкий уровень заявок на курсы: менее 500 заявок в месяц.</li>
-        <li className={styles.text_info}>Низкая конверсия посадочных страниц, составляющая около 1,2%.</li>
+        <li className={`${styles.text_info} ${styles.text_problems}` }>Низкий уровень заявок на курсы: менее 500 заявок в месяц.</li>
+        <li className={`${styles.text_info} ${styles.text_problems}` }>Низкая конверсия посадочных страниц, составляющая около 1,2%.</li>
         </ul>
+        </Container>
     </div>
+    <Container>
     <div className={styles.tasks}>
         <h3 className={styles.title}>
         Решение
@@ -107,6 +112,7 @@ export const Frontend_dev_case: FC<PropsWithChildren<IGenericElementProps>> = ({
         title=''
         />
         </div>
+        <FormController formType={FORM_TYPE.MAIN_FORM} />
     </div>
     </Container>
     </Section>
