@@ -1,12 +1,12 @@
-
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { STROITELNIE_COMPANII_CONFIG } from "@/config/content-config/servises/promotion/stroitelnye-kompanii/stroitelnie-companii.config";
+import { CONSTRUCTION_COMPANY_CONFIG } from "@/config/content-config/servises/promotion/consruction-company/consruction-companyconfig";
+
 import { NextPage } from "next";
 
 const PromotionOnlineSchoolPage: NextPage = () => {
   return (
     <>
-      <ProductScreen content={STROITELNIE_COMPANII_CONFIG} />
+      <ProductScreen content={CONSTRUCTION_COMPANY_CONFIG} />
     </>
   );
 };

@@ -1,5 +1,3 @@
-
-
 import { WILDBERRIES_CASE } from "@/components/screens/cases/wildberries/wildberries-case";
 import { NextPage } from "next";
 

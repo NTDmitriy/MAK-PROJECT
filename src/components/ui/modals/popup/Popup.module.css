@@ -1,22 +1,13 @@
 .drawer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0px;
   z-index: 100;
   visibility: hidden;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, 150%);
-  transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
-	border: none;
-	cursor:auto;
-
+  transition: visibility 0.3s ease-in-out;
 }
-
-.drawer::backdrop {
-	background-color: rgba(0, 0, 0, 0.5);
-	cursor: pointer;
-
-}
-
 
 .content {
   background-color: #fff;
@@ -27,32 +18,38 @@
   flex-direction: column;
   align-items: center;
   max-height: calc(100% - 200px);
-
-  width: 100%;
+  transform: translateY(100dvh);
   transition: transform 0.3s ease-in-out;
   z-index: 100;
-
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .close {
+	display: flex;
+	align-items: center;
+	justify-content: center;
   background: none;
-  border: none;
+	border: 1px solid transparent;
+	border-radius: 50%;
   color: var(--accent-color);
-  padding: 10px;
-  position: absolute;	
-	z-index: 99;
+  position: absolute;
+	max-width: 42px;
+	max-height: 42px;
+	aspect-ratio: 1;
   top: 1%;
   right: 1%;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-.close:focus-visible  {
-	transform: scale(1.2);
-	
-} 
-
 .close svg {
-	transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+	width: 40px;
+	height: 40px;
+}
+
+.close:focus {
+	border-color: var(--accent-color);
 }
 
 @media (hover: hover) {
@@ -61,19 +58,31 @@
   }
 }
 
+.backdrop {
+  position: fixed;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  inset: 0px;
+  background-color: var(--background-loyout);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  -webkit-tap-highlight-color: transparent;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
 
 .drawer.open {
   visibility: unset;
 }
 
-.drawer.open  {
-	transform: translate(-50%, -50%);
+.drawer.open .content {
+  transform: translateY(0);
 }
 
-
-@media screen and (max-width: 768px) {
-	.drawer {
-		width: 100%;
-	
-	}
+.drawer.open .backdrop {
+  opacity: 1;
 }

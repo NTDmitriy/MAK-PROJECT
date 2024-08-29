@@ -1,3 +1,4 @@
+
 import { MAGAZIN_MEBELI_CASE } from "@/components/screens/cases/magazin-mebeli/Magazin-mebeli-case";
 import { NextPage } from "next";
 

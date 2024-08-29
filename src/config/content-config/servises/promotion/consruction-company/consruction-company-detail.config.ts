@@ -1,6 +1,6 @@
 import { TDetialServices } from "@/interfaces/types/block/products.type";
 
-export const STROITELNIE_COMPANII_DETAIL = {
+export const CONSTRUCTION_COMPANY_DETAIL = {
   title: "Услуги для строительных компаний",
   services: [
     {
@@ -9,7 +9,6 @@ export const STROITELNIE_COMPANII_DETAIL = {
       description:
         "Анализируем ваш бизнес, целевую аудиторию и конкурентов, чтобы создать индивидуальную стратегию продвижения.",
       image: "promotion-schools-hero-info", 
-      // promotion-marketplace-services-info1
     },
     {
       id: 2,

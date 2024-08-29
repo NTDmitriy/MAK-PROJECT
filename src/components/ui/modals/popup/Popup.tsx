@@ -1,17 +1,17 @@
 "use client";
+
 import { useStopScroll } from "@/hooks/useStopScroll";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
-import { Dialog, Slide } from "@mui/material";
-import { TransitionProps } from "@mui/material/transitions";
+import clsx from "clsx";
 import {
 	cloneElement,
 	FC,
-	forwardRef,
 	ReactElement,
 	ReactNode,
-	Ref,
+	useEffect,
 	useState,
 } from "react";
+import { createPortal } from "react-dom";
 import { DynamicSvg } from "../../dynamicSvg/DynamicSvg";
 import styles from "./Popup.module.css";
 
@@ -20,25 +20,30 @@ interface IPopup extends IGenericElementProps {
   contentComponent: ReactNode;
 }
 
-const Transition = forwardRef(function Transition(
-  props: TransitionProps & {
-    children: ReactElement<any, any>;
-  },
-  ref: Ref<unknown>
-) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
-
 export const Popup: FC<IPopup> = ({ initComponent, contentComponent }) => {
   const [open, setOpen] = useState(false);
+  const [animate, setAnimate] = useState(false);
+  const portalContainer = typeof window !== "undefined" ? document.body : null;
+  const inertContent =
+    typeof window !== "undefined" ? document.body.querySelector(".page") : null;
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
   const handleClose = () => {
-    setOpen(false);
+    setAnimate(false);
+    setTimeout(() => setOpen(false), 300);
   };
+
+  useEffect(() => {
+    if (open) {
+      inertContent?.setAttribute("inert", "");
+      setTimeout(() => setAnimate(true), 10);
+    } else {
+      inertContent?.removeAttribute("inert");
+    }
+  }, [open]);
 
   useStopScroll(open);
 
@@ -48,32 +53,20 @@ export const Popup: FC<IPopup> = ({ initComponent, contentComponent }) => {
         onClick: handleClickOpen,
       })}
 
-      <Dialog
-        sx={{
-          "& .MuiBackdrop-root": {
-            backgroundColor: "var(--background-loyout)",
-            webkitBackdropFilter: "blur(8px)",
-            backdropFilter: "blur(8px)",
-          },
-          "& .MuiPaper-root": {
-            maxWidth: "unset",
-            marginLeft: "16px",
-            marginRight: "16px",
-          },
-        }}
-        open={open}
-        TransitionComponent={Transition}
-        disableScrollLock={true}
-        onClose={handleClose}
-        aria-describedby="alert-dialog-slide-description"
-      >
-        <div className={styles.content}>
-          <button className={styles.close} onClick={handleClose}>
-            <DynamicSvg name="IconClose" width={"30px"} height={"30px"} />
-          </button>
-          {contentComponent}
-        </div>
-      </Dialog>
+      {open &&
+        portalContainer &&
+        createPortal(
+          <div className={clsx(styles.drawer, animate ? styles.open : "")}>
+            <div className={styles.content}>
+              <button className={styles.close} onClick={handleClose} >
+                <DynamicSvg name="IconClose" width={"30px"} height={"30px"} />
+              </button>
+              {contentComponent}
+            </div>
+            <div onClick={handleClose} className={styles.backdrop}></div>
+          </div>,
+          portalContainer
+        )}
     </>
   );
 };

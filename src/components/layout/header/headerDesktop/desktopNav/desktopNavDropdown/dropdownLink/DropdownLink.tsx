@@ -30,7 +30,6 @@ const DropdownLink: FC<PropsWithChildren<IDropdownLink>> = ({
       {arrayRight && (
         <span className={styles.array}>
           <DynamicSvg name="IconRightArray" />
-					
         </span>
       )}
     </Link>

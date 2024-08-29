@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 
-const Service: NextPage = () => {
+const Cases: NextPage = () => {
   return (
     <div>
       cases page
@@ -8,4 +8,4 @@ const Service: NextPage = () => {
   );
 };
 
-export default Service;
+export default Cases;

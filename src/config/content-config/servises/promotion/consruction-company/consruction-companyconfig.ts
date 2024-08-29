@@ -9,9 +9,9 @@ import {
 	TReviwe,
 } from "@/interfaces/types/block/products.type";
 import { TProductScreen } from "@/interfaces/types/screens/screens.type";
-import { STROITELNIE_COMPANII_DETAIL } from "./stroitelnie-companii-detail.config";
+import { CONSTRUCTION_COMPANY_DETAIL } from "./consruction-company-detail.config";
 
-export const STROITELNIE_COMPANII_CONFIG = {
+export const CONSTRUCTION_COMPANY_CONFIG = {
   hero: {
     basic: {
       title: {
@@ -30,7 +30,7 @@ export const STROITELNIE_COMPANII_CONFIG = {
       image: "promotion-stroitelnie-comp-hero-info",
     } satisfies THeroInfo,
   } satisfies THero,
-  detialServices: STROITELNIE_COMPANII_DETAIL satisfies TDetialServices,
+  detialServices: CONSTRUCTION_COMPANY_DETAIL satisfies TDetialServices,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: allReviwes satisfies TReviwe[],
 } satisfies TProductScreen;
