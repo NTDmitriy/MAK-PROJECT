@@ -5,30 +5,30 @@ import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./HeroInfoService.module.css";
 interface IHeroInfoService extends IGenericElementProps {
-  info: THeroInfoService;
+	info: THeroInfoService;
 }
 
 export const HeroInfoService: FC<PropsWithChildren<IHeroInfoService>> = ({
-  className,
-  info,
-  ...rest
+	className,
+	info,
+	...rest
 }) => {
-  return (
-    <>
-      {info && (
-        <div className={clsx(styles.background, className)} {...rest}>
-          <Container>
-            <ul className={styles.info__list}>
-              {info.map((item, index) => (
-                <li key={index} className={styles.info__item}>
-                  {/* <span className={styles.line}></span> */}
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </Container>
-        </div>
-      )}
-    </>
-  );
+	return (
+		<>
+			{info && (
+				<div className={clsx(styles.background, className)} {...rest}>
+					<Container>
+						<ul className={styles.info__list}>
+							{info.map((item, index) => (
+								<li key={index} className={styles.info__item}>
+									<span className={styles.opacity}>{item}</span>
+
+								</li>
+							))}
+						</ul>
+					</Container>
+				</div>
+			)}
+		</>
+	);
 };

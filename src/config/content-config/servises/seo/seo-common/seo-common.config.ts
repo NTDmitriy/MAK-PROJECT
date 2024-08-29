@@ -2,13 +2,14 @@ import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.confi
 import { allReviwes } from "@/config/content-config/reviwes/reviwes.config";
 import { IDashboardItem } from "@/config/url-config/all-pages.config";
 import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
-import {
+import type {
 	TCases,
 	TFaq,
 	THero,
 	THeroBasic,
 	THeroInfoService,
 	TReviwe,
+	TSupplementaryDescr,
 } from "@/interfaces/types/block/products.type";
 import { TServiceScreen } from "@/interfaces/types/screens/screens.type";
 import { SEO_FAQ } from "./seo-common-faq.config";
@@ -31,6 +32,11 @@ export const SEO_COMMON_CONFIG = {
       "Повышение видимости в поисковых системах",
     ] satisfies THeroInfoService,
   } satisfies THero,
+  supplementaryDescr: {
+    title: "Трафик и SEO-продвижение: основы результата в цифровом мире",
+    descr: "В условиях быстро развивающегося цифрового мира трафик и SEO-продвижение играют решающую роль в успехе бизнеса. Правильное использование этих инструментов помогает привлекать новых клиентов, удерживать существующих и существенно увеличивать прибыль. Комплексный подход к цифровому маркетингу включает использование различных стратегий и технологий, которые позволяют максимально эффективно продвигать ваши товары и услуги.",
+    image: "seo-common-supplementary.webp",
+  } satisfies TSupplementaryDescr,
   products: SEO_DASHBOARD_PAGES.SEO satisfies IDashboardItem,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: allReviwes satisfies TReviwe[],

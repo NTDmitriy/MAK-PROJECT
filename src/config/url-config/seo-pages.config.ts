@@ -7,7 +7,7 @@ class SEO_DASHBOARD {
     name: "Инфлюенс-маркетинг",
     smallName: "Инфлюенс-маркетинг",
     url: `${this.root}/influence-marketing`,
-    image: "hero-info",
+    image: "promotion-construction-company-700x300",
     icon: "hero-info",
     description:
       "Подбор релевантных инфлюенсеров, разработка стратегии кампании, создание контента, анализ результатов",
@@ -17,7 +17,7 @@ class SEO_DASHBOARD {
     name: "Посевы",
     smallName: "Посевы",
     url: `${this.root}/posevy`,
-    image: "hero-info",
+    image: "promotion-construction-company-700x300",
     icon: "hero-info",
     description:
       "Размещение контента на популярных платформах и форумах, разработка стратегии посевов, анализ эффективности.",
@@ -27,7 +27,7 @@ class SEO_DASHBOARD {
     name: "SEO-продвижение",
     smallName: "SEO-продвижение",
     url: `${this.root}/seo-prodvizhenie`,
-    image: "hero-info",
+    image: "promotion-construction-company-700x300",
     icon: "hero-info",
     description:
       "Аудит сайта, внутренняя и внешняя оптимизация, создание качественного контента, улучшение видимости и позиций в поисковых системах. ",
@@ -37,7 +37,7 @@ class SEO_DASHBOARD {
     name: "Email рассылки по базам",
     smallName: "Email рассылки по базам",
     url: `${this.root}/email-rassylki-po-bazam`,
-    image: "hero-info",
+    image: "promotion-construction-company-700x300",
     icon: "hero-info",
     description:
       "Создание персонализированных email-кампаний, сегментация базы данных, анализ и оптимизация рассылок.",
