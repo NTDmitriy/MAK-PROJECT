@@ -1,11 +1,11 @@
+import { KARELSKIY_DOM_CASE } from "@/components/screens/cases/karelskiy-dom/karelskiy-dom-case";
 import { NextPage } from "next";
 
-const Service5: NextPage = () => {
+const CasesPage: NextPage = () => {
   return (
-    <div>
-      cases page
-    </div>
-  );
+    <KARELSKIY_DOM_CASE />
+    );
 };
 
-export default Service5;
+export default CasesPage;
+

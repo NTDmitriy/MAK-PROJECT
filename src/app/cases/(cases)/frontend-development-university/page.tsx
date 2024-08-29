@@ -1,11 +1,11 @@
+
+import { FRONTEND_DEV_CASE } from "@/components/screens/cases/frontend-dev.tsx/Frontend-dev-case";
 import { NextPage } from "next";
 
-const Service1: NextPage = () => {
+const CasesPage: NextPage = () => {
   return (
-    <div>
-      cases page
-    </div>
-  );
+    <FRONTEND_DEV_CASE />
+    );
 };
 
-export default Service1;
+export default CasesPage;

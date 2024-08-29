@@ -1,11 +1,11 @@
+import { STAMOTOLOGIYA_CASE } from "@/components/screens/cases/stomatologiya/stomatologiya-case";
 import { NextPage } from "next";
 
-const Service6: NextPage = () => {
+const CasesPage: NextPage = () => {
   return (
-    <div>
-      cases page
-    </div>
-  );
+    <STAMOTOLOGIYA_CASE />
+    );
 };
 
-export default Service6;
+export default CasesPage;
+

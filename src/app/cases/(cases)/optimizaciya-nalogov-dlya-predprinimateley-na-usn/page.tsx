@@ -1,11 +1,12 @@
+
+import { EFFECTIVNOE_PREVLECHENIE_CASE } from "@/components/screens/cases/effectivnoe-prevlichenie/effectivnoe-prevlichenie-case";
 import { NextPage } from "next";
 
-const Service2: NextPage = () => {
+const CasesPage: NextPage = () => {
   return (
-    <div>
-      cases page
-    </div>
-  );
+    <EFFECTIVNOE_PREVLECHENIE_CASE />
+    );
 };
 
-export default Service2;
+export default CasesPage;
+

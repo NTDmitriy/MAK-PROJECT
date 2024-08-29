@@ -1,11 +1,11 @@
+
+import { MAGAZIN_MEBELI_CASE } from "@/components/screens/cases/magazin-mebeli/Magazin-mebeli-case";
 import { NextPage } from "next";
 
-const Service3: NextPage = () => {
+const CasesPage: NextPage = () => {
   return (
-    <div>
-      cases page
-    </div>
-  );
+    <MAGAZIN_MEBELI_CASE />
+    );
 };
 
-export default Service3;
+export default CasesPage;

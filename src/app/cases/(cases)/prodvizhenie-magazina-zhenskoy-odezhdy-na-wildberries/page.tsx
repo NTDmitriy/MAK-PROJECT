@@ -1,11 +1,10 @@
+import { WILDBERRIES_CASE } from "@/components/screens/cases/wildberries/wildberries-case";
 import { NextPage } from "next";
 
-const Service4: NextPage = () => {
+const CasesPage: NextPage = () => {
   return (
-    <div>
-      cases page
-    </div>
-  );
+    <WILDBERRIES_CASE />
+    );
 };
 
-export default Service4;
+export default CasesPage;
