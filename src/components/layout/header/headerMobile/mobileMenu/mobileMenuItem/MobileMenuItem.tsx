@@ -25,7 +25,7 @@ export const MobileMenuItem: FC<PropsWithChildren<IMobileMenuItem>> = ({
 }) => {
   const { name, childrens, icon, url } = page;
 
-  const { dropdownIndex, setDropdownIndex } = useMobileMenu();
+  const { dropdownIndex, setDropdownIndex, handleClose } = useMobileMenu();
   const handleOpenDropdown = (index: number) => {
     setDropdownIndex(dropdownIndex === index ? null! : index);
   };
@@ -35,7 +35,7 @@ export const MobileMenuItem: FC<PropsWithChildren<IMobileMenuItem>> = ({
       {page && (
         <li className={clsx(styles.menu__item, className)} {...rest}>
           <div className={styles.link__wrapper}>
-            <Link href={url} className={styles.link}>
+            <Link href={url} className={styles.link} onClick={handleClose}>
               {icon && (
                 <DynamicSvg
                   name={icon as TSvgMapKeys}

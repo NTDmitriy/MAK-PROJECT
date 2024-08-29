@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/container/Container";
+import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
 import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
@@ -27,7 +28,7 @@ export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
               descrBottom={
                 <p className={styles.title__descr}>
                   Мы предлагаем{" "}
-                  <span className="accent">комплексное продвижение</span> для
+                  <span className={styles.accent}>комплексное продвижение</span> для
                   различных ниш и сфер деятельности. Выберите подходящее решение
                   для вашего бизнеса.
                 </p>
@@ -67,7 +68,7 @@ export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
                 ))}
             </ul>
 
-            <div className={styles.card_container}></div>
+            <FormController formType={FORM_TYPE.MAIN_FORM}/>
           </Container>
         </Section>
       )}

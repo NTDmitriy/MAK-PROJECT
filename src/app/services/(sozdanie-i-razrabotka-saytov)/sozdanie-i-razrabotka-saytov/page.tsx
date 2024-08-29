@@ -1,11 +1,12 @@
+
+import { ServiceScreen } from "@/components/screens/ServiceScreen";
+import { PROMOTION_COMMON_CONFIG } from "@/config/content-config/servises/promotion/promotion-common/promotion-common.config";
 import { NextPage } from "next";
 
-const SiteCreation: NextPage = () => {
-  return (
-      <div>
-        dorabotka i sozdanie
-      </div>
-  );
+const ServisePage: NextPage = () => {
+  const content = PROMOTION_COMMON_CONFIG;
+
+  return <>{content && <ServiceScreen content={content} />}</>;
 };
 
-export default SiteCreation;
+export default ServisePage;

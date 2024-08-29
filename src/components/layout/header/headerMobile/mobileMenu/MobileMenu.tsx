@@ -7,6 +7,7 @@ import {
 	FC,
 	PropsWithChildren,
 	ReactElement,
+	useEffect,
 	useState,
 } from "react";
 
@@ -37,6 +38,10 @@ export const MobileMenu: FC<PropsWithChildren<IMobileMenu>> = ({
   const [open, setOpen] = useState<boolean>(false);
   const { menuOpen, handleOpen } = useMobileMenu();
 
+	useEffect(() => {if(!menuOpen) {
+		setOpen(false)
+	}}, [menuOpen]);
+	
   useStopScroll(menuOpen);
 
   return (

@@ -7,8 +7,10 @@
 .info__list {
   padding-top: 50px;
   padding-bottom: 50px;
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  column-gap: 20px;
+  row-gap: 60px;
   font-family: var(--font-family);
   font-weight: 100;
   font-size: clamp(16px, 1.5dvw, 26px);
@@ -17,20 +19,20 @@
 }
 
 .info__item {
-	display: flex;
-	gap: 18px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  min-height: 60px;
+  padding-left: 28px;
 }
 
-.line {
-	width: 10px;
-	background-color: var(--accent-color);
-	margin-top: -10px;
-	margin-bottom: -10px;
-}
-
-@media screen and (max-width: 768px) {
-	.info__list {
-		flex-direction: column;
-		gap: 60px;
-	}
+.info__item::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 10px;
+  background-color: var(--accent-color);
+  left: 0;
+  min-height: clamp(60px, 8dvw, 80px);
 }

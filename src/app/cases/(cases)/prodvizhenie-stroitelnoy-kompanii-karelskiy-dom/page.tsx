@@ -1,9 +1,9 @@
-import { KARELSKIY_DOM_CASE } from "@/components/screens/cases/karelskiy-dom/karelskiy-dom-case";
+import { ConstructionCompanyCase } from "@/components/screens/cases/constructionCompanyCase/ConstructionCompanyCase";
 import { NextPage } from "next";
 
 const CasesPage: NextPage = () => {
   return (
-    <KARELSKIY_DOM_CASE />
+    <ConstructionCompanyCase />
     );
 };
 
