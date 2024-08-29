@@ -26,32 +26,31 @@
 }
 
 .close {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	top: 1%;
-	right: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1%;
+  right: 1%;
   background: none;
-	border: 1px solid transparent;
-	border-radius: 50%;
+  border: 1px solid transparent;
+  border-radius: 50%;
   color: var(--accent-color);
-	width: 40px;
-	height: 40px;
-	aspect-ratio: 1;
-
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1;
+  z-index: 6;
   transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .close svg {
-	width: 24px;
-	height: 24px;
+  width: 24px;
+  height: 24px;
   transition: transform 0.3s ease-in-out;
-
 }
 
 .close:focus {
-	border-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 @media (hover: hover) {

@@ -8,7 +8,7 @@ import styles from "./BlockTitle.module.css";
 
 interface IBlockTitle extends IGenericElementProps {
   leftSide: boolean;
-  descrBottom?: string | ReactNode;
+  descrBottom?: string | ReactNode ;
   descrSideway?: string | ReactNode;
   background?: string;
   bgLessVisibility?: boolean;

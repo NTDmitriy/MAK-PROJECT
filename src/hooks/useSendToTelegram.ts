@@ -36,6 +36,7 @@ const formatMessageForTelegram = (data: IForm, pathname: string) => {
     PHONE: "Телефон",
     CHECKBOXES: "Выбранные услуги",
     MESSAGE: "Вопрос клиента",
+    product: "Продукт",
   };
 
   const foundPage = findPageByPathname(DASHBOARD_PAGES, pathname);

@@ -1,3 +1,5 @@
+import { IDashboardItem } from "@/config/url-config/all-pages.config";
+
 export type THeroBasic = {
   title: {
     text: string;
@@ -13,7 +15,6 @@ export type THeroInfo = {
   description: string;
   image: string;
 };
-
 
 export type THeroInfoService = string[];
 
@@ -59,13 +60,32 @@ export type TAccordionItem = {
 };
 
 export type TDetialService = {
-	id: number | string;
+  id: number | string;
   title: string;
   description: string;
   image: string;
-}
+};
 
 export type TDetialServices = {
-	title: string;
-	services: TDetialService[]
-}
+  title: string;
+  services: TDetialService[];
+};
+
+export type TServiceProducts = {
+  filling: IDashboardItem;
+  options?: TServiceProductsOptions;
+
+};
+
+export type TServiceProductsOptions = {
+  title: string;
+  titleDescr?: string | null;
+};
+
+export type TServiceWebdevProducts = {
+  name: string;
+  description: string;
+  deadline: string | null;
+  image: string;
+  buttonText: string;
+};
