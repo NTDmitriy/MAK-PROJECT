@@ -4,53 +4,53 @@ class WEBDEV_DASHBOARD {
   private root = "/services";
 
   WEBDEV_REACT_NEXT = {
-    name: "Создание сайтов на React & Next",
+    name: "Сайт на JavaScript",
     smallName: "React & Next",
     url: `${this.root}/sozdanie-i-razrabotka-saytov-react-next`,
-    image: "hero-info",
+    image: "/images/sites_creation/sites-js.webp",
     icon: "hero-info",
     description:
-      "Создание сайтов — это инструмент для запуска контекстной рекламы в одной из крупнейших поисковых систем России.",
+      "Создание мощных и адаптивных сайтов с использованием современных фреймворков, таких как React, Next.js, Vue.js и Angular.",
   } satisfies IDashboardItem;
 
   WEBDEV_WORDPRESS = {
     name: "Создание сайтов на Wordpress",
     smallName: "Wordpress",
     url: `${this.root}/sozdanie-i-razrabotka-saytov-wordpress`,
-    image: "hero-info",
+    image: "/images/sites_creation/sites-wordpress.webp",
     icon: "hero-info",
     description:
-      "Создание сайтов — это инструмент для запуска контекстной рекламы в одной из крупнейших поисковых систем России.",
+      "Разработка гибких и функциональных сайтов на самой популярной в мире CMS, идеально подходящих для блогов, корпоративных сайтов и интернет-магазинов.",
   } satisfies IDashboardItem;
 
   WEBDEV_TILDA = {
     name: "Создание сайтов на Tilda",
     smallName: "Tilda",
     url: `${this.root}/sozdanie-i-razrabotka-saytov-tilda`,
-    image: "hero-info",
+    image: "/images/sites_creation/sites-tilda.webp",
     icon: "hero-info",
     description:
-      "Создание сайтов — это инструмент для запуска контекстной рекламы в одной из крупнейших поисковых систем России.",
+      "Быстрое создание стильных и удобных сайтов без необходимости программирования. Идеально для лендингов и сайтов-визиток.",
   } satisfies IDashboardItem;
 
   WEBDEV_MODX = {
     name: "Создание сайтов на ModX",
     smallName: "ModX",
     url: `${this.root}/sozdanie-i-razrabotka-saytov-modx`,
-    image: "hero-info",
+    image: "/images/sites_creation/sites-modx.webp",
     icon: "hero-info",
     description:
-      "Создание сайтов — это инструмент для запуска контекстной рекламы в одной из крупнейших поисковых систем России.",
+      "Разработка высокопроизводительных и безопасных сайтов с уникальным функционалом на платформе ModX.",
   } satisfies IDashboardItem;
 
   WEBDEV_REDESIGN = {
     name: "Редизайн и доработка",
     smallName: "Редизайн и доработка",
     url: `${this.root}/redizayn-i-dorabotka-saytov`,
-    image: "hero-info",
+    image: "/images/sites_creation/sites-redisgn.webp",
     icon: "hero-info",
     description:
-      "Создание сайтов — это инструмент для запуска контекстной рекламы в одной из крупнейших поисковых систем России.",
+      "Обновление дизайна и функционала существующих сайтов, улучшение их производительности и соответствие современным требованиям.",
   } satisfies IDashboardItem;
 
   WEBDEV = {
