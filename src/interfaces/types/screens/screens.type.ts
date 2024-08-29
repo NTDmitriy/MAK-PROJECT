@@ -5,10 +5,13 @@ import {
 	TFaq,
 	THero,
 	TReviwe,
+	TSupplementaryDescr,
 } from "../block/products.type";
+
 
 export type TServiceScreen = {
   hero: THero;
+  supplementaryDescr?: TSupplementaryDescr;
   products: IDashboardItem;
   projects: TCases[];
   reviwes: TReviwe[];
@@ -24,7 +27,7 @@ export type TProductScreen = {
 
 export type THomeScreen = {
   services: IDashboardItem[];
-	projects: TCases[];
-	reviwes: TReviwe[];
-	faq: TFaq[];
+  projects: TCases[];
+  reviwes: TReviwe[];
+  faq: TFaq[];
 };

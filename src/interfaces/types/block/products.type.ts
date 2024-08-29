@@ -14,11 +14,18 @@ export type THeroInfo = {
   image: string;
 };
 
+
 export type THeroInfoService = string[];
 
 export type THero = {
   basic: THeroBasic;
   info: THeroInfo | THeroInfoService;
+};
+
+export type TSupplementaryDescr = {
+  title: string;
+  descr: string;
+  image: string;
 };
 
 export type TCases = {
