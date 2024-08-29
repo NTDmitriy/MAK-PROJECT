@@ -5,14 +5,17 @@ import {
 	TFaq,
 	THero,
 	TReviwe,
+	TServiceProducts,
+	TServiceWebdevProducts,
 	TSupplementaryDescr,
 } from "../block/products.type";
-
 
 export type TServiceScreen = {
   hero: THero;
   supplementaryDescr?: TSupplementaryDescr;
-  products: IDashboardItem;
+  products?: TServiceProducts;
+  productsWebdev?: TServiceWebdevProducts[];
+	howWorksSites?: boolean;
   projects: TCases[];
   reviwes: TReviwe[];
   faq: TFaq[];

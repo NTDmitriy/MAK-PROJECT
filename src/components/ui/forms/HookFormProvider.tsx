@@ -8,6 +8,7 @@ export interface IForm {
   phone?: string;
   email?: string;
 	checkboxes?: string[];
+	product?: string;
 }
 
 export const HookFormProvider: FC<PropsWithChildren> = ({ children }) => {

@@ -9,6 +9,7 @@ import {
 	THeroBasic,
 	THeroInfoService,
 	TReviwe,
+	TServiceProducts,
 } from "@/interfaces/types/block/products.type";
 import { TServiceScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_FAQ } from "./advertisement-common-faq.config";
@@ -30,7 +31,11 @@ export const ADVERTISEMENT_COMMON_CONFIG = {
       "Интегрируем рекламу с другими маркетинговыми каналами для создания единой и мощной маркетинговой стратегии",
     ] satisfies THeroInfoService,
   } satisfies THero,
-  products: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT satisfies IDashboardItem,
+  products: {
+    filling:
+      ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT satisfies IDashboardItem,
+  } satisfies TServiceProducts,
+
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: allReviwes satisfies TReviwe[],
   faq: ADVERTISEMENT_FAQ satisfies TFaq[],

@@ -9,6 +9,7 @@ import type {
 	THeroBasic,
 	THeroInfoService,
 	TReviwe,
+	TServiceProducts,
 	TSupplementaryDescr,
 } from "@/interfaces/types/block/products.type";
 import { TServiceScreen } from "@/interfaces/types/screens/screens.type";
@@ -37,7 +38,9 @@ export const SEO_COMMON_CONFIG = {
     descr: "В условиях быстро развивающегося цифрового мира трафик и SEO-продвижение играют решающую роль в успехе бизнеса. Правильное использование этих инструментов помогает привлекать новых клиентов, удерживать существующих и существенно увеличивать прибыль. Комплексный подход к цифровому маркетингу включает использование различных стратегий и технологий, которые позволяют максимально эффективно продвигать ваши товары и услуги.",
     image: "seo-common-supplementary.webp",
   } satisfies TSupplementaryDescr,
-  products: SEO_DASHBOARD_PAGES.SEO satisfies IDashboardItem,
+	products: {
+    filling: SEO_DASHBOARD_PAGES.SEO satisfies IDashboardItem,
+  } satisfies TServiceProducts,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: allReviwes satisfies TReviwe[],
   faq: SEO_FAQ satisfies TFaq[],

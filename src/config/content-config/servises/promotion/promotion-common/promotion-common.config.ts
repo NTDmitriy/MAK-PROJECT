@@ -9,6 +9,7 @@ import {
 	THeroBasic,
 	THeroInfoService,
 	TReviwe,
+	TServiceProducts,
 } from "@/interfaces/types/block/products.type";
 import { TServiceScreen } from "@/interfaces/types/screens/screens.type";
 import { PROMOTION_FAQ } from "./promotion-common-faq.config";
@@ -30,7 +31,9 @@ export const PROMOTION_COMMON_CONFIG = {
       "Помогаем вам стать лидером мнений в вашей нише через создание и продвижение экспертного контента",
     ] satisfies THeroInfoService,
   } satisfies THero,
-  products: PROMOTION_DASHBOARD_PAGES.PROMOTION satisfies IDashboardItem,
+  products: {
+    filling: PROMOTION_DASHBOARD_PAGES.PROMOTION satisfies IDashboardItem,
+  } satisfies TServiceProducts,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: allReviwes satisfies TReviwe[],
   faq: PROMOTION_FAQ satisfies TFaq[],
