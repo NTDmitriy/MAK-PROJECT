@@ -17,10 +17,6 @@ export const MobileMenuHead: FC<PropsWithChildren<IMobileMenuHead>> = ({
 }) => {
   const { handleClose } = useMobileMenu();
 
-  const closeAllMenu = () => {
-    handleClose(), closeSubMenu();
-  };
-
   return (
     <div className={clsx(styles.head, !children ? styles.head__pl : "")}>
       {children && (
@@ -29,7 +25,7 @@ export const MobileMenuHead: FC<PropsWithChildren<IMobileMenuHead>> = ({
         </button>
       )}
       {children ? children : "Меню"}
-      <SubButton {...rest} className={styles.sub__btn} onClick={closeAllMenu}>
+      <SubButton {...rest} className={styles.sub__btn} onClick={handleClose}>
         <DynamicSvg name="IconClose" />
       </SubButton>
     </div>

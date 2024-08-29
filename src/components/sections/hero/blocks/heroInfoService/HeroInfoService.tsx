@@ -21,7 +21,7 @@ export const HeroInfoService: FC<PropsWithChildren<IHeroInfoService>> = ({
             <ul className={styles.info__list}>
               {info.map((item, index) => (
                 <li key={index} className={styles.info__item}>
-                  <span className={styles.line}></span>
+                  {/* <span className={styles.line}></span> */}
                   {item}
                 </li>
               ))}

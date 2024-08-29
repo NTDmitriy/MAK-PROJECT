@@ -1,10 +1,10 @@
 
-import { MAGAZIN_MEBELI_CASE } from "@/components/screens/cases/magazin-mebeli/Magazin-mebeli-case";
+import { FurnitureStoreCase } from "@/components/screens/cases/furnitureStoreCase/FurnitureStoreCase";
 import { NextPage } from "next";
 
 const CasesPage: NextPage = () => {
   return (
-    <MAGAZIN_MEBELI_CASE />
+    <FurnitureStoreCase />
     );
 };
 

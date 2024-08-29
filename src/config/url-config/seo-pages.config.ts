@@ -45,7 +45,7 @@ class SEO_DASHBOARD {
 
   SEO = {
     name: "Трафик и SEO",
-    url: `${this.root}/trafiс-and-seo`,
+    url: `${this.root}/trafic-and-seo`,
     childrens: [
       this.SEO_INFLUENCE,
       this.SEO_POSEVY,

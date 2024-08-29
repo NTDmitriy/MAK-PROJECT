@@ -27,7 +27,7 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
           </>
         ) : (
           <>
-            <span>{title.text}</span>
+            <span>{title.text}</span>{" "}
             {title.accentText && (
               <span className={styles.accent}>{title.accentText}</span>
             )}

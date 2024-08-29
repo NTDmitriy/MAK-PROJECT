@@ -1,10 +1,11 @@
 
-import { FRONTEND_DEV_CASE } from "@/components/screens/cases/frontend-dev.tsx/Frontend-dev-case";
+
+import { FrontentDevUniversityCase } from "@/components/screens/cases/frontentDevUniversityCase/FrontentDevUniversityCase";
 import { NextPage } from "next";
 
 const CasesPage: NextPage = () => {
   return (
-    <FRONTEND_DEV_CASE />
+    <FrontentDevUniversityCase />
     );
 };
 

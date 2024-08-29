@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 
-const Service: NextPage = () => {
+const ServicePage: NextPage = () => {
   return (
     <div>
       servise page
@@ -8,4 +8,4 @@ const Service: NextPage = () => {
   );
 };
 
-export default Service;
+export default ServicePage;

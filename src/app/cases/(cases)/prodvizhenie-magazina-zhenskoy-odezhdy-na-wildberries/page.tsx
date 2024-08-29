@@ -1,9 +1,9 @@
-import { WILDBERRIES_CASE } from "@/components/screens/cases/wildberries/wildberries-case";
+import { WildberriesShopCase } from "@/components/screens/cases/wildberriesShopCase/WildberriesShopCase";
 import { NextPage } from "next";
 
 const CasesPage: NextPage = () => {
   return (
-    <WILDBERRIES_CASE />
+    <WildberriesShopCase />
     );
 };
 
