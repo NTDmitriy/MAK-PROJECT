@@ -30,7 +30,7 @@ const Card: FC<CardProps> = ({ image, name, url, description }) => {
     return (
         <div className={styles.card}>
             <div className={styles.card_content}>
-                    <img src={image} alt={name} />
+                    <img src={image} alt={name} className={styles.image} />
                     <h2 className={styles.title}>{name}</h2>
                 <PrimaryLinkButton href={url} className={styles.link}>
                     Подробнее
