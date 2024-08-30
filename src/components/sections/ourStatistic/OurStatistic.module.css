@@ -78,13 +78,12 @@
   width: 80%;
 }
 
-
 @keyframes scale {
   0% {
     width: 0;
   }
   100% {
-    width: 80%;
+    width: 65%;
   }
 }
 
@@ -171,7 +170,7 @@ width: 70px;
 
   .visible {
     opacity: 1;
-    width: 73%;
+    width: 58%;
     animation: unset;
     
   }
@@ -180,7 +179,7 @@ width: 70px;
 @media screen and (max-width:560px) {
   .visible {
     opacity: 1;
-    width: 87%;
+    width: 72%;
     animation: unset;
   }
 }

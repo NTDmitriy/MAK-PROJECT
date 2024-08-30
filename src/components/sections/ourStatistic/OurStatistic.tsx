@@ -9,6 +9,7 @@ import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
 import styles from './OurStatistic.module.css';
 import clsx from "clsx";
+import { OurClients } from "../ourClients/OurClients";
 
 export const OurStatistic: FC<PropsWithChildren<IGenericElementProps>> = ({ className, ...rest }) => {
     // Инициализация useInView
@@ -23,7 +24,6 @@ export const OurStatistic: FC<PropsWithChildren<IGenericElementProps>> = ({ clas
 
     return (
         <Section className={className} {...rest}>
-
             <BlockTitle
                 leftSide={true}
                 descrSideway='Мы нацелены на долгосрочное сотрудничество'
@@ -75,5 +75,6 @@ export const OurStatistic: FC<PropsWithChildren<IGenericElementProps>> = ({ clas
                 </div>
             </Container>
         </Section>
+       
     );
 };
