@@ -6,9 +6,9 @@ import { NextPage } from "next";
 
 const CasesPage: NextPage = () => {
   return (
-    <div>
-      {/* <FrontentDevUniversityCase /> */}
-    <WhyUsSites /></div>
+    
+      <FrontentDevUniversityCase />
+    
     
     );
 };
