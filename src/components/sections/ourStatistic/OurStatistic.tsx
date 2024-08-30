@@ -41,7 +41,7 @@ export const OurStatistic: FC<PropsWithChildren<IGenericElementProps>> = ({ clas
                     <div className={styles.data_counter}>
                         {/* Используем CountUp для анимации счётчика */}
                         <p className={styles.days}>
-                            {inView && <CountUp start={0} end={835} duration={2} />}
+                            {inView && <CountUp start={0} end={835} duration={5} />}
                         </p>
                         <p className={styles.days_descr}>календарных дней</p>
                     </div>
