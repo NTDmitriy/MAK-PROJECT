@@ -2,6 +2,7 @@
   background-color: var(--background-loyout);
   padding-top: 60px;
   padding-bottom: 60px;
+  overflow: hidden;
 }
 
 .head {

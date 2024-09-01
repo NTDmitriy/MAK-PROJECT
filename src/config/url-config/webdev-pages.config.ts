@@ -5,10 +5,10 @@ class WEBDEV_DASHBOARD {
 
   WEBDEV_REACT_NEXT = {
     name: "Сайт на JavaScript",
-    smallName: "React & Next",
-    url: `${this.root}/sozdanie-i-razrabotka-saytov-react-next`,
-    image: "/images/sites_creation/sites-js.webp",
-    icon: "hero-info",
+    smallName: "Сайт на JavaScript",
+    url: `${this.root}/sozdanie-i-razrabotka-saytov-na-javascript`,
+    image: "IconJavaScript",
+    icon: "home-hero-295x191",
     description:
       "Создание мощных и адаптивных сайтов с использованием современных фреймворков, таких как React, Next.js, Vue.js и Angular.",
   } satisfies IDashboardItem;
@@ -17,8 +17,8 @@ class WEBDEV_DASHBOARD {
     name: "Создание сайтов на Wordpress",
     smallName: "Wordpress",
     url: `${this.root}/sozdanie-i-razrabotka-saytov-wordpress`,
-    image: "/images/sites_creation/sites-wordpress.webp",
-    icon: "hero-info",
+    image: "IconWordPress",
+    icon: "home-hero-295x191",
     description:
       "Разработка гибких и функциональных сайтов на самой популярной в мире CMS, идеально подходящих для блогов, корпоративных сайтов и интернет-магазинов.",
   } satisfies IDashboardItem;
@@ -27,8 +27,8 @@ class WEBDEV_DASHBOARD {
     name: "Создание сайтов на Tilda",
     smallName: "Tilda",
     url: `${this.root}/sozdanie-i-razrabotka-saytov-tilda`,
-    image: "/images/sites_creation/sites-tilda.webp",
-    icon: "hero-info",
+    image: "IconTilda",
+    icon: "home-hero-295x191",
     description:
       "Быстрое создание стильных и удобных сайтов без необходимости программирования. Идеально для лендингов и сайтов-визиток.",
   } satisfies IDashboardItem;
@@ -37,8 +37,8 @@ class WEBDEV_DASHBOARD {
     name: "Создание сайтов на ModX",
     smallName: "ModX",
     url: `${this.root}/sozdanie-i-razrabotka-saytov-modx`,
-    image: "/images/sites_creation/sites-modx.webp",
-    icon: "hero-info",
+    image: "IconModx",
+    icon: "home-hero-295x191",
     description:
       "Разработка высокопроизводительных и безопасных сайтов с уникальным функционалом на платформе ModX.",
   } satisfies IDashboardItem;
@@ -47,13 +47,14 @@ class WEBDEV_DASHBOARD {
     name: "Редизайн и доработка",
     smallName: "Редизайн и доработка",
     url: `${this.root}/redizayn-i-dorabotka-saytov`,
-    image: "/images/sites_creation/sites-redisgn.webp",
-    icon: "hero-info",
+    image: "iconRedesign",
+    icon: "home-hero-295x191",
     description:
       "Обновление дизайна и функционала существующих сайтов, улучшение их производительности и соответствие современным требованиям.",
   } satisfies IDashboardItem;
 
   WEBDEV = {
+    icon: "IconWebDevNav",
     name: "Создание сайтов",
     url: `${this.root}/sozdanie-i-razrabotka-saytov`,
     childrens: [

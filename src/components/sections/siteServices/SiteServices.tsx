@@ -1,72 +1,104 @@
+import { PrimaryButton } from "@/components/ui/buttons/primaryButton/PrimaryButton";
 import { Container } from "@/components/ui/container/Container";
+import {
+  FORM_TYPE,
+  FormController,
+} from "@/components/ui/forms/FormController";
+import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
+import { Popup } from "@/components/ui/modals/popup/Popup";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { FC, PropsWithChildren } from "react";
-import styles from './SiteServices.module.css';
-import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import { WEBDEV_DASHBOARD_PAGES } from "@/config/url-config/webdev-pages.config";
-import clsx from "clsx";
+import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { FC, PropsWithChildren } from "react";
+import { DynamicSvg, TSvgMapKeys } from "../../ui/dynamicSvg/DynamicSvg";
+import styles from "./SiteServices.module.css";
 
-interface CardProps {
-    image: string;
-    name: string;
-    url: string;
-    description: string;
+interface ICard {
+  image: string;
+  name: string;
+  url: string;
+  description: string;
 }
 
-interface CardListProps {
-    cards: CardProps[];
+interface ICardList {
+  cards: ICard[];
 }
 
-
-const cardData: CardProps[] = WEBDEV_DASHBOARD_PAGES.WEBDEV.childrens.map(item => ({
-    image: item.image,
-    name: item.name,
-    url: item.url,
-    description: item.description,
-}));
-
-const Card: FC<CardProps> = ({ image, name, url, description }) => {
-    return (
-        <div className={styles.card}>
-            <div className={styles.card_content}>
-                    <img src={image} alt={name} className={styles.image} />
-                    <h2 className={styles.title}>{name}</h2>
-                <PrimaryLinkButton href={url} className={styles.link}>
-                    Подробнее
-                </PrimaryLinkButton>
-            </div>
-            <p className={styles.description}>{description}</p>
-        </div>
-    );
+const CardList: FC<ICardList> = ({ cards }) => {
+  return (
+    <ul className={styles.card__list}>
+      {cards.map((card, index) => (
+        <Card
+          key={index}
+          image={card.image}
+          name={card.name}
+          url={card.url}
+          description={card.description}
+        />
+      ))}
+    </ul>
+  );
 };
 
-const CardList: FC<CardListProps> = ({ cards }) => {
-    return (
-        <div className={styles.cardList}>
-            {cards.map((card, index) => (
-                <Card
-                    key={index}
-                    image={card.image}
-                    name={card.name}
-                    url={card.url}
-                    description={card.description}
+const Card: FC<ICard> = ({ image, name, url, description }) => {
+  return (
+    <li className={styles.card}>
+      <div className={styles.card_content}>
+        <div className={styles.img}>
+          <DynamicSvg name={image as TSvgMapKeys} />
+        </div>
+        <div className={styles.title__wrapper}>
+          <h2 className={styles.title}>{name}</h2>
+          <PrimaryLinkButton href={url} className={styles.link}>
+            Подробнее
+          </PrimaryLinkButton>
+        </div>
+      </div>
+      <p className={styles.description}>{description}</p>
+    </li>
+  );
+};
+
+export const SiteServices: FC<PropsWithChildren<IGenericElementProps>> = ({
+  className,
+  ...rest
+}) => {
+  const { childrens } = WEBDEV_DASHBOARD_PAGES.WEBDEV;
+
+  return (
+    <Section className={className} {...rest}>
+      <BlockTitle leftSide={true}>
+        Создание сайтов на популярных фреймворках и CMS
+      </BlockTitle>
+      <Container>
+        <div className={styles.content}>
+          <CardList cards={childrens} />
+
+          <div className={styles.sticky}>
+            <h5 className={styles.sticky__title}>ОБРАТИТЕ ВНИМАНИЕ!</h5>
+            <p className={styles.sticky__text}>
+              Мы предлагаем как полный комплекс услуг по продвижению вашей
+              онлайн-школы, так и отдельные решения по вашему выбору. Вы можете
+              выбрать только те услуги, которые вам необходимы, или
+              воспользоваться нашим полным пакетом для максимальной
+              эффективности.
+            </p>
+
+            <Popup
+              initComponent={
+                <PrimaryButton>Получить консультацию</PrimaryButton>
+              }
+              contentComponent={
+                <FormController
+                  formType={FORM_TYPE.COMPLEX_FORM}
+                  title="Получить консультацию"
                 />
-            ))}
+              }
+            />
+          </div>
         </div>
-    );
-};
-
-export const SiteServices: FC<PropsWithChildren> = () => {
-    return (
-        <Section>
-            <BlockTitle leftSide={true}>Создание сайтов на популярных фреймворках и CMS</BlockTitle>
-            <Container className={styles.content}>
-                <CardList cards={cardData} />
-                <div className={styles.form}>
-                </div>
-            </Container>
-
-        </Section>
-    );
+      </Container>
+    </Section>
+  );
 };

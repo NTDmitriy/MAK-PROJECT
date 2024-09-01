@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { FC } from "react";
 import { DynamicSvg } from "../../ui/dynamicSvg/DynamicSvg";
-import styles from "./WhyUsServices.module.css";
+import styles from "./WhyUsChecklist.module.css";
 
 const whyUsServicesArr = [
   "Опытная команда специалистов",
@@ -14,7 +14,7 @@ const whyUsServicesArr = [
   "Ежедневная отчетность и подробная аналитика",
 ];
 
-export const WhyUsServices: FC = () => {
+export const WhyUsChecklist: FC = () => {
   return (
     <Section>
       <BlockTitle leftSide={false}>

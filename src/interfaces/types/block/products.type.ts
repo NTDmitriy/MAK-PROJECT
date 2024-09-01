@@ -10,7 +10,7 @@ export type THeroBasic = {
   image: string;
 };
 
-export type THeroInfo = {
+export type THeroInfoProduct = {
   title: string;
   description: string;
   image: string;
@@ -18,9 +18,19 @@ export type THeroInfo = {
 
 export type THeroInfoService = string[];
 
+export type THeroInfoWebdev = string[];
+
+export type THeroInfoAdvertisement = {
+  title: string;
+  description: string;
+};
+
 export type THero = {
   basic: THeroBasic;
-  info: THeroInfo | THeroInfoService;
+  infoProduct?: THeroInfoProduct;
+  infoService?: THeroInfoService;
+  infoAdvertisement?: THeroInfoAdvertisement[];
+  infoWebdev?: THeroInfoWebdev;
 };
 
 export type TSupplementaryDescr = {
@@ -71,13 +81,22 @@ export type TDetialServices = {
   services: TDetialService[];
 };
 
-export type TServiceProducts = {
-  filling: IDashboardItem;
-  options?: TServiceProductsOptions;
-
+export type TIncludedInService = {
+  items: TIncludedInServiceItem[];
+  options: TTitleOptions;
 };
 
-export type TServiceProductsOptions = {
+export type TIncludedInServiceItem = {
+  title: string;
+  description: string;
+};
+
+export type TServiceProducts = {
+  filling: IDashboardItem;
+  options?: TTitleOptions;
+};
+
+export type TTitleOptions = {
   title: string;
   titleDescr?: string | null;
 };
@@ -88,4 +107,26 @@ export type TServiceWebdevProducts = {
   deadline: string | null;
   image: string;
   buttonText: string;
+};
+
+export type THowWorks = {
+  items: THowWorksItem[];
+  options: TTitleOptions;
+};
+
+export type THowWorksItem = {
+  title: string;
+  descr: string;
+};
+
+export type TWhyUs = {
+  items: TWhyUsItem[];
+  options: TTitleOptions;
+};
+
+export type TWhyUsItem = {
+  title: string;
+  descrBefore: string;
+  descrAccent: string;
+  descrAfter: string;
 };

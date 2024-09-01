@@ -1,3 +1,5 @@
+'use client'
+
 import { enqueueSnackbar } from "notistack";
 
 interface INotification {

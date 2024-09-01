@@ -18,9 +18,9 @@ export const HeroInfoService: FC<PropsWithChildren<IHeroInfoService>> = ({
 			{info && (
 				<div className={clsx(styles.background, className)} {...rest}>
 					<Container>
-						<ul className={styles.info__list}>
+						<ul className={styles.list}>
 							{info.map((item, index) => (
-								<li key={index} className={styles.info__item}>
+								<li key={index} className={styles.item}>
 									<span className={styles.opacity}>{item}</span>
 
 								</li>

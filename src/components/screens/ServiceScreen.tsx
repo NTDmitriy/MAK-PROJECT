@@ -1,33 +1,47 @@
-import { Hero } from "@/components/sections/hero/Hero";
-import { THeroInfoService } from "@/interfaces/types/block/products.type";
 import { TServiceScreen } from "@/interfaces/types/screens/screens.type";
 import { FC, PropsWithChildren } from "react";
 import { AllProductsService } from "../sections/allProductsService/AllProductsService";
 import { AllProductsWebdevService } from "../sections/allProductsService/AllProductsWebdevService";
+import Faq from "../sections/faq/Faq";
+import { Hero } from "../sections/hero/Hero";
+import { HowWorks } from "../sections/howWorks/HowWorks";
 import { HowWorksSites } from "../sections/howWorksSites/HowWorksSites";
+import { Projects } from "../sections/projects/Projects";
+import { Reviwes } from "../sections/reviwes/Reviwes";
+import { SiteServices } from "../sections/siteServices/SiteServices";
 import { SupplementaryDescr } from "../sections/supplementaryDescr/SupplementaryDescr";
-import { WhyUsServices } from "../sections/whyUsServices/WhyUsServices";
+import { WhyUs } from "../sections/whyUs/WhyUs";
+import { WhyUsChecklist } from "../sections/whyUsChecklist/WhyUsChecklist";
+import { WhyUsSites } from "../sections/whyUsSites/whyUsSites";
 
 interface IServiceScreen {
-	content: TServiceScreen;
+  content: TServiceScreen;
 }
 
 export const ServiceScreen: FC<PropsWithChildren<IServiceScreen>> = ({
-	content,
+  content,
 }) => {
-	return (
-		<>
-			<Hero
-				basicContent={content.hero.basic}
-				serviceContent={content.hero.info as THeroInfoService}
-			/>
+  return (
+    <>
+      <Hero
+        basicContent={content.hero.basic}
+        productContent={content.hero.infoProduct}
+        serviceContent={content.hero.infoService}
+        advertisementContent={content.hero.infoAdvertisement}
+        webdewContent={content.hero.infoWebdev}
+      />
 			{content.supplementaryDescr && <SupplementaryDescr suppContent={content.supplementaryDescr} />}
 			{content.products && <AllProductsService productsConent={content.products} />}
 			{content.productsWebdev && <AllProductsWebdevService productsConent={content.productsWebdev} />}
-			{content.howWorksSites ? <HowWorksSites /> : <WhyUsServices />}
-			{/*<Projects cases={content.projects} />
-			<Reviwes reviwes={content.reviwes} />
-			<Faq faq={content.faq} /> */}
-		</>
-	);
+			{content.siteServices && <SiteServices />}
+      {content.howWorks && <HowWorks howWorksContent={content.howWorks} />}
+      {content.howWorksSites && <HowWorksSites />}
+			{content.whyUsChecklict && <WhyUsChecklist />}
+			{content.whyUsSites && <WhyUsSites />}
+      {content.whyUs && <WhyUs whyUsContent={content.whyUs} />}
+      {content.projects && <Projects cases={content.projects} />}
+			{content.reviwes && <Reviwes reviwes={content.reviwes} />}
+			{content.faq && <Faq faq={content.faq} />}
+    </>
+  );
 };
