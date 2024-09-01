@@ -14,6 +14,7 @@ import IconArticlesNav from "@/assets/svg/iconArticlesNav.svg";
 import IconCasesNav from "@/assets/svg/iconCasesNav.svg";
 import IconClose from "@/assets/svg/iconClose.svg";
 import IconContactsNav from "@/assets/svg/iconContactsNav.svg";
+import IconDeadline from "@/assets/svg/iconDeadline.svg";
 import IconDownArray from "@/assets/svg/iconDownArray.svg";
 import IconDzen from "@/assets/svg/iconDzen.svg";
 import IconEMail from "@/assets/svg/iconEMail.svg";
@@ -56,6 +57,7 @@ import IconWhyUsServices from "@/assets/svg/iconWhyUsServices.svg";
 import IconWordPress from "@/assets/svg/iconWordPress.svg";
 
 export const svgMap = {
+  IconDeadline,
   IconTilda,
   IconWordPress,
   iconRedesign,

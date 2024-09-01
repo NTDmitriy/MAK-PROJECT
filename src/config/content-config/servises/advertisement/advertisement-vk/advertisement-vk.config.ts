@@ -11,7 +11,7 @@ import {
   TSupplementaryDescr,
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
-import { TProductScreen } from "@/interfaces/types/screens/screens.type";
+import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_VK_INCLUDE } from "./advertisement-vk-include.config";
 
 export const ADVERTISEMENT_VK_CONFIG = {
@@ -120,4 +120,4 @@ export const ADVERTISEMENT_VK_CONFIG = {
   includeService: ADVERTISEMENT_VK_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
-} satisfies TProductScreen;
+} satisfies TScreen;

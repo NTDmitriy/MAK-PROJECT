@@ -11,7 +11,11 @@ export interface IReviwes extends IGenericElementProps {
   reviwes: TReviwe[];
 }
 
-export const Reviwes: FC<PropsWithChildren<IReviwes>> = ({ className, reviwes, ...rest }) => {
+export const Reviwes: FC<PropsWithChildren<IReviwes>> = ({
+  className,
+  reviwes,
+  ...rest
+}) => {
   return (
     <>
       {reviwes && (
@@ -20,13 +24,11 @@ export const Reviwes: FC<PropsWithChildren<IReviwes>> = ({ className, reviwes, .
             leftSide={true}
             descrSideway="Отзывы и оценки от наших клиентов"
             background="ОТЗЫВЫ"
-						bgLessVisibility={true}
+            bgLessVisibility={true}
             className={styles.reviwes__title}
           >
             Что говорят наши клиенты
           </BlockTitle>
-
-
           <Slider reviwes={reviwes} />
         </Section>
       )}

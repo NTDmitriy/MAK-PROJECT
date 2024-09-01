@@ -1,11 +1,10 @@
-import { TServiceScreen } from "@/interfaces/types/screens/screens.type";
+import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { FC, PropsWithChildren } from "react";
 import { AllProductsService } from "../sections/allProductsService/AllProductsService";
 import { AllProductsWebdevService } from "../sections/allProductsService/AllProductsWebdevService";
 import Faq from "../sections/faq/Faq";
 import { Hero } from "../sections/hero/Hero";
 import { HowWorks } from "../sections/howWorks/HowWorks";
-import { HowWorksSites } from "../sections/howWorksSites/HowWorksSites";
 import { Projects } from "../sections/projects/Projects";
 import { Reviwes } from "../sections/reviwes/Reviwes";
 import { SiteServices } from "../sections/siteServices/SiteServices";
@@ -13,9 +12,10 @@ import { SupplementaryDescr } from "../sections/supplementaryDescr/Supplementary
 import { WhyUs } from "../sections/whyUs/WhyUs";
 import { WhyUsChecklist } from "../sections/whyUsChecklist/WhyUsChecklist";
 import { WhyUsSites } from "../sections/whyUsSites/whyUsSites";
+import { WorkStages } from "../sections/workStages/WorkStages";
 
 interface IServiceScreen {
-  content: TServiceScreen;
+  content: TScreen;
 }
 
 export const ServiceScreen: FC<PropsWithChildren<IServiceScreen>> = ({
@@ -35,7 +35,7 @@ export const ServiceScreen: FC<PropsWithChildren<IServiceScreen>> = ({
 			{content.productsWebdev && <AllProductsWebdevService productsConent={content.productsWebdev} />}
 			{content.siteServices && <SiteServices />}
       {content.howWorks && <HowWorks howWorksContent={content.howWorks} />}
-      {content.howWorksSites && <HowWorksSites />}
+      {content.workStages && <WorkStages workStagesContent={content.workStages} />}
 			{content.whyUsChecklict && <WhyUsChecklist />}
 			{content.whyUsSites && <WhyUsSites />}
       {content.whyUs && <WhyUs whyUsContent={content.whyUs} />}

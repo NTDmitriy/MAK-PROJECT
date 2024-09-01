@@ -11,7 +11,7 @@ import {
   TReviwe,
   TServiceProducts,
 } from "@/interfaces/types/block/products.type";
-import { TServiceScreen } from "@/interfaces/types/screens/screens.type";
+import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { PROMOTION_FAQ } from "./promotion-common-faq.config";
 
 export const PROMOTION_COMMON_CONFIG = {
@@ -38,4 +38,4 @@ export const PROMOTION_COMMON_CONFIG = {
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
   faq: PROMOTION_FAQ satisfies TFaq[],
-} satisfies TServiceScreen;
+} satisfies TScreen;

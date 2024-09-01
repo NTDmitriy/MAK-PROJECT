@@ -1,5 +1,6 @@
 import { IDashboardItem } from "@/config/url-config/all-pages.config";
-import {
+import type {
+  TAllSiteTypes,
   TCases,
   TDetialServices,
   TFaq,
@@ -9,35 +10,31 @@ import {
   TReviwe,
   TServiceProducts,
   TServiceWebdevProducts,
+  TSuitableFor,
   TSupplementaryDescr,
   TWhyUs,
+  TWorkStages,
 } from "../block/products.type";
 
-export type TServiceScreen = {
+export type TScreen = {
   hero: THero;
   supplementaryDescr?: TSupplementaryDescr;
   products?: TServiceProducts;
   productsWebdev?: TServiceWebdevProducts[];
   siteServices?: boolean;
   howWorks?: THowWorks;
-  howWorksSites?: boolean;
+  workStages?: TWorkStages;
   whyUs?: TWhyUs;
   whyUsChecklict?: boolean;
   whyUsSites?: boolean;
   projects?: TCases[];
   reviwes?: TReviwe[];
   faq?: TFaq[];
-};
-
-export type TProductScreen = {
-  hero: THero;
-  supplementaryDescr?: TSupplementaryDescr;
+  allSiteTypes?: TAllSiteTypes;
   detialServices?: TDetialServices;
   includeService?: TIncludedInService;
-  howWorks?: THowWorks;
-  whyUs?: TWhyUs;
-  projects: TCases[];
-  reviwes: TReviwe[];
+  suitableFor?: TSuitableFor;
+  technologyStack?: TSuitableFor;
 };
 
 export type THomeScreen = {

@@ -10,7 +10,7 @@ import {
   TReviwe,
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
-import { TProductScreen } from "@/interfaces/types/screens/screens.type";
+import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ONLINE_SCHOOL_DETAIL } from "./online-schools-detail.config";
 
 export const ONLINE_SCHOOL_CONFIG = {
@@ -95,4 +95,4 @@ export const ONLINE_SCHOOL_CONFIG = {
   detialServices: ONLINE_SCHOOL_DETAIL satisfies TDetialServices,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
-} satisfies TProductScreen;
+} satisfies TScreen;

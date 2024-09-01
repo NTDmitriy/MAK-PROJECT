@@ -96,6 +96,16 @@ export type TServiceProducts = {
   options?: TTitleOptions;
 };
 
+export type TWorkStages = {
+  items: TWorkStagesItem[];
+  title: string;
+};
+
+export type TWorkStagesItem = {
+  stage: string;
+  descr: string[];
+};
+
 export type TTitleOptions = {
   title: string;
   titleDescr?: string | null;
@@ -104,9 +114,16 @@ export type TTitleOptions = {
 export type TServiceWebdevProducts = {
   name: string;
   description: string;
+  descriptionSmall?: string;
   deadline: string | null;
   image: string;
   buttonText: string;
+};
+
+export type TAllSiteTypes = {
+  items: TServiceWebdevProducts[];
+  formTitle: string;
+  formDescr: string;
 };
 
 export type THowWorks = {
@@ -129,4 +146,13 @@ export type TWhyUsItem = {
   descrBefore: string;
   descrAccent: string;
   descrAfter: string;
+};
+
+export type TSuitableFor = {
+  items: TSuitableForItem[];
+  title?: string;
+};
+export type TSuitableForItem = {
+  title: string;
+  descr: string;
 };

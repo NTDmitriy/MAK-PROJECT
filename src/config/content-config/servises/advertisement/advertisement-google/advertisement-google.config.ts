@@ -11,7 +11,7 @@ import {
   TSupplementaryDescr,
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
-import { TProductScreen } from "@/interfaces/types/screens/screens.type";
+import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_GOOGLE_INCLUDE } from "./advertisement-google-include.config";
 
 export const ADVERTISEMENT_GOOGLE_CONFIG = {
@@ -117,4 +117,4 @@ export const ADVERTISEMENT_GOOGLE_CONFIG = {
   includeService: ADVERTISEMENT_GOOGLE_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
-} satisfies TProductScreen;
+} satisfies TScreen;

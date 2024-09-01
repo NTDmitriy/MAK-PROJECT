@@ -10,7 +10,7 @@ import {
   TReviwe,
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
-import { TProductScreen } from "@/interfaces/types/screens/screens.type";
+import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { MARKET_PLACE_DETAIL } from "./market-place-detail.config";
 
 export const MARKET_PLACE_CONFIG = {
@@ -95,4 +95,4 @@ export const MARKET_PLACE_CONFIG = {
   detialServices: MARKET_PLACE_DETAIL satisfies TDetialServices,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
-} satisfies TProductScreen;
+} satisfies TScreen;

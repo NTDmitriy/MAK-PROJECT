@@ -10,7 +10,7 @@ import {
   TReviwe,
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
-import { TProductScreen } from "@/interfaces/types/screens/screens.type";
+import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { CONSTRUCTION_COMPANY_DETAIL } from "./consruction-company-detail.config";
 
 export const CONSTRUCTION_COMPANY_CONFIG = {
@@ -95,4 +95,4 @@ export const CONSTRUCTION_COMPANY_CONFIG = {
   detialServices: CONSTRUCTION_COMPANY_DETAIL satisfies TDetialServices,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
-} satisfies TProductScreen;
+} satisfies TScreen;
