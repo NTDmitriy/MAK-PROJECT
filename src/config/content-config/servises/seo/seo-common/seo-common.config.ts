@@ -13,7 +13,7 @@ import type {
   TSupplementaryDescr,
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
-import { TServiceScreen } from "@/interfaces/types/screens/screens.type";
+import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { SEO_FAQ } from "./seo-common-faq.config";
 
 export const SEO_COMMON_CONFIG = {
@@ -111,5 +111,5 @@ export const SEO_COMMON_CONFIG = {
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
   faq: SEO_FAQ satisfies TFaq[],
-} satisfies TServiceScreen;
+} satisfies TScreen;
  

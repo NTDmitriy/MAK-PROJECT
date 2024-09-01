@@ -9,7 +9,7 @@ import {
   TReviwe,
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
-import { TProductScreen } from "@/interfaces/types/screens/screens.type";
+import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { SEO_PROMOTION_INCLUDE } from "./seo-promotion-include.config";
 
 export const SEO_PROMOTION_CONFIG = {
@@ -76,4 +76,4 @@ export const SEO_PROMOTION_CONFIG = {
   includeService: SEO_PROMOTION_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
-} satisfies TProductScreen;
+} satisfies TScreen;

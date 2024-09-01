@@ -11,7 +11,7 @@ import {
   TSupplementaryDescr,
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
-import { TProductScreen } from "@/interfaces/types/screens/screens.type";
+import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_META_INCLUDE } from "./advertisement-meta-include.config";
 
 export const ADVERTISEMENT_META_CONFIG = {
@@ -120,4 +120,4 @@ export const ADVERTISEMENT_META_CONFIG = {
   includeService: ADVERTISEMENT_META_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
-} satisfies TProductScreen;
+} satisfies TScreen;

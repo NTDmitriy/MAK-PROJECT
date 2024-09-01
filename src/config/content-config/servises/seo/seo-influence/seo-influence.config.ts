@@ -9,7 +9,7 @@ import {
   TReviwe,
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
-import { TProductScreen } from "@/interfaces/types/screens/screens.type";
+import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { SEO_INFLUENCE_INCLUDE } from "./seo-influence-include.config";
 
 export const SEO_INFLUENCE_CONFIG = {
@@ -74,4 +74,4 @@ export const SEO_INFLUENCE_CONFIG = {
   includeService: SEO_INFLUENCE_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
-} satisfies TProductScreen;
+} satisfies TScreen;
