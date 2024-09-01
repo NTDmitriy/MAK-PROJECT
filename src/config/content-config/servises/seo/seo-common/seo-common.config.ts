@@ -42,11 +42,9 @@ export const SEO_COMMON_CONFIG = {
   } satisfies TSupplementaryDescr,
   products: {
     filling: SEO_DASHBOARD_PAGES.SEO satisfies IDashboardItem,
-    options: {
-      title: "Услуги по трафику и SEO",
-      titleDescr:
-        "Наша команда предоставляет полный спектр услуг для эффективного продвижения вашего бизнеса:",
-    },
+    blockTitle: "Услуги по трафику и SEO",
+    blockTitleDescr:
+      "Наша команда предоставляет полный спектр услуг для эффективного продвижения вашего бизнеса:",
   } satisfies TServiceProducts,
   howWorks: {
     items: [
@@ -71,9 +69,8 @@ export const SEO_COMMON_CONFIG = {
           "Предоставляем регулярные отчеты и анализируем эффективность кампаний, корректируя их по мере необходимости.",
       },
     ],
-    options: {
-      title: "Как мы работаем",
-    },
+
+    blockTitle: "Как мы работаем",
   },
   whyUs: {
     items: [
@@ -104,12 +101,9 @@ export const SEO_COMMON_CONFIG = {
         descrAfter: "благодаря нашим решениям.",
       },
     ],
-    options: {
-      title: "Почему нас выбирают:",
-    },
+    blockTitle: "Почему нас выбирают:",
   } satisfies TWhyUs,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
   faq: SEO_FAQ satisfies TFaq[],
 } satisfies TScreen;
- 

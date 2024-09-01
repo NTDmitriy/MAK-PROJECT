@@ -31,7 +31,6 @@ export const SEO_POSEVY_CONFIG = {
       image: "promotion-medical-hero-info",
     } satisfies THeroInfoProduct,
   } satisfies THero,
-
   whyUs: {
     items: [
       {
@@ -65,11 +64,9 @@ export const SEO_POSEVY_CONFIG = {
         descrAfter: "и улучшение показателей вашего бизнеса.",
       },
     ],
-    options: {
-      title: "Почему посевы рекламы доверяют нам",
-      titleDescr:
-        "Мы предлагаем уникальный подход к посевам рекламы, который базируется на нашем многолетнем опыте и глубоких знаниях рынка:",
-    },
+    blockTitle: "Почему посевы рекламы доверяют нам",
+    blockTitleDescr:
+      "Мы предлагаем уникальный подход к посевам рекламы, который базируется на нашем многолетнем опыте и глубоких знаниях рынка:",
   } satisfies TWhyUs,
   includeService: SEO_POSEVY_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

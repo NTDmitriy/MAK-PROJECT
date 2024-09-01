@@ -79,11 +79,10 @@ export const ADVERTISEMENT_META_CONFIG = {
           "Предоставляем регулярные отчеты и рекомендации по дальнейшему улучшению рекламных кампаний.",
       },
     ],
-    options: {
-      title: "Как мы работаем и почему нас выбирают",
-      titleDescr:
-        "Мы работаем по четко выстроенной схеме, которая гарантирует успешное продвижение вашего бизнеса:",
-    },
+
+    blockTitle: "Как мы работаем и почему нас выбирают",
+    blockTitleDescr:
+      "Мы работаем по четко выстроенной схеме, которая гарантирует успешное продвижение вашего бизнеса:",
   } satisfies THowWorks,
   whyUs: {
     items: [
@@ -113,9 +112,9 @@ export const ADVERTISEMENT_META_CONFIG = {
         descrAfter: "и повышение эффективности вашего бизнеса. ",
       },
     ],
-    options: {
-      title: "Почему нас выбирают:",
-    },
+ 
+      blockTitle: "Почему нас выбирают:",
+   
   } satisfies TWhyUs,
   includeService: ADVERTISEMENT_META_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

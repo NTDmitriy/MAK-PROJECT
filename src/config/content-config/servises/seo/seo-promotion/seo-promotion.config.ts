@@ -67,11 +67,9 @@ export const SEO_PROMOTION_CONFIG = {
         descrAfter: "и улучшение позиций вашего сайта в поисковой выдаче.",
       },
     ],
-    options: {
-      title: "Почему SEO-продвижение доверяют нам",
-      titleDescr:
-        "Наше агентство предлагает уникальный подход к SEO-продвижению, который основывается на нашем многолетнем опыте и глубоких знаниях рынка:",
-    },
+    blockTitle: "Почему SEO-продвижение доверяют нам",
+    blockTitleDescr:
+      "Наше агентство предлагает уникальный подход к SEO-продвижению, который основывается на нашем многолетнем опыте и глубоких знаниях рынка:",
   } satisfies TWhyUs,
   includeService: SEO_PROMOTION_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

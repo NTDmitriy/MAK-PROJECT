@@ -83,7 +83,8 @@ export type TDetialServices = {
 
 export type TIncludedInService = {
   items: TIncludedInServiceItem[];
-  options: TTitleOptions;
+  blockTitle?: string;
+  blockTitleDescr?: string;
 };
 
 export type TIncludedInServiceItem = {
@@ -93,7 +94,8 @@ export type TIncludedInServiceItem = {
 
 export type TServiceProducts = {
   filling: IDashboardItem;
-  options?: TTitleOptions;
+  blockTitle?: string;
+  blockTitleDescr?: string;
 };
 
 export type TWorkStages = {
@@ -106,10 +108,6 @@ export type TWorkStagesItem = {
   descr: string[];
 };
 
-export type TTitleOptions = {
-  title: string;
-  titleDescr?: string | null;
-};
 
 export type TServiceWebdevProducts = {
   name: string;
@@ -128,7 +126,8 @@ export type TAllSiteTypes = {
 
 export type THowWorks = {
   items: THowWorksItem[];
-  options: TTitleOptions;
+  blockTitle?: string;
+  blockTitleDescr?: string;
 };
 
 export type THowWorksItem = {
@@ -138,7 +137,8 @@ export type THowWorksItem = {
 
 export type TWhyUs = {
   items: TWhyUsItem[];
-  options: TTitleOptions;
+  blockTitle?: string;
+  blockTitleDescr?: string;
 };
 
 export type TWhyUsItem = {

@@ -76,11 +76,10 @@ export const ADVERTISEMENT_GOOGLE_CONFIG = {
           "Предоставляем регулярные отчеты и вносим необходимые изменения для повышения эффективности.",
       },
     ],
-    options: {
-      title: "Как мы работаем и почему нас выбирают",
-      titleDescr:
-        "Мы работаем по четко выстроенной схеме, которая гарантирует успешное продвижение вашего бизнеса:",
-    },
+
+    blockTitle: "Как мы работаем и почему нас выбирают",
+    blockTitleDescr:
+      "Мы работаем по четко выстроенной схеме, которая гарантирует успешное продвижение вашего бизнеса:",
   } satisfies THowWorks,
   whyUs: {
     items: [
@@ -96,7 +95,7 @@ export const ADVERTISEMENT_GOOGLE_CONFIG = {
         descrBefore: "Каждому клиенту мы предоставляем ",
         descrAccent: "персонализированные решения,",
         descrAfter: " которые соответствуют его уникальным потребностям.",
-      }, 
+      },
       {
         title: "Прозрачность и отчетность:",
         descrBefore: "Мы всегда открыты для общения и предоставляем",
@@ -110,9 +109,8 @@ export const ADVERTISEMENT_GOOGLE_CONFIG = {
         descrAfter: "и повышение эффективности вашего бизнеса. ",
       },
     ],
-    options: {
-      title: "Почему нас выбирают:",
-    },
+
+    blockTitle: "Почему нас выбирают:",
   } satisfies TWhyUs,
   includeService: ADVERTISEMENT_GOOGLE_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

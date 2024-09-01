@@ -36,7 +36,7 @@ export const SEO_EMAIL_INCLUDE = {
     }
   ]
   ,
-  options: {
-    title: "Что входит в услугу",
-  },
+
+    blockTitle: "Что входит в услугу",
+ 
 } satisfies TIncludedInService;

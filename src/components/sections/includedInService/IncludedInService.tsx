@@ -1,5 +1,8 @@
 import { Container } from "@/components/ui/container/Container";
-import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
+import {
+  FORM_TYPE,
+  FormController,
+} from "@/components/ui/forms/FormController";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
@@ -17,14 +20,16 @@ export const IncludedInService: FC<PropsWithChildren<IIncludedInService>> = ({
   includedInService,
   ...rest
 }) => {
-  const { items, options } = includedInService;
-  const { title, titleDescr } = options;
+  const { items, blockTitle, blockTitleDescr } = includedInService;
 
   return (
     <>
       <Section className={className} {...rest}>
-        <BlockTitle leftSide={true} descrBottom={titleDescr}>
-          {title ? <>{title}</> : "Что выходит в услугу"}
+        <BlockTitle
+          leftSide={true}
+          descrBottom={blockTitleDescr && blockTitleDescr}
+        >
+          {blockTitle ? <>{blockTitle}</> : "Что выходит в услугу"}
         </BlockTitle>
         <Container>
           <div className={styles.root}>

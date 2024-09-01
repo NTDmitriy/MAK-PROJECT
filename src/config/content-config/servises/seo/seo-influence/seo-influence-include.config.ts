@@ -43,7 +43,6 @@ export const SEO_INFLUENCE_INCLUDE = {
         "Предоставляем полный отчет о кампании и рекомендации по дальнейшему продвижению.",
     },
   ],
-  options: {
-    title: "Что входит в услугу",
-  },
+
+  blockTitle: "Что входит в услугу",
 } satisfies TIncludedInService;
