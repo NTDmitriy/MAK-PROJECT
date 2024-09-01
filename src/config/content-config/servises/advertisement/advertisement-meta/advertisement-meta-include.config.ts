@@ -53,9 +53,9 @@ export const ADVERTISEMENT_META_INCLUDE = {
         "Рекомендации и внедрение дополнительных сервисов и виджетов для улучшения конверсии.",
     },
   ],
-  options: {
-    title: "Что входит в услугу",
-    titleDescr:
+
+    blockTitle: "Что входит в услугу",
+    blockTitleDescr:
       "Наше агентство предлагает комплексный подход к настройке и управлению рекламными кампаниями в Meta: Facebook & Instagram:",
-  },
+
 } satisfies TIncludedInService;

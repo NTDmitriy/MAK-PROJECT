@@ -14,13 +14,13 @@ export const HowWorks: FC<PropsWithChildren<IHowWorks>> = ({
   howWorksContent,
   ...rest
 }) => {
-  const { items, options } = howWorksContent;
-  const { title, titleDescr } = options;
+  const { items, blockTitle, blockTitleDescr} = howWorksContent;
+
 
   return (
     <Section className={className} {...rest}>
-      <BlockTitle leftSide={true} descrBottom={<>{titleDescr && titleDescr}</>}>
-        {title ? title : "Как мы работаем"}
+      <BlockTitle leftSide={true} descrBottom={<>{blockTitleDescr && blockTitleDescr}</>}>
+        {blockTitle ? blockTitle : "Как мы работаем"}
       </BlockTitle>
       <Container>
         <ul className={styles.card_container}>

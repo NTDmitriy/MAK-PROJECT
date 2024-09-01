@@ -65,11 +65,9 @@ export const SEO_EMAIL_CONFIG = {
         descrAfter: "и улучшение показателей вашего бизнеса.",
       },
     ],
-    options: {
-      title: "Почему email-рассылки доверяют нам",
-      titleDescr:
-        "Мы предлагаем уникальный подход к email-маркетингу, который базируется на нашем многолетнем опыте и глубоких знаниях рынка:",
-    },
+    blockTitle: "Почему email-рассылки доверяют нам",
+    blockTitleDescr:
+      "Мы предлагаем уникальный подход к email-маркетингу, который базируется на нашем многолетнем опыте и глубоких знаниях рынка:",
   } satisfies TWhyUs,
   includeService: SEO_EMAIL_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

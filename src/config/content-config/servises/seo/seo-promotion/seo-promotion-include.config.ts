@@ -53,7 +53,5 @@ export const SEO_PROMOTION_INCLUDE = {
         "Оптимизируем сайт для локального поиска, что особенно важно для бизнеса, ориентированного на определенный регион.",
     },
   ],
-  options: {
-    title: "Что входит в услугу",
-  },
+    blockTitle: "Что входит в услугу",
 } satisfies TIncludedInService;

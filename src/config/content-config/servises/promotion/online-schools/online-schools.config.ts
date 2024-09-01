@@ -55,9 +55,8 @@ export const ONLINE_SCHOOL_CONFIG = {
           "Предоставляем регулярные отчеты и анализируем эффективность кампаний, корректируя их по мере необходимости.",
       },
     ],
-    options: {
-      title: "Как мы работаем",
-    },
+
+    blockTitle: "Как мы работаем",
   } satisfies THowWorks,
   whyUs: {
     items: [
@@ -82,15 +81,14 @@ export const ONLINE_SCHOOL_CONFIG = {
           "того, как идут дела с вашими кампаниями, благодаря регулярным отчетам и открытой коммуникации.",
       },
       {
-        title: "Комплексный подход", 
+        title: "Комплексный подход",
         descrBefore: "Мы охватываем",
         descrAccent: "все аспекты интернет-маркетинга,",
-        descrAfter: "чтобы обеспечить всестороннее продвижение вашей онлайн-школы.",
+        descrAfter:
+          "чтобы обеспечить всестороннее продвижение вашей онлайн-школы.",
       },
     ],
-    options: {
-      title: "Почему нас выбирают:",
-    },
+    blockTitle: "Почему нас выбирают:",
   } satisfies TWhyUs,
   detialServices: ONLINE_SCHOOL_DETAIL satisfies TDetialServices,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

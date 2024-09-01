@@ -59,9 +59,7 @@ export const ADVERTISEMENT_GOOGLE_INCLUDE = {
     },
   ],
 
-  options: {
-    title: "Что входит в услугу",
-    titleDescr:
-      "Наше агентство предлагает комплексный подход к настройке и управлению рекламными кампаниями в Google Ads:",
-  },
+  blockTitle: "Что входит в услугу",
+  blockTitleDescr:
+    "Наше агентство предлагает комплексный подход к настройке и управлению рекламными кампаниями в Google Ads:",
 } satisfies TIncludedInService;

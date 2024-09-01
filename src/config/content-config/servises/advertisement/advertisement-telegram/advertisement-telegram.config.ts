@@ -54,34 +54,33 @@ export const ADVERTISEMENT_TELEGRAM_CONFIG = {
     items: [
       {
         title: "Консультация и анализ",
-        descr :
+        descr:
           "Проводим бесплатную первичную консультацию, анализируем вашу нишу и определяем цели.",
       },
       {
         title: "Разработка стратегии",
-        descr :
+        descr:
           "Создаем индивидуальную стратегию продвижения, учитывая особенности вашего бизнеса.",
       },
-      { 
+      {
         title: "Запуск кампаний",
-        descr : "Настраиваем и запускаем рекламные кампании в Telegram Ads.",
+        descr: "Настраиваем и запускаем рекламные кампании в Telegram Ads.",
       },
       {
         title: "Оптимизация и контроль",
-        descr :
+        descr:
           "Постоянно оптимизируем кампании для достижения лучших результатов.",
       },
       {
         title: "Отчеты и улучшения",
-        descr :
+        descr:
           "Предоставляем регулярные отчеты и вносим необходимые изменения для повышения эффективности.",
       },
     ],
-    options: {
-      title: "Как мы работаем и почему нас выбирают",
-      titleDescr:
-        "Мы работаем по четко выстроенной схеме, которая гарантирует успешное продвижение вашего бизнеса:",
-    },
+
+    blockTitle: "Как мы работаем и почему нас выбирают",
+    blockTitleDescr:
+      "Мы работаем по четко выстроенной схеме, которая гарантирует успешное продвижение вашего бизнеса:",
   } satisfies THowWorks,
   whyUs: {
     items: [
@@ -111,9 +110,8 @@ export const ADVERTISEMENT_TELEGRAM_CONFIG = {
         descrAfter: "и повышение эффективности вашего бизнеса. ",
       },
     ],
-    options: {
-      title: "Почему нас выбирают:",
-    },
+
+    blockTitle: "Почему нас выбирают:",
   } satisfies TWhyUs,
   includeService: ADVERTISEMENT_TELEGRAM_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

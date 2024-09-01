@@ -16,16 +16,16 @@ export const WhyUs: FC<PropsWithChildren<IWhyUs>> = ({
   whyUsContent,
   ...rest
 }) => {
-  const { items, options } = whyUsContent;
-  const { title, titleDescr } = options;
+  const { items, blockTitle, blockTitleDescr } = whyUsContent;
+
 
   return (
     <Section className={className} {...rest}>
       <BlockTitle
         leftSide={false}
-        descrBottom={<>{titleDescr && titleDescr}</>}
+        descrBottom={<>{blockTitleDescr && blockTitleDescr}</>}
       >
-        {title ? <>{title}</> : "Почему нас выбирают"}
+        {blockTitle ? <>{blockTitle}</> : "Почему нас выбирают"}
       </BlockTitle>
       <Container>
         <ul className={styles.list}>

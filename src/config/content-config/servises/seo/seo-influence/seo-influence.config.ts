@@ -65,11 +65,9 @@ export const SEO_INFLUENCE_CONFIG = {
         descrAfter: "и улучшение показателей вашего бизнеса.",
       },
     ],
-    options: {
-      title: "Почему рекламу через инфлюенсеров доверяют нам",
-      titleDescr:
-        "Мы предлагаем уникальный подход к рекламе через инфлюенсеров, который базируется на нашем многолетнем опыте и глубоких знаниях рынка:",
-    },
+    blockTitle: "Почему рекламу через инфлюенсеров доверяют нам",
+    blockTitleDescr:
+      "Мы предлагаем уникальный подход к рекламе через инфлюенсеров, который базируется на нашем многолетнем опыте и глубоких знаниях рынка:",
   } satisfies TWhyUs,
   includeService: SEO_INFLUENCE_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
