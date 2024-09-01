@@ -1,10 +1,15 @@
+
 import { OurStatistic } from "@/components/sections/ourStatistic/OurStatistic";
 import { NextPage } from "next";
 
-const Useful: NextPage = () => {
+const Contact: NextPage = () => {
 	return (
+
 		<OurStatistic />
+
+
+
 	);
 };
 
-export default Useful;
+export default Contact;

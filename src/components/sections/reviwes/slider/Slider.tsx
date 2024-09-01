@@ -17,11 +17,13 @@ export const Slider: FC<IReviwes> = ({ reviwes }) => {
   const sliderRef = useRef<any>(null);
   const [progress, setProgress] = useState(0);
 
+
   const updateProgress = (index: number) => {
     const totalSlides = reviwes.length;
     const progressPercentage = ((index + 1) / totalSlides) * 100;
     setProgress(progressPercentage);
   };
+
 
   return (
     <>

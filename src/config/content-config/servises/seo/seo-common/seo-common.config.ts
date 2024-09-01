@@ -1,14 +1,17 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
-import { allReviwes } from "@/config/content-config/reviwes/reviwes.config";
+import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
 import { IDashboardItem } from "@/config/url-config/all-pages.config";
 import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
-import {
-	TCases,
-	TFaq,
-	THero,
-	THeroBasic,
-	THeroInfoService,
-	TReviwe,
+import type {
+  TCases,
+  TFaq,
+  THero,
+  THeroBasic,
+  THeroInfoService,
+  TReviwe,
+  TServiceProducts,
+  TSupplementaryDescr,
+  TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TServiceScreen } from "@/interfaces/types/screens/screens.type";
 import { SEO_FAQ } from "./seo-common-faq.config";
@@ -25,14 +28,88 @@ export const SEO_COMMON_CONFIG = {
         "Ищете, где заказать рекламу в интернете? Наше рекламное агентство предоставляет комплексные услуги по настройке и запуску рекламных кампаний в Яндекс Директ, ВКонтакте, Google Ads, Telegram Ads и Meta: Facebook & Instagram. Мы поможем вам привлечь целевую аудиторию, увеличить конверсию и добиться максимального результата от рекламы. Доверьтесь профессионалам!",
       image: "promotion-schools-hero",
     } satisfies THeroBasic,
-    info: [
+    infoService: [
       "Привлечение целевой аудитории",
       "Увеличение конверсии и продаж ",
       "Повышение видимости в поисковых системах",
     ] satisfies THeroInfoService,
   } satisfies THero,
-  products: SEO_DASHBOARD_PAGES.SEO satisfies IDashboardItem,
+  supplementaryDescr: {
+    title: "Трафик и SEO-продвижение: основы результата в цифровом мире",
+    descr:
+      "В условиях быстро развивающегося цифрового мира трафик и SEO-продвижение играют решающую роль в успехе бизнеса. Правильное использование этих инструментов помогает привлекать новых клиентов, удерживать существующих и существенно увеличивать прибыль. Комплексный подход к цифровому маркетингу включает использование различных стратегий и технологий, которые позволяют максимально эффективно продвигать ваши товары и услуги.",
+    image: "seo-common-supplementary.webp",
+  } satisfies TSupplementaryDescr,
+  products: {
+    filling: SEO_DASHBOARD_PAGES.SEO satisfies IDashboardItem,
+    options: {
+      title: "Услуги по трафику и SEO",
+      titleDescr:
+        "Наша команда предоставляет полный спектр услуг для эффективного продвижения вашего бизнеса:",
+    },
+  } satisfies TServiceProducts,
+  howWorks: {
+    items: [
+      {
+        title: "Анализ и аудит",
+        descr:
+          "Изучаем вашу текущую маркетинговую стратегию и определяем точки роста.",
+      },
+      {
+        title: "Планирование и стратегия",
+        descr:
+          "Разрабатываем детальный план продвижения, учитывая особенности вашего бизнеса и целевой аудитории.",
+      },
+      {
+        title: "Реализация",
+        descr:
+          "Внедряем разработанную стратегию, постоянно оптимизируя процессы для достижения лучших результатов.",
+      },
+      {
+        title: "Отчетность и анализ",
+        descr:
+          "Предоставляем регулярные отчеты и анализируем эффективность кампаний, корректируя их по мере необходимости.",
+      },
+    ],
+    options: {
+      title: "Как мы работаем",
+    },
+  },
+  whyUs: {
+    items: [
+      {
+        title: "Профессионализм",
+        descrBefore: "наша команда",
+        descrAccent: "состоит из опытных специалистов",
+        descrAfter:
+          "которые владеют новейшими методами и технологиями в сфере трафика и SEO-продвижения.",
+      },
+      {
+        title: "Индивидуальный подход",
+        descrBefore: "Мы разрабатываем",
+        descrAccent: "уникальные стратегии ",
+        descrAfter: "для каждого клиента, учитывая специфику его бизнеса.",
+      },
+      {
+        title: "Прозрачность и отчетность",
+        descrBefore: "мы предоставляем",
+        descrAccent: "подробные отчеты",
+        descrAfter:
+          "о проделанной работе и достигнутых результатах, обеспечивая полную прозрачность наших действий. ",
+      },
+      {
+        title: "Доказанная эффективность",
+        descrBefore: "наши клиенты достигают",
+        descrAccent: "устойчивого роста и увеличения прибыли",
+        descrAfter: "благодаря нашим решениям.",
+      },
+    ],
+    options: {
+      title: "Почему нас выбирают:",
+    },
+  } satisfies TWhyUs,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
-  reviwes: allReviwes satisfies TReviwe[],
+  reviwes: ALL_REVIWES satisfies TReviwe[],
   faq: SEO_FAQ satisfies TFaq[],
 } satisfies TServiceScreen;
+ 

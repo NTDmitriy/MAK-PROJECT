@@ -1,12 +1,12 @@
 "use client";
 
-import { FC } from "react";
-import { useFormContext } from "react-hook-form";
-
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { useNotification } from "@/hooks/useNotification";
 import { useSendToTelegram } from "@/hooks/useSendToTelegram";
 import Link from "next/link";
+import { FC } from "react";
+import { useFormContext } from "react-hook-form";
+
 import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
 import { PhoneLinkButton } from "../../links/phoneLinkButton/PhoneLinkButton";
 import { TelegramLinkButton } from "../../links/telegramLinkButton/TelegramLinkButton";

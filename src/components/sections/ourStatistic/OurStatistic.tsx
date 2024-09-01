@@ -5,14 +5,13 @@ import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { FC, PropsWithChildren } from "react";
-import { useInView } from "react-intersection-observer"; 
+import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
 import styles from './OurStatistic.module.css';
 import clsx from "clsx";
-import { OurClients } from "../ourClients/OurClients";
 
 export const OurStatistic: FC<PropsWithChildren<IGenericElementProps>> = ({ className, ...rest }) => {
-    // Инициализация useInView
+
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.5,

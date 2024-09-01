@@ -7,8 +7,8 @@ class SEO_DASHBOARD {
     name: "Инфлюенс-маркетинг",
     smallName: "Инфлюенс-маркетинг",
     url: `${this.root}/influence-marketing`,
-    image: "hero-info",
-    icon: "hero-info",
+    image: "promotion-construction-company-700x300",
+    icon: "home-hero-295x191",
     description:
       "Подбор релевантных инфлюенсеров, разработка стратегии кампании, создание контента, анализ результатов",
   } satisfies IDashboardItem;
@@ -17,8 +17,8 @@ class SEO_DASHBOARD {
     name: "Посевы",
     smallName: "Посевы",
     url: `${this.root}/posevy`,
-    image: "hero-info",
-    icon: "hero-info",
+    image: "promotion-construction-company-700x300",
+    icon: "home-hero-295x191",
     description:
       "Размещение контента на популярных платформах и форумах, разработка стратегии посевов, анализ эффективности.",
   } satisfies IDashboardItem;
@@ -27,8 +27,8 @@ class SEO_DASHBOARD {
     name: "SEO-продвижение",
     smallName: "SEO-продвижение",
     url: `${this.root}/seo-prodvizhenie`,
-    image: "hero-info",
-    icon: "hero-info",
+    image: "promotion-construction-company-700x300",
+    icon: "home-hero-295x191",
     description:
       "Аудит сайта, внутренняя и внешняя оптимизация, создание качественного контента, улучшение видимости и позиций в поисковых системах. ",
   } satisfies IDashboardItem;
@@ -37,14 +37,15 @@ class SEO_DASHBOARD {
     name: "Email рассылки по базам",
     smallName: "Email рассылки по базам",
     url: `${this.root}/email-rassylki-po-bazam`,
-    image: "hero-info",
-    icon: "hero-info",
+    image: "promotion-construction-company-700x300",
+    icon: "home-hero-295x191",
     description:
       "Создание персонализированных email-кампаний, сегментация базы данных, анализ и оптимизация рассылок.",
   } satisfies IDashboardItem;
 
   SEO = {
     name: "Трафик и SEO",
+    icon: "IconSeoNav",
     url: `${this.root}/trafic-and-seo`,
     childrens: [
       this.SEO_INFLUENCE,

@@ -1,15 +1,16 @@
-import { PrimaryButton } from "@/components/ui/buttons/primaryButton/PrimaryButton";
+import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { Container } from "@/components/ui/container/Container";
 import {
-	FORM_TYPE,
-	FormController,
+  FORM_TYPE,
+  FormController,
 } from "@/components/ui/forms/FormController";
-import { SeconderyLinkButton } from "@/components/ui/links/seconderyLinkButton/SeconderyLinkButton";
+import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { THeroBasic } from "@/interfaces/types/block/products.type";
 import { FC } from "react";
 import styles from "./HeroBasic.module.css";
+
 interface IHeroBasic {
   basicContent: THeroBasic;
 }
@@ -38,9 +39,9 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
       <div className={styles.btn_grop}>
         <Popup
           initComponent={
-            <PrimaryButton className={styles.button}>
+            <SeconderyButton className={styles.button}>
               Заказать звонок
-            </PrimaryButton>
+            </SeconderyButton>
           }
           contentComponent={
             <FormController
@@ -50,13 +51,13 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
           }
         />
 
-        <SeconderyLinkButton
+        <PrimaryLinkButton
           href={CONTACTS_PUBLIC.TELEGRAM}
           target="_blank"
           className={styles.button__tg}
         >
           Связаться через Telegram
-        </SeconderyLinkButton>
+        </PrimaryLinkButton>
       </div>
       <div className={styles.img__wrapper}>
         <picture>

@@ -1,11 +1,11 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { MARKET_PLACE_CONFIG } from "@/config/content-config/servises/promotion/market-place/market-place.config";
+import { ADVERTISEMENT_TELEGRAM_CONFIG } from "@/config/content-config/servises/advertisement/advertisement-telegram/advertisement-telegram.config";
 import { NextPage } from "next";
 
 
 const ProductPage: NextPage = () => {
-	const content = MARKET_PLACE_CONFIG;
+	const content = ADVERTISEMENT_TELEGRAM_CONFIG;
 	return (
 		<>
 			{content && <ProductScreen content={content} />}

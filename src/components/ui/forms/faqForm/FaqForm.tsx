@@ -62,7 +62,7 @@ export const FaqForm: FC<IFormContent> = ({
       <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
         <NameInput />
         <PhoneInput />
-       {areaVisible && <MessageInput />} 
+        {areaVisible && <MessageInput />}
         <PrimaryButton className={styles.submit}>Отправить</PrimaryButton>
       </form>
       <p className={styles.contact__text}>

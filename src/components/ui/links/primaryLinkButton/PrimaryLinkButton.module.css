@@ -1,5 +1,7 @@
 .button {
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
   position: relative;
   font-family: var(--third-family);
   font-weight: 300;
