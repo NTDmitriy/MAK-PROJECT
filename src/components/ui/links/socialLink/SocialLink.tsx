@@ -1,6 +1,5 @@
 import { ILink } from "@/interfaces/link.interface";
 import clsx from "clsx";
-import Link from "next/link";
 import { FC, PropsWithChildren, ReactNode } from "react";
 import styles from "./SocialLink.module.css";
 
@@ -17,7 +16,7 @@ export const SocialLink: FC<PropsWithChildren<ISocialLink>> = ({
   ...rest
 }) => {
   return (
-    <Link
+    <a
       target="_blank"
       data-tooltip={tooltip}
       href={href}
@@ -25,6 +24,6 @@ export const SocialLink: FC<PropsWithChildren<ISocialLink>> = ({
       {...rest}
     >
       {icon}
-    </Link>
+    </a>
   );
 };

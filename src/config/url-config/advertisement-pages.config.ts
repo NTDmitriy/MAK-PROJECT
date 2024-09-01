@@ -8,7 +8,7 @@ class ADVERTISEMENT_DASHBOARD {
     smallName: "ВКонтакте",
     url: `${this.root}/reklama-vkontakte`,
     image: "promotion-construction-company-700x300",
-    icon: "hero-info",
+    icon: "home-hero-295x191",
     description:
       "Реклама в ВКонтакте позволяет охватить миллионы пользователей в одной из самых популярных социальных сетей России. Мы разработаем и запустим рекламные кампании, ориентированные на вашу целевую аудиторию, чтобы увеличить узнаваемость бренда и привлечь новых клиентов. Наши услуги включают анализ аудитории, создание креативов и настройку таргетинга.",
   } satisfies IDashboardItem;
@@ -18,7 +18,7 @@ class ADVERTISEMENT_DASHBOARD {
     smallName: "Яндекс Директ",
     url: `${this.root}/reklama-yandex-direct`,
     image: "promotion-construction-company-700x300",
-    icon: "hero-info",
+    icon: "home-hero-295x191",
     description:
       "Яндекс Директ — это инструмент для запуска контекстной рекламы в одной из крупнейших поисковых систем России. Мы поможем настроить рекламные кампании, которые привлекут целевую аудиторию и увеличат конверсию. Наши специалисты проведут анализ ключевых слов, создадут эффективные объявления и настроят таргетинг для достижения максимального результата.",
   } satisfies IDashboardItem;
@@ -28,7 +28,7 @@ class ADVERTISEMENT_DASHBOARD {
     smallName: "Google Ads",
     url: `${this.root}/reklama-google-ads`,
     image: "promotion-construction-company-700x300",
-    icon: "hero-info",
+    icon: "home-hero-295x191",
     description:
       "Google Ads — это мощный инструмент для продвижения вашего бизнеса в крупнейшей поисковой системе мира. Мы настроим ваши рекламные кампании так, чтобы они приносили максимальный ROI. Наши услуги включают в себя анализ ключевых слов, создание и оптимизацию объявлений, а также настройку ретаргетинга и мониторинг эффективности.",
   } satisfies IDashboardItem;
@@ -38,7 +38,7 @@ class ADVERTISEMENT_DASHBOARD {
     smallName: "Telegram Ads",
     url: `${this.root}/reklama-telegram-ads`,
     image: "promotion-construction-company-700x300",
-    icon: "hero-info",
+    icon: "home-hero-295x191",
     description:
       "Telegram Ads — это возможность продвигать ваш бизнес в одном из самых популярных мессенджеров. Мы поможем создать эффективные рекламные кампании, которые донесут ваше сообщение до нужной аудитории. Наши услуги включают создание контента, настройку таргетинга и анализ результатов для постоянного улучшения эффективности рекламы.",
   } satisfies IDashboardItem;
@@ -48,7 +48,7 @@ class ADVERTISEMENT_DASHBOARD {
     smallName: "Meta: Facebook & Instagram",
     url: `${this.root}/reklama-facebook-instagram`,
     image: "promotion-construction-company-700x300",
-    icon: "hero-info",
+    icon: "home-hero-295x191",
     description:
       "Meta (Facebook/Instagram) — это мощный инструмент для продвижения вашего бизнеса в крупнейших социальных сетях мира. Мы настроим ваши рекламные кампании так, чтобы они привлекали целевую аудиторию и обеспечивали высокую вовлеченность. Наши услуги включают в себя точный таргетинг, создание креативных объявлений и настройку Facebook Pixel.",
   } satisfies IDashboardItem;
@@ -56,6 +56,7 @@ class ADVERTISEMENT_DASHBOARD {
   ADVERTISEMENT = {
     name: "Реклама",
     url: `${this.root}/reklama-v-internete`,
+    icon: "IconAdvertisementNav",
     childrens: [
       this.ADVERTISEMENT_VK,
       this.ADVERTISEMENT_YANDEX_DIRECT,

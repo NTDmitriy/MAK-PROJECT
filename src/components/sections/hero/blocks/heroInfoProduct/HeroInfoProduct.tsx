@@ -1,10 +1,10 @@
 import { Container } from "@/components/ui/container/Container";
-import { THeroInfo } from "@/interfaces/types/block/products.type";
+import { THeroInfoProduct } from "@/interfaces/types/block/products.type";
 import { FC } from "react";
 import styles from "./HeroInfoProduct.module.css";
 
 interface IHeroInfoProduct {
-  info: THeroInfo;
+  info: THeroInfoProduct;
 }
 
 export const HeroInfoProduct: FC<IHeroInfoProduct> = ({ info }) => {
@@ -18,15 +18,11 @@ export const HeroInfoProduct: FC<IHeroInfoProduct> = ({ info }) => {
                 <h3 className={styles.title}>{info.title}</h3>
                 <p className={styles.text}> {info.description}</p>
               </div>
-
-    
-
-                <img
-                  className={styles.image}
-                  src={`/images/services/${info.image}.webp`}
-                  alt="Онлайн-школы и инфобизнес"
-                />
- 
+              <img
+                className={styles.image}
+                src={`/images/services/${info.image}.webp`}
+                alt="Онлайн-школы и инфобизнес"
+              />
             </div>
           </Container>
         </div>

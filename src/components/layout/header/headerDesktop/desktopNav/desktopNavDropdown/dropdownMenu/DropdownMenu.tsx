@@ -4,11 +4,11 @@ import { IGenericElementProps } from "@/interfaces/elements.interface";
 import clsx from "clsx";
 import Link from "next/link";
 import {
-	FC,
-	PropsWithChildren,
-	ReactNode,
-	SyntheticEvent,
-	useState,
+  FC,
+  PropsWithChildren,
+  ReactNode,
+  SyntheticEvent,
+  useState,
 } from "react";
 import DropdownLink from "../dropdownLink/DropdownLink";
 import styles from "./DropdownMenu.module.css";
@@ -72,7 +72,7 @@ export const DropdownMenu: FC<PropsWithChildren<IDropdownMenu>> = ({
                         className={styles.tab__panel__item}
                       >
                         <img
-                          src={`/images/${child.icon}.jpg`}
+                          src={`/images/${child.icon}.webp`}
                           alt={child.name}
                           title={child.name}
                         />

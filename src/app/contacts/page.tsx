@@ -1,11 +1,17 @@
+import { WhyUs } from "@/components/sections/whyUs/WhyUs";
+import { WhyUsChecklist } from "@/components/sections/whyUsChecklist/WhyUsChecklist";
+import { WhyUsSites } from "@/components/sections/whyUsSites/whyUsSites";
 import { NextPage } from "next";
 
-const Useful: NextPage = () => {
+const Contact: NextPage = () => {
 	return (
-		<div>
-			useful page
-		</div>
+		<>
+			<WhyUs />
+			<WhyUsChecklist />
+			<WhyUsSites />
+
+		</>
 	);
 };
 
-export default Useful;
+export default Contact;

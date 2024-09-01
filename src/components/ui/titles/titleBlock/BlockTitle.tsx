@@ -54,7 +54,13 @@ export const BlockTitle: FC<PropsWithChildren<IBlockTitle>> = ({
           </div>
         )}
 
-        {descrBottom && <>{descrBottom}</>}
+        {descrBottom && <div
+            className={clsx(styles.descr, {
+              [styles.align__left]: leftSide,
+            })}
+          >
+            {descrBottom}
+          </div>}
 
         <DynamicSvg
           name="IconTitleSecondery"

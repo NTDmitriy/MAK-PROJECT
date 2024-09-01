@@ -2,7 +2,7 @@
   color: var(--text-primary);
 }
 
-.card_container {
+.list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -50,7 +50,7 @@
 }
 
 @media screen and (max-width: 780px) {
-  .card_container {
+  .list {
     grid-template-columns: 1fr;
     padding: 5px;
   }

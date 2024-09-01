@@ -6,22 +6,18 @@ import { WEBDEV_DASHBOARD_PAGES } from "./webdev-pages.config";
 
 class SERVICES_DASHBOARD {
   ADVERTISEMENT = {
-    icon: "IconAdvertisementNav",
     ...ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT,
   } satisfies IDashboardItem;
 
   PROMOTION = {
-    icon: "IconForceNav",
     ...PROMOTION_DASHBOARD_PAGES.PROMOTION,
   } satisfies IDashboardItem;
 
   WEBDEV = {
-    icon: "IconWebDevNav",
     ...WEBDEV_DASHBOARD_PAGES.WEBDEV,
   } satisfies IDashboardItem;
 
   SEO = {
-    icon: "IconSeoNav",
     ...SEO_DASHBOARD_PAGES.SEO,
   } satisfies IDashboardItem;
 

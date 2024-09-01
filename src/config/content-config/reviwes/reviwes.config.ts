@@ -1,7 +1,7 @@
 import { CASES_DASHBOARD_PAGES } from "@/config/url-config/cases-pages.config";
 import { TReviwe } from "@/interfaces/types/block/products.type";
 
-export const allReviwes = [
+export const ALL_REVIWES = [
   {
     id: 1,
     name: "Иван Назаров",
