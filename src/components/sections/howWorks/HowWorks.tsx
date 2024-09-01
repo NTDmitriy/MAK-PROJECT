@@ -14,12 +14,14 @@ export const HowWorks: FC<PropsWithChildren<IHowWorks>> = ({
   howWorksContent,
   ...rest
 }) => {
-  const { items, blockTitle, blockTitleDescr} = howWorksContent;
-
+  const { items, blockTitle, blockTitleDescr } = howWorksContent;
 
   return (
     <Section className={className} {...rest}>
-      <BlockTitle leftSide={true} descrBottom={<>{blockTitleDescr && blockTitleDescr}</>}>
+      <BlockTitle
+        leftSide={true}
+        descrBottom={<>{blockTitleDescr && blockTitleDescr}</>}
+      >
         {blockTitle ? blockTitle : "Как мы работаем"}
       </BlockTitle>
       <Container>
