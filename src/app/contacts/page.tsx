@@ -6,7 +6,7 @@ import { NextPage } from "next";
 const Contact: NextPage = () => {
 	return (
 		<>
-			<WhyUs />
+			{/* <WhyUs whyUsContent={'',''} /> */}
 			<WhyUsChecklist />
 			<WhyUsSites />
 

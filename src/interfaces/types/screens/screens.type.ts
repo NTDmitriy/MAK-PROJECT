@@ -46,3 +46,8 @@ export type THomeScreen = {
   reviwes: TReviwe[];
   faq: TFaq[];
 };
+
+export type TUsefulScreen = {
+  // hero: THero;
+  reviwes: TReviwe[];
+}
