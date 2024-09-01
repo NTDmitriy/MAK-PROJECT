@@ -18,10 +18,8 @@ export const AboutScreen: FC<PropsWithChildren<IAboutScreen>> = ({ content }) =>
      <OurStatistic />
      <OurClients />
      <Reviwes reviwes={content.reviwes} />
-     <OurTeam 
-     
+     <OurTeam
      />
     </>
-   
   );
 };
