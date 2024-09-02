@@ -16,7 +16,7 @@
 .days {
   font-family: var(--second-family);
   font-weight: 700;
-  font-size: clamp(300px, 20dvw, 400px);
+  font-size: clamp(200px, 20dvw, 400px);
   line-height: 64%;
   color: #fff;
 }
@@ -179,7 +179,14 @@ width: 70px;
 @media screen and (max-width:560px) {
   .visible {
     opacity: 1;
-    width: 72%;
+    width: 65%;
     animation: unset;
   }
+  .progress_grafs {
+    justify-content: space-evenly;
+  }
+  .proc20 {
+    margin-left: 0;
+  }
 }
+
