@@ -1,6 +1,5 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
-import { IDashboardItem } from "@/config/url-config/all-pages.config";
 import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
 import type {
   TCases,
@@ -13,6 +12,7 @@ import type {
   TWhyUs
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
+import { SEO_PRODUCTS } from "./seo-products.config";
 
 export const SEO_COMMON_CONFIG = {
   url: SEO_DASHBOARD_PAGES.SEO.url,
@@ -38,12 +38,7 @@ export const SEO_COMMON_CONFIG = {
       "В условиях быстро развивающегося цифрового мира трафик и SEO-продвижение играют решающую роль в успехе бизнеса. Правильное использование этих инструментов помогает привлекать новых клиентов, удерживать существующих и существенно увеличивать прибыль. Комплексный подход к цифровому маркетингу включает использование различных стратегий и технологий, которые позволяют максимально эффективно продвигать ваши товары и услуги.",
     image: "seo-common-supplementary.webp",
   } satisfies TSupplementaryDescr,
-  products: {
-    filling: SEO_DASHBOARD_PAGES.SEO satisfies IDashboardItem,
-    blockTitle: "Услуги по трафику и SEO",
-    blockTitleDescr:
-      "Наша команда предоставляет полный спектр услуг для эффективного продвижения вашего бизнеса:",
-  } satisfies TServiceProducts,
+  products: SEO_PRODUCTS satisfies TServiceProducts,
   howWorks: {
     items: [
       {

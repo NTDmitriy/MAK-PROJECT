@@ -398,7 +398,7 @@ class BLOG_DASHBOARD {
 
   toArray(): IBlogItem[] {
     return Object.values(this).filter((item) => {
-      return (item as IBlogItem).date !== undefined;
+      return (item as IBlogItem).name !== undefined;
     }) as IBlogItem[];
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useNotification } from "@/hooks/useNotification";
+import clsx from "clsx";
 import { FC } from "react";
 import { useFormContext } from "react-hook-form";
 import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
@@ -37,7 +38,7 @@ export const SingUpFrom: FC = () => {
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
       <EmailInput />
-      <PrimaryButton className={styles.submit}>
+      <PrimaryButton className={clsx(styles.submit, styles.inner)}>
         <DynamicSvg name="IconSend" />
       </PrimaryButton>
     </form>

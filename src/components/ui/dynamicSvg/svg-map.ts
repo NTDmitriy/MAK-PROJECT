@@ -12,6 +12,7 @@ import IconAdvertisementNav from "@/assets/svg/iconAdvertisementNav.svg";
 import IconArrayBlackBg from "@/assets/svg/iconArrayBlackBg.svg";
 import IconArticlesNav from "@/assets/svg/iconArticlesNav.svg";
 import IconCasesNav from "@/assets/svg/iconCasesNav.svg";
+import IconClock from "@/assets/svg/iconClock.svg";
 import IconClose from "@/assets/svg/iconClose.svg";
 import IconContactsNav from "@/assets/svg/iconContactsNav.svg";
 import IconDeadline from "@/assets/svg/iconDeadline.svg";
@@ -26,6 +27,7 @@ import IconJavaScript from "@/assets/svg/iconJavaScript.svg";
 import IconLogo from "@/assets/svg/iconLogo.svg";
 import IconMenu from "@/assets/svg/iconMenu.svg";
 import IconModx from "@/assets/svg/iconModx.svg";
+import IconMoney from "@/assets/svg/iconMoney.svg";
 import IconOurServicesRound from "@/assets/svg/iconOurServicesRound.svg";
 import IconPartnersNav from "@/assets/svg/iconPartnersNav.svg";
 import IconPhone from "@/assets/svg/iconPhone.svg";
@@ -57,6 +59,8 @@ import IconWhyUsServices from "@/assets/svg/iconWhyUsServices.svg";
 import IconWordPress from "@/assets/svg/iconWordPress.svg";
 
 export const svgMap = {
+  IconClock,
+  IconMoney,
   IconDeadline,
   IconTilda,
   IconWordPress,

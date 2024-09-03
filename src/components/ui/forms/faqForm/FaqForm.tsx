@@ -1,11 +1,11 @@
 "use client";
 
-import { FC } from "react";
-import { useFormContext } from "react-hook-form";
-
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { useNotification } from "@/hooks/useNotification";
 import { useSendToTelegram } from "@/hooks/useSendToTelegram";
+import { usePopupStore } from "@/store/popup.store";
+import { FC } from "react";
+import { useFormContext } from "react-hook-form";
 import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
 import { PhoneLinkButton } from "../../links/phoneLinkButton/PhoneLinkButton";
 import { TelegramLinkButton } from "../../links/telegramLinkButton/TelegramLinkButton";
@@ -25,11 +25,13 @@ export const FaqForm: FC<IFormContent> = ({
     formState: { errors },
     reset,
   } = useFormContext();
-
+  const { closePopup } = usePopupStore();
+  
   const onSubmit = (data: IForm) => {
     const pathname = window.location.pathname;
     useSendToTelegram(data, pathname);
     useNotification("Заявка отправлена", "success");
+    closePopup();
     reset();
   };
 
@@ -79,7 +81,7 @@ export const FaqForm: FC<IFormContent> = ({
       <p className={styles.notice}>
         Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
         персональных данных и соглашаетесь с условиями{" "}
-        <a className={styles.privacy}  href={`/privacy-policy.pdf`}>
+        <a className={styles.privacy} href={`/privacy-policy.pdf`}>
           Политики конфиденциальности
         </a>
       </p>

@@ -88,3 +88,8 @@ footer {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+#notistack-snackbar {
+  font-family: var(--font-family);
+  font-weight: 300;
+}

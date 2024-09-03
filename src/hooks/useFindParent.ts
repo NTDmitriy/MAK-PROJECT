@@ -1,11 +1,18 @@
 
 
-import { IDashboardItem } from "@/config/url-config/all-pages.config";
+interface TreeNode {
+  name: string;
+  url: string;
+  childrens?: TreeNode[];
+}
 
-export const useFindParent = (array: IDashboardItem[],targetUrl: string) => {
-
+export const useFindParent = <T extends TreeNode>(
+  array: T[],
+  targetUrl: string
+): Array<{ name: string; url: string }> | null => {
   if (targetUrl === "/") return null;
-  const stack = [...array].map((item) => ({
+
+  const stack = array.map((item) => ({
     node: item,
     path: [{ name: "Главная", url: "/" }],
   }));
@@ -24,10 +31,10 @@ export const useFindParent = (array: IDashboardItem[],targetUrl: string) => {
 
     if (node.childrens) {
       for (let child of node.childrens) {
-        stack.push({ node: child, path: currentPath });
+        stack.push({ node: child as T, path: currentPath });
       }
     }
   }
 
   return null;
-}
+};

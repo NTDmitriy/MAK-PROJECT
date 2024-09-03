@@ -16,7 +16,7 @@ import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_TELEGRAM_INCLUDE } from "./advertisement-telegram-include.config";
 
 export const ADVERTISEMENT_TELEGRAM_CONFIG = {
-  url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_META.url,
+  url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_TG.url,
   hero: {
     basic: {
       title: {

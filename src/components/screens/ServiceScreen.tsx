@@ -1,7 +1,7 @@
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { FC, PropsWithChildren } from "react";
+
 import { AllProductsService } from "../sections/allProductsService/AllProductsService";
-import { AllProductsWebdevService } from "../sections/allProductsService/AllProductsWebdevService";
 import Faq from "../sections/faq/Faq";
 import { Hero } from "../sections/hero/Hero";
 import { HowWorks } from "../sections/howWorks/HowWorks";
@@ -34,8 +34,8 @@ export const ServiceScreen: FC<PropsWithChildren<IServiceScreen>> = ({
         webdewContent={content.hero.infoWebdev}
       />
 			{content.supplementaryDescr && <SupplementaryDescr suppContent={content.supplementaryDescr} />}
+
 			{content.products && <AllProductsService productsConent={content.products} />}
-			{content.productsWebdev && <AllProductsWebdevService productsConent={content.productsWebdev} />}
 			{content.siteServices && <SiteServices />}
       {content.howWorks && <HowWorks howWorksContent={content.howWorks} />}
       {content.workStages && <WorkStages workStagesContent={content.workStages} />}

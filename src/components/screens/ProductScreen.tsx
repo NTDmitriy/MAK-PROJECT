@@ -5,6 +5,7 @@ import Faq from "../sections/faq/Faq";
 import { Hero } from "../sections/hero/Hero";
 import { HowWorks } from "../sections/howWorks/HowWorks";
 import { IncludedInService } from "../sections/includedInService/IncludedInService";
+import { MaybeInteresting } from "../sections/maybeInteresting/MaybeInteresting";
 import { Projects } from "../sections/projects/Projects";
 import { Reviwes } from "../sections/reviwes/Reviwes";
 import { AllSiteTypes } from "../sections/siteTypes/SiteTypes";
@@ -20,11 +21,10 @@ interface IProductScreen {
 export const ProductScreen: FC<PropsWithChildren<IProductScreen>> = ({
   content,
 }) => {
-  console.log(content.url);
 
   return (
     <>
-      <Breadcrumbs pathname={content.url} />
+      {content.url && <Breadcrumbs pathname={content.url} />}  
       <Hero
         basicContent={content.hero.basic}
         productContent={content.hero.infoProduct}
@@ -32,34 +32,19 @@ export const ProductScreen: FC<PropsWithChildren<IProductScreen>> = ({
         advertisementContent={content.hero.infoAdvertisement}
         webdewContent={content.hero.infoWebdev}
       />
-      {content.supplementaryDescr && (
-        <SupplementaryDescr suppContent={content.supplementaryDescr} />
-      )}
-      {content.suitableFor && (
-        <SuitableFor suitableForContent={content.suitableFor} />
-      )}
-      {content.allSiteTypes && (
-        <AllSiteTypes productsConent={content.allSiteTypes} />
-      )}
-      {content.technologyStack && (
-        <SuitableFor suitableForContent={content.technologyStack} />
-      )}
-      {content.workStages && (
-        <WorkStages workStagesContent={content.workStages} />
-      )}
-      {content.detialServices && (
-        <DetailServices detailContent={content.detialServices} />
-      )}
-      {content.includeService && (
-        <IncludedInService includedInService={content.includeService} />
-      )}
+      {content.supplementaryDescr && (<SupplementaryDescr suppContent={content.supplementaryDescr} />)}
+      {content.suitableFor && (<SuitableFor suitableForContent={content.suitableFor} />)}
+      {content.allSiteTypes && (<AllSiteTypes productsConent={content.allSiteTypes} />)}
+      {content.technologyStack && (<SuitableFor suitableForContent={content.technologyStack} />)}
+      {content.workStages && (<WorkStages workStagesContent={content.workStages} />)}
+      {content.detialServices && (<DetailServices detailContent={content.detialServices} />)}
+      {content.includeService && (<IncludedInService includedInService={content.includeService} />)}
       {content.howWorks && <HowWorks howWorksContent={content.howWorks} />}
       {content.whyUs && <WhyUs whyUsContent={content.whyUs} />}
-      {content.projects && (
-        <Projects cases={content.projects} formVisible={true} />
-      )}
+      {content.projects && (<Projects cases={content.projects} formVisible={true} />)}
       {content.reviwes && <Reviwes reviwes={content.reviwes} />}
       {content.faq && <Faq faq={content.faq} />}
+      {content.url && <MaybeInteresting pathname={content.url} />}  
     </>
   );
 };

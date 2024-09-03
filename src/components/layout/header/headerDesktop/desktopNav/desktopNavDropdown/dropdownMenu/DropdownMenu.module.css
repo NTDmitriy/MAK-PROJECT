@@ -53,6 +53,7 @@
   display: none;
 }
 
+
 .tab__panel__item {
   display: flex;
   align-items: center;
@@ -77,10 +78,14 @@
 	max-height: 24px;
 }
 
+
 @media (hover:hover) {
 	
 	.tab__panel__item:hover {
 		border-color: rgba(255, 255, 255, 0.5);
+	}
+	.tab__panel__item:focus-visible {
+		border-color: rgba(255, 255, 255, 0.4);
 	}
 }
 

@@ -4,7 +4,7 @@ class PROMOTION_DASHBOARD {
   private root = "/services";
 
   PROMOTION_ONLINE_SCHOOL = {
-    name: "Продвижение онлайн школ",
+    name: "Продвижение онлайн-школ",
     smallName: "Онлайн-школ",
     url: `${this.root}/prodvizhenie-onlayn-shkol`,
     image: "promotion-online-school-700x300",
@@ -47,6 +47,8 @@ class PROMOTION_DASHBOARD {
     name: "Нишевое продвижение",
     url: `${this.root}/nishevoe-prodvigenie`,
     icon: "IconForceNav",
+    description:
+      "Максимально раскройте потенциал вашего бизнеса с помощью нишевого продвижения в интернете. Мы используем передовые маркетинговые стратегии для увеличения вашей онлайн-видимости, привлечения целевой аудитории и роста числа клиентов. Доверьтесь профессионалам и наблюдайте, как ваше продвижение приводит к новым высотам бизнеса.",
     childrens: [
       this.PROMOTION_ONLINE_SCHOOL,
       this.PROMOTION_MARKETPLACE,

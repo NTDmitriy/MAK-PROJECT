@@ -1,7 +1,6 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
 import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
-import { IDashboardItem } from "@/config/url-config/all-pages.config";
 import {
   TCases,
   TFaq,
@@ -13,6 +12,7 @@ import {
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_FAQ } from "./advertisement-common-faq.config";
+import { ADVERTISEMENT_PRODUCTS } from "./advertisement-products.config";
 
 export const ADVERTISEMENT_COMMON_CONFIG = {
   url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT.url,
@@ -32,10 +32,7 @@ export const ADVERTISEMENT_COMMON_CONFIG = {
       "Интегрируем рекламу с другими маркетинговыми каналами для создания единой и мощной маркетинговой стратегии",
     ] satisfies THeroInfoService,
   } satisfies THero,
-  products: {
-    filling:
-      ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT satisfies IDashboardItem,
-  } satisfies TServiceProducts,
+  products: ADVERTISEMENT_PRODUCTS satisfies TServiceProducts,
   whyUsChecklict: true,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],

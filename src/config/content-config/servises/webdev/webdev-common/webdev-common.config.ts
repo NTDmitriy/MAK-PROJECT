@@ -1,14 +1,14 @@
+import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
 import { WEBDEV_DASHBOARD_PAGES } from "@/config/url-config/webdev-pages.config";
 import type {
-  TFaq,
   THero,
   THeroBasic,
   THeroInfoService,
-  TServiceWebdevProducts,
-  TWorkStages,
+  TReviwe,
+  TServiceProducts,
+  TWorkStages
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
-import { WEBDEV_FAQ } from "./webdev-common-faq.config";
 import { WEBDEV_COMMON_STAGES } from "./webdev-common-stages.config";
 import { WEBDEV_PRODUCTS } from "./webdev-products.config";
 
@@ -31,9 +31,10 @@ export const WEBDEV_COMMON_CONFIG = {
       "Подбираем решения под ваши конкретные нужды и цели. Учитываем все особенности вашего бизнеса и пожелания ",
     ] satisfies THeroInfoService,
   } satisfies THero,
-  productsWebdev: WEBDEV_PRODUCTS satisfies TServiceWebdevProducts[],
+  products: WEBDEV_PRODUCTS satisfies TServiceProducts,
   workStages: WEBDEV_COMMON_STAGES satisfies TWorkStages,
   whyUsSites: true,
   siteServices: true,
-  faq: WEBDEV_FAQ satisfies TFaq[],
+  reviwes: ALL_REVIWES satisfies TReviwe[],
+
 } satisfies TScreen;
