@@ -3,7 +3,6 @@
 import { useNotification } from "@/hooks/useNotification";
 import { useSendToTelegram } from "@/hooks/useSendToTelegram";
 import clsx from "clsx";
-import Link from "next/link";
 import { FC } from "react";
 import { useFormContext } from "react-hook-form";
 import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
@@ -73,9 +72,9 @@ export const ComplexForm: FC<IFormContent> = ({ title, text }) => {
 					<p className={styles.notice}>
 						Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
 						персональных данных и соглашаетесь с условиями{" "}
-						<Link className={styles.privacy} href={"/приваси"}>
+						<a className={styles.privacy}   href={`/privacy-policy.pdf`}>
 							Политики конфиденциальности
-						</Link>
+						</a>
 					</p>
 				</div>
 			</form>

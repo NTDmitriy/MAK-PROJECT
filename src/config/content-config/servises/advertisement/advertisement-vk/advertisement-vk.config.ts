@@ -1,5 +1,6 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
 import {
   TCases,
   THero,
@@ -15,12 +16,13 @@ import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_VK_INCLUDE } from "./advertisement-vk-include.config";
 
 export const ADVERTISEMENT_VK_CONFIG = {
+  url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_VK.url,
   hero: {
     basic: {
       title: {
-        accentText: "Таргетированная реклама ",
-        text: "в ВКонтакте для вашего бизнеса",
-        accentOrder: 0,
+        accent: "Таргетированная реклама",
+        accentAfter: "в ВКонтакте для вашего бизнеса",
+
       },
       description:
         "Хотите заказать рекламу в социальных сетях? Реклама в ВКонтакте предлагает уникальные возможности для продвижения вашего бизнеса. Наше агентство профессионально настроит и запустит рекламные кампании, ориентированные на вашу целевую аудиторию. Закажите настройку рекламы у нас и увидьте, как растут ваши показатели.",

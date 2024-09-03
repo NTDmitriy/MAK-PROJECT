@@ -3,7 +3,7 @@ import { IDashboardItem } from "./all-pages.config";
 class WEBDEV_DASHBOARD {
   private root = "/services";
 
-  WEBDEV_REACT_NEXT = {
+  WEBDEV_JS = {
     name: "Сайт на JavaScript",
     smallName: "Сайт на JavaScript",
     url: `${this.root}/sozdanie-i-razrabotka-saytov-na-javascript`,
@@ -20,7 +20,7 @@ class WEBDEV_DASHBOARD {
     image: "IconWordPress",
     icon: "home-hero-295x191",
     description:
-      "Разработка гибких и функциональных сайтов на самой популярной в мире CMS, идеально подходящих для блогов, корпоративных сайтов и интернет-магазинов.",
+      "Разработка гибких и функциональных сайтов на самых популярных CMS в мире, идеально подходящих для блогов, корпоративных сайтов и интернет-магазинов.",
   } satisfies IDashboardItem;
 
   WEBDEV_TILDA = {
@@ -58,7 +58,7 @@ class WEBDEV_DASHBOARD {
     name: "Создание сайтов",
     url: `${this.root}/sozdanie-i-razrabotka-saytov`,
     childrens: [
-      this.WEBDEV_REACT_NEXT,
+      this.WEBDEV_JS,
       this.WEBDEV_WORDPRESS,
       this.WEBDEV_TILDA,
       this.WEBDEV_MODX,

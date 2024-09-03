@@ -8,8 +8,8 @@ import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 
 import {
-	FORM_TYPE,
-	FormController,
+  FORM_TYPE,
+  FormController,
 } from "@/components/ui/forms/FormController";
 import { Tooltip } from "@/components/ui/tooltip/Tooltip";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
@@ -30,7 +30,7 @@ export const OurServices: FC<PropsWithChildren<IGenericElementProps>> = ({
         descrSideway={
           <>
             Наши решения адаптированы под различные ниши и помогают
-            <span className="accent">эффективно привлекать клиентов</span> и
+            <span className="accent">{' '}эффективно привлекать клиентов</span> и
             повышать узнаваемость вашего бренда
           </>
         }

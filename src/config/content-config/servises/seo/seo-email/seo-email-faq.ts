@@ -1,4 +1,4 @@
-const FAQ_EMAIL_SEND = [
+export const EMAIL_FAQ = [
     {
         title: "Что такое email-рассылки?",
         descr: "Email-рассылки – это отправка электронных писем на базы данных с целью продвижения товаров и услуг, а также укрепления отношений с клиентами."
@@ -25,4 +25,3 @@ const FAQ_EMAIL_SEND = [
       }
 ]
 
-export  default FAQ_EMAIL_SEND;

@@ -1,5 +1,6 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
 import {
   TCases,
   THero,
@@ -15,15 +16,15 @@ import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_GOOGLE_INCLUDE } from "./advertisement-google-include.config";
 
 export const ADVERTISEMENT_GOOGLE_CONFIG = {
+  url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_GOOGLE.url,
   hero: {
     basic: {
       title: {
-        accentText: "Эффективная реклама",
-        text: "в Google Ads",
-        accentOrder: 0,
+        accent: "Эффективная реклама",
+        accentAfter: "в Google Ads",
       },
       description:
-        "Закажите рекламу в Google Ads и привлеките русскоговорящую аудторию со всего мира! Наше агентство предлагает профессиональную настройку и управление рекламными кампаниями в Google Ads. Мы обеспечим высокую конверсию и максимальную отдачу от ваших инвестиций в рекламу. Доверьтесь нам и закажите услуги настройки рекламы сегодня.",
+        "Закажите рекламу в Google Ads и привлеките русскоговорящую аудторию со всего мира! Наше агентство предлагает профессиональную настройку и управление рекламными кампаниями в Google Ads. Мы обеспечим высокую конверсию и максимальную отдачу от ваших инвестиций в рекламу. Доверьтесь нам и закажите услуги настройки рекламы сегодня.",
       image: "promotion-stroitelnie-comp-hero",
     } satisfies THeroBasic,
     infoAdvertisement: [
@@ -63,7 +64,7 @@ export const ADVERTISEMENT_GOOGLE_CONFIG = {
       },
       {
         title: "Запуск кампаний",
-        descr: "Настраиваем и запускаем рекламные кампании в Google Ads.",
+        descr: "Настраиваем и запускаем рекламные кампании в Google Ads.",
       },
       {
         title: "Оптимизация и контроль",

@@ -1,3 +1,4 @@
+import { WEBDEV_DASHBOARD_PAGES } from "@/config/url-config/webdev-pages.config";
 import {
   TAllSiteTypes,
   TFaq,
@@ -14,12 +15,12 @@ import { WEBDEV_REDESING_STAGES } from "./webdev-redesign-stages.config";
 import { REDESIGN_FAQ } from "./webdev-redesing-faq.config";
 
 export const WEBDEV_REDESIGN_CONFIG = {
+  url: WEBDEV_DASHBOARD_PAGES.WEBDEV_REDESIGN.url,
   hero: {
     basic: {
       title: {
-        accentText: "Редизайн и доработка сайтов:",
-        text: "Улучшите свой сайт, повысив его эффективность",
-        accentOrder: 0,
+        accent: "Редизайн и доработка сайтов:",
+        accentAfter: "Улучшите свой сайт, повысив его эффективность",
       },
       description:
         "Мы предлагаем услуги по редизайну и доработке сайтов любого типа и на любой платформе. Наша команда поможет вам обновить внешний вид вашего сайта, улучшить его функциональность и адаптировать под современные требования, чтобы он максимально соответствовал вашим бизнес-целям.",

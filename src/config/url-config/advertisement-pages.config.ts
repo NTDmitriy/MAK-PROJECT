@@ -23,7 +23,7 @@ class ADVERTISEMENT_DASHBOARD {
       "Яндекс Директ — это инструмент для запуска контекстной рекламы в одной из крупнейших поисковых систем России. Мы поможем настроить рекламные кампании, которые привлекут целевую аудиторию и увеличат конверсию. Наши специалисты проведут анализ ключевых слов, создадут эффективные объявления и настроят таргетинг для достижения максимального результата.",
   } satisfies IDashboardItem;
 
-  ADVERTISEMENT_GOOGLE_ADS = {
+  ADVERTISEMENT_GOOGLE = {
     name: "Реклама в Google",
     smallName: "Google Ads",
     url: `${this.root}/reklama-google-ads`,
@@ -43,7 +43,7 @@ class ADVERTISEMENT_DASHBOARD {
       "Telegram Ads — это возможность продвигать ваш бизнес в одном из самых популярных мессенджеров. Мы поможем создать эффективные рекламные кампании, которые донесут ваше сообщение до нужной аудитории. Наши услуги включают создание контента, настройку таргетинга и анализ результатов для постоянного улучшения эффективности рекламы.",
   } satisfies IDashboardItem;
 
-  ADVERTISEMENT_FACEBOOk = {
+  ADVERTISEMENT_META = {
     name: "Реклама в Meta: Facebook & Instagram",
     smallName: "Meta: Facebook & Instagram",
     url: `${this.root}/reklama-facebook-instagram`,
@@ -60,9 +60,9 @@ class ADVERTISEMENT_DASHBOARD {
     childrens: [
       this.ADVERTISEMENT_VK,
       this.ADVERTISEMENT_YANDEX_DIRECT,
-      this.ADVERTISEMENT_GOOGLE_ADS,
+      this.ADVERTISEMENT_GOOGLE,
       this.ADVERTISEMENT_TG,
-      this.ADVERTISEMENT_FACEBOOk,
+      this.ADVERTISEMENT_META,
     ],
   } satisfies IDashboardItem;
 }

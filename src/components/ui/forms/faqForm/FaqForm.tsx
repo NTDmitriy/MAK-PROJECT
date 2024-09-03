@@ -6,7 +6,6 @@ import { useFormContext } from "react-hook-form";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { useNotification } from "@/hooks/useNotification";
 import { useSendToTelegram } from "@/hooks/useSendToTelegram";
-import Link from "next/link";
 import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
 import { PhoneLinkButton } from "../../links/phoneLinkButton/PhoneLinkButton";
 import { TelegramLinkButton } from "../../links/telegramLinkButton/TelegramLinkButton";
@@ -80,9 +79,9 @@ export const FaqForm: FC<IFormContent> = ({
       <p className={styles.notice}>
         Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
         персональных данных и соглашаетесь с условиями{" "}
-        <Link className={styles.privacy} href={"/приваси"}>
+        <a className={styles.privacy}  href={`/privacy-policy.pdf`}>
           Политики конфиденциальности
-        </Link>
+        </a>
       </p>
     </div>
   );

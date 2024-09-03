@@ -17,6 +17,7 @@ import type {
 } from "../block/products.type";
 
 export type TScreen = {
+  url: string;
   hero: THero;
   supplementaryDescr?: TSupplementaryDescr;
   products?: TServiceProducts;

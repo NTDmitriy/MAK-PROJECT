@@ -1,5 +1,5 @@
 .hero__container {
-  padding-top: clamp(70px, 9dvw, 180px);
+  padding-top: clamp(125px, 9dvw, 180px);
   padding-bottom: clamp(60px, 8dvw ,120px);
   position: relative;
 
@@ -12,10 +12,12 @@
   font-size: clamp(24px, 3.7dvw, 70px);
   line-height: 114%;
   margin-bottom: clamp(10px, 2.65dvw, 50px);
+  max-width: 1200px;
 }
 
 .accent {
   background: linear-gradient(90deg, #f4a21a 0%, #ffde00 50%, #f4a21a 100%);
+  display: block;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

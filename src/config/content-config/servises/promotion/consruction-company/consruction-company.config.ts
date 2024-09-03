@@ -1,5 +1,6 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { PROMOTION_DASHBOARD_PAGES } from "@/config/url-config/promotion-pages.config";
 import {
   TCases,
   TDetialServices,
@@ -14,12 +15,12 @@ import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { CONSTRUCTION_COMPANY_DETAIL } from "./consruction-company-detail.config";
 
 export const CONSTRUCTION_COMPANY_CONFIG = {
+  url: PROMOTION_DASHBOARD_PAGES.PROMOTION_CONSTRUCTION_COMPANY.url,
   hero: {
     basic: {
       title: {
-        accentText: "Комплексное продвижение",
-        text: "для строительных компаний",
-        accentOrder: 0,
+        accent: "Комплексное продвижение",
+        accentBefore: "для строительных компаний",
       },
       description:
         "Повышайте узнаваемость и привлекайте больше клиентов для вашей строительной компании с нашими комплексными маркетинговыми решениями. Мы поможем вам выделиться на рынке и увеличить количество заказов.",
