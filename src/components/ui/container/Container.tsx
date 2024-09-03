@@ -9,7 +9,7 @@ export const Container: FC<PropsWithChildren<IGenericElementProps>> = ({
   ...rest
 }) => {
   return (
-    <div className={clsx(styles.container, className)} {...rest} >
+    <div className={clsx(styles.container, className)} {...rest}>
       {children}
     </div>
   );

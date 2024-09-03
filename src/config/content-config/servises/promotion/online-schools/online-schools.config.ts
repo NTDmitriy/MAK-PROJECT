@@ -1,5 +1,6 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { PROMOTION_DASHBOARD_PAGES } from "@/config/url-config/promotion-pages.config";
 import {
   TCases,
   TDetialServices,
@@ -14,12 +15,12 @@ import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ONLINE_SCHOOL_DETAIL } from "./online-schools-detail.config";
 
 export const ONLINE_SCHOOL_CONFIG = {
+  url: PROMOTION_DASHBOARD_PAGES.PROMOTION_ONLINE_SCHOOL.url,
   hero: {
     basic: {
       title: {
-        accentText: "Эффективное продвижение",
-        text: "для экспертов, наставников и онлайн-школ",
-        accentOrder: 0,
+        accent: "Эффективное продвижение",
+        accentAfter: "для экспертов, наставников и онлайн-школ",
       },
       description:
         "Мы поможем вашей онлайн-школе выделиться среди конкурентов и привлечь больше учеников. Комплексный подход к продвижению, включающий SEO, SMM, PPC и контент-маркетинг.",

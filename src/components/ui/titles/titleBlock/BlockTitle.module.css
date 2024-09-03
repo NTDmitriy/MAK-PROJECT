@@ -8,15 +8,30 @@
   position: relative;
   padding-top: 14px;
   padding-bottom: clamp(40px, 6.7dvw, 135px);
-  padding-left: 50px;
-  padding-right: 50px;
-  text-align: left;
   color: var(--text-primary);
   min-height: 100%;
   margin-top: 10px;
 }
 
+
+.title__left {
+  padding-left: 50px;
+}
+
+.title__right {
+  padding-right: 50px;
+}
+
+.pl {
+  padding-left: 50px;
+}
+
+.pr {
+  padding-right: 50px;
+}
+
 .title {
+  display: block;
   font-family: var(--third-family);
   font-weight: 900;
   font-size: 60px;
@@ -24,7 +39,10 @@
   line-height: 133%;
   z-index: 2;
   text-align: left;
+  width: 100%;
+  
 }
+
 .title__right,
 .title__wrapper {
   text-align: right;
@@ -66,7 +84,7 @@
   right: 0;
 }
 
-.title__wrapper__flex {
+.flex {
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -81,6 +99,10 @@
   text-align: right;
   z-index: 1;
   padding-top: 16px;
+}
+
+.descr__sideway {
+  max-width: 700px;
 }
 
 .align__left {
@@ -110,9 +132,9 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .title__wrapper__flex {
-    flex-direction: column;
-  }
+.grid {
+  grid-template-columns: 1fr;
+}
 
   .title__right {
     order: unset;
@@ -149,7 +171,22 @@
   }
   .title__wrapper {
     margin-top: 30px;
+  }
+
+  .title__left {
     padding-left: 0;
+  }
+
+  .title__right {
+    padding-right: 0;
+  }
+
+  .pl {
+    padding-left: 0;
+  }
+  
+  .pr {
+    padding-right: 0;
   }
 
   .background__text {

@@ -1,7 +1,9 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
 import {
   TCases,
+  TFaq,
   THero,
   THeroBasic,
   THeroInfoProduct,
@@ -10,15 +12,16 @@ import {
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
+import { POSEVI_FAQ } from "./seo-posevy-faq";
 import { SEO_POSEVY_INCLUDE } from "./seo-posevy-include.config";
 
 export const SEO_POSEVY_CONFIG = {
+  url: SEO_DASHBOARD_PAGES.SEO_POSEVY.url,
   hero: {
     basic: {
       title: {
-        accentText: "Эффективные посевы рекламы",
-        text: "в социальных сетях",
-        accentOrder: 0,
+        accent: "Эффективные посевы рекламы",
+        accentAfter: "в социальных сетях",
       },
       description:
         "Хотите увеличить охват и привлечь новых клиентов? Услуга посевов рекламы позволяет быстро и эффективно донести ваше сообщение до широкой аудитории   в социальных сетях. Наше агентство профессионально организует и проведет рекламные посевы, чтобы ваш бренд получил максимальное внимание и вовлеченность.",
@@ -71,4 +74,5 @@ export const SEO_POSEVY_CONFIG = {
   includeService: SEO_POSEVY_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
+  faq: POSEVI_FAQ satisfies TFaq[],
 } satisfies TScreen;

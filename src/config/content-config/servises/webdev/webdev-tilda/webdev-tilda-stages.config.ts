@@ -1,6 +1,7 @@
 import { TWorkStages } from "@/interfaces/types/block/products.type";
 
 export const WEBDEV_TILDA_STAGES = {
+
   items: [
     {
       stage: "Анализ и планирование",

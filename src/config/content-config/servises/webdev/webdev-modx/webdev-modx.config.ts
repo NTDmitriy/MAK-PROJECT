@@ -1,3 +1,4 @@
+import { WEBDEV_DASHBOARD_PAGES } from "@/config/url-config/webdev-pages.config";
 import {
   TAllSiteTypes,
   TFaq,
@@ -14,12 +15,13 @@ import { MODX_FAQ } from "./webdev-modx-faq.config";
 import { WEBDEV_MODX_STAGES } from "./webdev-modx-stages.config";
 
 export const WEBDEV_MODX_CONFIG = {
+  url: WEBDEV_DASHBOARD_PAGES.WEBDEV_MODX.url,
   hero: {
     basic: {
       title: {
-        accentText: "Создание сайтов на ModX:",
-        text: "Гибкость, Надежность, Высокая производительность",
-        accentOrder: 0,
+        accent: "Создание сайтов на ModX:",
+        accentAfter: "Гибкость, Надежность, Высокая производительность",
+
       },
       description: 'Предлагаем услуги по созданию сайтов на платформе ModX. Наша команда создаст для вас высокопроизводительный и безопасный сайт с уникальными функциями, который будет идеально соответствовать потребностям вашего бизнеса.',
       image: "promotion-stroitelnie-comp-hero",

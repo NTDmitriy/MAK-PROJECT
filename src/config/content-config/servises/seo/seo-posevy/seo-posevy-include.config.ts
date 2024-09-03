@@ -44,4 +44,5 @@ export const SEO_POSEVY_INCLUDE = {
     },
   ],
   blockTitle: "Что входит в услугу",
+
 } satisfies TIncludedInService;

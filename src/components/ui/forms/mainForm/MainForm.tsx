@@ -3,7 +3,6 @@
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { useNotification } from "@/hooks/useNotification";
 import { useSendToTelegram } from "@/hooks/useSendToTelegram";
-import Link from "next/link";
 import { FC } from "react";
 import { useFormContext } from "react-hook-form";
 
@@ -85,9 +84,9 @@ export const MainForm: FC<IFormContent> = ({ title, text, ...rest }) => {
       <p className={styles.notice}>
         Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
         персональных данных и соглашаетесь с условиями{" "}
-        <Link className={styles.privacy} href={"/приваси"}>
+        <a className={styles.privacy}   href={`/privacy-policy.pdf`}>
           Политики конфиденциальности
-        </Link>
+        </a>
       </p>
     </div>
   );

@@ -4,7 +4,6 @@ import { useNotification } from "@/hooks/useNotification";
 import { useSendToTelegram } from "@/hooks/useSendToTelegram";
 
 import clsx from "clsx";
-import Link from "next/link";
 import { FC, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
@@ -21,7 +20,7 @@ export const StepForm: FC<IFormContent> = ({ subServices }) => {
     reset,
   } = useFormContext();
 
-	console.log(subServices)
+  console.log(subServices);
 
   const [step, setStep] = useState<number>(1);
 
@@ -64,14 +63,10 @@ export const StepForm: FC<IFormContent> = ({ subServices }) => {
             интересуют. Затем нажмите кнопку "Далее".
           </p>
           <div className={styles.checkbox__group}>
-            {subServices && subServices.map((item, index) => (
-
-              <Checkbox
-                key={index}
-                id={`${index}`}
-                value={item}
-              />
-            ))}
+            {subServices &&
+              subServices.map((item, index) => (
+                <Checkbox key={index} id={`${index}`} value={item} />
+              ))}
           </div>
           <PrimaryButton
             className={clsx(styles.form__nav, styles.form__nav__next)}
@@ -107,9 +102,9 @@ export const StepForm: FC<IFormContent> = ({ subServices }) => {
           <p className={styles.notice}>
             Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
             персональных данных и соглашаетесь с условиями{" "}
-            <Link className={styles.privacy} href={"/приваси"}>
+            <a className={styles.privacy} href={`/privacy-policy.pdf`}>
               Политики конфиденциальности
-            </Link>
+            </a>
           </p>
         </div>
       </form>

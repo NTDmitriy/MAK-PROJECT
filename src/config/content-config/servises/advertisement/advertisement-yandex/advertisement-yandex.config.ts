@@ -1,5 +1,6 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
 import {
   TCases,
   THero,
@@ -15,12 +16,12 @@ import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_YANDEX_INCLUDE } from "./advertisement-yandex-include.config";
 
 export const ADVERTISEMENT_YANDEX_CONFIG = {
+  url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_YANDEX_DIRECT.url,
   hero: {
     basic: {
       title: {
-        accentText: "Эффективная",
-        text: "контекстная реклама в Яндекс Директ ",
-        accentOrder: 0,
+        accent: "Эффективная",
+        accentAfter: "контекстная реклама в Яндекс Директ",
       },
       description:
         "Ищете способы заказать рекламу в интернете? Яндекс Директ – это ваш ключ к успеху! Мы предлагаем комплексные услуги по настройке и управлению рекламными кампаниями в Яндекс Директ. Наша команда специалистов поможет вам привлечь целевую аудиторию и увеличить конверсию. Закажите рекламу у нас и ощутите результаты уже сегодня.",

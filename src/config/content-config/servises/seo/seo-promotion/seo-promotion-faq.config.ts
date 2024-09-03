@@ -1,6 +1,6 @@
 import { TFaq } from "@/interfaces/types/block/products.type";
 
-export const SEO_FAQ = [
+export const PROMOTION_FAQ = [
 	{
 		title: "Что такое SEO-продвижение?",
 		descr: "SEO-продвижение – это набор методов и стратегий, направленных на улучшение видимости вашего сайта в поисковых системах и увеличение трафика."

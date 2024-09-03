@@ -34,7 +34,7 @@ export const BlockTitle: FC<PropsWithChildren<IBlockTitle>> = ({
     <div className={styles.overflow}>
       <Container
         className={clsx(styles.title__wrapper, {
-          [styles.title__wrapper__flex]: descrSideway,
+          [styles.flex]: descrSideway,
         })}
       >
         <h2
@@ -46,7 +46,7 @@ export const BlockTitle: FC<PropsWithChildren<IBlockTitle>> = ({
 
         {descrSideway && (
           <div
-            className={clsx(styles.descr, {
+            className={clsx(styles.descr, styles.descr__sideway, {
               [styles.align__left]: !leftSide,
             })}
           >
@@ -57,6 +57,8 @@ export const BlockTitle: FC<PropsWithChildren<IBlockTitle>> = ({
         {descrBottom && <div
             className={clsx(styles.descr, {
               [styles.align__left]: leftSide,
+              [styles.pl]: leftSide,
+              [styles.pr]: !leftSide,
             })}
           >
             {descrBottom}

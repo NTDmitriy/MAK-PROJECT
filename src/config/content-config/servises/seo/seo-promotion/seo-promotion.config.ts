@@ -1,7 +1,9 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
 import {
   TCases,
+  TFaq,
   THero,
   THeroBasic,
   THeroInfoProduct,
@@ -10,15 +12,16 @@ import {
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
+import { PROMOTION_FAQ } from "./seo-promotion-faq.config";
 import { SEO_PROMOTION_INCLUDE } from "./seo-promotion-include.config";
 
 export const SEO_PROMOTION_CONFIG = {
+  url: SEO_DASHBOARD_PAGES.SEO_PROMOTION.url,
   hero: {
     basic: {
       title: {
-        accentText: "Профессиональное SEO-продвижение",
-        text: "для вашего бизнеса",
-        accentOrder: 0,
+        accent: "Профессиональное SEO-продвижение",
+        accentAfter: "для вашего бизнеса",
       },
       description:
         "Хотите улучшить позиции вашего сайта в поисковых системах и привлечь больше клиентов? Наше агентство предлагает комплексные услуги по SEO-продвижению. Мы поможем вашему сайту достичь высоких позиций в Google и Яндекс, что увеличит трафик и конверсии. Закажите наше SEO-продвижение и увидьте результаты!",
@@ -74,4 +77,5 @@ export const SEO_PROMOTION_CONFIG = {
   includeService: SEO_PROMOTION_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
+  faq: PROMOTION_FAQ satisfies TFaq[],
 } satisfies TScreen;

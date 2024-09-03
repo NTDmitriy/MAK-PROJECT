@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/container/Container";
 import {
-	FORM_TYPE,
-	FormController,
+  FORM_TYPE,
+  FormController,
 } from "@/components/ui/forms/FormController";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
@@ -24,7 +24,7 @@ export const Projects: FC<PropsWithChildren<IProjects>> = ({
   return (
     <Section {...rest}>
       <BlockTitle
-        leftSide={true}
+        leftSide={false}
         descrSideway="Примеры кейсов и результатов, которых мы достигли для наших клиентов"
       >
         Наши проекты

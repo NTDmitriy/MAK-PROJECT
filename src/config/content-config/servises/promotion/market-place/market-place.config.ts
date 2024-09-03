@@ -1,5 +1,6 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { PROMOTION_DASHBOARD_PAGES } from "@/config/url-config/promotion-pages.config";
 import {
   TCases,
   TDetialServices,
@@ -14,12 +15,12 @@ import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { MARKET_PLACE_DETAIL } from "./market-place-detail.config";
 
 export const MARKET_PLACE_CONFIG = {
+  url: PROMOTION_DASHBOARD_PAGES.PROMOTION_MARKETPLACE.url,
   hero: {
     basic: {
       title: {
-        accentText: "Эффективное продвижение",
-        text: "магазинов на маркетплейсах (Wildberries, OZON, Яндекс Маркет и другие)",
-        accentOrder: 0,
+        accent: "Эффективное продвижение",
+        accentAfter: "магазинов на маркетплейсах (Wildberries, OZON, Яндекс Маркет и другие)",
       },
       description:
         "Максимизируйте свои продажи на популярных маркетплейсах с нашей помощью. Мы предлагаем комплексные решения для повышения видимости и увеличения конверсии вашего магазина.",

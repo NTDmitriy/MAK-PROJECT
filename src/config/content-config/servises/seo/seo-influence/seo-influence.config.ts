@@ -1,7 +1,9 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
 import {
   TCases,
+  TFaq,
   THero,
   THeroBasic,
   THeroInfoProduct,
@@ -10,15 +12,16 @@ import {
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
+import { INFLUENCE_FAQ } from "./influencePageFaq";
 import { SEO_INFLUENCE_INCLUDE } from "./seo-influence-include.config";
 
 export const SEO_INFLUENCE_CONFIG = {
+  url: SEO_DASHBOARD_PAGES.SEO_INFLUENCE.url,
   hero: {
     basic: {
       title: {
-        accentText: "Эффективная реклама",
-        text: "через инфлюенсеров",
-        accentOrder: 0,
+        accent: "Эффективная реклама",
+        accentAfter: "через инфлюенсеров",
       },
       description:
         "Хотите увеличить узнаваемость бренда и привлечь новых клиентов? Реклама через инфлюенсеров – это мощный инструмент для продвижения вашего бизнеса. Мы поможем вам найти подходящих инфлюенсеров, которые идеально подойдут для вашей целевой аудитории, и разработаем креативные кампании, которые принесут отличные результаты.",
@@ -72,4 +75,5 @@ export const SEO_INFLUENCE_CONFIG = {
   includeService: SEO_INFLUENCE_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
+  faq: INFLUENCE_FAQ satisfies TFaq[],
 } satisfies TScreen;

@@ -35,10 +35,13 @@ export const Hero: FC<PropsWithChildren<IHero>> = ({
 }) => {
   return (
     <Section {...rest} className={clsx(styles.hero, className)}>
+ 
       {basicContent && <HeroBasic basicContent={basicContent} />}
       {productContent && <HeroInfoProduct info={productContent} />}
       {serviceContent && <HeroInfoService info={serviceContent} />}
-      {advertisementContent && (<HeroInfoAdvertisement info={advertisementContent} />)}
+      {advertisementContent && (
+        <HeroInfoAdvertisement info={advertisementContent} />
+      )}
       {webdewContent && <HeroInfoWebdev info={webdewContent} />}
     </Section>
   );

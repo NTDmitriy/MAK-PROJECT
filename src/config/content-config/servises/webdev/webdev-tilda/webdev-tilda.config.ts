@@ -1,3 +1,4 @@
+import { WEBDEV_DASHBOARD_PAGES } from "@/config/url-config/webdev-pages.config";
 import {
   TAllSiteTypes,
   TFaq,
@@ -14,12 +15,13 @@ import { TILDA_FAQ } from "./webdev-tilda-faq.config";
 import { WEBDEV_TILDA_STAGES } from "./webdev-tilda-stages.config";
 
 export const WEBDEV_TILDA_CONFIG = {
+  url: WEBDEV_DASHBOARD_PAGES.WEBDEV_TILDA.url,
   hero: {
     basic: {
       title: {
-        accentText: "Создание сайтов на Tilda: ",
-        text: "Быстро, Качественно, Уникально",
-        accentOrder: 0,
+        accent: "Создание сайтов на Tilda: ",
+        accentAfter: "Быстро, Качественно, Уникально",
+
       },
       description:
         "Предлагаем услуги по созданию сайтов на платформе Tilda. Наши специалисты разработают для вас уникальный и адаптивный сайт, который привлечет внимание вашей аудитории и поможет достичь ваших бизнес-целей.",

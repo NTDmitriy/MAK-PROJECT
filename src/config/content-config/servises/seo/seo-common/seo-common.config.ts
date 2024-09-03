@@ -4,25 +4,23 @@ import { IDashboardItem } from "@/config/url-config/all-pages.config";
 import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
 import type {
   TCases,
-  TFaq,
   THero,
   THeroBasic,
   THeroInfoService,
   TReviwe,
   TServiceProducts,
   TSupplementaryDescr,
-  TWhyUs,
+  TWhyUs
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
-import { SEO_FAQ } from "./seo-common-faq.config";
 
 export const SEO_COMMON_CONFIG = {
+  url: SEO_DASHBOARD_PAGES.SEO.url,
   hero: {
     basic: {
       title: {
-        accentText: "эффективные решения для вашего бизнеса",
-        text: "Трафик и SEO-продвижение:",
-        accentOrder: 1,
+        accent: "эффективные решения для вашего бизнеса",
+        accentBefore: "Трафик и SEO-продвижение:",
       },
       description:
         "Ищете, где заказать рекламу в интернете? Наше рекламное агентство предоставляет комплексные услуги по настройке и запуску рекламных кампаний в Яндекс Директ, ВКонтакте, Google Ads, Telegram Ads и Meta: Facebook & Instagram. Мы поможем вам привлечь целевую аудиторию, увеличить конверсию и добиться максимального результата от рекламы. Доверьтесь профессионалам!",
@@ -105,5 +103,5 @@ export const SEO_COMMON_CONFIG = {
   } satisfies TWhyUs,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
-  faq: SEO_FAQ satisfies TFaq[],
+
 } satisfies TScreen;

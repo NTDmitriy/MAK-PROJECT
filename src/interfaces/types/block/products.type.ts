@@ -2,9 +2,9 @@ import { IDashboardItem } from "@/config/url-config/all-pages.config";
 
 export type THeroBasic = {
   title: {
-    text: string;
-    accentText: string;
-    accentOrder: number;
+    accentBefore?: string;
+    accent?: string;
+    accentAfter?: string;
   };
   description: string;
   image: string;

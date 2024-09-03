@@ -1,3 +1,4 @@
+import { WEBDEV_DASHBOARD_PAGES } from "@/config/url-config/webdev-pages.config";
 import {
   TAllSiteTypes,
   TFaq,
@@ -14,12 +15,12 @@ import { JS_FAQ } from "./webdev-js-faq.config";
 import { WEBDEV_JS_STAGES } from "./webdev-js-stages.config";
 
 export const WEBDEV_JS_CONFIG = {
+  url: WEBDEV_DASHBOARD_PAGES.WEBDEV_JS.url,
   hero: {
     basic: {
       title: {
-        accentText: "Создание сайтов на JavaScript:",
-        text: "Мощные, Быстрые и Адаптивные решения",
-        accentOrder: 0,
+        accent: "Создание сайтов на JavaScript:",
+        accentAfter: "Мощные, Быстрые и Адаптивные решения",
       },
       description:
         "Мы предлагаем профессиональные услуги по созданию сайтов на JavaScript. Наши опытные разработчики создадут для вас высокопроизводительный, адаптивный и современный сайт, который будет работать быстро и эффективно на любых устройствах.",

@@ -201,8 +201,6 @@
   .form {
     grid-row: unset;
     grid-column-start: unset;
-    min-width: 100%;
-    height: 200px;
   }
   .tooltip {
     display: none;

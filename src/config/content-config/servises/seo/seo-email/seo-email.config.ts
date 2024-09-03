@@ -1,7 +1,9 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
 import {
   TCases,
+  TFaq,
   THero,
   THeroBasic,
   THeroInfoProduct,
@@ -10,15 +12,16 @@ import {
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
+import { EMAIL_FAQ } from "./seo-email-faq";
 import { SEO_EMAIL_INCLUDE } from "./seo-email-include.config";
 
 export const SEO_EMAIL_CONFIG = {
+  url: SEO_DASHBOARD_PAGES.SEO_EMAIL_DISTRIBUTION.url,
   hero: {
     basic: {
       title: {
-        accentText: "Профессиональные email-рассылки",
-        text: "по базам",
-        accentOrder: 0,
+        accent: "Профессиональные email-рассылки",
+        accentAfter: "по базам",
       },
       description:
         "Хотите увеличить продажи и укрепить отношения с клиентами? Наше агентство предлагает услуги по созданию и управлению email-рассылками по готовым или имеющимся базам. Мы разработаем эффективные письма, которые привлекут внимание и увеличат конверсию. Закажите нашу услугу и увидьте, как растет ваша прибыль.",
@@ -72,4 +75,5 @@ export const SEO_EMAIL_CONFIG = {
   includeService: SEO_EMAIL_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
+  faq: EMAIL_FAQ satisfies TFaq[],
 } satisfies TScreen;

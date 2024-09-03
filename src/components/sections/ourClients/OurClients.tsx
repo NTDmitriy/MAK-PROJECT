@@ -31,7 +31,7 @@ export const OurClients: FC<PropsWithChildren<IGenericElementProps>> = ({
         leftSide={true}
         descrSideway="Познакомьтесь с компаниями, которые доверяют нашему маркетинговому агентству. Мы работаем с лидерами рынка и помогаем им достигать высоких результатов в digital маркетинге."
       >
-        Наши Партнеры
+        Наши клиенты
       </BlockTitle>
       <Container>
         <div className={styles.container}>

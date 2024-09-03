@@ -1,5 +1,6 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { PROMOTION_DASHBOARD_PAGES } from "@/config/url-config/promotion-pages.config";
 import {
   TCases,
   TDetialServices,
@@ -14,12 +15,12 @@ import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { MEDICAL_DETAIL } from "./medical-detail.config";
 
 export const MEDICAL_CONFIG = {
+  url: PROMOTION_DASHBOARD_PAGES.PROMOTION_MEDICAL.url,
   hero: {
     basic: {
       title: {
-        accentText: "привлечение пациентов и рост доверия",
-        text: "Продвижение медицинских учреждений: ",
-        accentOrder: 1,
+        accentBefore: "Продвижение медицинских учреждений: ",
+        accent: "привлечение пациентов и рост доверия",
       },
       description:
         "Увеличьте количество пациентов и улучшите репутацию вашего медицинского учреждения с помощью наших комплексных маркетинговых решений. Мы знаем, как сделать вашу клинику заметной и востребованной.",

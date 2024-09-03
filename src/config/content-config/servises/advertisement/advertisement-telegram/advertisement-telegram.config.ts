@@ -1,5 +1,6 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
 import {
   TCases,
   THero,
@@ -15,12 +16,12 @@ import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_TELEGRAM_INCLUDE } from "./advertisement-telegram-include.config";
 
 export const ADVERTISEMENT_TELEGRAM_CONFIG = {
+  url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_META.url,
   hero: {
     basic: {
       title: {
-        accentText: "Эффективная реклама",
-        text: "в Telegram Ads для вашего бизнеса",
-        accentOrder: 0,
+        accent: "Эффективная реклама",
+        accentAfter: "в Telegram Ads для вашего бизнеса",
       },
       description:
         "Хотите заказать рекламу в одном из самых популярных мессенджеров? Telegram Ads предоставляет уникальные возможности для прямого взаимодействия с вашей целевой аудиторией. Наше агентство профессионально настроит и запустит рекламные кампании, которые помогут привлечь новых клиентов и увеличить узнаваемость бренда. Закажите настройку рекламы у нас и увидьте, как растут ваши показатели.",

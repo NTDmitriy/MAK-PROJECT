@@ -21,19 +21,9 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
   return (
     <Container className={styles.hero__container}>
       <h1 className={styles.title}>
-        {title.accentText && title.accentOrder === 0 ? (
-          <>
-            <span className={styles.accent}>{title.accentText}</span>{" "}
-            <span>{title.text}</span>
-          </>
-        ) : (
-          <>
-            <span>{title.text}</span>{" "}
-            {title.accentText && (
-              <span className={styles.accent}>{title.accentText}</span>
-            )}
-          </>
-        )}
+        <span>{title.accentBefore && title.accentBefore}</span>
+        <span className={styles.accent}>{title.accent && title.accent}</span>
+        <span>{title.accentAfter && title.accentAfter}</span>
       </h1>
       <p className={styles.descr}>{description}</p>
       <div className={styles.btn_grop}>

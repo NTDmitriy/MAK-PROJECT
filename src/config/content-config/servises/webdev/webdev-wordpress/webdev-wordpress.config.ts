@@ -1,3 +1,4 @@
+import { WEBDEV_DASHBOARD_PAGES } from "@/config/url-config/webdev-pages.config";
 import {
   TAllSiteTypes,
   TFaq,
@@ -14,12 +15,12 @@ import { WORDPRESS_FAQ } from "./webdev-wordpress-faq.config";
 import { WEBDEV_WORDPRESS_STAGES } from "./webdev-wordpress-stages.config";
 
 export const WEBDEV_WORDPRESS_CONFIG = {
+  url: WEBDEV_DASHBOARD_PAGES.WEBDEV_WORDPRESS.url,
   hero: {
     basic: {
       title: {
-        accentText: "Создание сайтов на WordPress:",
-        text: "Профессионально, Надежно, Эффективно",
-        accentOrder: 0,
+        accent: "Создание сайтов на WordPress:",
+        accentAfter: "Профессионально, Надежно, Эффективно",
       },
       description:
         "Предлагаем услуги по созданию сайтов на платформе WordPress. Наши специалисты создадут для вас мощный и адаптивный сайт, который удовлетворит все потребности вашего бизнеса и поможет вам достичь успеха.",

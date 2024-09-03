@@ -1,6 +1,9 @@
 import { Container } from "@/components/ui/container/Container";
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
-import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
+import {
+  FORM_TYPE,
+  FormController,
+} from "@/components/ui/forms/FormController";
 import { SocialLink } from "@/components/ui/links/socialLink/SocialLink";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
@@ -35,8 +38,7 @@ export const Footer: FC<PropsWithChildren<IGenericElementProps>> = ({
             </div>
             <div className={clsx(styles.head__item, styles.social__item)}>
               <div className={styles.head__social}>
-
-								<FormController formType={FORM_TYPE.SING_UP_FORM}  />
+                <FormController formType={FORM_TYPE.SING_UP_FORM} />
                 <div className={styles.social__btns}>
                   <SocialLink
                     className={styles.btn}
@@ -63,28 +65,28 @@ export const Footer: FC<PropsWithChildren<IGenericElementProps>> = ({
             </div>
             <div className={clsx(styles.head__item, styles.contact__item)}>
               <div className={styles.contact__wrapper}>
-                <Link
+                <a
                   className={styles.contact__link}
                   href={`tel:${CONTACTS_PUBLIC.PHONE}`}
                 >
                   <DynamicSvg name="IconPhone" />
                   <span>{CONTACTS_PUBLIC.PHONE}</span>
-                </Link>
-                <Link
+                </a>
+                <a
                   className={styles.contact__link}
                   href={`mailto:${CONTACTS_PUBLIC.EMAIL}`}
                 >
                   <DynamicSvg name="IconEMailTransparent" />
                   <span>{CONTACTS_PUBLIC.EMAIL}</span>
-                </Link>
-                <Link
+                </a>
+                <a
                   className={styles.contact__link}
                   href={`${CONTACTS_PUBLIC.TELEGRAM}`}
                   target="_blank"
                 >
                   <DynamicSvg name="IconTelegramTransparent" />
                   <span>@makeallperfect_bot</span>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -95,7 +97,7 @@ export const Footer: FC<PropsWithChildren<IGenericElementProps>> = ({
                   <li className={styles.nav__item} key={index}>
                     <Link
                       className={styles.nav__head__link}
-                      href={`${services.url}${service.url}`}
+                      href={`${service.url}`}
                     >
                       {service.name}
                     </Link>
@@ -106,7 +108,7 @@ export const Footer: FC<PropsWithChildren<IGenericElementProps>> = ({
                           <li key={index} className={styles.service__item}>
                             <Link
                               className={styles.footer__link}
-                              href={`${services.url}${subService.url}`}
+                              href={`${subService.url}`}
                             >
                               <span>{subService.smallName}</span>
                             </Link>
@@ -120,25 +122,27 @@ export const Footer: FC<PropsWithChildren<IGenericElementProps>> = ({
           )}
 
           <div className={styles.lower__block}>
-            <div className={clsx(styles.lower__block__item, styles.copy__block)}>
+            <div
+              className={clsx(styles.lower__block__item, styles.copy__block)}
+            >
               <p className={styles.copy}>
                 {getCurrentYear()} © all rights reserved
               </p>
               <div className={styles.ducument__links}>
-                <Link
+                <a
                   className={clsx(styles.footer__link, styles.ducument__link)}
-                  href={`приваси`}
+                  href={`/privacy-policy.pdf`}
                   target="_blank"
                 >
                   <span>Политика конфиденциальности</span>
-                </Link>
-                <Link
+                </a>
+                <a
                   className={clsx(styles.footer__link, styles.ducument__link)}
                   href={`sitemap`}
                   target="_blank"
                 >
                   <span>Карта сайта</span>
-                </Link>
+                </a>
               </div>
             </div>
             <div className={styles.lower__block__item}>
