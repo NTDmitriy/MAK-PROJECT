@@ -1,7 +1,8 @@
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { InputMask } from "@react-input/mask";
 import clsx from "clsx";
-import { FC, InputHTMLAttributes, TextareaHTMLAttributes } from "react";
+import { randomBytes } from "crypto";
+import { FC, InputHTMLAttributes, TextareaHTMLAttributes, useEffect, useState } from "react";
 import styles from "./PrimaryInput.module.css";
 
 type TMaskParams = {
@@ -30,6 +31,17 @@ export const PrimaryInput: FC<IInput> = ({
   isTextarea,
   ...rest
 }) => {
+  const [uniqueId, setUniqueId] = useState(id);
+
+  useEffect(() => {
+    const randomHash = randomBytes(4)
+      .toString("base64")
+      .replace(/\//g, "_")
+      .replace(/\+/g, "-")
+      .slice(0, 5)
+    setUniqueId(`${id}-${randomHash}`);
+  }, [id]);
+
   return (
     <div className={clsx(styles.root, className)} {...rest}>
       {!isTextarea && (
@@ -42,7 +54,7 @@ export const PrimaryInput: FC<IInput> = ({
               )}
               mask={maskParams.mask}
               replacement={maskParams.replacement}
-              id={id}
+              id={uniqueId}
               {...InputProps}
             />
           )}
@@ -52,8 +64,8 @@ export const PrimaryInput: FC<IInput> = ({
                 styles.input,
                 label && styles.hidden__placeholder
               )}
+              id={uniqueId}
               {...InputProps}
-              id={id}
             />
           )}
         </>
@@ -67,13 +79,13 @@ export const PrimaryInput: FC<IInput> = ({
             styles.textarea,
             label && styles.hidden__placeholder
           )}
-          id={id}
+          id={uniqueId}
           {...TextareaProps}
         />
       )}
 
       {label && (
-        <label htmlFor={id} className={styles.label}>
+        <label htmlFor={uniqueId} className={styles.label}>
           {label}
         </label>
       )}

@@ -22,7 +22,7 @@ export const Reviwes: FC<PropsWithChildren<IReviwes>> = ({
         <Section {...rest} className={clsx(styles.reviwes, styles.inner)}>
           <BlockTitle
             leftSide={true}
-            descrSideway="Отзывы и оценки от наших клиентов"
+            descrSideway={<span className={styles.black}>Отзывы и оценки от наших клиентов </span>}
             background="ОТЗЫВЫ"
             bgLessVisibility={true}
             className={styles.reviwes__title}

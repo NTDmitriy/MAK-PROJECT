@@ -1,5 +1,6 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
+import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
 import {
   TCases,
   THero,
@@ -15,6 +16,7 @@ import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_META_INCLUDE } from "./advertisement-meta-include.config";
 
 export const ADVERTISEMENT_META_CONFIG = {
+  url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_META.url,
   hero: {
     basic: {
       title: {

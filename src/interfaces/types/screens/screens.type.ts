@@ -1,6 +1,5 @@
 import { IDashboardItem } from "@/config/url-config/all-pages.config";
 import type {
-  TAllSiteTypes,
   TCases,
   TDetialServices,
   TFaq,
@@ -9,11 +8,10 @@ import type {
   TIncludedInService,
   TReviwe,
   TServiceProducts,
-  TServiceWebdevProducts,
   TSuitableFor,
   TSupplementaryDescr,
   TWhyUs,
-  TWorkStages,
+  TWorkStages
 } from "../block/products.type";
 
 export type TScreen = {
@@ -21,7 +19,6 @@ export type TScreen = {
   hero: THero;
   supplementaryDescr?: TSupplementaryDescr;
   products?: TServiceProducts;
-  productsWebdev?: TServiceWebdevProducts[];
   siteServices?: boolean;
   howWorks?: THowWorks;
   workStages?: TWorkStages;
@@ -31,7 +28,7 @@ export type TScreen = {
   projects?: TCases[];
   reviwes?: TReviwe[];
   faq?: TFaq[];
-  allSiteTypes?: TAllSiteTypes;
+  allSiteTypes?: TServiceProducts;
   detialServices?: TDetialServices;
   includeService?: TIncludedInService;
   suitableFor?: TSuitableFor;

@@ -1,5 +1,3 @@
-import { IDashboardItem } from "@/config/url-config/all-pages.config";
-
 export type THeroBasic = {
   title: {
     accentBefore?: string;
@@ -92,12 +90,6 @@ export type TIncludedInServiceItem = {
   description: string;
 };
 
-export type TServiceProducts = {
-  filling: IDashboardItem;
-  blockTitle?: string;
-  blockTitleDescr?: string;
-};
-
 export type TWorkStages = {
   items: TWorkStagesItem[];
   title: string;
@@ -108,18 +100,27 @@ export type TWorkStagesItem = {
   descr: string[];
 };
 
+export type TServiceProducts = {
+  blockTitle: string;
+  blockTitleDescr?: string;
+  formTitle?: string;
+  formDescr?: string;
+  items: TServiceProductsItem[];
+};
 
-export type TServiceWebdevProducts = {
+export type TServiceProductsItem = {
   name: string;
-  description: string;
+  description?: string;
   descriptionSmall?: string;
-  deadline: string | null;
-  image: string;
-  buttonText: string;
+  deadline?: string;
+  image?: string;
+  url?: string;
+  buttonText?: string;
+  priceFrom?: string | number;
 };
 
 export type TAllSiteTypes = {
-  items: TServiceWebdevProducts[];
+  items: TServiceProductsItem[];
   formTitle: string;
   formDescr: string;
 };

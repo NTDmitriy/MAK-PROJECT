@@ -30,7 +30,7 @@ export const OurServices: FC<PropsWithChildren<IGenericElementProps>> = ({
         descrSideway={
           <>
             Наши решения адаптированы под различные ниши и помогают
-            <span className="accent">{' '}эффективно привлекать клиентов</span> и
+            <span className="accent"> эффективно привлекать клиентов</span> и
             повышать узнаваемость вашего бренда
           </>
         }
@@ -80,10 +80,9 @@ export const OurServices: FC<PropsWithChildren<IGenericElementProps>> = ({
                 </div>
               </li>
             ))}
-
-          <div className={styles.form}>
+          <li className={styles.form}>
             <FormController formType={FORM_TYPE.FAQ_FORM} />
-          </div>
+          </li>
         </ul>
       </Container>
     </Section>

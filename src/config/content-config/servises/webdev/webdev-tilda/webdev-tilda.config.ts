@@ -1,13 +1,13 @@
 import { WEBDEV_DASHBOARD_PAGES } from "@/config/url-config/webdev-pages.config";
 import {
-  TAllSiteTypes,
   TFaq,
   THero,
   THeroBasic,
   THeroInfoService,
+  TServiceProducts,
   TSuitableFor,
   TSupplementaryDescr,
-  TWorkStages,
+  TWorkStages
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { WEBDEV_PRODUCTS } from "../webdev-common/webdev-products.config";
@@ -60,11 +60,6 @@ export const WEBDEV_TILDA_CONFIG = {
     ],
   } satisfies TSuitableFor,
   workStages: WEBDEV_TILDA_STAGES satisfies TWorkStages,
-  allSiteTypes: {
-    items: WEBDEV_PRODUCTS,
-    formTitle: "Сроки редизайна и доработки",
-    formDescr:
-      "Сроки редизайна и доработки сайта зависят от индивидуальных особенностей и потребностей вашего проекта. Мы подходим к каждому клиенту персонально и учитываем все нюансы, чтобы предложить оптимальное решение. Для точной оценки сроков и объема работ нам необходимо ознакомиться с вашим действующим сайтом и понять ваши цели. Запишитесь на консультацию, чтобы мы могли обсудить все детали и предложить вам наилучший план действий",
-  } satisfies TAllSiteTypes,
+  allSiteTypes: WEBDEV_PRODUCTS satisfies TServiceProducts,
   faq: TILDA_FAQ satisfies TFaq[],
 } satisfies TScreen;

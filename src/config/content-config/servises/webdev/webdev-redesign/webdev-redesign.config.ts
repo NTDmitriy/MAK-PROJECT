@@ -1,13 +1,15 @@
+import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
 import { WEBDEV_DASHBOARD_PAGES } from "@/config/url-config/webdev-pages.config";
 import {
-  TAllSiteTypes,
   TFaq,
   THero,
   THeroBasic,
   THeroInfoService,
+  TReviwe,
+  TServiceProducts,
   TSuitableFor,
   TSupplementaryDescr,
-  TWorkStages,
+  TWorkStages
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { WEBDEV_PRODUCTS } from "../webdev-common/webdev-products.config";
@@ -58,12 +60,9 @@ export const WEBDEV_REDESIGN_CONFIG = {
       },
     ],
   } satisfies TSuitableFor,
-  allSiteTypes: {
-    items: WEBDEV_PRODUCTS,
-    formTitle: "Сроки редизайна и доработки",
-    formDescr:
-      "Сроки редизайна и доработки сайта зависят от индивидуальных особенностей и потребностей вашего проекта. Мы подходим к каждому клиенту персонально и учитываем все нюансы, чтобы предложить оптимальное решение. Для точной оценки сроков и объема работ нам необходимо ознакомиться с вашим действующим сайтом и понять ваши цели. Запишитесь на консультацию, чтобы мы могли обсудить все детали и предложить вам наилучший план действий",
-  } satisfies TAllSiteTypes,
+  allSiteTypes: WEBDEV_PRODUCTS satisfies TServiceProducts,
   workStages: WEBDEV_REDESING_STAGES satisfies TWorkStages,
   faq: REDESIGN_FAQ satisfies TFaq[],
+  reviwes: ALL_REVIWES satisfies TReviwe[],
+  
 } satisfies TScreen;

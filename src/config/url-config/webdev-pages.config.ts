@@ -54,9 +54,11 @@ class WEBDEV_DASHBOARD {
   } satisfies IDashboardItem;
 
   WEBDEV = {
+    url: `${this.root}/sozdanie-i-razrabotka-saytov`,
     icon: "IconWebDevNav",
     name: "Создание сайтов",
-    url: `${this.root}/sozdanie-i-razrabotka-saytov`,
+    description:
+      "Мы предлагаем профессиональные услуги по созданию сайтов любой сложности, включая разработку на популярных платформах и создание уникальных самописных решений. Наша команда обеспечивает индивидуальный дизайн, адаптивную верстку и качественное информационное наполнение, учитывая все современные тренды UI/UX.",
     childrens: [
       this.WEBDEV_JS,
       this.WEBDEV_WORDPRESS,

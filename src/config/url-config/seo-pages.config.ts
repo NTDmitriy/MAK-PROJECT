@@ -44,9 +44,11 @@ class SEO_DASHBOARD {
   } satisfies IDashboardItem;
 
   SEO = {
+    url: `${this.root}/trafic-and-seo`,
     name: "Трафик и SEO",
     icon: "IconSeoNav",
-    url: `${this.root}/trafic-and-seo`,
+    description:
+      "В современном мире успех бизнеса во многом зависит от его присутствия в интернете. Трафик и SEO-продвижение — это ключевые инструменты для привлечения клиентов и увеличения продаж. Наши услуги включают инфлюенс маркетинг, посевы, email рассылку по базам и SEO-продвижение. Узнайте, как наши решения могут помочь вам достичь новых высот. ",
     childrens: [
       this.SEO_INFLUENCE,
       this.SEO_POSEVY,

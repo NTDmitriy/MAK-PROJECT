@@ -1,8 +1,9 @@
-import { PrimaryButton } from "@/components/ui/buttons/primaryButton/PrimaryButton";
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { Container } from "@/components/ui/container/Container";
 import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
+import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import { Popup } from "@/components/ui/modals/popup/Popup";
+import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { FC, PropsWithChildren } from "react";
 import styles from "./HeroBasic.module.css";
@@ -12,7 +13,7 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
     <Container className={styles.hero__container}>
       <div className={styles.left__side}>
         <h1 className={styles.title}>
-          М<span className={styles.small__text}>ALL PERFECT</span> аркетинговое{" "}
+          М<span className={styles.small__text}>AKE ALL PERFECT</span> аркетинговое{" "}
           <span className={styles.accent}>агенство</span> полного цикла
         </h1>
         <p className={styles.descr}>
@@ -20,23 +21,28 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
           маркетинга
         </p>
         <div className={styles.btn_grop}>
-          <Popup
-            initComponent={
-              <PrimaryButton className={styles.button}>
-                Заказать звонок
-              </PrimaryButton>
-            }
-            contentComponent={
-              <FormController
-                formType={FORM_TYPE.COMPLEX_FORM}
-                title="Свяжитесь с нами"
-              />
-            }
-          />
-          <SeconderyButton className={styles.button__tg}>
-            Связаться через Telegram
-          </SeconderyButton>
-        </div>
+        <Popup
+          initComponent={
+            <SeconderyButton className={styles.button}>
+              Заказать звонок
+            </SeconderyButton>
+          }
+          contentComponent={
+            <FormController
+              formType={FORM_TYPE.COMPLEX_FORM}
+              title="Свяжитесь с нами"
+            />
+          }
+        />
+
+        <PrimaryLinkButton
+          href={CONTACTS_PUBLIC.TELEGRAM}
+          target="_blank"
+          className={styles.button__tg}
+        >
+          Связаться через Telegram
+        </PrimaryLinkButton>
+      </div>
         <p className={styles.background__text__top}>MAKE</p>
       </div>
 

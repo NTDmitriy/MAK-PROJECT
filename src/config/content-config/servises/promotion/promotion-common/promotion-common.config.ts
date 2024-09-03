@@ -1,6 +1,5 @@
 import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
-import { IDashboardItem } from "@/config/url-config/all-pages.config";
 import { PROMOTION_DASHBOARD_PAGES } from "@/config/url-config/promotion-pages.config";
 import {
   TCases,
@@ -13,6 +12,7 @@ import {
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { PROMOTION_FAQ } from "./promotion-common-faq.config";
+import { PROMOTION_PRODUCTS } from "./promotion-products.config";
 
 export const PROMOTION_COMMON_CONFIG = {
   url: PROMOTION_DASHBOARD_PAGES.PROMOTION.url,
@@ -32,9 +32,7 @@ export const PROMOTION_COMMON_CONFIG = {
       "Помогаем вам стать лидером мнений в вашей нише через создание и продвижение экспертного контента",
     ] satisfies THeroInfoService,
   } satisfies THero,
-  products: {
-    filling: PROMOTION_DASHBOARD_PAGES.PROMOTION satisfies IDashboardItem,
-  } satisfies TServiceProducts,
+  products: PROMOTION_PRODUCTS satisfies TServiceProducts,
   whyUsChecklict: true,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],

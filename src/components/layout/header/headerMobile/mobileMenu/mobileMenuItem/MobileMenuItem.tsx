@@ -24,6 +24,7 @@ export const MobileMenuItem: FC<PropsWithChildren<IMobileMenuItem>> = ({
   ...rest
 }) => {
   const { name, childrens, icon, url } = page;
+  const isServices = url.includes('services')
 
   const { dropdownIndex, setDropdownIndex, handleClose } = useMobileMenu();
   const handleOpenDropdown = (index: number) => {
@@ -53,7 +54,7 @@ export const MobileMenuItem: FC<PropsWithChildren<IMobileMenuItem>> = ({
               </MobileMenu>
             )}
 
-            {childrens && isSubMenuItem && (
+            {childrens && isSubMenuItem && isServices &&(
               <SubButton
                 shadowBtn={true}
                 onClick={() => handleOpenDropdown(index)}
@@ -69,8 +70,13 @@ export const MobileMenuItem: FC<PropsWithChildren<IMobileMenuItem>> = ({
             )}
           </div>
 
-          {childrens && isSubMenuItem && (
-            <MobileMenuAccordion isOpen={dropdownIndex === index} page={page} />
+          {childrens && isSubMenuItem && isServices &&(
+            <>
+              <MobileMenuAccordion
+                isOpen={dropdownIndex === index}
+                page={page}
+              />
+            </>
           )}
         </li>
       )}

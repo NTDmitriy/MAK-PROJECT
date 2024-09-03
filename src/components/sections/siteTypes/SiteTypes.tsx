@@ -6,13 +6,13 @@ import {
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
-import { TAllSiteTypes } from "@/interfaces/types/block/products.type";
+import { TServiceProducts } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg } from "../../ui/dynamicSvg/DynamicSvg";
 import styles from "./SiteTypes.module.css";
 
 interface IAllSiteTypes extends IGenericElementProps {
-  productsConent: TAllSiteTypes;
+  productsConent: TServiceProducts;
 }
 
 export const AllSiteTypes: FC<PropsWithChildren<IAllSiteTypes>> = ({

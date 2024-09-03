@@ -3,6 +3,7 @@
 import { useNotification } from "@/hooks/useNotification";
 import { useSendToTelegram } from "@/hooks/useSendToTelegram";
 
+import { usePopupStore } from "@/store/popup.store";
 import clsx from "clsx";
 import { FC, useState } from "react";
 import { useFormContext } from "react-hook-form";
@@ -20,7 +21,7 @@ export const StepForm: FC<IFormContent> = ({ subServices }) => {
     reset,
   } = useFormContext();
 
-  console.log(subServices);
+  const { closePopup } = usePopupStore();
 
   const [step, setStep] = useState<number>(1);
 
@@ -28,6 +29,7 @@ export const StepForm: FC<IFormContent> = ({ subServices }) => {
     const pathname = window.location.pathname;
     useSendToTelegram(data, pathname);
     useNotification("Заявка отправлена", "success");
+    closePopup();
     reset();
   };
 

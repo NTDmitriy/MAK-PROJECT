@@ -56,7 +56,7 @@ export const EmailInput = () => {
           autoComplete: "email",
           type: "email",
           ...register(INPUT_NAMES.EMAIL, {
-            required: `Поле "Телефон" не может быть пустым`,
+            required: `Поле "E-mail" не может быть пустым`,
             pattern: {
               value:
                 /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~\-]+(\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~\-]+)*@[a-zA-Z0-9а-яА-Я\-]+(\.[a-zA-Z]{2,})+$/iu,

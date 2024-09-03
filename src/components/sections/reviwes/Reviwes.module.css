@@ -8,18 +8,17 @@
   z-index: 0;
 }
 
-.rev {
-	padding-left: 50px;
+.reviwes__title{
+  color: var(--text-third);
 }
-
-.reviwes__title {
+.black {
   color: var(--text-third);
 }
 
 
 
 @media screen and (max-width: 1024px) {
-	.reviwes__section {
+	.reviwes.inner {
 		padding-top: 30px;
 		padding-bottom: 60px;
 	}
