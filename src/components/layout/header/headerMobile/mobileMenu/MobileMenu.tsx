@@ -1,23 +1,20 @@
 "use client";
 
 import { IDashboardItem } from "@/config/url-config/all-pages.config";
+import { useStopScroll } from "@/hooks/useStopScroll";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
-import {
-	cloneElement,
-	FC,
-	PropsWithChildren,
-	ReactElement,
-	useEffect,
-	useState,
-} from "react";
-
+import { useMobileMenu } from "@/store/mobile-menu.store";
 import clsx from "clsx";
-
+import {
+  cloneElement,
+  FC,
+  PropsWithChildren,
+  ReactElement,
+  useEffect,
+  useState,
+} from "react";
 import styles from "./MobileMenu.module.css";
 import { MobileMenuHead } from "./mobileMenuHead/MobileMenuHead";
-
-import { useStopScroll } from "@/hooks/useStopScroll";
-import { useMobileMenu } from "@/store/mobile-menu.store";
 import { MobileMenuItem } from "./mobileMenuItem/MobileMenuItem";
 import { MobileMenuSocials } from "./mobileMenuSocials/MobileMenuSocials";
 
@@ -38,10 +35,12 @@ export const MobileMenu: FC<PropsWithChildren<IMobileMenu>> = ({
   const [open, setOpen] = useState<boolean>(false);
   const { menuOpen, handleOpen } = useMobileMenu();
 
-	useEffect(() => {if(!menuOpen) {
-		setOpen(false)
-	}}, [menuOpen]);
-	
+  useEffect(() => {
+    if (!menuOpen) {
+      setOpen(false);
+    }
+  }, [menuOpen]);
+
   useStopScroll(menuOpen);
 
   return (

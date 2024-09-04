@@ -20,7 +20,7 @@ export const OurServices: FC<PropsWithChildren<IGenericElementProps>> = ({
   ...rest
 }) => {
   const services = SERVICES_DASHBOARD_PAGES.SERVICES;
-  const { childrens, url } = services;
+  const { childrens } = services;
 
   return (
     <Section className={className} {...rest}>

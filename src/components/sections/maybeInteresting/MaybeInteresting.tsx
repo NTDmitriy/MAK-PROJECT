@@ -1,12 +1,6 @@
-import { Container } from "@/components/ui/container/Container";
-import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
-import { Section } from "@/components/ui/section/Section";
-import { SERVICES_DASHBOARD_PAGES } from "@/config/url-config/servises-pages.config";
-import { useFindParent } from "@/hooks/useFindParent";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { FC } from "react";
-import { BlockTitle } from "../../ui/titles/titleBlock/BlockTitle";
-import styles from "./MaybeInteresting.module.css";
+// import styles from "./MaybeInteresting.module.css";
 
 interface IMaybeInteresting extends IGenericElementProps {
   pathname: string;
@@ -17,22 +11,22 @@ export const MaybeInteresting: FC<IMaybeInteresting> = ({
   className,
   ...rest
 }) => {
-  const parents = useFindParent(
-    SERVICES_DASHBOARD_PAGES.SERVICES.childrens,
-    pathname
-  );
+  // const parents = useFindParent(
+  //   SERVICES_DASHBOARD_PAGES.SERVICES.childrens,
+  //   pathname
+  // );
 
-  const exclude = parents && parents[1].url;
+  // const exclude = parents && parents[1].url;
 
-  const isInteresting =
-    parents &&
-    SERVICES_DASHBOARD_PAGES.SERVICES.childrens.filter(
-      (item) => item.url !== exclude
-    );
+  // const isInteresting =
+  //   parents &&
+  //   SERVICES_DASHBOARD_PAGES.SERVICES.childrens.filter(
+  //     (item) => item.url !== exclude
+  //   );
 
   return (
     <>
-      {isInteresting && (
+      {/* {isInteresting && (
         <Section className={className} {...rest}>
           <BlockTitle leftSide={true}>
             Посмотрите. Это тоже интересно
@@ -58,7 +52,7 @@ export const MaybeInteresting: FC<IMaybeInteresting> = ({
             </ul>
           </Container>
         </Section>
-      )}
+      )} */}
     </>
   );
 };
