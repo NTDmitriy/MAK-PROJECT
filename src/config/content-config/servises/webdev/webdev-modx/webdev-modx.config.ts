@@ -56,7 +56,11 @@ export const WEBDEV_MODX_CONFIG = {
     },
   ]}satisfies TSuitableFor,
   workStages: WEBDEV_MODX_STAGES satisfies TWorkStages,
-  allSiteTypes: WEBDEV_PRODUCTS satisfies TServiceProducts,
+  allSiteTypes: {
+    formTitle: "Хотите обсудить разработку вашего сайта?",
+    formDescr: "Оставьте свои контактные данные, и наш менеджер свяжется с вами, чтобы обсудить все детали вашего проекта и предложить наилучшие решения. Мы готовы провести бесплатную консультацию, чтобы помочь вам выбрать оптимальный тип сайта — будь то сайт-визитка, лендинг или полноценный бизнес-сайт. Мы также предложим подходящую платформу и технологии для разработки, учитывая ваши цели и особенности вашего бизнеса.",
+    ...WEBDEV_PRODUCTS,
+  } satisfies TServiceProducts,
   faq: MODX_FAQ satisfies TFaq[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
 } satisfies TScreen;

@@ -32,7 +32,11 @@ export const PROMOTION_COMMON_CONFIG = {
       "Помогаем вам стать лидером мнений в вашей нише через создание и продвижение экспертного контента",
     ] satisfies THeroInfoService,
   } satisfies THero,
-  products: PROMOTION_PRODUCTS satisfies TServiceProducts,
+  products: {
+    formTitle: "Не нашли свою нишу? Напишите нам!",
+    formDescr: "Каждая ниша уникальна и требует индивидуального подхода. Если вы не нашли свою нишу среди наших услуг, свяжитесь с нами. Мы обсудим ваш проект и предложим наилучшие решения для продвижения. Наш опыт охватывает множество отраслей, и мы уверены, что сможем помочь вам достичь ваших целей. Оставьте свои контактные данные и наш менеджер свяжется с вами и предложит идеальные решения для вашего бизнеса. ",
+    ...PROMOTION_PRODUCTS,
+  } satisfies TServiceProducts,
   whyUsChecklict: true,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],

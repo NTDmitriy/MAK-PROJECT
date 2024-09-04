@@ -4,15 +4,17 @@ import {
   THero,
   THeroBasic,
   THeroInfoService,
+  TProjectTeam,
   TServiceProducts,
   TSuitableFor,
   TSupplementaryDescr,
-  TWorkStages
+  TWorkStages,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { WEBDEV_PRODUCTS } from "../webdev-common/webdev-products.config";
 import { JS_FAQ } from "./webdev-js-faq.config";
 import { WEBDEV_JS_STAGES } from "./webdev-js-stages.config";
+import { PROJECT_TEAM } from "./webdev-js-team";
 
 export const WEBDEV_JS_CONFIG = {
   url: WEBDEV_DASHBOARD_PAGES.WEBDEV_JS.url,
@@ -83,7 +85,12 @@ export const WEBDEV_JS_CONFIG = {
     title: "Фреймворки, которые мы используем:",
   } satisfies TSuitableFor,
   workStages: WEBDEV_JS_STAGES satisfies TWorkStages,
-  allSiteTypes: WEBDEV_PRODUCTS satisfies TServiceProducts,
+  allSiteTypes: {
+    formTitle: "Хотите обсудить разработку вашего сайта?",
+    formDescr:
+      "Оставьте свои контактные данные, и наш менеджер свяжется с вами, чтобы обсудить все детали вашего проекта и предложить наилучшие решения. Мы готовы провести бесплатную консультацию, чтобы помочь вам выбрать оптимальный тип сайта — будь то сайт-визитка, лендинг или полноценный бизнес-сайт. Мы также предложим подходящую платформу и технологии для разработки, учитывая ваши цели и особенности вашего бизнеса.",
+    ...WEBDEV_PRODUCTS,
+  } satisfies TServiceProducts,
   faq: JS_FAQ satisfies TFaq[],
-
+  projectTeam: PROJECT_TEAM satisfies TProjectTeam[],
 } satisfies TScreen;

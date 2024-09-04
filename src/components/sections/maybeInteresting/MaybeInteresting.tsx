@@ -5,7 +5,7 @@ import { SERVICES_DASHBOARD_PAGES } from "@/config/url-config/servises-pages.con
 import { useFindParent } from "@/hooks/useFindParent";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { FC } from "react";
-import { BlockTitle } from '../../ui/titles/titleBlock/BlockTitle';
+import { BlockTitle } from "../../ui/titles/titleBlock/BlockTitle";
 import styles from "./MaybeInteresting.module.css";
 
 interface IMaybeInteresting extends IGenericElementProps {
@@ -33,8 +33,10 @@ export const MaybeInteresting: FC<IMaybeInteresting> = ({
   return (
     <>
       {isInteresting && (
-        <Section>
-          <BlockTitle leftSide={true}>Посмотрите. Это тоже интересно</BlockTitle>
+        <Section className={className} {...rest}>
+          <BlockTitle leftSide={true}>
+            Посмотрите. Это тоже интересно
+          </BlockTitle>
           <Container>
             <ul className={styles.list}>
               {isInteresting.map((item, index) => (

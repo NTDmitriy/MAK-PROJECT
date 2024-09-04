@@ -2,15 +2,15 @@ import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.confi
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
 import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
 import {
-  TCases,
-  THero,
-  THeroBasic,
-  THeroInfoAdvertisement,
-  THowWorks,
-  TIncludedInService,
-  TReviwe,
-  TSupplementaryDescr,
-  TWhyUs,
+    TCases,
+    THero,
+    THeroBasic,
+    THeroInfoAdvertisement,
+    THowWorks,
+    TIncludedInService,
+    TReviwe,
+    TSupplementaryDescr,
+    TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_TELEGRAM_INCLUDE } from "./advertisement-telegram-include.config";

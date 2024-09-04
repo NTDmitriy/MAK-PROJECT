@@ -60,7 +60,11 @@ export const WEBDEV_REDESIGN_CONFIG = {
       },
     ],
   } satisfies TSuitableFor,
-  allSiteTypes: WEBDEV_PRODUCTS satisfies TServiceProducts,
+  allSiteTypes: {
+    formTitle: "Сроки редизайна и доработки",
+    formDescr: "Сроки редизайна и доработки сайта зависят от индивидуальных особенностей и потребностей вашего проекта. Мы подходим к каждому клиенту персонально и учитываем все нюансы, чтобы предложить оптимальное решение. Для точной оценки сроков и объема работ нам необходимо ознакомиться с вашим действующим сайтом и понять ваши цели. Запишитесь на консультацию, чтобы мы могли обсудить все детали и предложить вам наилучший план действий",
+    ...WEBDEV_PRODUCTS,
+  } satisfies TServiceProducts,
   workStages: WEBDEV_REDESING_STAGES satisfies TWorkStages,
   faq: REDESIGN_FAQ satisfies TFaq[],
   reviwes: ALL_REVIWES satisfies TReviwe[],

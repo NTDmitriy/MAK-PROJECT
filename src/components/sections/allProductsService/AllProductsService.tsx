@@ -24,7 +24,8 @@ export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
   productsConent,
   ...rest
 }) => {
-  const { blockTitle, blockTitleDescr, items } = productsConent;
+  const { blockTitle, blockTitleDescr, formTitle, formDescr, items } =
+    productsConent;
 
   return (
     <>
@@ -66,7 +67,6 @@ export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
                             <DynamicSvg name="IconMoney" />
                             {isNumber(item.priceFrom) ? (
                               <>
-                                
                                 от {item.priceFrom.toLocaleString("ru-RU")}{" "}
                                 &#8381;
                               </>
@@ -110,7 +110,13 @@ export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
                   </li>
                 ))}
             </ul>
-            <FormController formType={FORM_TYPE.MAIN_FORM} />
+
+            {formTitle && (
+              <FormController
+                formType={FORM_TYPE.MAIN_FORM}
+                title={formTitle}
+              />
+            )}
           </Container>
         </Section>
       )}

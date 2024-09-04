@@ -1,8 +1,8 @@
 import { Accordion } from "@/components/ui/accordion/Accordion";
 import { Container } from "@/components/ui/container/Container";
 import {
-  FORM_TYPE,
-  FormController,
+    FORM_TYPE,
+    FormController,
 } from "@/components/ui/forms/FormController";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";

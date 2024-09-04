@@ -153,7 +153,14 @@ export type TSuitableFor = {
   items: TSuitableForItem[];
   title?: string;
 };
+
 export type TSuitableForItem = {
   title: string;
   descr: string;
+};
+
+export type TProjectTeam = {
+  name: string;
+  descr: string;
+  icon: string;
 };

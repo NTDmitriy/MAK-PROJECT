@@ -2,8 +2,8 @@ import { PrimaryButton } from "@/components/ui/buttons/primaryButton/PrimaryButt
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { Container } from "@/components/ui/container/Container";
 import {
-	FORM_TYPE,
-	FormController,
+    FORM_TYPE,
+    FormController,
 } from "@/components/ui/forms/FormController";
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { Section } from "@/components/ui/section/Section";

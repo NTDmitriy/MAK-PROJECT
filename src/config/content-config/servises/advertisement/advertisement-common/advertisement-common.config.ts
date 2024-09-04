@@ -32,7 +32,12 @@ export const ADVERTISEMENT_COMMON_CONFIG = {
       "Интегрируем рекламу с другими маркетинговыми каналами для создания единой и мощной маркетинговой стратегии",
     ] satisfies THeroInfoService,
   } satisfies THero,
-  products: ADVERTISEMENT_PRODUCTS satisfies TServiceProducts,
+  products: {
+    formTitle: "НУЖНО НЕСКОЛЬКО РЕКЛАМНЫХ КАНАЛОВ ОДНОВРЕМЕННО?",
+    formDescr:
+      "Оставьте свои контактные данные, и наш менеджер свяжется с вами, чтобы предложить наиболее подходящие каналы трафика для вашего бизнеса. Мы предлагаем комплексный подход с использованием нескольких каналов трафика для максимальной эффективности и результата. Наши специалисты обладают богатым опытом работы в различных отраслях и смогут подобрать оптимальные стратегии для вас.",
+    ...ADVERTISEMENT_PRODUCTS,
+  } satisfies TServiceProducts,
   whyUsChecklict: true,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],

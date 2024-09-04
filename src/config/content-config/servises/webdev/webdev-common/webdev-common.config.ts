@@ -31,7 +31,7 @@ export const WEBDEV_COMMON_CONFIG = {
       "Подбираем решения под ваши конкретные нужды и цели. Учитываем все особенности вашего бизнеса и пожелания ",
     ] satisfies THeroInfoService,
   } satisfies THero,
-  products: WEBDEV_PRODUCTS satisfies TServiceProducts,
+  products: WEBDEV_PRODUCTS satisfies TServiceProducts, 
   workStages: WEBDEV_COMMON_STAGES satisfies TWorkStages,
   whyUsSites: true,
   siteServices: true,

@@ -2,14 +2,14 @@ import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.confi
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
 import { PROMOTION_DASHBOARD_PAGES } from "@/config/url-config/promotion-pages.config";
 import {
-  TCases,
-  TDetialServices,
-  THero,
-  THeroBasic,
-  THeroInfoProduct,
-  THowWorks,
-  TReviwe,
-  TWhyUs,
+    TCases,
+    TDetialServices,
+    THero,
+    THeroBasic,
+    THeroInfoProduct,
+    THowWorks,
+    TReviwe,
+    TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { MARKET_PLACE_DETAIL } from "./market-place-detail.config";

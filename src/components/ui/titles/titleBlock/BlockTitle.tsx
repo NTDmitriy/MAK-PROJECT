@@ -8,7 +8,7 @@ import styles from "./BlockTitle.module.css";
 
 interface IBlockTitle extends IGenericElementProps {
   leftSide: boolean;
-  descrBottom?: string | ReactNode ;
+  descrBottom?: string | ReactNode;
   descrSideway?: string | ReactNode;
   background?: string;
   bgLessVisibility?: boolean;
@@ -54,15 +54,17 @@ export const BlockTitle: FC<PropsWithChildren<IBlockTitle>> = ({
           </div>
         )}
 
-        {descrBottom && <div
-            className={clsx(styles.descr, {
+        {descrBottom && (
+          <div
+            className={clsx(styles.descr__bottom, {
               [styles.align__left]: leftSide,
               [styles.pl]: leftSide,
               [styles.pr]: !leftSide,
             })}
           >
             {descrBottom}
-          </div>}
+          </div>
+        )}
 
         <DynamicSvg
           name="IconTitleSecondery"
@@ -80,7 +82,6 @@ export const BlockTitle: FC<PropsWithChildren<IBlockTitle>> = ({
             {background}
           </div>
         )}
-				
       </Container>
     </div>
   );

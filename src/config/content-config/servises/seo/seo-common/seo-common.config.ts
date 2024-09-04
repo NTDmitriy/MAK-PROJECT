@@ -9,7 +9,7 @@ import type {
   TReviwe,
   TServiceProducts,
   TSupplementaryDescr,
-  TWhyUs
+  TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { SEO_PRODUCTS } from "./seo-products.config";
@@ -38,7 +38,12 @@ export const SEO_COMMON_CONFIG = {
       "В условиях быстро развивающегося цифрового мира трафик и SEO-продвижение играют решающую роль в успехе бизнеса. Правильное использование этих инструментов помогает привлекать новых клиентов, удерживать существующих и существенно увеличивать прибыль. Комплексный подход к цифровому маркетингу включает использование различных стратегий и технологий, которые позволяют максимально эффективно продвигать ваши товары и услуги.",
     image: "seo-common-supplementary.webp",
   } satisfies TSupplementaryDescr,
-  products: SEO_PRODUCTS satisfies TServiceProducts,
+  products: {
+    formTitle: "Не нашли свою нишу? Напишите нам!",
+    formDescr:
+      "Каждая ниша уникальна и требует индивидуального подхода. Если вы не нашли свою нишу среди наших услуг, свяжитесь с нами. Мы обсудим ваш проект и предложим наилучшие решения для продвижения. Наш опыт охватывает множество отраслей, и мы уверены, что сможем помочь вам достичь ваших целей. Оставьте свои контактные данные и наш менеджер свяжется с вами и предложит идеальные решения для вашего бизнеса. ",
+    ...SEO_PRODUCTS,
+  } satisfies TServiceProducts,
   howWorks: {
     items: [
       {
@@ -98,5 +103,4 @@ export const SEO_COMMON_CONFIG = {
   } satisfies TWhyUs,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
-
 } satisfies TScreen;
