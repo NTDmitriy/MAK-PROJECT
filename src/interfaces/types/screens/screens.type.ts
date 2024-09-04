@@ -6,6 +6,7 @@ import type {
   THero,
   THowWorks,
   TIncludedInService,
+  TProjectTeam,
   TReviwe,
   TServiceProducts,
   TSuitableFor,
@@ -33,6 +34,7 @@ export type TScreen = {
   includeService?: TIncludedInService;
   suitableFor?: TSuitableFor;
   technologyStack?: TSuitableFor;
+  projectTeam?: TProjectTeam[];
 };
 
 export type THomeScreen = {
@@ -45,4 +47,4 @@ export type THomeScreen = {
 export type TUsefulScreen = {
   // hero: THero;
   reviwes: TReviwe[];
-}
+};

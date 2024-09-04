@@ -1,11 +1,11 @@
 import { Section } from "@/components/ui/section/Section";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import {
-  THeroInfoAdvertisement,
-  THeroInfoProduct,
-  THeroInfoService,
-  THeroInfoWebdev,
-  type THeroBasic,
+    THeroInfoAdvertisement,
+    THeroInfoProduct,
+    THeroInfoService,
+    THeroInfoWebdev,
+    type THeroBasic,
 } from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";

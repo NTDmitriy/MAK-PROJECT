@@ -7,6 +7,7 @@ import { HowWorks } from "../sections/howWorks/HowWorks";
 import { IncludedInService } from "../sections/includedInService/IncludedInService";
 import { MaybeInteresting } from "../sections/maybeInteresting/MaybeInteresting";
 import { Projects } from "../sections/projects/Projects";
+import { ProjectTeam } from "../sections/projectTeam/ProjectTeam";
 import { Reviwes } from "../sections/reviwes/Reviwes";
 import { AllSiteTypes } from "../sections/siteTypes/SiteTypes";
 import { SuitableFor } from "../sections/suitableFor/SuitableFor";
@@ -35,6 +36,7 @@ export const ProductScreen: FC<PropsWithChildren<IProductScreen>> = ({
       {content.supplementaryDescr && (<SupplementaryDescr suppContent={content.supplementaryDescr} />)}
       {content.suitableFor && (<SuitableFor suitableForContent={content.suitableFor} />)}
       {content.allSiteTypes && (<AllSiteTypes productsConent={content.allSiteTypes} />)}
+      {content.projectTeam && <ProjectTeam projectTeamContent={content.projectTeam} />}
       {content.technologyStack && (<SuitableFor suitableForContent={content.technologyStack} />)}
       {content.workStages && (<WorkStages workStagesContent={content.workStages} />)}
       {content.detialServices && (<DetailServices detailContent={content.detialServices} />)}
@@ -44,7 +46,8 @@ export const ProductScreen: FC<PropsWithChildren<IProductScreen>> = ({
       {content.projects && (<Projects cases={content.projects} formVisible={true} />)}
       {content.reviwes && <Reviwes reviwes={content.reviwes} />}
       {content.faq && <Faq faq={content.faq} />}
-      {content.url && <MaybeInteresting pathname={content.url} />}  
+      {content.url && <MaybeInteresting pathname={content.url} />} 
+
     </>
   );
 };

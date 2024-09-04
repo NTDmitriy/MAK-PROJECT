@@ -2,14 +2,14 @@ import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.confi
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
 import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
 import {
-  TCases,
-  TFaq,
-  THero,
-  THeroBasic,
-  THeroInfoProduct,
-  TIncludedInService,
-  TReviwe,
-  TWhyUs,
+    TCases,
+    TFaq,
+    THero,
+    THeroBasic,
+    THeroInfoProduct,
+    TIncludedInService,
+    TReviwe,
+    TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { POSEVI_FAQ } from "./seo-posevy-faq";

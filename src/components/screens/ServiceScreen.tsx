@@ -1,6 +1,5 @@
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { FC, PropsWithChildren } from "react";
-
 import { AllProductsService } from "../sections/allProductsService/AllProductsService";
 import Faq from "../sections/faq/Faq";
 import { Hero } from "../sections/hero/Hero";
@@ -14,6 +13,7 @@ import { WhyUsChecklist } from "../sections/whyUsChecklist/WhyUsChecklist";
 import { WhyUsSites } from "../sections/whyUsSites/whyUsSites";
 import { WorkStages } from "../sections/workStages/WorkStages";
 import { Breadcrumbs } from "../ui/breadcrumbs/Breadcrumbs";
+
 
 interface IServiceScreen {
   content: TScreen;
