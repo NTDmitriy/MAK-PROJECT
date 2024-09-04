@@ -25,7 +25,6 @@ export const HomeScreen: FC<PropsWithChildren<IHomeScreen>> = ({ content }) => {
       <Faq faq={content.faq} />
       <Blog isPreview={true} headline={true} />
       <AffiliatePreview formVisible={true} />
-
     </>
   );
 };

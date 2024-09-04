@@ -3,10 +3,9 @@
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { useNotification } from "@/hooks/useNotification";
 import { useSendToTelegram } from "@/hooks/useSendToTelegram";
+import { usePopupStore } from "@/store/popup.store";
 import { FC } from "react";
 import { useFormContext } from "react-hook-form";
-
-import { usePopupStore } from "@/store/popup.store";
 import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
 import { PhoneLinkButton } from "../../links/phoneLinkButton/PhoneLinkButton";
 import { TelegramLinkButton } from "../../links/telegramLinkButton/TelegramLinkButton";
@@ -22,7 +21,7 @@ export const MainForm: FC<IFormContent> = ({ title, text, ...rest }) => {
     reset,
   } = useFormContext();
   const { closePopup } = usePopupStore();
-  
+
   const onSubmit = (data: IForm) => {
     const pathname = window.location.pathname;
     useSendToTelegram(data, pathname);
