@@ -1,7 +1,7 @@
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { InputMask } from "@react-input/mask";
 import clsx from "clsx";
-import { randomBytes } from "crypto";
+import { nanoid } from 'nanoid';
 import { FC, InputHTMLAttributes, TextareaHTMLAttributes, useEffect, useState } from "react";
 import styles from "./PrimaryInput.module.css";
 
@@ -33,15 +33,13 @@ export const PrimaryInput: FC<IInput> = ({
 }) => {
   const [uniqueId, setUniqueId] = useState(id);
 
+
   useEffect(() => {
-    const randomHash = randomBytes(4)
-      .toString("base64")
-      .replace(/\//g, "_")
-      .replace(/\+/g, "-")
-      .slice(0, 5)
+    const randomHash = nanoid(5); 
     setUniqueId(`${id}-${randomHash}`);
   }, [id]);
 
+  
   return (
     <div className={clsx(styles.root, className)} {...rest}>
       {!isTextarea && (
