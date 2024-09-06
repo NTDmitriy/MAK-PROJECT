@@ -38,7 +38,7 @@ export const Slider: FC<IReviwes> = ({ reviwes }) => {
             slidesPerView={"auto"}
             initialSlide={3}
             speed={800}
-            spaceBetween={0}
+            spaceBetween={10}
             breakpoints={{
               768: { spaceBetween: 20 },
             }}
@@ -46,7 +46,7 @@ export const Slider: FC<IReviwes> = ({ reviwes }) => {
             loopAddBlankSlides={true}
             centeredSlides={true}
             roundLengths={true}
-            mousewheel={true}
+       
             grabCursor={true}
             watchSlidesProgress={true}
             ref={sliderRef}

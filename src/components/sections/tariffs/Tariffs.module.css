@@ -1,0 +1,256 @@
+.tab__list {
+  min-height: 0;
+  background: #161616;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  background-image: url(/images/tariffs-bg.webp);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.tab__list__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.4s ease-in-out, padding 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  transform: translateY(100%) scale(0);
+  transform-origin: bottom;
+}
+
+.tab__list__item:nth-child(3) {
+  position: relative;
+}
+
+.tab__head {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.tab__head__item {
+  display: grid;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.head__descr {
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: clamp(18px, 1.3dvw, 24px);
+  line-height: 130%;
+  color: #cacaca;
+}
+
+.team {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: clamp(24px, 2dvw, 32px);
+  line-height: 100%;
+  color: #fff;
+  margin-top: auto;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: clamp(14px, 2.2dvw, 24px);
+  line-height: 130%;
+  color: #ffde00;
+}
+
+.head__btn {
+  margin-top: auto;
+}
+
+.team__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+.team__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.team__item__title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  min-height: 60px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 110%;
+  color: #cacaca;
+  background: rgba(34, 34, 34, 0.9);
+  padding: 2px 25px 2px 10px;
+}
+
+.team__item__descr {
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 130%;
+  color: #cacaca;
+}
+
+.upwards {
+  display: none;
+}
+.bottom__wrapper {
+  display: flex;
+  gap: 20px;
+}
+.bottom__descr {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bottom__title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: clamp(18px, 2dvw, 30px);
+  line-height: 100%;
+  color: #ffde00;
+}
+
+.bottom__text {
+  font-family: var(--font-family);
+  font-weight: 100;
+  font-size: clamp(14px, 1.5dvw, 18px);
+  line-height: 130%;
+  color: #fff;
+}
+
+.bottom__btn {
+  max-width: 440px;
+  margin-top: auto;
+  max-height: 60px;
+}
+
+.icon {
+  width: 24px;
+}
+
+@media screen and (min-width: 1025px) {
+  .tab__list__item.active {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .tab__list__item {
+    position: relative;
+    transform: unset;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .tab__list__item.active {
+    grid-template-rows: 1fr;
+    padding-top: 20px;
+    padding-bottom: 80px;
+  }
+
+  .tab__head {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .head__descr {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
+
+  .price {
+    justify-content: flex-start;
+  }
+
+  .team {
+    margin-top: auto;
+    grid-row: 3;
+  }
+
+  .head__btn {
+    grid-row: 3;
+  }
+
+  .team__list {
+    gap: 20px;
+  }
+  .upwards__wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .upwards {
+    display: block;
+    min-height: 60px;
+    margin-top: 20px;
+  }
+
+  .bottom__wrapper {
+    flex-direction: column;
+  }
+
+  .bottom__descr{ gap: 10px;}
+}
+
+@media screen and (max-width: 768px) {
+  .btn__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .team__list {
+    grid-template-columns: 1fr;
+  }
+
+  .upwards__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .bottom__btn {
+    max-width: 1;
+  
+  }
+}
+@media screen and (max-width: 576px) {
+  .tab__head {
+    grid-template-columns: 1fr;
+  }
+
+  .head__descr {
+    grid-column: 1;
+  }
+  .team {
+    grid-row: 4;
+  }
+}

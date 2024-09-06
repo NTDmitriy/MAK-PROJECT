@@ -12,6 +12,7 @@ import { Reviwes } from "../sections/reviwes/Reviwes";
 import { AllSiteTypes } from "../sections/siteTypes/SiteTypes";
 import { SuitableFor } from "../sections/suitableFor/SuitableFor";
 import { SupplementaryDescr } from "../sections/supplementaryDescr/SupplementaryDescr";
+import { Tariffs } from "../sections/tariffs/Tariffs";
 import { WhyUs } from "../sections/whyUs/WhyUs";
 import { WorkStages } from "../sections/workStages/WorkStages";
 import { Breadcrumbs } from "../ui/breadcrumbs/Breadcrumbs";
@@ -41,6 +42,7 @@ export const ProductScreen: FC<PropsWithChildren<IProductScreen>> = ({
       {content.workStages && (<WorkStages workStagesContent={content.workStages} />)}
       {content.detialServices && (<DetailServices detailContent={content.detialServices} />)}
       {content.includeService && (<IncludedInService includedInService={content.includeService} />)}
+      {content.tariffs && (<Tariffs tariffs={content.tariffs} />)}
       {content.howWorks && <HowWorks howWorksContent={content.howWorks} />}
       {content.whyUs && <WhyUs whyUsContent={content.whyUs} />}
       {content.projects && (<Projects cases={content.projects} formVisible={true} />)}

@@ -13,7 +13,7 @@
   --font-family: "Roboto", sans-serif;
   --second-family: "Babes Neue Bold", sans-serif;
   --third-family: "Inter", sans-serif;
-  --border-radius: 10px;
+  --border-radius: 10px
 }
 
 @font-face {
@@ -76,14 +76,13 @@ footer {
   color: var(--accent-color);
 }
 
-
-
 [inert] {
   pointer-events: none;
   cursor: default;
 }
 
-[inert], [inert] * {
+[inert],
+[inert] * {
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -93,3 +92,5 @@ footer {
   font-family: var(--font-family);
   font-weight: 300;
 }
+
+

@@ -27,6 +27,7 @@ import IconFaq from "@/assets/svg/iconFaq.svg";
 import IconForceNav from "@/assets/svg/iconForceNav.svg";
 import IconFrontTeam from "@/assets/svg/iconFrontTeam.svg";
 import IconHomeNav from "@/assets/svg/iconHomeNav.svg";
+import IconHuman from "@/assets/svg/iconHuman.svg";
 import IconJavaScript from "@/assets/svg/iconJavaScript.svg";
 import IconLogo from "@/assets/svg/iconLogo.svg";
 import IconMarketolorTeam from "@/assets/svg/iconMarketolorTeam.svg";
@@ -69,6 +70,7 @@ import IconWordPress from "@/assets/svg/iconWordPress.svg";
 import IconСopywriterTeam from "@/assets/svg/iconСopywriterTeam.svg";
 
 export const svgMap = {
+  IconHuman,
   IconProdactManagetTeam,
   IconQaTeam,
   IconSeoTeam,

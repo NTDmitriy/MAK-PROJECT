@@ -164,3 +164,21 @@ export type TProjectTeam = {
   descr: string;
   icon: string;
 };
+
+export type TTariffs = {
+  blockTitle: string;
+  blickTitleDescr: string;
+  plans: TPlan[];
+};
+
+export type TPlan = {
+  title: string;
+  description?: string;
+  price?: number | string ;
+  items?: TPlanItem[];
+};
+
+export type TPlanItem = {
+  title?: string;
+  description?: string;
+};

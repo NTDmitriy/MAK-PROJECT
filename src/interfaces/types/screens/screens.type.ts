@@ -11,6 +11,7 @@ import type {
   TServiceProducts,
   TSuitableFor,
   TSupplementaryDescr,
+  TTariffs,
   TWhyUs,
   TWorkStages
 } from "../block/products.type";
@@ -35,6 +36,7 @@ export type TScreen = {
   suitableFor?: TSuitableFor;
   technologyStack?: TSuitableFor;
   projectTeam?: TProjectTeam[];
+  tariffs?: TTariffs;
 };
 
 export type THomeScreen = {

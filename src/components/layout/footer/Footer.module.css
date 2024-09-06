@@ -213,10 +213,14 @@
 	padding-top: 50px;
 }
 
-.nav__head__link:focus-visible,
+
 .footer__link:focus-visible,
 .contact__link:focus-visible {
   color: var(--accent-color);
+}
+
+.nav__head__link:focus-visible {
+  color: #a08c00;
 }
 
 .footer__link:focus-visible span::before,
@@ -228,7 +232,7 @@
 @media (hover: hover) {
   .nav__head__link:hover {
     transform: scale(1.2);
-    color: #a08c00;
+    color: var(--accent-color);
   }
 
   .footer__link:hover,
