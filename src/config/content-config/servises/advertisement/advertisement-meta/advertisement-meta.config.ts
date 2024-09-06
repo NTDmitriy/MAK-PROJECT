@@ -2,18 +2,20 @@ import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.confi
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
 import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
 import {
-    TCases,
-    THero,
-    THeroBasic,
-    THeroInfoAdvertisement,
-    THowWorks,
-    TIncludedInService,
-    TReviwe,
-    TSupplementaryDescr,
-    TWhyUs,
+  TCases,
+  THero,
+  THeroBasic,
+  THeroInfoAdvertisement,
+  THowWorks,
+  TIncludedInService,
+  TReviwe,
+  TSupplementaryDescr,
+  TTariffs,
+  TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_META_INCLUDE } from "./advertisement-meta-include.config";
+import { TARIFFS_META } from "./advertisement-meta-tariffs.config";
 
 export const ADVERTISEMENT_META_CONFIG = {
   url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_META.url,
@@ -121,4 +123,5 @@ export const ADVERTISEMENT_META_CONFIG = {
   includeService: ADVERTISEMENT_META_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
+  tariffs: TARIFFS_META satisfies TTariffs,
 } satisfies TScreen;

@@ -11,7 +11,7 @@ import {
   FORM_TYPE,
   FormController,
 } from "@/components/ui/forms/FormController";
-import { Tooltip } from "@/components/ui/tooltip/Tooltip";
+import { MyTooltip } from "@/components/ui/tooltip/Tooltip";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import styles from "./OurServices.module.css";
 
@@ -62,7 +62,8 @@ export const OurServices: FC<PropsWithChildren<IGenericElementProps>> = ({
                             SEO_DASHBOARD_PAGES.SEO_INFLUENCE.url ||
                             subService.url ===
                               SEO_DASHBOARD_PAGES.SEO_POSEVY.url) && (
-                            <Tooltip
+                            <MyTooltip
+                              side="right"
                               className={styles.tooltip}
                               text={subService.description}
                             />

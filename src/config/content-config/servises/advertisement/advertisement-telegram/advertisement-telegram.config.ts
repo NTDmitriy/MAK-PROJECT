@@ -2,18 +2,20 @@ import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.confi
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
 import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
 import {
-    TCases,
-    THero,
-    THeroBasic,
-    THeroInfoAdvertisement,
-    THowWorks,
-    TIncludedInService,
-    TReviwe,
-    TSupplementaryDescr,
-    TWhyUs,
+  TCases,
+  THero,
+  THeroBasic,
+  THeroInfoAdvertisement,
+  THowWorks,
+  TIncludedInService,
+  TReviwe,
+  TSupplementaryDescr,
+  TTariffs,
+  TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_TELEGRAM_INCLUDE } from "./advertisement-telegram-include.config";
+import { TARIFFS_TG } from "./advertisement-telegram-tariffs.config";
 
 export const ADVERTISEMENT_TELEGRAM_CONFIG = {
   url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_TG.url,
@@ -117,4 +119,5 @@ export const ADVERTISEMENT_TELEGRAM_CONFIG = {
   includeService: ADVERTISEMENT_TELEGRAM_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
+  tariffs: TARIFFS_TG satisfies TTariffs,
 } satisfies TScreen;

@@ -2,18 +2,20 @@ import { ALL_CASES_CONTENT } from "@/config/content-config/cases/all-cases.confi
 import { ALL_REVIWES } from "@/config/content-config/reviwes/reviwes.config";
 import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
 import {
-    TCases,
-    THero,
-    THeroBasic,
-    THeroInfoAdvertisement,
-    THowWorks,
-    TIncludedInService,
-    TReviwe,
-    TSupplementaryDescr,
-    TWhyUs,
+  TCases,
+  THero,
+  THeroBasic,
+  THeroInfoAdvertisement,
+  THowWorks,
+  TIncludedInService,
+  TReviwe,
+  TSupplementaryDescr,
+  TTariffs,
+  TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_VK_INCLUDE } from "./advertisement-vk-include.config";
+import { TARIFFS_VK } from "./advertisement-vk-tariffs.config";
 
 export const ADVERTISEMENT_VK_CONFIG = {
   url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_VK.url,
@@ -120,4 +122,5 @@ export const ADVERTISEMENT_VK_CONFIG = {
   includeService: ADVERTISEMENT_VK_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
+  tariffs: TARIFFS_VK satisfies TTariffs,
 } satisfies TScreen;

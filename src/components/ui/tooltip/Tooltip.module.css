@@ -1,45 +1,62 @@
-
 .wrapper {
-	color: #FFDE00;
-	position: relative;
+  display: block;
+  position: relative;
+  color: #ffde00;
 }
-
-
 
 .button {
   border: none;
   display: flex;
-  padding-left: 3px;
+  align-items: center;
+  justify-content: center;
   background: none;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   position: relative;
   z-index: 3;
 }
 
-.text {
+.tooltip {
   position: absolute;
-  z-index: 3;
-  top: -3px;
-  left: 25px;
+  top: 0;
+  z-index: 1;
   width: max-content;
-  max-width: 400px;
+  max-width: 380px;
   padding: 10px 10px 18px;
   font-family: var(--font-family);
   font-weight: 300;
   font-size: 16px;
   line-height: 120%;
   color: #cacaca;
-  box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.25);
-  background: #161616;
-  transform: scale(0);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 2px 2px 12px 0 rgba(0, 0, 0, 0.1);
+  background: rgba(22, 22, 22, 0.6);
+  backdrop-filter: blur(10px);
   transition: transform 0.4s ease-in-out;
-  transform-origin: left top;
 }
 
-@media (hover:hover) {
-  .button:focus + .text,
-  .button:hover + .text {
-    transform: scale(1);
+.tooltip__right {
+  left: 0;
+  transform: translateX(30px) scale(0);
+  transform-origin: left top;
+}
+.tooltip__left {
+  right: 0;
+  transform: translateX(-30px) scale(0);
+  transform-origin: right top;
+}
+
+.button:focus + .tooltip.tooltip__left,
+.button:hover + .tooltip.tooltip__left {
+  transform: translateX(-30px) scale(1);
+}
+.button:focus + .tooltip.tooltip__right,
+.button:hover + .tooltip.tooltip__right {
+  transform: translateX(30px) scale(1);
+}
+
+@media screen and (max-width: 576px) {
+  .tooltip {
+    max-width: 300px;
   }
 }
