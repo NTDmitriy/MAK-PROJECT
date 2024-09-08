@@ -35,7 +35,7 @@ export type TScreen = {
   detialServices?: TDetialServices;
   includeService?: TIncludedInService;
   suitableFor?: TSuitableFor;
-  technologyStack?: TSuitableFor;
+  technologyStack?: boolean;
   projectTeam?: TProjectTeam[];
   tariffs?: TTariffs;
 };
@@ -72,4 +72,8 @@ export type TUsefulScreen = {
   aboutPrev?: boolean;
   affiliatePrev?: boolean;
   vacanciesPrev?: boolean;
+  partnerBenefits?: TWhyUs;
+  joinProgram?: boolean;
+  howAffiliateWork?: THowWorks;
+  affiliateAvantages?: boolean;
 };

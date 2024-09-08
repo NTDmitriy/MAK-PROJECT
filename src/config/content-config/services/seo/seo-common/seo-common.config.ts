@@ -5,11 +5,11 @@ import type {
   TCases,
   THero,
   THeroBasic,
-  THeroInfoAdvertisement,
+  THeroInfo,
   TReviwe,
   TServiceProducts,
   TSupplementaryDescr,
-  TWhyUs,
+  TWhyUs
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { SEO_PRODUCTS } from "./seo-products.config";
@@ -30,7 +30,7 @@ export const SEO_COMMON_CONFIG = {
       "Привлечение целевой аудитории",
       "Увеличение конверсии и продаж ",
       "Повышение видимости в поисковых системах",
-    ] satisfies THeroInfoAdvertisement,
+    ] satisfies THeroInfo,
   } satisfies THero,
   supplementaryDescr: {
     title: "Трафик и SEO-продвижение: основы результата в цифровом мире",

@@ -18,7 +18,6 @@ export const WhyUs: FC<PropsWithChildren<IWhyUs>> = ({
 }) => {
   const { items, blockTitle, blockTitleDescr } = whyUsContent;
 
-
   return (
     <Section className={className} {...rest}>
       <BlockTitle
@@ -37,11 +36,11 @@ export const WhyUs: FC<PropsWithChildren<IWhyUs>> = ({
                   {item.title && item.title}
                 </h3>
                 <p className={styles.card_text}>
-                  {item.descrBefore && item.descrBefore}{" "}
-                  <span className="accent">
-                    {item.descrAccent && item.descrAccent}
-                  </span>{" "}
-                  {item.descrAfter && item.descrAfter}
+                  {item.descrBefore && item.descrBefore}
+                  <span className={styles.accent}>
+                    {item.descrAccent && <> {item.descrAccent}</>}
+                  </span>
+                  {item.descrAfter && <> {item.descrAfter}</>}
                 </p>
               </li>
             ))}

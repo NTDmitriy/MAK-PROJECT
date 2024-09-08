@@ -146,9 +146,9 @@ export type TWhyUs = {
 
 export type TWhyUsItem = {
   title: string;
-  descrBefore: string;
-  descrAccent: string;
-  descrAfter: string;
+  descrBefore?: string;
+  descrAccent?: string;
+  descrAfter?: string;
 };
 
 export type TSuitableFor = {

@@ -6,9 +6,9 @@ import {
   TFaq,
   THero,
   THeroBasic,
-  THeroInfoAdvertisement,
+  THeroInfo,
   TReviwe,
-  TServiceProducts,
+  TServiceProducts
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { PROMOTION_FAQ } from "./promotion-common-faq.config";
@@ -30,7 +30,7 @@ export const PROMOTION_COMMON_CONFIG = {
     infoService: [
       "Разрабатываем уникальные стратегии продвижения, ориентированные на вашу специфическую нишу",
       "Помогаем вам стать лидером мнений в вашей нише через создание и продвижение экспертного контента",
-    ] satisfies THeroInfoAdvertisement,
+    ] satisfies THeroInfo,
   } satisfies THero,
   products: {
     formTitle: "Не нашли свою нишу? Напишите нам!",
