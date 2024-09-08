@@ -1,4 +1,5 @@
-
+import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
+import { Popup } from "@/components/ui/modals/popup/Popup";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
@@ -22,10 +23,17 @@ export const BottomNavigation: FC<
             Меню
           </button>
         </MobileMenu>
-        <button className={styles.button}>
-          <DynamicSvg name="IconTelegram" className={styles.icon} />
-          Оставить заявку
-        </button>
+
+        <Popup
+          initComponent={
+            <button className={styles.button}>
+              <DynamicSvg name="IconTelegram" className={styles.icon} />
+              Оставить заявку
+            </button>
+          }
+          contentComponent={<FormController formType={FORM_TYPE.MAIN_FORM} />}
+        />
+
         <Link href={`tel:${CONTACTS_PUBLIC.PHONE}`} className={styles.button}>
           <DynamicSvg name="IconPhone" className={styles.icon} />
           Позвонить

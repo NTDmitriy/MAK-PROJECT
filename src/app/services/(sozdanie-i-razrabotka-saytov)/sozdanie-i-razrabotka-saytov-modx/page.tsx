@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { WEBDEV_MODX_CONFIG } from "@/config/content-config/servises/webdev/webdev-modx/webdev-modx.config";
+import { WEBDEV_MODX_CONFIG } from "@/config/content-config/services/webdev/webdev-modx/webdev-modx.config";
 import { NextPage } from "next";
 
 

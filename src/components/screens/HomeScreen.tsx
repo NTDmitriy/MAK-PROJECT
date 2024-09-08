@@ -1,5 +1,6 @@
 import { THomeScreen } from "@/interfaces/types/screens/screens.type";
 import { FC, PropsWithChildren } from "react";
+import { AboutPrev } from "../sections/aboutPrev/AboutPrev";
 import { AffiliatePreview } from "../sections/affiliatePreview/AffiliatePreview";
 import { Blog } from "../sections/blog/Blog";
 import Faq from "../sections/faq/Faq";
@@ -17,6 +18,7 @@ export const HomeScreen: FC<PropsWithChildren<IHomeScreen>> = ({ content }) => {
   return (
     <>
       <HeroHome />
+      <AboutPrev/>
       <OurServices />
       <Projects cases={content.projects} />
       <Reviwes reviwes={content.reviwes} />

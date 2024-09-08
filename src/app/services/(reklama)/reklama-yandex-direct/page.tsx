@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { ADVERTISEMENT_YANDEX_CONFIG } from "@/config/content-config/servises/advertisement/advertisement-yandex/advertisement-yandex.config";
+import { ADVERTISEMENT_YANDEX_CONFIG } from "@/config/content-config/services/advertisement/advertisement-yandex/advertisement-yandex.config";
 import { NextPage } from "next";
 
 

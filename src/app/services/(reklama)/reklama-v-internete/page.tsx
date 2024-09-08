@@ -1,5 +1,5 @@
 import { ServiceScreen } from "@/components/screens/ServiceScreen";
-import { ADVERTISEMENT_COMMON_CONFIG } from "@/config/content-config/servises/advertisement/advertisement-common/advertisement-common.config";
+import { ADVERTISEMENT_COMMON_CONFIG } from "@/config/content-config/services/advertisement/advertisement-common/advertisement-common.config";
 import { NextPage } from "next";
 
 const ServisePage: NextPage = () => {

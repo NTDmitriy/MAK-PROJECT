@@ -17,11 +17,13 @@ import styles from "./AllProductsService.module.css";
 
 interface IAllProductsService extends IGenericElementProps {
   productsConent: TServiceProducts;
+  formVisible?: boolean
 }
 
 export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
   className,
   productsConent,
+  formVisible = false,
   ...rest
 }) => {
   const { blockTitle, blockTitleDescr, formTitle, formDescr, items } =
@@ -101,7 +103,7 @@ export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
                           }
                         />
                       )}
-                      {item.url && (
+                      {item.url  && (
                         <PrimaryLinkButton href={item.url}>
                           Узнать подробнее
                         </PrimaryLinkButton>
@@ -111,7 +113,7 @@ export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
                 ))}
             </ul>
 
-            {formTitle && (
+            {(formTitle || formVisible) && (
               <FormController
                 formType={FORM_TYPE.MAIN_FORM}
                 title={formTitle}

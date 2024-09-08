@@ -1,5 +1,5 @@
 import { ServiceScreen } from "@/components/screens/ServiceScreen";
-import { SEO_COMMON_CONFIG } from "@/config/content-config/servises/seo/seo-common/seo-common.config";
+import { SEO_COMMON_CONFIG } from "@/config/content-config/services/seo/seo-common/seo-common.config";
 import { NextPage } from "next";
 
 const ServisePage: NextPage = () => {

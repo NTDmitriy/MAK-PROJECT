@@ -12,8 +12,9 @@ import type {
   TSuitableFor,
   TSupplementaryDescr,
   TTariffs,
+  TVacancies,
   TWhyUs,
-  TWorkStages
+  TWorkStages,
 } from "../block/products.type";
 
 export type TScreen = {
@@ -39,6 +40,15 @@ export type TScreen = {
   tariffs?: TTariffs;
 };
 
+export type TAllServicesScreen = {
+  url: string;
+  hero: THero;
+  detialServicesAdvertusement?: TServiceProducts;
+  detialServicesPromotion?: TServiceProducts;
+  detialServicesWebdev?: boolean;
+  detialServicesSeo?: TServiceProducts;
+};
+
 export type THomeScreen = {
   services: IDashboardItem[];
   projects: TCases[];
@@ -47,6 +57,19 @@ export type THomeScreen = {
 };
 
 export type TUsefulScreen = {
-  // hero: THero;
-  reviwes: TReviwe[];
+  url: string;
+  hero: THero;
+  aboutUs?: boolean;
+  ourStatistic?: boolean;
+  ourClients?: boolean;
+  reviwes?: TReviwe[];
+  reviwesList?: TReviwe[];
+  ourTeam?: boolean;
+  blog?: boolean;
+  blogPrev?: boolean;
+  projects?: TCases[];
+  vacancies?: TVacancies;
+  aboutPrev?: boolean;
+  affiliatePrev?: boolean;
+  vacanciesPrev?: boolean;
 };

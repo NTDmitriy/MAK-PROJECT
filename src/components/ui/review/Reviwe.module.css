@@ -4,8 +4,18 @@
   gap: 30px;
   padding: 30px 30px;
   background-color: #fff;
-	min-height: 100%;
-	max-width: 800px;
+  min-height: 100%;
+  max-width: 800px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .head {
@@ -51,7 +61,7 @@
 }
 
 .reviwe__full .reviwe__text {
-	-webkit-line-clamp: unset;
+  -webkit-line-clamp: unset;
   line-clamp: unset;
 }
 
@@ -103,12 +113,10 @@
     width: 50px;
     max-height: 50px;
   }
-	
 }
 @media screen and (max-width: 576px) {
-	.reviwe__text {
-		-webkit-line-clamp: 5;
-		line-clamp: 5;
-	}
-	
+  .reviwe__text {
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+  }
 }

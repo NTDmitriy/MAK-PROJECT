@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { WEBDEV_JS_CONFIG } from "@/config/content-config/servises/webdev/webdev-js/webdev-js.config";
+import { WEBDEV_JS_CONFIG } from "@/config/content-config/services/webdev/webdev-js/webdev-js.config";
 import { NextPage } from "next";
 
 

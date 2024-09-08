@@ -57,6 +57,7 @@ import IconTooltip from "@/assets/svg/iconTooltip.svg";
 import IconUsefulBellNav from "@/assets/svg/iconUsefulBellNav.svg";
 import IconUsefulNav from "@/assets/svg/iconUsefulNav.svg";
 import IconUxDesignTeam from "@/assets/svg/iconUxDesignTeam.svg";
+import IconVacancies from "@/assets/svg/iconVacancies.svg";
 import IconVacanciesNav from "@/assets/svg/iconVacanciesNav.svg";
 import IconVk from "@/assets/svg/IconVk.svg";
 import IconWebDevNav from "@/assets/svg/iconWebDevNav.svg";
@@ -70,6 +71,7 @@ import IconWordPress from "@/assets/svg/iconWordPress.svg";
 import IconСopywriterTeam from "@/assets/svg/iconСopywriterTeam.svg";
 
 export const svgMap = {
+  IconVacancies,
   IconHuman,
   IconProdactManagetTeam,
   IconQaTeam,

@@ -1,4 +1,4 @@
-import { SERVICES_DASHBOARD_PAGES } from "./servises-pages.config";
+import { SERVICES_DASHBOARD_PAGES } from "./services-pages.config";
 import { USEFUL_DASHBOARD_PAGES } from "./useful-pages.config";
 
 export interface IDashboardItem {

@@ -1,5 +1,5 @@
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { WEBDEV_REDESIGN_CONFIG } from "@/config/content-config/servises/webdev/webdev-redesign/webdev-redesign.config";
+import { WEBDEV_REDESIGN_CONFIG } from "@/config/content-config/services/webdev/webdev-redesign/webdev-redesign.config";
 import { NextPage } from "next";
 
 

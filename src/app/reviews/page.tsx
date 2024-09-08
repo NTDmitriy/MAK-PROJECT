@@ -1,11 +1,11 @@
+import { UsefulScreen } from "@/components/screens/UsefulScreen";
+import { REVIEWS_CONFIG } from "@/config/content-config/useful/reviews/reviews.config";
 import { NextPage } from "next";
 
-const Reviews: NextPage = () => {
+const UsefulPage: NextPage = () => {
 	return (
-		<div>
-			Reviews page
-		</div>
+		<UsefulScreen content={REVIEWS_CONFIG} />
 	);
 };
 
-export default Reviews;
+export default UsefulPage;

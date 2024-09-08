@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { ADVERTISEMENT_TELEGRAM_CONFIG } from "@/config/content-config/servises/advertisement/advertisement-telegram/advertisement-telegram.config";
+import { ADVERTISEMENT_TELEGRAM_CONFIG } from "@/config/content-config/services/advertisement/advertisement-telegram/advertisement-telegram.config";
 import { NextPage } from "next";
 
 

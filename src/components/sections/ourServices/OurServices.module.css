@@ -202,7 +202,7 @@
     grid-row: unset;
     grid-column-start: unset;
   }
-  .tooltip {
+  .tooltip.inner {
     display: none;
   }
 }

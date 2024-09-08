@@ -1,5 +1,5 @@
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { CONSTRUCTION_COMPANY_CONFIG } from "@/config/content-config/servises/promotion/consruction-company/consruction-company.config";
+import { CONSTRUCTION_COMPANY_CONFIG } from "@/config/content-config/services/promotion/consruction-company/consruction-company.config";
 import { NextPage } from "next";
 
 const ProductPage: NextPage = () => {

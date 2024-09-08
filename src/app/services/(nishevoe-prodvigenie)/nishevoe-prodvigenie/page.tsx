@@ -1,5 +1,5 @@
 import { ServiceScreen } from "@/components/screens/ServiceScreen";
-import { PROMOTION_COMMON_CONFIG } from "@/config/content-config/servises/promotion/promotion-common/promotion-common.config";
+import { PROMOTION_COMMON_CONFIG } from "@/config/content-config/services/promotion/promotion-common/promotion-common.config";
 import { NextPage } from "next";
 
 const ServisePage: NextPage = () => {

@@ -1,7 +1,4 @@
-import {
-	FORM_TYPE,
-	FormController,
-} from "@/components/ui/forms/FormController";
+import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
