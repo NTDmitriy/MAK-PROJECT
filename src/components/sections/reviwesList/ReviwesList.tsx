@@ -4,16 +4,18 @@ import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { TReviwe } from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
-import styles from "./Reviwes.module.css";
-import { Slider } from "./slider/Slider";
+import { ReviewsList } from "./reviewsList/ReviwesList";
+import styles from "./ReviwesList.module.css";
 
-export interface IReviwes extends IGenericElementProps {
+
+export interface IReviwesList extends IGenericElementProps {
   reviwes: TReviwe[];
 }
 
-export const Reviwes: FC<PropsWithChildren<IReviwes>> = ({
+export const ReviwesList: FC<PropsWithChildren<IReviwesList>> = ({
   className,
   reviwes,
+
   ...rest
 }) => {
   return (
@@ -33,7 +35,7 @@ export const Reviwes: FC<PropsWithChildren<IReviwes>> = ({
           >
             Что говорят наши клиенты
           </BlockTitle>
-          <Slider reviwes={reviwes} />
+          <ReviewsList reviwes={reviwes} />
         </Section>
       )}
     </>

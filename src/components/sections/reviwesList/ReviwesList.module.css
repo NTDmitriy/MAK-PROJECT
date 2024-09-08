@@ -1,7 +1,7 @@
 .reviwes.inner {
   background-color: #f5f6f8;
   color: var(--text-third);
-  margin-top: clamp(25px, 3dvw, 50px);
+  margin-top: clamp(-25px, 3dvw, -50px);
   padding-top: 100px;
   padding-bottom: 100px;
   position: relative;
