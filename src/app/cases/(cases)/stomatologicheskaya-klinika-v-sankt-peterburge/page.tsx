@@ -1,4 +1,4 @@
-import { StamotalogyClinicCase } from "@/components/screens/cases/stamotalogyClinicCase/StamotalogyClinicCase";
+import { StamotalogyClinicCase } from "@/components/screens/cases/StamotalogyClinicCase";
 import { NextPage } from "next";
 
 const CasesPage: NextPage = () => {

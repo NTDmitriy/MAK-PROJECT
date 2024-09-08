@@ -1,5 +1,5 @@
 
-import { FurnitureStoreCase } from "@/components/screens/cases/furnitureStoreCase/FurnitureStoreCase";
+import { FurnitureStoreCase } from "@/components/screens/cases/FurnitureStoreCase";
 import { NextPage } from "next";
 
 const CasesPage: NextPage = () => {

@@ -1,7 +1,6 @@
 
 
-import { FrontentDevUniversityCase } from "@/components/screens/cases/frontentDevUniversityCase/FrontentDevUniversityCase";
-import { WhyUsSites } from "@/components/sections/whyUsSites/whyUsSites";
+import { FrontentDevUniversityCase } from "@/components/screens/cases/FrontentDevUniversityCase";
 import { NextPage } from "next";
 
 const CasesPage: NextPage = () => {

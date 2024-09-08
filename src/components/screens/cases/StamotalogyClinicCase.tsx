@@ -3,7 +3,7 @@ import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController"
 import { Section } from "@/components/ui/section/Section";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { FC, PropsWithChildren } from "react";
-import styles from './StamotalogyClinicCase.module.css';
+import styles from './Cases.module.css';
 
 export const StamotalogyClinicCase: FC<PropsWithChildren<IGenericElementProps>> = ({
     className,
