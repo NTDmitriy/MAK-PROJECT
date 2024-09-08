@@ -1,11 +1,11 @@
+import { UsefulScreen } from "@/components/screens/UsefulScreen";
+import { USEFUL_CONFIG } from "@/config/content-config/useful/useful.config";
 import { NextPage } from "next";
 
-const Contacts: NextPage = () => {
+const UsefulPage: NextPage = () => {
 	return (
-		<div>
-			useful page
-		</div>
+		<UsefulScreen content={USEFUL_CONFIG} />
 	);
 };
 
-export default Contacts;
+export default UsefulPage;

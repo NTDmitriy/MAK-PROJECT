@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { SEO_EMAIL_CONFIG } from "@/config/content-config/servises/seo/seo-email/seo-email.config";
+import { SEO_EMAIL_CONFIG } from "@/config/content-config/services/seo/seo-email/seo-email.config";
 import { NextPage } from "next";
 
 

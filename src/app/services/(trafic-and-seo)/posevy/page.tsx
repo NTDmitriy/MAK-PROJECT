@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { SEO_POSEVY_CONFIG } from "@/config/content-config/servises/seo/seo-posevy/seo-posevy.config";
+import { SEO_POSEVY_CONFIG } from "@/config/content-config/services/seo/seo-posevy/seo-posevy.config";
 import { NextPage } from "next";
 
 

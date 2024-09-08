@@ -1,11 +1,10 @@
 import { Section } from "@/components/ui/section/Section";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import {
-    THeroInfoAdvertisement,
-    THeroInfoProduct,
-    THeroInfoService,
-    THeroInfoWebdev,
-    type THeroBasic,
+  THeroInfo,
+  THeroInfoAdvertisement,
+  THeroInfoProduct,
+  type THeroBasic
 } from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
@@ -19,9 +18,9 @@ import { HeroInfoWebdev } from "./blocks/heroInfoWebdev/HeroInfoWebdev";
 interface IHero extends IGenericElementProps {
   basicContent: THeroBasic;
   productContent?: THeroInfoProduct;
-  serviceContent?: THeroInfoService;
+  serviceContent?: THeroInfo;
   advertisementContent?: THeroInfoAdvertisement[];
-  webdewContent?: THeroInfoWebdev;
+  webdewContent?: THeroInfo;
 }
 
 export const Hero: FC<PropsWithChildren<IHero>> = ({

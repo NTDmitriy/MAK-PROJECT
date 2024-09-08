@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { ADVERTISEMENT_META_CONFIG } from "@/config/content-config/servises/advertisement/advertisement-meta/advertisement-meta.config";
+import { ADVERTISEMENT_META_CONFIG } from "@/config/content-config/services/advertisement/advertisement-meta/advertisement-meta.config";
 
 import { NextPage } from "next";
 

@@ -1,5 +1,5 @@
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { MEDICAL_CONFIG } from "@/config/content-config/servises/promotion/medical/medical.config";
+import { MEDICAL_CONFIG } from "@/config/content-config/services/promotion/medical/medical.config";
 import { NextPage } from "next";
 
 const ProductPage: NextPage = () => {

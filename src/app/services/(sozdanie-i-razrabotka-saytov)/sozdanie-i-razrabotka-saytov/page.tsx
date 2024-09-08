@@ -1,6 +1,6 @@
 
 import { ServiceScreen } from "@/components/screens/ServiceScreen";
-import { WEBDEV_COMMON_CONFIG } from "@/config/content-config/servises/webdev/webdev-common/webdev-common.config";
+import { WEBDEV_COMMON_CONFIG } from "@/config/content-config/services/webdev/webdev-common/webdev-common.config";
 import { NextPage } from "next";
 
 const ServisePage: NextPage = () => {

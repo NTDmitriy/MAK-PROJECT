@@ -3,7 +3,7 @@ import { DynamicSvg, TSvgMapKeys } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
-import { SERVICES_DASHBOARD_PAGES } from "@/config/url-config/servises-pages.config";
+import { SERVICES_DASHBOARD_PAGES } from "@/config/url-config/services-pages.config";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 
@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/forms/FormController";
 import { MyTooltip } from "@/components/ui/tooltip/Tooltip";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
+import clsx from "clsx";
 import styles from "./OurServices.module.css";
 
 export const OurServices: FC<PropsWithChildren<IGenericElementProps>> = ({
@@ -64,7 +65,7 @@ export const OurServices: FC<PropsWithChildren<IGenericElementProps>> = ({
                               SEO_DASHBOARD_PAGES.SEO_POSEVY.url) && (
                             <MyTooltip
                               side="right"
-                              className={styles.tooltip}
+                              className={clsx(styles.tooltip, styles.inner)}
                               text={subService.description}
                             />
                           )}

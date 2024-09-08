@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { MARKET_PLACE_CONFIG } from "@/config/content-config/servises/promotion/market-place/market-place.config";
+import { MARKET_PLACE_CONFIG } from "@/config/content-config/services/promotion/market-place/market-place.config";
 import { NextPage } from "next";
 
 const ProductPage: NextPage = () => {

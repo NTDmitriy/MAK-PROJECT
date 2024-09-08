@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { WEBDEV_WORDPRESS_CONFIG } from "@/config/content-config/servises/webdev/webdev-wordpress/webdev-wordpress.config";
+import { WEBDEV_WORDPRESS_CONFIG } from "@/config/content-config/services/webdev/webdev-wordpress/webdev-wordpress.config";
 import { NextPage } from "next";
 
 

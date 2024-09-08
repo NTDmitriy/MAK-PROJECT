@@ -6,6 +6,9 @@ export type THeroBasic = {
   };
   description: string;
   image: string;
+  formBtnText?: string;
+  formTitle?: string;
+  formText?: string;
 };
 
 export type THeroInfoProduct = {
@@ -14,9 +17,7 @@ export type THeroInfoProduct = {
   image: string;
 };
 
-export type THeroInfoService = string[];
-
-export type THeroInfoWebdev = string[];
+export type THeroInfo = string[];
 
 export type THeroInfoAdvertisement = {
   title: string;
@@ -26,9 +27,10 @@ export type THeroInfoAdvertisement = {
 export type THero = {
   basic: THeroBasic;
   infoProduct?: THeroInfoProduct;
-  infoService?: THeroInfoService;
+  infoService?: THeroInfo;
+  infoUseful?: THeroInfo;
   infoAdvertisement?: THeroInfoAdvertisement[];
-  infoWebdev?: THeroInfoWebdev;
+  infoWebdev?: THeroInfo;
 };
 
 export type TSupplementaryDescr = {
@@ -174,11 +176,31 @@ export type TTariffs = {
 export type TPlan = {
   title: string;
   description?: string;
-  price?: number | string ;
+  price?: number | string;
   items?: TPlanItem[];
 };
 
 export type TPlanItem = {
   title?: string;
   description?: string;
+};
+
+export type TVacancies = {
+  blockTitle?: string;
+  formTitle?: string;
+  formText?: string;
+  items: TVacanciesItem[];
+};
+
+export type TVacanciesItem = {
+  position?: string;
+  employment?: string;
+  payroll?: TPayroll;
+  description?: string;
+  skills?: string[];
+};
+
+export type TPayroll = {
+  min: number;
+  max: number;
 };

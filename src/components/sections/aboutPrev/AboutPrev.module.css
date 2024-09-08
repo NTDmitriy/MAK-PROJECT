@@ -1,0 +1,130 @@
+.content {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 5.4dvw, 90px);
+}
+
+.text {
+  font-family: var(--font-family);
+  font-weight: 100;
+  font-size: clamp(16px, 2dvw, 32px);
+  line-height: 130%;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.accent {
+  background: linear-gradient(90deg, #f4a21a 0%, #ffde00 50%, #f4a21a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.link {
+  max-width: 300px;
+}
+
+.link:focus-visible {
+  opacity: 0.7;
+}
+
+.logo {
+  max-width: clamp(266px, 20dvw, 366px);
+  max-height: clamp(266px, 20dvw, 366px);
+}
+/* 
+.logo path:nth-child(1) {
+  animation: rotate180 15s infinite;
+  transform-origin: center;
+}
+.logo path:nth-child(2) {
+  animation: rotate180Reverse 15s infinite;
+  transform-origin: center;
+}
+.logo path:nth-child(3) {
+  animation: rotate180 15s infinite;
+  transform-origin: center;
+} */
+
+@media screen and (max-width: 1024px) {
+  .content {
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .logo__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: -15%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logo__wrapper {
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .text {
+    margin-bottom: 20px;
+  }
+
+  .link {
+    max-width: unset;
+  }
+}
+
+@keyframes rotate180 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg) scale(1);
+  }
+
+  37.5% {
+    transform: rotate(180deg) scale(0.7);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+
+  75% {
+    transform: rotate(180deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes rotate180Reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-180deg) scale(1);
+  }
+
+  37.5% {
+    transform: rotate(-180deg) scale(0.7);
+  }
+
+  50% {
+    transform: rotate(-180deg) scale(1.1);
+  }
+
+  75% {
+    transform: rotate(-180deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(-360deg) scale(1);
+  }
+}

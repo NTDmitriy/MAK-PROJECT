@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { WEBDEV_TILDA_CONFIG } from "@/config/content-config/servises/webdev/webdev-tilda/webdev-tilda.config";
+import { WEBDEV_TILDA_CONFIG } from "@/config/content-config/services/webdev/webdev-tilda/webdev-tilda.config";
 import { NextPage } from "next";
 
 

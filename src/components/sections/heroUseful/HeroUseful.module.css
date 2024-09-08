@@ -1,0 +1,10 @@
+.hero {
+	margin-top: -100px;
+	overflow-x: hidden;
+}
+
+@media screen and (min-width: 1201px) {
+  .hero {
+    padding-bottom: 30px;
+  }
+}

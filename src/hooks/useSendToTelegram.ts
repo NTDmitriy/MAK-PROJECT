@@ -51,7 +51,7 @@ const formatMessageForTelegram = (data: IForm, pathname: string) => {
       const value = data[key as keyof IForm];
 
       if (!Array.isArray(value)) {
-        messageInfo += `<b>${label}:</b> ${value?.trim()}\n`;
+        messageInfo += (value && `<b>${label}:</b> ${value?.trim()}\n`);
       } else {
         const servicesList = value
           .map((service, index) => `${index + 1}) ${service}`)

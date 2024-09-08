@@ -1,0 +1,44 @@
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.descr {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 50px;
+}
+
+.text {
+  font-family: var(--font-family);
+  font-weight: 100;
+  font-size: clamp(16px, 1.6dvw, 28px);
+  line-height: 130%;
+  color: #fff;
+}
+
+.img {
+  max-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center right;
+}
+
+.btn__wrapper {
+  margin-top: auto;
+  max-width: 490px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .descr {
+    order: 1;
+  }
+}

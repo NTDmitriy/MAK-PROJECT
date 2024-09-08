@@ -4,32 +4,48 @@ import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { TReviwe } from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
+import { ReviewsList } from "./reviewsList/ReviwesList";
 import styles from "./Reviwes.module.css";
 import { Slider } from "./slider/Slider";
 
 export interface IReviwes extends IGenericElementProps {
   reviwes: TReviwe[];
+  isList?: boolean;
 }
 
 export const Reviwes: FC<PropsWithChildren<IReviwes>> = ({
   className,
   reviwes,
+  isList,
   ...rest
 }) => {
   return (
     <>
       {reviwes && (
-        <Section {...rest} className={clsx(styles.reviwes, styles.inner)}>
+        <Section
+          {...rest}
+          className={clsx(
+            styles.reviwes,
+            styles.inner,
+            !isList && styles.slider__section,
+            isList && styles.list__section,
+          )}
+        >
           <BlockTitle
             leftSide={true}
-            descrSideway={<span className={styles.black}>Отзывы и оценки от наших клиентов </span>}
+            descrSideway={
+              <span className={styles.black}>
+                Отзывы и оценки от наших клиентов{" "}
+              </span>
+            }
             background="ОТЗЫВЫ"
             bgLessVisibility={true}
             className={styles.reviwes__title}
           >
             Что говорят наши клиенты
           </BlockTitle>
-          <Slider reviwes={reviwes} />
+          {!isList && <Slider reviwes={reviwes} />}
+          {isList && <ReviewsList reviwes={reviwes} />}
         </Section>
       )}
     </>

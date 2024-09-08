@@ -1,8 +1,11 @@
+import { UsefulScreen } from "@/components/screens/UsefulScreen";
+import { CASES_CONFIG } from "@/config/content-config/useful/cases/cases.config";
 import { NextPage } from "next";
 
-const Cases: NextPage = () => {
-  
-  return <div>cases page</div>;
+const UsefulPage: NextPage = () => {
+	return (
+		<UsefulScreen content={CASES_CONFIG} />
+	);
 };
 
-export default Cases;
+export default UsefulPage;

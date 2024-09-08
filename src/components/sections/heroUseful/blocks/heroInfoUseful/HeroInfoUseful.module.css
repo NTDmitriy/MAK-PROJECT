@@ -1,0 +1,50 @@
+.background {
+  background: url(/images/hero_background.webp);
+  position: relative;
+  z-index: 3;
+}
+
+.list {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  column-gap: 20px;
+  row-gap: 60px;
+
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  padding-left: 28px;
+  padding-right: 10px;
+}
+
+.opacity {
+	font-family: var(--font-family);
+  font-weight: 300;
+  font-size: clamp(16px, 1.5dvw, 26px);
+  line-height: 120%;
+  color: #fff;
+	opacity: 0.7;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  min-height: calc(100% + 20px);
+  width: 10px;
+  background: linear-gradient(90deg, #f4a21a 0%, #ffde00 50%, #f4a21a 100%);
+  left: 0;
+
+}
+
+
+@media screen and (max-width: 576px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -183,6 +183,7 @@
 
   .tab__head {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
   .head__descr {
     grid-row: 2;

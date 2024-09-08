@@ -1,11 +1,11 @@
 import { Container } from "@/components/ui/container/Container";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
-import { THeroInfoService } from "@/interfaces/types/block/products.type";
+import { THeroInfo } from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./HeroInfoService.module.css";
 interface IHeroInfoService extends IGenericElementProps {
-	info: THeroInfoService;
+	info: THeroInfo;
 }
 
 export const HeroInfoService: FC<PropsWithChildren<IHeroInfoService>> = ({

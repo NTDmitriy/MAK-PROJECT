@@ -1,0 +1,115 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+  padding-right: 38px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  background: #161616;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.head__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.position {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.employment {
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffde00;
+}
+
+.payroll {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 130%;
+  color: #ffde00;
+}
+
+.payroll svg {
+  width: 24px;
+}
+
+.descr {
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: clamp(16px, 1.5dvw, 24px);
+  line-height: 120%;
+  color: #fff;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-family);
+  font-weight: 200;
+  font-size: clamp(16px, 1dvw, 20px);
+  line-height: 150%;
+  color: #fff;
+}
+
+.btn__wrapper {
+  margin-top: auto;
+  max-width: 310px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .bottom {
+    flex-direction: column;
+
+  }
+  .btn__wrapper {
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .head {
+    flex-direction: column;
+
+  }
+  .btn__wrapper {
+    max-width: 100%;
+  }
+}

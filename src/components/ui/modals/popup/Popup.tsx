@@ -74,6 +74,7 @@ export const Popup: FC<IPopup> = ({ initComponent, contentComponent }) => {
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
+    
   }, []);
 
   return (
