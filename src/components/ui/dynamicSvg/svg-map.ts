@@ -62,6 +62,7 @@ import IconVacanciesNav from "@/assets/svg/iconVacanciesNav.svg";
 import IconVk from "@/assets/svg/IconVk.svg";
 import IconWebDevNav from "@/assets/svg/iconWebDevNav.svg";
 import IconWhatsApp from "@/assets/svg/iconWhatsApp.svg";
+import CopyIcon from '@/assets/svg/copy.svg';
 import {
   default as IconCheck,
   default as IconWhyUs,
@@ -71,6 +72,7 @@ import IconWordPress from "@/assets/svg/iconWordPress.svg";
 import IconСopywriterTeam from "@/assets/svg/iconСopywriterTeam.svg";
 
 export const svgMap = {
+  CopyIcon,
   IconVacancies,
   IconHuman,
   IconProdactManagetTeam,
