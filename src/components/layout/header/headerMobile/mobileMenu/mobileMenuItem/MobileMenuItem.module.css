@@ -53,6 +53,7 @@
 
 .icon {
 	stroke-width: 2px;
+  min-width: 24px;
 	width: 24px;
 	height: 24px;
 }

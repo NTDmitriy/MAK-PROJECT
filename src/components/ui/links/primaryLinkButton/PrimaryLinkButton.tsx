@@ -6,14 +6,23 @@ import styles from "./PrimaryLinkButton.module.css";
 
 export const PrimaryLinkButton: FC<PropsWithChildren<ILinkButton>> = ({
   children,
-	href,
+  href,
   className,
+  publicLink,
   ...rest
 }) => {
-  return ( <>
-    <Link href={href} className={clsx(styles.button, className)} {...rest}>
-      {children}
-    </Link>
-	</>
+  return (
+    <>
+      {!publicLink && (
+        <Link href={href} className={clsx(styles.button, className)} {...rest}>
+          {children}
+        </Link>
+      )}
+      {publicLink && (
+        <a href={href} className={clsx(styles.button, className)} {...rest}>
+          {children}
+        </a>
+      )}
+    </>
   );
 };

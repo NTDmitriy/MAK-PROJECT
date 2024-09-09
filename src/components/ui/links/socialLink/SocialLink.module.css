@@ -28,12 +28,12 @@
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
       visibility 0.3s ease-in-out;
     font-size: 12px;
-		background-color: var(--background-loyout);
+
   }
   .link:hover::before {
     visibility: visible;
     opacity: 1;
-    transform: translateY(34px);
+    transform: translateY(32px);
   }
   .link:hover {
     background-color: var(--text-primary);

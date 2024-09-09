@@ -6,4 +6,5 @@ export interface ILink extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 export interface ILinkButton extends AnchorHTMLAttributes<HTMLAnchorElement> {
 	href: string;
+  publicLink?: boolean;
 }

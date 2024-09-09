@@ -31,12 +31,11 @@ export const Accordion: FC<PropsWithChildren<IAccordion>> = ({
   return (
     <ul className={clsx(styles.content, className)} {...rest}>
       {items.map((item, index) => (
-        <li
-          key={index}
-          className={styles.item}
-          onClick={() => handleOpenDropdown(index)}
-        >
-          <h4 className={styles.title}>
+        <li key={index} className={styles.item}>
+          <button
+            className={styles.title}
+            onClick={() => handleOpenDropdown(index)}
+          >
             <span>{item.title}</span>
             <DynamicSvg
               name="IconFaq"
@@ -45,7 +44,7 @@ export const Accordion: FC<PropsWithChildren<IAccordion>> = ({
                 openDropdown === index && styles.open
               )}
             />
-          </h4>
+          </button>
           <div
             className={clsx(
               styles.descr,

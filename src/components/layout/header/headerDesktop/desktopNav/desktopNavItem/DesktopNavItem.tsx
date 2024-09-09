@@ -17,9 +17,11 @@ export const DesktopNavItem: FC<PropsWithChildren<IDesktopNavItem>> = ({
 }) => {
   const { name, url, childrens } = page;
 
+  const dropDownTrigger = url === "/useful" || url === "/services";
+
   return (
     <li {...rest} className={className}>
-      {!childrens && (
+      {!dropDownTrigger && (
         <DesktopNavLink href={url}>
           {url === "/" ? (
             <DynamicSvg name="IconHomeNav" width="22px" height="22px" />
@@ -29,12 +31,9 @@ export const DesktopNavItem: FC<PropsWithChildren<IDesktopNavItem>> = ({
         </DesktopNavLink>
       )}
 
-      {childrens && (
-        <DesktopNavDropdown
-          centered={url === "/services"}
-          page={page}
-        >
-          <DesktopNavLink href={url} >
+      {childrens && dropDownTrigger && (
+        <DesktopNavDropdown centered={url === "/services"} page={page}>
+          <DesktopNavLink href={url}>
             {name} <DynamicSvg name="IconDownArray" />
             {url === "/useful" && (
               <DynamicSvg name="IconUsefulBellNav" className={styles.bell} />
