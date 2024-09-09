@@ -4,6 +4,7 @@ import {
   FORM_TYPE,
   FormController,
 } from "@/components/ui/forms/FormController";
+import { SeconderyLinkButton } from "@/components/ui/links/seconderyLinkButton/SeconderyLinkButton";
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { THeroBasic } from "@/interfaces/types/block/products.type";
 import { FC } from "react";
@@ -14,7 +15,15 @@ interface IHeroBasicUseful {
 }
 
 export const HeroBasic: FC<IHeroBasicUseful> = ({ basicContent }) => {
-  const { title, description, image, formBtnText, formTitle: fotmTitle, formText: fotmText } = basicContent;
+  const {
+    title,
+    description,
+    image,
+    formBtnText,
+    formTitle,
+    formText,
+    btnUrl,
+  } = basicContent;
 
   return (
     <Container className={styles.hero__container}>
@@ -25,21 +34,33 @@ export const HeroBasic: FC<IHeroBasicUseful> = ({ basicContent }) => {
       </h1>
       <p className={styles.descr}>{description}</p>
       <div className={styles.btn_grop}>
-        <Popup
-          initComponent={
-            <SeconderyButton className={styles.button}>
-              {formBtnText ? formBtnText : "Связаться с нами"}
-            </SeconderyButton>
-          }
-          contentComponent={
-            <FormController
-              formType={FORM_TYPE.COMPLEX_FORM}
-              title={fotmTitle ? fotmTitle : "Свяжитесь с нами"}
-              text={fotmText && fotmText}
-            />
-          }
-        />
+        {!btnUrl && (
+          <Popup
+            initComponent={
+              <SeconderyButton className={styles.button}>
+                {formBtnText ? formBtnText : "Связаться с нами"}
+              </SeconderyButton>
+            }
+            contentComponent={
+              <FormController
+                formType={FORM_TYPE.COMPLEX_FORM}
+                title={formTitle ? formTitle : "Свяжитесь с нами"}
+                text={formText && formText}
+              />
+            }
+          />
+        )}
 
+        {btnUrl && (
+          <SeconderyLinkButton
+            href={btnUrl}
+            publicLink
+            target="_blank"
+            className={styles.button}
+          >
+            {formBtnText ? formBtnText : "Связаться с нами"}
+          </SeconderyLinkButton>
+        )}
       </div>
       <div className={styles.img__wrapper}>
         <picture>

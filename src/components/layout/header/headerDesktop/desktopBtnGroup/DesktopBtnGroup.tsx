@@ -17,8 +17,8 @@ export const DesktopBtnGroup: FC<PropsWithChildren<IGenericElementProps>> = ({
     <div {...rest} className={clsx(styles.btn__group, className)}>
       <div className={styles.social__btns}>
         <SocialLink
-          href={`${CONTACTS_PUBLIC.TELEGRAM}`}
-          tooltip={"Написать в Telegram"}
+          href={`${CONTACTS_PUBLIC.TELEGRAM_PUBLIC}`}
+          tooltip={"Telegram"}
           icon={<DynamicSvg name="IconTelegram" />}
         />
         <SocialLink

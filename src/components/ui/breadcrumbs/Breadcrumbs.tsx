@@ -17,7 +17,6 @@ export const Breadcrumbs: FC<IBreadcrumbs> = ({
   ...rest
 }) => {
   const parents = useFindParent(DASHBOARD_PAGES.toArray(), pathname);
-
   return (
     <>
       {parents && (

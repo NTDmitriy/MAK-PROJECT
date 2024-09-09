@@ -10,8 +10,8 @@ export const MobileMenuSocials: FC = () => {
     <div className={styles.menu_bottom}>
       <div className={styles.social__btns}>
         <SocialLink
-          href={`${CONTACTS_PUBLIC.TELEGRAM}`}
-          tooltip={"Написать в Telegram"}
+          href={`${CONTACTS_PUBLIC.TELEGRAM_PUBLIC}`}
+          tooltip={"Написать"}
           icon={<DynamicSvg name="IconTelegram" />}
         />
         <SocialLink

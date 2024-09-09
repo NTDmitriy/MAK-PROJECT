@@ -26,7 +26,7 @@ export const FaqForm: FC<IFormContent> = ({
     reset,
   } = useFormContext();
   const { closePopup } = usePopupStore();
-  
+
   const onSubmit = (data: IForm) => {
     const pathname = window.location.pathname;
     useSendToTelegram(data, pathname);
@@ -50,15 +50,21 @@ export const FaqForm: FC<IFormContent> = ({
 
   return (
     <div className={styles.root} {...rest}>
-      <h5 className={styles.title}>Не нашли ответ на свой вопрос?</h5>
-      <p className={styles.descr}>
-        Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее время
-        для проведения первичной консультации. Ответим на все ваши вопросы и
-        предложим{" "}
-        <span className={styles.accent}>
-          идеальные решения для вашего бизнеса!
-        </span>
-      </p>
+      <h5 className={styles.title}>
+        {title ? title : "Не нашли ответ на свой вопрос?"}
+      </h5>
+      {text ? (
+        <p className={styles.descr}>{text}</p>
+      ) : (
+        <p className={styles.descr}>
+          Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее
+          время для проведения первичной консультации. Ответим на все ваши
+          вопросы и предложим{" "}
+          <span className={styles.accent}>
+            идеальные решения для вашего бизнеса!
+          </span>
+        </p>
+      )}
 
       <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
         <NameInput />

@@ -26,6 +26,7 @@ export const MobileMenuItem: FC<PropsWithChildren<IMobileMenuItem>> = ({
   const { name, childrens, icon, url } = page;
   const isServices = url.includes('services')
 
+  const subMenuTrigger = url === "/useful" || url === "/services";
   const { dropdownIndex, setDropdownIndex, handleClose } = useMobileMenu();
   const handleOpenDropdown = (index: number) => {
     setDropdownIndex(dropdownIndex === index ? null! : index);
@@ -46,7 +47,7 @@ export const MobileMenuItem: FC<PropsWithChildren<IMobileMenuItem>> = ({
 
               <span className={styles.page__name}>{name}</span>
             </Link>
-            {childrens && !isSubMenuItem && (
+            {childrens && !isSubMenuItem && subMenuTrigger && (
               <MobileMenu pages={childrens} menuName={name} isSubMenu={true}>
                 <SubButton shadowBtn={true}>
                   <DynamicSvg name="IconRightArray" />
@@ -54,7 +55,7 @@ export const MobileMenuItem: FC<PropsWithChildren<IMobileMenuItem>> = ({
               </MobileMenu>
             )}
 
-            {childrens && isSubMenuItem && isServices &&(
+            {childrens && isSubMenuItem && isServices && (
               <SubButton
                 shadowBtn={true}
                 onClick={() => handleOpenDropdown(index)}
@@ -70,7 +71,7 @@ export const MobileMenuItem: FC<PropsWithChildren<IMobileMenuItem>> = ({
             )}
           </div>
 
-          {childrens && isSubMenuItem && isServices &&(
+          {childrens && isSubMenuItem && isServices && (
             <>
               <MobileMenuAccordion
                 isOpen={dropdownIndex === index}

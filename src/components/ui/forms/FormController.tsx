@@ -47,7 +47,7 @@ export const FormController: FC<IFormController> = ({
 					)}
 					{formType === FORM_TYPE.SING_UP_FORM && <SingUpFrom />}
 					{formType === FORM_TYPE.FAQ_FORM && (
-						<FaqForm areaVisible={areaVisible} />
+						<FaqForm areaVisible={areaVisible} title={title} text={text}  />
 					)}
 				</HookFormProvider>
 			)}

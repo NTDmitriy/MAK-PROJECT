@@ -7,6 +7,7 @@ export type THeroBasic = {
   description: string;
   image: string;
   formBtnText?: string;
+  btnUrl?: string;
   formTitle?: string;
   formText?: string;
 };

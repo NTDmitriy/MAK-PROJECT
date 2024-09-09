@@ -1,3 +1,4 @@
+import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
 import {
   THero,
@@ -17,6 +18,7 @@ export const REVIEWS_CONFIG = {
       description: "Узнайте, что наши клиенты говорят о сотрудничестве с Make All Perfect. Мы гордимся нашими достижениями и благодарными отзывами, которые подтверждают качество нашей работы.",
       image: "promotion-schools-hero",
       formBtnText: "Оставить отзыв",
+      btnUrl: CONTACTS_PUBLIC.YANDEX_REVIWES,
     } satisfies THeroBasic,
   } satisfies THero,
   reviwesList: ALL_REVIWES satisfies TReviwe[],

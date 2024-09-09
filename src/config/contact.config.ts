@@ -7,10 +7,11 @@ class CONTACTS {
   PHONE = "+7 (495) 018-18-15";
   EMAIL = "info@makeallperfect.ru";
   TELEGRAM = "https://t.me/makeallperfect_bot";
-  TELEGRAM_PUBLIC = "tg";
+  TELEGRAM_PUBLIC = "https://t.me/makeallperfect";
   WHATSAPP = "wa";
   VK = "vk";
   DZEN = "dzen";
+  YANDEX_REVIWES='qeqweqwe'
 }
 
 export const CONTACTS_PUBLIC = new CONTACTS();

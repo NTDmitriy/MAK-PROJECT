@@ -32,7 +32,7 @@ export const Footer: FC<PropsWithChildren<IGenericElementProps>> = ({
                 Make All Perfect
               </div>
               <p className={styles.logo__descr}>
-                <span className="accent">Ваш надежный партнер</span> в мире
+                <span className={styles.accent}>Ваш надежный партнер</span> в мире
                 digital&nbsp;маркетинга
               </p>
             </div>
@@ -79,14 +79,7 @@ export const Footer: FC<PropsWithChildren<IGenericElementProps>> = ({
                   <DynamicSvg name="IconEMailTransparent" />
                   <span>{CONTACTS_PUBLIC.EMAIL}</span>
                 </a>
-                <a
-                  className={styles.contact__link}
-                  href={`${CONTACTS_PUBLIC.TELEGRAM}`}
-                  target="_blank"
-                >
-                  <DynamicSvg name="IconTelegramTransparent" />
-                  <span>@makeallperfect_bot</span>
-                </a>
+
               </div>
             </div>
           </div>

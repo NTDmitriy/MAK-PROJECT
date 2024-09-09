@@ -45,7 +45,8 @@
   justify-content: center;
   background-color: #fff;
   color: var(--accent-color);
-	transition: transform .3s ease-in-out;
+  border: 2px solid transparent;
+	transition: transform .3s ease-in-out, border-color .3s ease-in-out;
 }
 
 .slider-button.prev svg {
@@ -56,7 +57,13 @@
 	.slider-button:hover {
 		transform: scale(1.1);
 	}
+
+  .slider-button:focus-visible {
+		border-color: var(--accent-color);;
+	}
 }
+
+
 .slider-button:active {
 	transform: scale(0.95);
 }

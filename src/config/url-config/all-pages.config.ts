@@ -1,3 +1,4 @@
+import { CASES_DASHBOARD_PAGES } from "./cases-pages.config";
 import { SERVICES_DASHBOARD_PAGES } from "./services-pages.config";
 import { USEFUL_DASHBOARD_PAGES } from "./useful-pages.config";
 
@@ -18,11 +19,7 @@ class DASHBOARD {
     url: "/",
   } satisfies IDashboardItem;
 
-  CASES = {
-    icon: "IconCasesNav",
-    name: "Кейсы",
-    url: "/cases",
-  } satisfies IDashboardItem;
+  CASES = CASES_DASHBOARD_PAGES.CASES satisfies IDashboardItem;
 
   SERVICES = SERVICES_DASHBOARD_PAGES.SERVICES satisfies IDashboardItem;
 

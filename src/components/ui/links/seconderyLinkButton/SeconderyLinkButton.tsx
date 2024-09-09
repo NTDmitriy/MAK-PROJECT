@@ -8,11 +8,21 @@ export const SeconderyLinkButton: FC<PropsWithChildren<ILinkButton>> = ({
   children,
   className,
   href,
+  publicLink,
   ...rest
 }) => {
   return (
-    <Link href={href} className={clsx(styles.button, className)} {...rest}>
-      {children}
-    </Link>
+    <>
+      {!publicLink && (
+        <Link href={href} className={clsx(styles.button, className)} {...rest}>
+          {children}
+        </Link>
+      )}
+      {publicLink && (
+        <a href={href} className={clsx(styles.button, className)} {...rest}>
+          {children}
+        </a>
+      )}
+    </>
   );
 };
