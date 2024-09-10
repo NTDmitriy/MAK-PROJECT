@@ -29,7 +29,7 @@ export const CopyButton: FC<PropsWithChildren<ICopyButton>> = ({
       className={clsx(styles.btn, className)}
       onClick={() => copyTextToClipboard(text)}
     >
-      <DynamicSvg name="CopyIcon" />
+      <DynamicSvg name="IconCopy" />
     </button>
   );
 };
