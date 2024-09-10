@@ -7,6 +7,7 @@ import { FC, PropsWithChildren } from "react";
 import styles from "./Reviwes.module.css";
 import { Slider } from "./slider/Slider";
 
+
 export interface IReviwes extends IGenericElementProps {
   reviwes: TReviwe[];
 }
