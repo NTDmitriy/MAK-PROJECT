@@ -19,7 +19,7 @@ export const Reviwe: FC<IReviwe> = ({ reviwe, isFull }) => {
       <div className={styles.head}>
         <img
           className={styles.avatar}
-          src={`/images/${avatar}.png`}
+          src={`/images/avatars/${avatar}.webp`}
           alt="avatar"
         />
         <div className={styles.head__info}>
