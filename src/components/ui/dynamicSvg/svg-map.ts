@@ -6,6 +6,7 @@ import IconClient5 from "@/assets/svg/client5.svg";
 import IconClient6 from "@/assets/svg/client6.svg";
 import IconClient7 from "@/assets/svg/client7.svg";
 import IconClient8 from "@/assets/svg/client8.svg";
+import IconCopy from '@/assets/svg/copy.svg';
 import IconHeroLogo from "@/assets/svg/hero-logo.svg";
 import IconAboutNav from "@/assets/svg/iconAboutNav.svg";
 import IconAdvertisementNav from "@/assets/svg/iconAdvertisementNav.svg";
@@ -13,6 +14,7 @@ import IconAnalitycTeam from "@/assets/svg/iconAnalitycTeam.svg";
 import IconArrayBlackBg from "@/assets/svg/iconArrayBlackBg.svg";
 import IconArticlesNav from "@/assets/svg/iconArticlesNav.svg";
 import IconBackTeam from "@/assets/svg/iconBackTeam.svg";
+import IconCalendar from "@/assets/svg/iconCalendar.svg";
 import IconCasesNav from "@/assets/svg/iconCasesNav.svg";
 import IconClock from "@/assets/svg/iconClock.svg";
 import IconClose from "@/assets/svg/iconClose.svg";
@@ -62,7 +64,6 @@ import IconVacanciesNav from "@/assets/svg/iconVacanciesNav.svg";
 import IconVk from "@/assets/svg/IconVk.svg";
 import IconWebDevNav from "@/assets/svg/iconWebDevNav.svg";
 import IconWhatsApp from "@/assets/svg/iconWhatsApp.svg";
-import CopyIcon from '@/assets/svg/copy.svg';
 import {
   default as IconCheck,
   default as IconWhyUs,
@@ -72,7 +73,8 @@ import IconWordPress from "@/assets/svg/iconWordPress.svg";
 import IconСopywriterTeam from "@/assets/svg/iconСopywriterTeam.svg";
 
 export const svgMap = {
-  CopyIcon,
+  IconCalendar,
+  IconCopy,
   IconVacancies,
   IconHuman,
   IconProdactManagetTeam,
