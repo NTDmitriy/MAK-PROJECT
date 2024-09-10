@@ -14,7 +14,6 @@ import { WhyUsSites } from "../sections/whyUsSites/whyUsSites";
 import { WorkStages } from "../sections/workStages/WorkStages";
 import { Breadcrumbs } from "../ui/breadcrumbs/Breadcrumbs";
 
-
 interface IServiceScreen {
   content: TScreen;
 }
@@ -22,10 +21,9 @@ interface IServiceScreen {
 export const ServiceScreen: FC<PropsWithChildren<IServiceScreen>> = ({
   content,
 }) => {
-
   return (
     <>
-      <Breadcrumbs pathname={content.url}/>
+      <Breadcrumbs pathname={content.url} />
       <Hero
         basicContent={content.hero.basic}
         productContent={content.hero.infoProduct}
@@ -33,18 +31,24 @@ export const ServiceScreen: FC<PropsWithChildren<IServiceScreen>> = ({
         advertisementContent={content.hero.infoAdvertisement}
         webdewContent={content.hero.infoWebdev}
       />
-			{content.supplementaryDescr && <SupplementaryDescr suppContent={content.supplementaryDescr} />}
+      {content.supplementaryDescr && (
+        <SupplementaryDescr suppContent={content.supplementaryDescr} />
+      )}
 
-			{content.products && <AllProductsService productsConent={content.products} />}
-			{content.siteServices && <SiteServices />}
+      {content.products && (
+        <AllProductsService productsConent={content.products} />
+      )}
+      {content.siteServices && <SiteServices />}
       {content.howWorks && <HowWorks howWorksContent={content.howWorks} />}
-      {content.workStages && <WorkStages workStagesContent={content.workStages} />}
-			{content.whyUsChecklict && <WhyUsChecklist />}
-			{content.whyUsSites && <WhyUsSites />}
+      {content.workStages && (
+        <WorkStages workStagesContent={content.workStages} />
+      )}
+      {content.whyUsChecklict && <WhyUsChecklist />}
+      {content.whyUsSites && <WhyUsSites />}
       {content.whyUs && <WhyUs whyUsContent={content.whyUs} />}
       {content.projects && <Projects cases={content.projects} />}
-			{content.reviwes && <Reviwes reviwes={content.reviwes} />}
-			{content.faq && <Faq faq={content.faq} />}
+      {content.reviwes && <Reviwes reviwes={content.reviwes} />}
+      {content.faq && <Faq faq={content.faq} />}
     </>
   );
 };

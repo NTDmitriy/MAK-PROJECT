@@ -11,6 +11,7 @@ export const useFindParent = <T extends TreeNode>(
   targetUrl: string
 ): Array<{ name: string; url: string }> | null => {
   if (targetUrl === "/") return null;
+  if (targetUrl === "/sitemap") return [{ name: "Главная", url: "/" },{ name: "Карта сайта", url: "/sitemap" }];
 
   const stack = array.map((item) => ({
     node: item,

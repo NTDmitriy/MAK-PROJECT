@@ -24,10 +24,9 @@ interface IProductScreen {
 export const ProductScreen: FC<PropsWithChildren<IProductScreen>> = ({
   content,
 }) => {
-
   return (
     <>
-      {content.url && <Breadcrumbs pathname={content.url} />}  
+      {content.url && <Breadcrumbs pathname={content.url} />}
       <Hero
         basicContent={content.hero.basic}
         productContent={content.hero.infoProduct}
@@ -35,22 +34,37 @@ export const ProductScreen: FC<PropsWithChildren<IProductScreen>> = ({
         advertisementContent={content.hero.infoAdvertisement}
         webdewContent={content.hero.infoWebdev}
       />
-      {content.supplementaryDescr && <SupplementaryDescr suppContent={content.supplementaryDescr} />}
-      {content.suitableFor && <SuitableFor suitableForContent={content.suitableFor} />}
-      {content.allSiteTypes && <AllSiteTypes productsConent={content.allSiteTypes} />}
-      {content.projectTeam && <ProjectTeam projectTeamContent={content.projectTeam} />}
+      {content.supplementaryDescr && (
+        <SupplementaryDescr suppContent={content.supplementaryDescr} />
+      )}
+      {content.suitableFor && (
+        <SuitableFor suitableForContent={content.suitableFor} />
+      )}
+      {content.allSiteTypes && (
+        <AllSiteTypes productsConent={content.allSiteTypes} />
+      )}
+      {content.projectTeam && (
+        <ProjectTeam projectTeamContent={content.projectTeam} />
+      )}
       {content.technologyStack && <TechnologyStack />}
-      {content.workStages && <WorkStages workStagesContent={content.workStages} />}
-      {content.detialServices && <DetailServices detailContent={content.detialServices} />}
-      {content.includeService && <IncludedInService includedInService={content.includeService} />}
+      {content.workStages && (
+        <WorkStages workStagesContent={content.workStages} />
+      )}
+      {content.detialServices && (
+        <DetailServices detailContent={content.detialServices} />
+      )}
+      {content.includeService && (
+        <IncludedInService includedInService={content.includeService} />
+      )}
       {content.tariffs && <Tariffs tariffs={content.tariffs} />}
       {content.howWorks && <HowWorks howWorksContent={content.howWorks} />}
       {content.whyUs && <WhyUs whyUsContent={content.whyUs} />}
-      {content.projects && <Projects cases={content.projects} formVisible={true} />}
+      {content.projects && (
+        <Projects cases={content.projects} formVisible={true} />
+      )}
       {content.reviwes && <Reviwes reviwes={content.reviwes} />}
       {content.faq && <Faq faq={content.faq} />}
-      {content.url && <MaybeInteresting pathname={content.url} />} 
-
+      {content.url && <MaybeInteresting pathname={content.url} />}
     </>
   );
 };

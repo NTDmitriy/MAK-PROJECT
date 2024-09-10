@@ -11,6 +11,7 @@ import { OurTeam } from "../sections/ourTeam/OurTeam";
 import { Projects } from "../sections/projects/Projects";
 import { Reviwes } from "../sections/reviwes/Reviwes";
 
+
 interface IHomeScreen {
   content: THomeScreen;
 }

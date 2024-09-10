@@ -1,7 +1,11 @@
 import { ContactsScreen } from "@/components/screens/ContactsScreen";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs/Breadcrumbs";
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
-import { NextPage } from "next";
+import { Metadata, NextPage } from "next";
+
+export const metadata: Metadata = {
+  title: 'Invoices',
+};
 
 const Contact: NextPage = () => {
   return (
