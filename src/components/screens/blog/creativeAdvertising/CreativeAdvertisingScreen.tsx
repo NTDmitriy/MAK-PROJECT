@@ -10,6 +10,7 @@ export const CreativeAdvertisingScreen: FC = () => {
     <>
       <Breadcrumbs pathname={BLOG_DASHBOARD_PAGES.CREATIVE_ADVERTISING.url} />
       <HeroBlog heroContent={BLOG_DASHBOARD_PAGES.CREATIVE_ADVERTISING} />
+      {/* компонет с контентом */}
     </>
   );
 };
