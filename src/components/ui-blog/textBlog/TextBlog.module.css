@@ -5,3 +5,8 @@
   line-height: 120%;
   color: #cacaca;
 }
+
+
+.text_mg {
+  margin-bottom: clamp(20px,3dvw,50px);
+}
