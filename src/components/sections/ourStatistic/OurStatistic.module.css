@@ -23,7 +23,7 @@
 .days_descr {
   font-family: var(--font-family);
   font-weight: 100;
-  font-size: clamp(30px, 5dvw, 54px);
+  font-size: clamp(30px, 2.9dvw, 54px);
   line-height: 100%;
   color: #fff;
 }

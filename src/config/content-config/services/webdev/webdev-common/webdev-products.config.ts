@@ -11,7 +11,7 @@ export const WEBDEV_PRODUCTS = {
         "Небольшой сайт для представления компании или частного специалиста в интернете.",
       deadline: "до 8 дней",
       priceFrom: 75000,
-      image: "promotion-medical-700x300",
+      image: "webdev-visiting-prev",
       buttonText: "Заказать сайт-визитку",
     },
     {
@@ -22,7 +22,7 @@ export const WEBDEV_PRODUCTS = {
         "Одностраничный сайт для продвижения конкретного товара или услуги. ",
       deadline: "до 12 дней",
       priceFrom: 150000,
-      image: "promotion-medical-700x300",
+      image: "webdev-landing-prev",
       buttonText: "Заказать лендинг",
     },
     {
@@ -33,7 +33,7 @@ export const WEBDEV_PRODUCTS = {
         "Многостраничный ресурс для полной информации о компании и её услугах.",
       deadline: "от 1 месяца",
       priceFrom: 300000,
-      image: "promotion-medical-700x300",
+      image: "webdev-business-prev",
       buttonText: "Заказать бизнес сайт",
     },
     {
@@ -41,7 +41,7 @@ export const WEBDEV_PRODUCTS = {
       description:
         "Возможны индивидуальные экспресс решения по срокам разработки обсуждается индивидуально",
       priceFrom: "Индивидуально",
-      image: "promotion-medical-700x300",
+      image: "webdev-individually-prev",
       buttonText: "Заказать индивидуальный сайт",
     },
   ],

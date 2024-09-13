@@ -6,30 +6,35 @@ import { FC, PropsWithChildren } from "react";
 import styles from "./SupplementaryDescr.module.css";
 
 interface ISuplementaryDescr extends IGenericElementProps {
-	suppContent: TSupplementaryDescr
+  suppContent: TSupplementaryDescr;
 }
 
-
 export const SupplementaryDescr: FC<PropsWithChildren<ISuplementaryDescr>> = ({
-	suppContent,
-	className,
-	...rest
+  suppContent,
+  className,
+  ...rest
 }) => {
-	const { title, image, descr } = suppContent
+  const { title, image, descr } = suppContent;
 
-	return (
-		<Section className={className} {...rest}>
-			<Container>
-				<div className={styles.root}>
-					<img className={styles.img} src={`/images/services/${image}`} alt="1" />
-					<div className={styles.descr}>
-						<h4 className={styles.title}>{title}</h4>
-						<p className={styles.text}>
-							{descr}
-						</p>
-					</div>
-				</div>
-			</Container>
-		</Section>
-	);
+  return (
+    <Section className={className} {...rest}>
+      <Container>
+        <div className={styles.root}>
+          <picture className={styles.img}>
+            <source srcSet={`/images/services/${image}-small.webp`} media="(max-width: 1024px)" />
+            <img
+              src={`/images/services/${image}-large.webp`}
+              alt={title}
+              className={styles.img}
+            />
+          </picture>
+
+          <div className={styles.descr}>
+            <h4 className={styles.title}>{title}</h4>
+            <p className={styles.text}>{descr}</p>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
 };

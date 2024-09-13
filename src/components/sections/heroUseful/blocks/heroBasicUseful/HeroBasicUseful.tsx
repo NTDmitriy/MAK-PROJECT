@@ -65,12 +65,12 @@ export const HeroBasic: FC<IHeroBasicUseful> = ({ basicContent }) => {
       <div className={styles.img__wrapper}>
         <picture>
           <source
-            srcSet={`/images/services/${image}-295x191.webp`}
+            srcSet={`/images/useful/${image}-small.webp`}
             media="(max-width: 1024px)"
           />
           <img
             className={styles.img}
-            src={`/images/services/${image}-1360x870.webp`}
+            src={`/images/useful/${image}-large.webp`}
           />
         </picture>
       </div>

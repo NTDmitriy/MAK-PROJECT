@@ -25,7 +25,7 @@ export const WEBDEV_TILDA_CONFIG = {
       },
       description:
         "Предлагаем услуги по созданию сайтов на платформе Tilda. Наши специалисты разработают для вас уникальный и адаптивный сайт, который привлечет внимание вашей аудитории и поможет достичь ваших бизнес-целей.",
-      image: "promotion-stroitelnie-comp-hero",
+      image: "webdev-tilda-hero",
     } satisfies THeroBasic,
     infoWebdev: [
       "Уникальный дизайн",
@@ -38,7 +38,7 @@ export const WEBDEV_TILDA_CONFIG = {
     title: "Разработка веб-сайтов на Tilda",
     descr:
       "Мы предлагаем создание сайтов на Tilda – платформе, которая идеально подходит для создания стильных и функциональных веб-ресурсов. С нашей помощью вы получите сайт, который будет выделяться среди конкурентов и привлекать ваших клиентов. Tilda позволяет быстро и эффективно создавать сайты с минимальными затратами времени и ресурсов, а наша команда обеспечит высокое качество выполнения каждого этапа работы.",
-    image: "seo-common-supplementary.webp",
+    image: "webdev-tilda-supplementary",
   } satisfies TSupplementaryDescr,
   suitableFor: {
     items: [

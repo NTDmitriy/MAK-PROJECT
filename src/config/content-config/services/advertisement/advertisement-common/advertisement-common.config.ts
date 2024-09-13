@@ -25,7 +25,7 @@ export const ADVERTISEMENT_COMMON_CONFIG = {
       },
       description:
         "Ищете, где заказать рекламу в интернете? Наше рекламное агентство предоставляет комплексные услуги по настройке и запуску рекламных кампаний в Яндекс Директ, ВКонтакте, Google Ads, Telegram Ads и Meta: Facebook & Instagram. Мы поможем вам привлечь целевую аудиторию, увеличить конверсию и добиться максимального результата от рекламы. Доверьтесь профессионалам!",
-      image: "promotion-schools-hero",
+      image: "advertisemets-common-hero",
     } satisfies THeroBasic,
     infoService: [
       "Применяем современные инструменты для создания эффективной рекламы в Яндекс Директ, ВКонтакте, Google Ads, Telegram Ads и Meta: Facebook & Instagram",

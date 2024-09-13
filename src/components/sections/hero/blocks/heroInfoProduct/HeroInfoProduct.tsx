@@ -18,11 +18,18 @@ export const HeroInfoProduct: FC<IHeroInfoProduct> = ({ info }) => {
                 <h3 className={styles.title}>{info.title}</h3>
                 <p className={styles.text}> {info.description}</p>
               </div>
-              <img
-                className={styles.image}
-                src={`/images/services/${info.image}.webp`}
-                alt="Онлайн-школы и инфобизнес"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet={`/images/services/${info.image}-small.webp`}
+                  media="(max-width: 1200px)"
+                />
+                <img
+                  className={styles.image}
+                  src={`/images/services/${info.image}-large.webp`}
+                  alt="Онлайн-школы и инфобизнес"
+                />
+              </picture>
             </div>
           </Container>
         </div>

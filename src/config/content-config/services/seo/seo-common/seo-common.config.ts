@@ -9,7 +9,7 @@ import type {
   TReviwe,
   TServiceProducts,
   TSupplementaryDescr,
-  TWhyUs
+  TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { SEO_PRODUCTS } from "./seo-products.config";
@@ -24,7 +24,7 @@ export const SEO_COMMON_CONFIG = {
       },
       description:
         "Ищете, где заказать рекламу в интернете? Наше рекламное агентство предоставляет комплексные услуги по настройке и запуску рекламных кампаний в Яндекс Директ, ВКонтакте, Google Ads, Telegram Ads и Meta: Facebook & Instagram. Мы поможем вам привлечь целевую аудиторию, увеличить конверсию и добиться максимального результата от рекламы. Доверьтесь профессионалам!",
-      image: "promotion-schools-hero",
+      image: "seo-common-hero",
     } satisfies THeroBasic,
     infoService: [
       "Привлечение целевой аудитории",
@@ -36,7 +36,7 @@ export const SEO_COMMON_CONFIG = {
     title: "Трафик и SEO-продвижение: основы результата в цифровом мире",
     descr:
       "В условиях быстро развивающегося цифрового мира трафик и SEO-продвижение играют решающую роль в успехе бизнеса. Правильное использование этих инструментов помогает привлекать новых клиентов, удерживать существующих и существенно увеличивать прибыль. Комплексный подход к цифровому маркетингу включает использование различных стратегий и технологий, которые позволяют максимально эффективно продвигать ваши товары и услуги.",
-    image: "seo-common-supplementary.webp",
+    image: "seo-common-supplementary",
   } satisfies TSupplementaryDescr,
   products: {
     formTitle: "Не нашли свою нишу? Напишите нам!",

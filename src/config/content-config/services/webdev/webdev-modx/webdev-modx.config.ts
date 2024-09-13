@@ -26,7 +26,7 @@ export const WEBDEV_MODX_CONFIG = {
 
       },
       description: 'Предлагаем услуги по созданию сайтов на платформе ModX. Наша команда создаст для вас высокопроизводительный и безопасный сайт с уникальными функциями, который будет идеально соответствовать потребностям вашего бизнеса.',
-      image: "promotion-stroitelnie-comp-hero",
+      image: "webdev-modx-hero",
     } satisfies THeroBasic,
     infoWebdev: [
       "Уникальный дизайн",
@@ -38,7 +38,7 @@ export const WEBDEV_MODX_CONFIG = {
   supplementaryDescr: {
     title: "Разработка веб-сайтов на ModX",
     descr: "Создание сайтов на ModX – это выбор для тех, кто ценит гибкость и безопасность. Мы предлагаем разработку сайтов, которые будут не только красивыми, но и максимально функциональными. ModX – мощная и масштабируемая платформа, идеально подходящая для сложных проектов с уникальными требованиями. Наши специалисты обеспечат качественное выполнение всех этапов работ и высокую производительность вашего сайта.",
-    image: "seo-common-supplementary.webp",
+    image: "webdev-modx-supplementary",
   } satisfies TSupplementaryDescr,
   suitableFor:{ items: [
     {
