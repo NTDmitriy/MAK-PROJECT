@@ -1,10 +1,14 @@
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { Container } from "@/components/ui/container/Container";
-import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
+import {
+  FORM_TYPE,
+  FormController,
+} from "@/components/ui/forms/FormController";
 import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
+import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./HeroBasic.module.css";
 
@@ -12,37 +16,45 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
   return (
     <Container className={styles.hero__container}>
       <div className={styles.left__side}>
-        <h1 className={styles.title}>
-          М<span className={styles.small__text}>AKE ALL PERFECT</span> аркетинговое{" "}
-          <span className={styles.accent}>агенство</span> полного цикла
-        </h1>
+        <div className={styles.title__wrapper}>
+          <p className={clsx(styles.title, styles.absolute)}>
+            <span className={styles.opacity}>М</span>
+            <span className={styles.small__text}>AKE ALL PERFECT</span>{" "}
+            <span className={styles.opacity}>аркетинговое агенство полного
+            цикла</span>
+          </p>
+          <h1 className={clsx(styles.title)}>
+            Маркетинговое <span className={styles.accent}>агенство</span>{" "}
+            полного цикла
+          </h1>
+        </div>
         <p className={styles.descr}>
-          Ваш <span className="accent">надежный партнер</span> в мире digital
-          маркетинга
+          Ваш <span className={styles.accent}>надежный партнер</span> в мире
+          digital маркетинга
         </p>
         <div className={styles.btn_grop}>
-        <Popup
-          initComponent={
-            <SeconderyButton className={styles.button}>
-              Заказать звонок
-            </SeconderyButton>
-          }
-          contentComponent={
-            <FormController
-              formType={FORM_TYPE.COMPLEX_FORM}
-              title="Свяжитесь с нами"
-            />
-          }
-        />
+          <Popup
+            initComponent={
+              <SeconderyButton className={styles.button}>
+                Заказать звонок
+              </SeconderyButton>
+            }
+            contentComponent={
+              <FormController
+                formType={FORM_TYPE.COMPLEX_FORM}
+                title="Свяжитесь с нами"
+              />
+            }
+          />
 
-        <PrimaryLinkButton
-          href={CONTACTS_PUBLIC.TELEGRAM}
-          target="_blank"
-          className={styles.button__tg}
-        >
-          Связаться через Telegram
-        </PrimaryLinkButton>
-      </div>
+          <PrimaryLinkButton
+            href={CONTACTS_PUBLIC.TELEGRAM}
+            target="_blank"
+            className={styles.button__tg}
+          >
+            Связаться через Telegram
+          </PrimaryLinkButton>
+        </div>
         <p className={styles.background__text__top}>MAKE</p>
       </div>
 
@@ -60,7 +72,7 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
         <div className={styles.face__descr}>
           <p className={styles.name}>Дмитрий Графов</p>
           <p className={styles.position}>
-            Основатель <span className="accent">Make All Perfect</span>
+            Основатель <span className={styles.accent}>Make All Perfect</span>
           </p>
         </div>
       </div>

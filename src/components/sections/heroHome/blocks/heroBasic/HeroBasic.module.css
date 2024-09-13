@@ -5,6 +5,15 @@
   display: flex;
 }
 
+.title__wrapper {
+  position: relative;
+}
+
+.title.absolute {
+  position: absolute;
+  inset: 0;
+  
+}
 
 .title {
   position: relative;
@@ -17,6 +26,11 @@
   margin-bottom: clamp(10px, 2.65dvw, 50px);
   z-index: 2;
 }
+
+.opacity {
+  opacity: 0;
+}
+
 .accent {
   background: linear-gradient(90deg, #f4a21a 0%, #ffde00 50%, #f4a21a 100%);
   background-clip: text;
