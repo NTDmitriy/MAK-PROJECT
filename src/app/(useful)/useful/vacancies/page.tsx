@@ -1,6 +1,15 @@
 import { UsefulScreen } from "@/components/screens/UsefulScreen";
 import { VACANCIES_CONFIG } from "@/config/content-config/useful/vacancies/vacancies.config";
-import { NextPage } from "next";
+import { METADATA } from "@/seo/metadata";
+import { Metadata, NextPage } from "next";
+
+export const metadata: Metadata = {
+  ...METADATA.VACANCIES,
+  openGraph: {
+    ...METADATA.VACANCIES,
+  },
+};
+
 
 const UsefulPage: NextPage = () => {
 	return (

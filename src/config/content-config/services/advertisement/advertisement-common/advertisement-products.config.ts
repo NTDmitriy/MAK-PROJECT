@@ -12,7 +12,7 @@ export const ADVERTISEMENT_PRODUCTS = {
       description: 'Яндекс Директ — это инструмент для запуска контекстной рекламы в одной из крупнейших поисковых систем России. Мы поможем настроить рекламные кампании, которые привлекут целевую аудиторию и увеличат конверсию. Наши специалисты проведут анализ ключевых слов, создадут эффективные объявления и настроят таргетинг для достижения максимального результата.',
       priceFrom: 50000,
       image: "advertisement-yandex-prev",
-      url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_YANDEX_DIRECT.url,
+      url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_YANDEX.url,
     },
     {
       name: 'ВКонтакте',

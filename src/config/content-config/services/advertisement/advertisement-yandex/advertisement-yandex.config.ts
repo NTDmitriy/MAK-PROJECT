@@ -18,7 +18,7 @@ import { ADVERTISEMENT_YANDEX_INCLUDE } from "./advertisement-yandex-include.con
 import { TARIFFS_YANDEX } from "./advertisement-yandex-tariffs.config";
 
 export const ADVERTISEMENT_YANDEX_CONFIG = {
-  url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_YANDEX_DIRECT.url,
+  url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_YANDEX.url,
   hero: {
     basic: {
       title: {

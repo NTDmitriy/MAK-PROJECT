@@ -15,13 +15,26 @@ class BLOG_DASHBOARD {
     description:
       "Маркетинговое агентство полного цикла предоставляет полный спектр услуг, включая разработку стратегии, SEO-оптимизацию, контент-маркетинг, управление рекламными кампаниями и анализ результатов.",
     url: `${this.root}/kak-privlech-vnimanie-klientov-v-usloviyah-perenasyshchennogo-rynka-kreativnye-podhody-k-reklame`,
-    icon: "IconArticlesNav",
-    image: "grafov-hero-700x400.webp",
+    image: "recommendation-advertisement.webp",
     date: "09.09.2024",
     time: "~10 мин",
-    author: "Максим Бондаренко",
+    author: "Make All Perfect",
     thems: ["SEO-продвижение", "Яндекс Директ", "Сквозная аналитика"],
   } satisfies IBlogItem;
+
+  REDESIGN_GUIDE = {
+    name: "Как правильно провести редизайн сайта: подробное руководство",
+    description:
+      "Редизайн сайта помогает улучшить его внешний вид и функциональность. Узнайте, когда и как его проводить, чтобы сайт соответствовал современным требованиям и привлекал новых пользователей.",
+    url: `${this.root}/kak-pravilno-provesti-redizayn-sayta-podrobnoye-rukovodstvo`,
+    image: "recommendation-advertisement.webp",
+    date: "17.09.2024",
+    time: "~10 мин",
+    author: "Make All Perfect",
+    thems: ["Маркетинг", "Веб-дизайн", "Оптимизация сайтов"],
+  } satisfies IBlogItem;
+
+
 
   toArray(): IBlogItem[] {
     return Object.values(this).filter((item) => {
