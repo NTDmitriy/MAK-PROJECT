@@ -12,7 +12,7 @@ class ADVERTISEMENT_DASHBOARD {
       "Реклама в ВКонтакте позволяет охватить миллионы пользователей в одной из самых популярных социальных сетей России. Мы разработаем и запустим рекламные кампании, ориентированные на вашу целевую аудиторию, чтобы увеличить узнаваемость бренда и привлечь новых клиентов. Наши услуги включают анализ аудитории, создание креативов и настройку таргетинга.",
   } satisfies IDashboardItem;
 
-  ADVERTISEMENT_YANDEX_DIRECT = {
+  ADVERTISEMENT_YANDEX = {
     name: "Реклама в Яндекс Директ",
     smallName: "Яндекс Директ",
     url: `${this.root}/reklama-yandex-direct`,
@@ -56,7 +56,7 @@ class ADVERTISEMENT_DASHBOARD {
       "Ищете, где заказать рекламу в интернете? Наше рекламное агентство предоставляет комплексные услуги по настройке и запуску рекламных кампаний в Яндекс Директ, ВКонтакте, Google Ads, Telegram Ads и Meta: Facebook & Instagram. Мы поможем вам привлечь целевую аудиторию, увеличить конверсию и добиться максимального результата от рекламы. Доверьтесь профессионалам!",
     childrens: [
       this.ADVERTISEMENT_VK,
-      this.ADVERTISEMENT_YANDEX_DIRECT,
+      this.ADVERTISEMENT_YANDEX,
       this.ADVERTISEMENT_GOOGLE,
       this.ADVERTISEMENT_TG,
       this.ADVERTISEMENT_META,
