@@ -15,7 +15,7 @@ export const BLOG_CONFIG = {
       },
       description:
         "Читайте последние новости, советы и статьи о маркетинге, рекламе и digital-технологиях. Полезная информация от экспертов Make All Perfect.",
-      image: "promotion-schools-hero",
+      image: "useful-blog-hero",
     } satisfies THeroBasic,
     infoUseful: [
       "Инсайты и актуальные тренды в сфере маркетинга и рекламы",

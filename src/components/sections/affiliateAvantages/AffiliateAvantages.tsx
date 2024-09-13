@@ -9,17 +9,17 @@ const avantages = [
   {
     name: "Высокие вознаграждения",
     description: "10-20% от суммы сделки ежемесячно",
-    image: "promotion-medical-700x300",
+    image: "affiliate-avantages-1",
   },
   {
     name: "Пассивный доход",
     description: "Вам не нужно продавать услуги, просто рекомендуйте нас",
-    image: "promotion-medical-700x300",
+    image: "affiliate-avantages-2",
   },
   {
     name: "Бонусы для клиентов",
     description: "Бесплатная консультация и аудит и другие бонусы для привлеченных клиентов",
-    image: "promotion-medical-700x300",
+    image: "affiliate-avantages-3",
   },
 ];
 
@@ -37,7 +37,7 @@ export const AffiliateAvantages: FC<
                 <li key={index} className={styles.item}>
                   <img
                     className={styles.img}
-                    src={`/images/services/${item.image}.webp`}
+                    src={`/images/useful/${item.image}.webp`}
                     alt={item.name}
                     title={item.name}
                   />

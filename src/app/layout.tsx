@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  openGraph: {
+    title:     "Make All Perfect – маркетинговое агентство полного цикла | Digital маркетинг",
+    description: "The official Next.js Learn Dashboard built with App Router.",
+    siteName: "Make All Perfect",
+    url: 'хуйхуйхуй.ком',
+  },
+
 
   ...NO_INDEX_PAGE,
 };

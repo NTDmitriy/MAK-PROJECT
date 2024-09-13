@@ -25,13 +25,13 @@ export const SEO_PROMOTION_CONFIG = {
       },
       description:
         "Хотите улучшить позиции вашего сайта в поисковых системах и привлечь больше клиентов? Наше агентство предлагает комплексные услуги по SEO-продвижению. Мы поможем вашему сайту достичь высоких позиций в Google и Яндекс, что увеличит трафик и конверсии. Закажите наше SEO-продвижение и увидьте результаты!",
-      image: "promotion-stroitelnie-comp-hero",
+      image: "seo-promotion-hero",
     } satisfies THeroBasic,
     infoProduct: {
       title: "SEO-продвижение",
       description:
         "Чтобы повысить видимость вашего сайта в поисковых системах, используются различные методы и стратегии. Мы применяем исключительно белые методы оптимизации, соответствующие требованиям поисковых систем, что обеспечивает достижение долгосрочных и стабильных результатов.",
-      image: "promotion-medical-hero-info",
+      image: "seo-promotion-hero-info",
     } satisfies THeroInfoProduct,
   } satisfies THero,
 

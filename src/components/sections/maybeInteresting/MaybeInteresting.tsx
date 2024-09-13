@@ -1,6 +1,12 @@
+import { Container } from "@/components/ui/container/Container";
+import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
+import { Section } from "@/components/ui/section/Section";
+import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
+import { SERVICES_DASHBOARD_PAGES } from "@/config/url-config/services-pages.config";
+import { useFindParent } from "@/hooks/useFindParent";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { FC } from "react";
-// import styles from "./MaybeInteresting.module.css";
+import styles from "./MaybeInteresting.module.css";
 
 interface IMaybeInteresting extends IGenericElementProps {
   pathname: string;
@@ -11,22 +17,22 @@ export const MaybeInteresting: FC<IMaybeInteresting> = ({
   className,
   ...rest
 }) => {
-  // const parents = useFindParent(
-  //   SERVICES_DASHBOARD_PAGES.SERVICES.childrens,
-  //   pathname
-  // );
+  const parents = useFindParent(
+    SERVICES_DASHBOARD_PAGES.SERVICES.childrens,
+    pathname
+  );
 
-  // const exclude = parents && parents[1].url;
+  const exclude = parents && parents[1].url;
 
-  // const isInteresting =
-  //   parents &&
-  //   SERVICES_DASHBOARD_PAGES.SERVICES.childrens.filter(
-  //     (item) => item.url !== exclude
-  //   );
+  const isInteresting =
+    parents &&
+    SERVICES_DASHBOARD_PAGES.SERVICES.childrens.filter(
+      (item) => item.url !== exclude
+    );
 
   return (
     <>
-      {/* {isInteresting && (
+      {isInteresting && (
         <Section className={className} {...rest}>
           <BlockTitle leftSide={true}>
             Посмотрите. Это тоже интересно
@@ -37,7 +43,7 @@ export const MaybeInteresting: FC<IMaybeInteresting> = ({
                 <li key={index} className={styles.item}>
                   <div className={styles.img__wrapper}>
                     <img
-                      src={`/images/services/${item.image}`}
+                      src={`/images/${item.image}`}
                       className={styles.img}
                       alt={item.name}
                     />
@@ -52,7 +58,7 @@ export const MaybeInteresting: FC<IMaybeInteresting> = ({
             </ul>
           </Container>
         </Section>
-      )} */}
+      )}
     </>
   );
 };

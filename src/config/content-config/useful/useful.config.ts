@@ -14,7 +14,7 @@ export const USEFUL_CONFIG = {
       },
       description:
         "Здесь вы найдете полезные статьи, информацию о наших вакансиях, партнерской программе и подробности о нашей компании. Все, что нужно для эффективного сотрудничества.",
-      image: "promotion-schools-hero",
+        image: "useful-common-hero",
     } satisfies THeroBasic,
   } satisfies THero,
   blogPrev: true,

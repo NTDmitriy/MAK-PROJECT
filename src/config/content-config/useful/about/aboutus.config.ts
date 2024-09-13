@@ -17,7 +17,7 @@ export const ABOUT_US_CONFIG = {
       },
       description:
         "Узнайте больше о нашем маркетинговом агентстве, наших ценностях, подходах и истории успеха. Познакомьтесь с нашей командой и миссией.",
-      image: "promotion-schools-hero",
+      image: "useful-about-hero",
     } satisfies THeroBasic,
     infoUseful: [
       "Надежный партнер в мире digital маркетинга.",

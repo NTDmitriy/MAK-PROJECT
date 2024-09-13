@@ -24,6 +24,7 @@ export const BlogItem: FC<PropsWithChildren<IBlog>> = ({
           alt={name}
           title={name}
         />
+
         <h4 className={styles.title}>{name}</h4>
         <p className={styles.descr}>{description}</p>
         <div className={styles.bot__wrapper}>

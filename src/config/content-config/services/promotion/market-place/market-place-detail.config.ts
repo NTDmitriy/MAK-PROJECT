@@ -8,8 +8,7 @@ export const MARKET_PLACE_DETAIL = {
       title: "Оптимизация карточек товаров",
       description:
         "Улучшаем описание и фотографии товаров, чтобы привлечь больше покупателей и увеличить конверсию.",
-      image: "promotion-schools-hero-info", 
-      // promotion-marketplace-services-info1
+      image: "promotion-market-pl-detail-1", 
     },
     {
       id: 2,
@@ -17,7 +16,7 @@ export const MARKET_PLACE_DETAIL = {
       description:
         "Работаем с отзывами и рейтингами, чтобы повысить доверие к вашему магазину.",
 
-      image: "promotion-schools-hero-info",
+      image: "promotion-market-pl-detail-2",
     },
     {
       id: 3,
@@ -25,7 +24,7 @@ export const MARKET_PLACE_DETAIL = {
       description:
         "Настраиваем и управляем рекламными кампаниями для привлечения целевой аудитории и увеличения продаж.",
 
-      image: "promotion-schools-hero-info",
+      image: "promotion-market-pl-detail-3",
     },
     {
       id: 4,
@@ -33,7 +32,7 @@ export const MARKET_PLACE_DETAIL = {
       description:
         "Настраиваем рекламу в социальных сетях, чтобы привлечь больше покупателей на ваш магазин.",
 
-      image: "promotion-schools-hero-info",
+      image: "promotion-market-pl-detail-4",
     },
     {
       id: 5,
@@ -41,7 +40,7 @@ export const MARKET_PLACE_DETAIL = {
       description:
         "Изучаем стратегии конкурентов и выявляем возможности для улучшения вашего магазина.",
 
-      image: "promotion-schools-hero-info",
+      image: "promotion-market-pl-detail-5",
     },
     {
       id: 6,
@@ -49,7 +48,7 @@ export const MARKET_PLACE_DETAIL = {
       description:
         "Создаем полезный контент, который помогает покупателям принимать решение о покупке.",
 
-      image: "promotion-schools-hero-info",
+      image: "promotion-market-pl-detail-6",
     },
   ],
 } satisfies TDetialServices;

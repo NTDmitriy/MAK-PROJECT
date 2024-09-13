@@ -1,8 +1,8 @@
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { Container } from "@/components/ui/container/Container";
 import {
-    FORM_TYPE,
-    FormController,
+  FORM_TYPE,
+  FormController,
 } from "@/components/ui/forms/FormController";
 import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import { Popup } from "@/components/ui/modals/popup/Popup";
@@ -52,12 +52,12 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
       <div className={styles.img__wrapper}>
         <picture>
           <source
-            srcSet={`/images/services/${image}-295x191.webp`}
+            srcSet={`/images/services/${image}-small.webp`}
             media="(max-width: 1024px)"
           />
           <img
             className={styles.img}
-            src={`/images/services/${image}-1360x870.webp`}
+            src={`/images/services/${image}-large.webp`}
           />
         </picture>
       </div>

@@ -12,7 +12,7 @@ import {
   TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
-import { INFLUENCE_FAQ } from "./influencePageFaq";
+import { INFLUENCE_FAQ } from "./seo-influence-faq";
 import { SEO_INFLUENCE_INCLUDE } from "./seo-influence-include.config";
 
 export const SEO_INFLUENCE_CONFIG = {
@@ -25,13 +25,13 @@ export const SEO_INFLUENCE_CONFIG = {
       },
       description:
         "Хотите увеличить узнаваемость бренда и привлечь новых клиентов? Реклама через инфлюенсеров – это мощный инструмент для продвижения вашего бизнеса. Мы поможем вам найти подходящих инфлюенсеров, которые идеально подойдут для вашей целевой аудитории, и разработаем креативные кампании, которые принесут отличные результаты.",
-      image: "promotion-stroitelnie-comp-hero",
+      image: "seo-influence-hero",
     } satisfies THeroBasic,
     infoProduct: {
       title: "Инфлюенс-маркетинг",
       description:
         "Наше агентство предоставляет полный спектр услуг по организации и проведению рекламных кампаний через инфлюенсеров. Мы сотрудничаем с ведущими блогерами и лидерами мнений на различных платформах, чтобы ваш бренд получил максимальную видимость и доверие целевой аудитории.",
-      image: "promotion-medical-hero-info",
+      image: "seo-influence-hero-info",
     } satisfies THeroInfoProduct,
   } satisfies THero,
 

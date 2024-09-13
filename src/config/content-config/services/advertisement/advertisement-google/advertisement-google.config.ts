@@ -27,7 +27,7 @@ export const ADVERTISEMENT_GOOGLE_CONFIG = {
       },
       description:
         "Закажите рекламу в Google Ads и привлеките русскоговорящую аудторию со всего мира! Наше агентство предлагает профессиональную настройку и управление рекламными кампаниями в Google Ads. Мы обеспечим высокую конверсию и максимальную отдачу от ваших инвестиций в рекламу. Доверьтесь нам и закажите услуги настройки рекламы сегодня.",
-      image: "promotion-stroitelnie-comp-hero",
+         image: "advertisement-google-hero",
     } satisfies THeroBasic,
     infoAdvertisement: [
       {
@@ -50,7 +50,7 @@ export const ADVERTISEMENT_GOOGLE_CONFIG = {
     title: "Google Ads: контекстная реклама, охватывающая весь мир",
     descr:
       "Google Ads является одним из самых мощных инструментов для продвижения вашего бизнеса в интернете. С его помощью можно охватить глобальную аудиторию и привлекать клиентов со всего мира. Благодаря точным настройкам таргетинга и широким аналитическим возможностям, Google Ads предоставляет идеальные условия для успешного продвижения. Используйте Google Ads для достижения максимального результата и повышения узнаваемости вашего бренда.",
-    image: "seo-common-supplementary.webp",
+       image: "advertisement-google-supplementary",
   } satisfies TSupplementaryDescr,
   howWorks: {
     items: [

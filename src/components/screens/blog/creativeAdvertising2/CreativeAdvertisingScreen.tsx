@@ -1,4 +1,3 @@
-import { HeroBlog } from "@/components/ui-blog/heroBlog/HeroBlog";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs/Breadcrumbs";
 import { CASES_DASHBOARD_PAGES } from "@/config/url-config/cases-pages.config";
 import { FC } from "react";
@@ -16,7 +15,6 @@ export const CreativeAdvertisingScreen: FC = () => {
   return (
     <>
       <Breadcrumbs pathname={CASES_DASHBOARD_PAGES.CONSTRUCTION_COMPANY.url} />
-      <HeroBlog heroContent={content} />
     </>
   );
 };

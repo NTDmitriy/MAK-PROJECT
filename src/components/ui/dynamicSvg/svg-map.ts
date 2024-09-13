@@ -43,7 +43,7 @@ import iconPhoneYellow from "@/assets/svg/iconPhoneYellow.svg";
 import IconProdactManagetTeam from "@/assets/svg/iconProdactManagetTeam.svg";
 import IconQaTeam from "@/assets/svg/iconQaTeam.svg";
 import IconQoute from "@/assets/svg/iconQoute.svg";
-import iconRedesign from "@/assets/svg/iconRedesign.svg";
+import IconRedesign from "@/assets/svg/iconRedesign.svg";
 import IconReviwesNav from "@/assets/svg/iconReviwesNav.svg";
 import IconRightArray from "@/assets/svg/iconRightArray.svg";
 import IconSend from "@/assets/svg/iconSend.svg";
@@ -92,7 +92,7 @@ export const svgMap = {
   IconDeadline,
   IconTilda,
   IconWordPress,
-  iconRedesign,
+  IconRedesign,
   IconJavaScript,
   IconModx,
   IconArrayBlackBg,

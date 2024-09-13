@@ -11,7 +11,7 @@ export const SEO_PRODUCTS = {
       description:
         "Подбор релевантных инфлюенсеров, разработка стратегии кампании, создание контента, анализ результатов",
       priceFrom: "от 10% рекламного бюджета",
-      image: "promotion-medical-700x300",
+      image: "seo-influence-prev",
       url: SEO_DASHBOARD_PAGES.SEO_INFLUENCE.url,
     },
     {
@@ -19,7 +19,7 @@ export const SEO_PRODUCTS = {
       description:
         "Размещение контента на популярных платформах и форумах, разработка стратегии посевов, анализ эффективности.",
       priceFrom: "от 30% рекламного бюджета",
-      image: "promotion-medical-700x300",
+      image: "seo-posevy-prev",
       url: SEO_DASHBOARD_PAGES.SEO_POSEVY.url,
     },
     {
@@ -27,7 +27,7 @@ export const SEO_PRODUCTS = {
       description:
         "Создание персонализированных email-кампаний, сегментация базы данных, анализ и оптимизация рассылок.",
       priceFrom: 30000,
-      image: "promotion-medical-700x300",
+      image: "seo-email-prev",
       url: SEO_DASHBOARD_PAGES.SEO_EMAIL_DISTRIBUTION.url,
     },
     {
@@ -35,7 +35,7 @@ export const SEO_PRODUCTS = {
       description:
         "Аудит сайта, внутренняя и внешняя оптимизация, создание качественного контента, улучшение видимости и позиций в поисковых системах.",
       priceFrom: 70000,
-      image: "promotion-medical-700x300",
+      image: "seo-promotion-prev",
       url: SEO_DASHBOARD_PAGES.SEO_PROMOTION.url,
     },
   ],

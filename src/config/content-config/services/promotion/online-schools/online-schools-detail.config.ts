@@ -8,7 +8,7 @@ export const ONLINE_SCHOOL_DETAIL = {
       title: "Разработка маркетинговой стратегии",
       description:
         "Мы анализируем ваш бизнес, целевую аудиторию и конкурентов, чтобы создать индивидуальную стратегию продвижения.",
-      image: "promotion-schools-hero-info",
+      image: "promotion-school-detail-1",
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ export const ONLINE_SCHOOL_DETAIL = {
       description:
         "Повышаем видимость вашего сайта в поисковых системах, привлекая органический трафик.",
 
-      image: "promotion-schools-hero-info",
+      image: "promotion-school-detail-2",
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ export const ONLINE_SCHOOL_DETAIL = {
       description:
         "Создаем полезный и интересный контент, который привлекает и удерживает внимание аудитории.",
 
-      image: "promotion-schools-hero-info",
+      image: "promotion-school-detail-3",
     },
     {
       id: 4,
@@ -32,7 +32,7 @@ export const ONLINE_SCHOOL_DETAIL = {
       description:
         "Разрабатываем и реализуем стратегии продвижения в социальных сетях, увеличивая вовлеченность и лояльность аудитории.",
 
-      image: "promotion-schools-hero-info",
+      image: "promotion-school-detail-4",
     },
     {
       id: 5,
@@ -40,7 +40,7 @@ export const ONLINE_SCHOOL_DETAIL = {
       description:
         "Настраиваем контекстную и таргетированную рекламу для быстрого привлечения целевой аудитории.",
 
-      image: "promotion-schools-hero-info",
+      image: "promotion-school-detail-5",
     },
     {
       id: 6,
@@ -48,7 +48,7 @@ export const ONLINE_SCHOOL_DETAIL = {
       description:
         "Создаем цепочки писем для повышения вовлеченности и удержания клиентов.",
 
-      image: "promotion-schools-hero-info",
+      image: "promotion-school-detail-6",
     },
   ],
 } satisfies TDetialServices;

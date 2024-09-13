@@ -36,19 +36,11 @@ export const FormController: FC<IFormController> = ({
 		<>
 			{!Object.values(FORM_TYPE).includes(formType) ? null : (
 				<HookFormProvider>
-					{formType === FORM_TYPE.STEP_FORM && (
-						<StepForm subServices={subServices} />
-					)}
-					{formType === FORM_TYPE.MAIN_FORM && (
-						<MainForm title={title} text={text} />
-					)}
-					{formType === FORM_TYPE.COMPLEX_FORM && (
-						<ComplexForm title={title} text={text} />
-					)}
+					{formType === FORM_TYPE.STEP_FORM && (<StepForm subServices={subServices} />)}
+					{formType === FORM_TYPE.MAIN_FORM && (<MainForm title={title} text={text} />)}
+					{formType === FORM_TYPE.COMPLEX_FORM && (<ComplexForm title={title} text={text} />)}
 					{formType === FORM_TYPE.SING_UP_FORM && <SingUpFrom />}
-					{formType === FORM_TYPE.FAQ_FORM && (
-						<FaqForm areaVisible={areaVisible} title={title} text={text}  />
-					)}
+					{formType === FORM_TYPE.FAQ_FORM && (<FaqForm areaVisible={areaVisible} title={title} text={text} />)}
 				</HookFormProvider>
 			)}
 		</>

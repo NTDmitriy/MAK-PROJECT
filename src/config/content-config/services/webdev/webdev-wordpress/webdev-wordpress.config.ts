@@ -26,7 +26,7 @@ export const WEBDEV_WORDPRESS_CONFIG = {
       },
       description:
         "Предлагаем услуги по созданию сайтов на платформе WordPress. Наши специалисты создадут для вас мощный и адаптивный сайт, который удовлетворит все потребности вашего бизнеса и поможет вам достичь успеха.",
-      image: "promotion-stroitelnie-comp-hero",
+      image: "webdev-wordpress-hero",
     } satisfies THeroBasic,
     infoWebdev: [
       "Эксклюзивный дизайн",
@@ -39,7 +39,7 @@ export const WEBDEV_WORDPRESS_CONFIG = {
     title: "Разработка веб-сайтов на WordPress",
     descr:
       "Создание сайтов на WordPress – это идеальное решение для вашего бизнеса. Мы предлагаем полный спектр услуг, от разработки уникального дизайна до полной настройки функционала вашего сайта. WordPress – самая популярная в мире CMS, что обеспечивает гибкость и масштабируемость вашего проекта. Наша команда профессионалов гарантирует высокое качество и оперативность выполнения всех этапов работ.",
-    image: "seo-common-supplementary.webp",
+    image: "webdev-wordpress-supplementary",
   } satisfies TSupplementaryDescr,
   suitableFor: {
     items: [
