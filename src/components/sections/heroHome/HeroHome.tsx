@@ -14,7 +14,6 @@ export const HeroHome: FC<PropsWithChildren<IGenericElementProps>> = ({
     <Section {...rest} className={clsx(styles.hero, className)}>
       <HeroBasic />
       <HeroInfo />
-      
     </Section>
   );
 };

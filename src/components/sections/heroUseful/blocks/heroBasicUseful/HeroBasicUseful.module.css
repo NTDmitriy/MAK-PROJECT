@@ -1,9 +1,28 @@
+
+.root {
+  position: relative;
+} 
+
+.img__wrapper {
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  max-width: 1360px;
+  z-index: -1;
+}
+
+.img {
+  opacity: 54%;
+  width: clamp(700px, 71dvw, 1360px);
+}
+
+
 .hero__container {
-  padding-top: clamp(125px, 9dvw, 180px);
+  padding-top: 210px;
   padding-bottom: clamp(60px, 8dvw ,120px);
   position: relative;
-
 }
+
 
 .title {
   font-family: var(--third-family);
@@ -67,22 +86,21 @@
   .hero__container {
     display: flex;
     flex-direction: column;
+  }
 
+  .hero__container {
+    padding-top: 320px;
   }
 
   .img__wrapper {
-    position: relative;
-    top: 0;
-  
-    margin-right: 0;
-    align-self: flex-end;
-    margin-bottom: -35px;
-    order: -1;
+    top: 150px;
   }
+
   .img {
     width: unset;
   }
 }
+
 
 @media screen and (max-width: 576px) {
   .btn_grop {

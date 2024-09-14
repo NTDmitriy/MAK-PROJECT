@@ -1,8 +1,8 @@
 import { Accordion } from "@/components/ui/accordion/Accordion";
 import { Container } from "@/components/ui/container/Container";
 import {
-    FORM_TYPE,
-    FormController,
+  FORM_TYPE,
+  FormController,
 } from "@/components/ui/forms/FormController";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
@@ -23,7 +23,7 @@ const Faq: FC<PropsWithChildren<IFaq>> = ({ faq }) => {
           <BlockTitle
             leftSide={false}
             descrSideway="Ответы на самые распространенные вопросы наших клиентов"
-            background="FAq"
+            background="Faq"
           >
             Часто задаваемые вопросы
           </BlockTitle>
