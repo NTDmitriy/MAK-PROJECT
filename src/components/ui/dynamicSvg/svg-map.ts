@@ -16,6 +16,7 @@ import IconArticlesNav from "@/assets/svg/iconArticlesNav.svg";
 import IconBackTeam from "@/assets/svg/iconBackTeam.svg";
 import IconCalendar from "@/assets/svg/iconCalendar.svg";
 import IconCasesNav from "@/assets/svg/iconCasesNav.svg";
+import IconWhyUsServices from "@/assets/svg/iconCheckServices.svg";
 import IconClock from "@/assets/svg/iconClock.svg";
 import IconClose from "@/assets/svg/iconClose.svg";
 import IconContactsNav from "@/assets/svg/iconContactsNav.svg";
@@ -66,7 +67,6 @@ import IconVk from "@/assets/svg/iconVk.svg";
 import IconWebDevNav from "@/assets/svg/iconWebDevNav.svg";
 import IconWhatsApp from "@/assets/svg/iconWhatsApp.svg";
 import IconCheck from "@/assets/svg/iconWhyUs.svg";
-import IconWhyUsServices from "@/assets/svg/iconWhyUsServices.svg";
 import IconWordPress from "@/assets/svg/iconWordPress.svg";
 import IconСopywriterTeam from "@/assets/svg/iconСopywriterTeam.svg";
 
