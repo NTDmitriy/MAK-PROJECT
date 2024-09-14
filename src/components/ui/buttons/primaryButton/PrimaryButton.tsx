@@ -8,10 +8,11 @@ export const PrimaryButton: FC<PropsWithChildren<IButton>> = ({
   className,
   ...rest
 }) => {
-  return ( <>
-    <button className={clsx(styles.button, className)} {...rest}>
-      {children}
-    </button>
-	</>
+  return (
+    <>
+      <button className={clsx(styles.button, className)} {...rest}>
+        <span>{children}</span>
+      </button>
+    </>
   );
 };

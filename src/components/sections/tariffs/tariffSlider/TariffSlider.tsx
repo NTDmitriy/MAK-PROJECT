@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { DynamicSvg } from "../../../ui/dynamicSvg/DynamicSvg";
 import styles from "./TariffSlider.module.css";
 
 interface ITariffSlider extends IGenericElementProps {
@@ -40,11 +41,16 @@ export const TariffSlider: FC<ITariffSlider> = ({
           items.map((item, index) => (
             <SwiperSlide key={index} className={styles.slide}>
               <button
-                className={clsx(styles.btn, activeTab === index && styles.active)}
+                className={clsx(
+                  styles.btn,
+                  activeTab === index && styles.active
+                )}
                 onClick={() => onTabClick(index)}
                 inert={activeTab === index ? "" : undefined}
               >
                 {item}
+                {item === 'ПРЕМИУМ' && <DynamicSvg name="IconShield" className={styles.shield}/>}
+                
               </button>
             </SwiperSlide>
           ))}

@@ -1,5 +1,7 @@
-
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
   font-family: var(--second-family);
   font-weight: 400;
@@ -12,33 +14,40 @@
   border: 1px solid transparent;
   text-align: left;
   z-index: 1;
-  transition: color .4s ease-in-out, border-color .4s ease-in-out;
+  transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out;
 }
 
 .btn::after {
   position: absolute;
-  content: '';
+  content: "";
   inset: 0;
   opacity: 0;
   z-index: -1;
-  background:linear-gradient(90deg, #f4a21a 0%, #ffde00 50%, #f4a21a 100%);
-  transition: opacity .4s ease-in-out;
-} 
+  background: linear-gradient(90deg, #f4a21a 0%, #ffde00 50%, #f4a21a 100%);
+  transition: opacity 0.4s ease-in-out;
+}
 
 .btn:focus-visible {
-  border-color:  rgba(255, 255, 255, 0.3);
-  
+  border-color: rgba(255, 255, 255, 0.3);
 }
-.btn:hover {  
-  border-color:  rgba(255, 255, 255, 0.6);
-
+.btn:hover {
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .btn.active::after {
   opacity: 1;
 }
+
 .btn.active {
   color: #161616;
+}
+
+.shield {
+  transition: filter 0.4s ease-in-out;
+}
+
+.btn.active .shield {
+  filter: brightness(0);
 }
 
 .slider {
@@ -49,11 +58,8 @@
   max-width: 340px;
 }
 
-
-
 @media screen and (max-width: 576px) {
   .slide {
     max-width: 240px;
   }
-  
 }
