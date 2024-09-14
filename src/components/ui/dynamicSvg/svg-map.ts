@@ -71,6 +71,7 @@ import IconWordPress from "@/assets/svg/iconWordPress.svg";
 import IconСopywriterTeam from "@/assets/svg/iconСopywriterTeam.svg";
 
 export const svgMap = {
+  IconWhyUsServices,
   IconShield,
   IconCalendar,
   IconCopy,
@@ -141,5 +142,5 @@ export const svgMap = {
   IconVacanciesNav,
   IconWebDevNav,
   IconWhatsApp,
-  IconWhyUsServices,
+ 
 } as const;
