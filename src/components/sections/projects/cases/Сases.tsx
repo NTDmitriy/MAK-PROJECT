@@ -28,6 +28,7 @@ export const Cases: FC<ICases> = ({ cases }) => {
             <img
               className={styles.img}
               src={`/images/cases/${item.image}.jpg`}
+              alt={item.name}
             />
           </picture>
 
@@ -42,11 +43,10 @@ export const Cases: FC<ICases> = ({ cases }) => {
             <h3 className={clsx(styles.case__title)}>{item.name}</h3>
             <p className={clsx(styles.case__text)}>{item.description}</p>
 
-              <Link href={`/cases${item.url}`} className={styles.btn}>
-                <span className={styles.btn__text}>Смотреть кейс</span>
-                <DynamicSvg name="IconRightArray"className={styles.btn__icon} />
-              </Link>
-        
+            <Link href={`/cases${item.url}`} className={styles.btn}>
+              <span className={styles.btn__text}>Смотреть кейс</span>
+              <DynamicSvg name="IconRightArray" className={styles.btn__icon} />
+            </Link>
           </div>
         </li>
       ))}

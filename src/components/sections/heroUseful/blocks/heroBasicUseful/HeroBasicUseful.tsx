@@ -26,42 +26,44 @@ export const HeroBasic: FC<IHeroBasicUseful> = ({ basicContent }) => {
   } = basicContent;
 
   return (
-    <Container className={styles.hero__container}>
-      <h1 className={styles.title}>
-        <span>{title.accentBefore && title.accentBefore}</span>
-        <span className={styles.accent}>{title.accent && title.accent}</span>
-        <span>{title.accentAfter && title.accentAfter}</span>
-      </h1>
-      <p className={styles.descr}>{description}</p>
-      <div className={styles.btn_grop}>
-        {!btnUrl && (
-          <Popup
-            initComponent={
-              <SeconderyButton className={styles.button}>
-                {formBtnText ? formBtnText : "Связаться с нами"}
-              </SeconderyButton>
-            }
-            contentComponent={
-              <FormController
-                formType={FORM_TYPE.COMPLEX_FORM}
-                title={formTitle ? formTitle : "Свяжитесь с нами"}
-                text={formText && formText}
-              />
-            }
-          />
-        )}
+    <div className={styles.root}>
+      <Container className={styles.hero__container}>
+        <h1 className={styles.title}>
+          <span>{title.accentBefore && title.accentBefore}</span>
+          <span className={styles.accent}>{title.accent && title.accent}</span>
+          <span>{title.accentAfter && title.accentAfter}</span>
+        </h1>
+        <p className={styles.descr}>{description}</p>
+        <div className={styles.btn_grop}>
+          {!btnUrl && (
+            <Popup
+              initComponent={
+                <SeconderyButton className={styles.button}>
+                  {formBtnText ? formBtnText : "Связаться с нами"}
+                </SeconderyButton>
+              }
+              contentComponent={
+                <FormController
+                  formType={FORM_TYPE.COMPLEX_FORM}
+                  title={formTitle ? formTitle : "Свяжитесь с нами"}
+                  text={formText && formText}
+                />
+              }
+            />
+          )}
 
-        {btnUrl && (
-          <SeconderyLinkButton
-            href={btnUrl}
-            publicLink
-            target="_blank"
-            className={styles.button}
-          >
-            {formBtnText ? formBtnText : "Связаться с нами"}
-          </SeconderyLinkButton>
-        )}
-      </div>
+          {btnUrl && (
+            <SeconderyLinkButton
+              href={btnUrl}
+              publicLink
+              target="_blank"
+              className={styles.button}
+            >
+              {formBtnText ? formBtnText : "Связаться с нами"}
+            </SeconderyLinkButton>
+          )}
+        </div>
+      </Container>
       <div className={styles.img__wrapper}>
         <picture>
           <source
@@ -74,6 +76,6 @@ export const HeroBasic: FC<IHeroBasicUseful> = ({ basicContent }) => {
           />
         </picture>
       </div>
-    </Container>
+    </div>
   );
 };

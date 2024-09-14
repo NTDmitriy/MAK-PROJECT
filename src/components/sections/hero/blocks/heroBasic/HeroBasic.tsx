@@ -19,48 +19,50 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
   const { title, description, image } = basicContent;
 
   return (
-    <Container className={styles.hero__container}>
-      <h1 className={styles.title}>
-        <span>{title.accentBefore && title.accentBefore}</span>
-        <span className={styles.accent}>{title.accent && title.accent}</span>
-        <span>{title.accentAfter && title.accentAfter}</span>
-      </h1>
-      <p className={styles.descr}>{description}</p>
-      <div className={styles.btn_grop}>
-        <Popup
-          initComponent={
-            <SeconderyButton className={styles.button}>
-              Заказать звонок
-            </SeconderyButton>
-          }
-          contentComponent={
-            <FormController
-              formType={FORM_TYPE.COMPLEX_FORM}
-              title="Свяжитесь с нами"
-            />
-          }
-        />
+    <div className={styles.root}>
+      <Container className={styles.hero__container}>
+        <h1 className={styles.title}>
+          <span>{title.accentBefore && title.accentBefore}</span>
+          <span className={styles.accent}>{title.accent && title.accent}</span>
+          <span>{title.accentAfter && title.accentAfter}</span>
+        </h1>
+        <p className={styles.descr}>{description}</p>
+        <div className={styles.btn_grop}>
+          <Popup
+            initComponent={
+              <SeconderyButton className={styles.button}>
+                Заказать звонок
+              </SeconderyButton>
+            }
+            contentComponent={
+              <FormController
+                formType={FORM_TYPE.COMPLEX_FORM}
+                title="Свяжитесь с нами"
+              />
+            }
+          />
 
-        <PrimaryLinkButton
-          href={CONTACTS_PUBLIC.TELEGRAM}
-          target="_blank"
-          className={styles.button__tg}
-        >
-          Связаться через Telegram
-        </PrimaryLinkButton>
-      </div>
-      <div className={styles.img__wrapper}>
-        <picture>
-          <source
-            srcSet={`/images/services/${image}-small.webp`}
-            media="(max-width: 1024px)"
-          />
-          <img
-            className={styles.img}
-            src={`/images/services/${image}-large.webp`}
-          />
-        </picture>
-      </div>
-    </Container>
+          <PrimaryLinkButton
+            href={CONTACTS_PUBLIC.TELEGRAM}
+            target="_blank"
+            className={styles.button__tg}
+          >
+            Связаться через Telegram
+          </PrimaryLinkButton>
+        </div>
+      </Container>
+        <div className={styles.img__wrapper}>
+          <picture>
+            <source
+              srcSet={`/images/services/${image}-small.webp`}
+              media="(max-width: 1024px)"
+            />
+            <img
+              className={styles.img}
+              src={`/images/services/${image}-large.webp`}
+            />
+          </picture>
+        </div>
+    </div>
   );
 };

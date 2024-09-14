@@ -71,6 +71,7 @@ export const BlockTitle: FC<PropsWithChildren<IBlockTitle>> = ({
           className={clsx(styles.icon, iconAlignmentClass)}
         />
 
+      </Container>
         {background && (
           <div
             className={clsx(
@@ -82,7 +83,6 @@ export const BlockTitle: FC<PropsWithChildren<IBlockTitle>> = ({
             {background}
           </div>
         )}
-      </Container>
     </div>
   );
 };

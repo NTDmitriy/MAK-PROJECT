@@ -2,6 +2,7 @@
   overflow: hidden;
   padding-left: 10px;
   padding-right: 10px;
+  position: relative;
 }
 
 .title__wrapper {
@@ -133,10 +134,10 @@
 }
 
 .background__text.left {
-  left: calc(50% - 50dvw);
+  left: 0;
 }
 .background__text.right {
-  right: calc(50% - 50dvw);
+  right: 0;
 }
 .background__text.bg__less__visibility {
   opacity: 0.15;
