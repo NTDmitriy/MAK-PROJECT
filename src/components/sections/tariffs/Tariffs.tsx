@@ -16,8 +16,8 @@ import { isNumber } from "@/utils/isNumber";
 import clsx from "clsx";
 import { FC, PropsWithChildren, useState } from "react";
 import { MyTooltip } from "../../ui/tooltip/Tooltip";
-import { TariffSlider } from "./slider/TariffSlider";
 import styles from "./Tariffs.module.css";
+import { TariffSlider } from "./tariffSlider/TariffSlider";
 
 interface ITariffs extends IGenericElementProps {
   tariffs: TTariffs;
@@ -52,6 +52,7 @@ export const Tariffs: FC<PropsWithChildren<ITariffs>> = ({ tariffs }) => {
               onTabClick={handleTabClick}
               activeTab={activeTab}
             />
+            
             <ul className={styles.tab__list}>
               {plans.map((plan, index) => (
                 <li
@@ -60,6 +61,7 @@ export const Tariffs: FC<PropsWithChildren<ITariffs>> = ({ tariffs }) => {
                     styles.tab__list__item,
                     activeTab === index && styles.active
                   )}
+                  inert={activeTab !== index ? "" : undefined}
                 >
                   <div style={{ minHeight: "0" }}>
                     <div className={styles.tab__head}>
@@ -96,7 +98,7 @@ export const Tariffs: FC<PropsWithChildren<ITariffs>> = ({ tariffs }) => {
                           <li key={index} className={styles.team__item}>
                             {item.title && (
                               <div className={styles.team__item__title}>
-                                <span className="icon">
+                                <span className={styles.icon}>
                                   <DynamicSvg name="IconHuman" />
                                 </span>
                                 {item.title}

@@ -15,12 +15,12 @@ export const PrimaryLinkButton: FC<PropsWithChildren<ILinkButton>> = ({
     <>
       {!publicLink && (
         <Link href={href} className={clsx(styles.button, className)} {...rest}>
-          {children}
+          <span>{children}</span>
         </Link>
       )}
       {publicLink && (
         <a href={href} className={clsx(styles.button, className)} {...rest}>
-          {children}
+          <span>{children}</span>
         </a>
       )}
     </>

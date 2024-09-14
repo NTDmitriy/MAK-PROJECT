@@ -50,6 +50,7 @@ import IconSend from "@/assets/svg/iconSend.svg";
 import IconSeoNav from "@/assets/svg/iconSeoNav.svg";
 import IconSeoTeam from "@/assets/svg/iconSeoTeam.svg";
 import IconServicesNav from "@/assets/svg/iconServicesNav.svg";
+import IconShield from "@/assets/svg/iconShield.svg";
 import IconTelegram from "@/assets/svg/iconTelegram.svg";
 import IconTelegramBlue from "@/assets/svg/iconTelegramBlue.svg";
 import IconTelegramTransparent from "@/assets/svg/iconTelegramTransparent.svg";
@@ -73,6 +74,7 @@ import IconWordPress from "@/assets/svg/iconWordPress.svg";
 import IconСopywriterTeam from "@/assets/svg/iconСopywriterTeam.svg";
 
 export const svgMap = {
+  IconShield,
   IconCalendar,
   IconCopy,
   IconVacancies,
