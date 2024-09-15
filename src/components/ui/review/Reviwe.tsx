@@ -21,6 +21,7 @@ export const Reviwe: FC<IReviwe> = ({ reviwe, isFull }) => {
           className={styles.avatar}
           src={`/images/avatars/${avatar}.webp`}
           alt="avatar"
+          loading="lazy"
         />
         <div className={styles.head__info}>
           <p className={styles.head__name}>{name}</p>

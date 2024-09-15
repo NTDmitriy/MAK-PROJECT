@@ -221,6 +221,11 @@
 		left: 0;
 	}
 
+  .face__img {
+    width: 100%;
+
+  }
+
 	.face__wrapper::before {
 		left: 50px;
 	}
