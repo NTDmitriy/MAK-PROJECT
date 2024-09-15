@@ -59,7 +59,7 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
           </div>
         </div>
 
-        {/* <div className={styles.face__wrapper}>
+        <div className={styles.face__wrapper}>
           <picture>
             <source
               srcSet={`/images/faces/grafov-hero-954x460.webp`}
@@ -77,7 +77,7 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
               Основатель <span className={styles.accent}>Make All Perfect</span>
             </p>
           </div>
-        </div> */}
+        </div>
       </Container>
       <p className={styles.background__text__top}>MAKE</p>
       <div className={styles.img__wrapper}>
