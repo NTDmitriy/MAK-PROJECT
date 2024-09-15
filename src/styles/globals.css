@@ -22,6 +22,7 @@
     url("/fonts/BebasNeueBold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 * {

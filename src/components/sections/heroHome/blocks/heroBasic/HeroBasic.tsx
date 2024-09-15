@@ -86,7 +86,11 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
             srcSet={`/images/home-hero-295x191.webp`}
             media="(max-width: 1024px)"
           />
-          <img className={styles.img} src={`/images/home-hero-1360x870.webp`} />
+          <img
+            className={styles.img}
+            src={`/images/home-hero-1360x870.webp`}
+            alt="Маркетинговое агенство полного цикла"
+          />
         </picture>
         <p className={styles.background__text__bot}>ALL PERFECT</p>
       </div>

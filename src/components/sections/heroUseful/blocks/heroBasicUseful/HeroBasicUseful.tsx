@@ -73,6 +73,9 @@ export const HeroBasic: FC<IHeroBasicUseful> = ({ basicContent }) => {
           <img
             className={styles.img}
             src={`/images/useful/${image}-large.webp`}
+            alt={`${title.accentBefore || ""} ${title.accent || ""} ${
+              title.accentAfter || ""
+            }`}
           />
         </picture>
       </div>

@@ -29,6 +29,7 @@ export const Cases: FC<ICases> = ({ cases }) => {
               className={styles.img}
               src={`/images/cases/${item.image}.jpg`}
               alt={item.name}
+              loading="lazy"
             />
           </picture>
 

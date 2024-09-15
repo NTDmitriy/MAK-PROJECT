@@ -51,18 +51,21 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
           </PrimaryLinkButton>
         </div>
       </Container>
-        <div className={styles.img__wrapper}>
-          <picture>
-            <source
-              srcSet={`/images/services/${image}-small.webp`}
-              media="(max-width: 1024px)"
-            />
-            <img
-              className={styles.img}
-              src={`/images/services/${image}-large.webp`}
-            />
-          </picture>
-        </div>
+      <div className={styles.img__wrapper}>
+        <picture>
+          <source
+            srcSet={`/images/services/${image}-small.webp`}
+            media="(max-width: 1024px)"
+          />
+          <img
+            className={styles.img}
+            src={`/images/services/${image}-large.webp`}
+            alt={`${title.accentBefore || ""} ${title.accent || ""} ${
+              title.accentAfter || ""
+            }`}
+          />
+        </picture>
+      </div>
     </div>
   );
 };

@@ -23,9 +23,10 @@ export const BlogItem: FC<PropsWithChildren<IBlog>> = ({
           src={`/images/blog/${image}`}
           alt={name}
           title={name}
+          loading="lazy"
         />
 
-        <h4 className={styles.title}>{name}</h4>
+        <h5 className={styles.title}>{name}</h5>
         <p className={styles.descr}>{description}</p>
         <div className={styles.bot__wrapper}>
           <Link className={styles.link} href={url}>
