@@ -7,9 +7,6 @@ const nextConfig = {
     });
     return config;
   },
-  optimizeFonts: true,
-
-  
 };
 
 export default nextConfig;
