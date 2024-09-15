@@ -1,6 +1,7 @@
 import { Footer } from "@/components/layout/footer/Footer";
 import { Header } from "@/components/layout/header/Header";
 import { METADATA, NO_INDEX_PAGE } from "@/seo/metadata";
+import "@/styles/fonts.css";
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import { ReactNode } from "react";
