@@ -104,6 +104,7 @@ export const OurTeam: FC<PropsWithChildren<IGenericElementProps>> = ({
                   className={styles.image__main}
                   alt={workers[selectedWorker].name}
                   title={workers[selectedWorker].name}
+                  loading="lazy"
                 />
               </div>
               <h3 className={styles.title}>{workers[selectedWorker].name}</h3>
@@ -149,6 +150,7 @@ export const OurTeam: FC<PropsWithChildren<IGenericElementProps>> = ({
                       src={`/images/faces/${worker.image}-702x540.webp`}
                       className={styles.image}
                       alt={worker.name}
+                      loading="lazy"
                     />
                   </picture>
                   <div className={styles.worker__info}>
