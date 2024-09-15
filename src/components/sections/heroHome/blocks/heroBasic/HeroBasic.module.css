@@ -59,7 +59,7 @@
   font-weight: 900;
   font-size: 70px;
   font-size: clamp(24px, 4.7dvw, 90px);
-  line-height: 114%;
+  line-height: 89%;
   max-width: 820px;
   margin-bottom: clamp(10px, 2.65dvw, 50px);
   z-index: 2;
@@ -83,21 +83,14 @@
 .small__text {
   display: block;
   position: relative;
-  top: clamp(6px, 1.2dvw, 23px);
+  top: clamp(3px, .8dvw, 12px);
   font-family: var(--third-family);
   font-weight: 300;
-  font-size: clamp(4px, 0.8dvw, 14px);
+  font-size: clamp(4px, 0.7dvw, 14px);
   line-height: 0;
   letter-spacing: 0.5em;
   text-transform: uppercase;
   color: var(--accent-color);
-}
-
-.accent {
-  background: linear-gradient(90deg, #f4a21a 0%, #ffde00 50%, #f4a21a 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .descr {
