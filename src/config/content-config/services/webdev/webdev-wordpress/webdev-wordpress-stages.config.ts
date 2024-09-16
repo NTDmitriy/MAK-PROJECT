@@ -43,5 +43,5 @@ export const WEBDEV_WORDPRESS_STAGES = {
       ],
     },
   ],
-  title: "Этапы работ:",
+  title: "Этапы работ",
 } satisfies TWorkStages;

@@ -24,7 +24,7 @@ export const AboutUs: FC<PropsWithChildren<IGenericElementProps>> = ({
           без шаблонных решений.
         </p>
         <div className={styles.content_main}>
-          <img className={styles.img} src="/images/OurTeam.webp"></img>
+          <img className={styles.img} src="/images/team.webp"></img>
 
           <p className={styles.text}>
             Наша миссия – быть надежным партнером для вашего бизнеса,

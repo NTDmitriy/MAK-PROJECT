@@ -89,6 +89,11 @@
   color: #fff;
 }
 
+.skill svg {
+  min-width: 18px;
+  height: 18px;
+}
+
 .btn__wrapper {
   margin-top: auto;
   max-width: 310px;

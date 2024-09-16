@@ -13,7 +13,8 @@ export const ABOUT_US_CONFIG = {
   hero: {
     basic: {
       title: {
-        accentAfter: "О компании Make All Perfect",
+        accent: 'Make All Perfect',
+        accentBefore: "О компании",
       },
       description:
         "Узнайте больше о нашем маркетинговом агентстве, наших ценностях, подходах и истории успеха. Познакомьтесь с нашей командой и миссией.",

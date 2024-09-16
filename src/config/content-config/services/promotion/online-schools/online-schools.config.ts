@@ -89,7 +89,7 @@ export const ONLINE_SCHOOL_CONFIG = {
           "чтобы обеспечить всестороннее продвижение вашей онлайн-школы.",
       },
     ],
-    blockTitle: "Почему нас выбирают:",
+    blockTitle: "Почему нас выбирают",
   } satisfies TWhyUs,
   detialServices: ONLINE_SCHOOL_DETAIL satisfies TDetialServices,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

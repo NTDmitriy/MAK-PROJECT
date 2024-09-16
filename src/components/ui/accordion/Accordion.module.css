@@ -81,6 +81,11 @@
     cursor: pointer;
     position: relative;
     background-color: #161616;
-    padding: 30px 10px;
+
+  }
+
+  .title {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }

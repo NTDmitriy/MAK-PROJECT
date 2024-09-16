@@ -22,8 +22,8 @@ export const ADVERTISEMENT_GOOGLE_CONFIG = {
   hero: {
     basic: {
       title: {
-        accent: "Эффективная реклама",
-        accentAfter: "в Google Ads",
+        accentBefore: "Эффективная реклама",
+        accent: "в Google Ads",
       },
       description:
         "Закажите рекламу в Google Ads и привлеките русскоговорящую аудторию со всего мира! Наше агентство предлагает профессиональную настройку и управление рекламными кампаниями в Google Ads. Мы обеспечим высокую конверсию и максимальную отдачу от ваших инвестиций в рекламу. Доверьтесь нам и закажите услуги настройки рекламы сегодня.",
@@ -80,7 +80,7 @@ export const ADVERTISEMENT_GOOGLE_CONFIG = {
       },
     ],
 
-    blockTitle: "Как мы работаем и почему нас выбирают",
+    blockTitle: "Как мы работаем",
     blockTitleDescr:
       "Мы работаем по четко выстроенной схеме, которая гарантирует успешное продвижение вашего бизнеса:",
   } satisfies THowWorks,
@@ -113,7 +113,7 @@ export const ADVERTISEMENT_GOOGLE_CONFIG = {
       },
     ],
 
-    blockTitle: "Почему нас выбирают:",
+    blockTitle: "Почему нас выбирают",
   } satisfies TWhyUs,
   includeService: ADVERTISEMENT_GOOGLE_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

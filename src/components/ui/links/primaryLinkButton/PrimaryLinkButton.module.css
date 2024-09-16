@@ -1,7 +1,7 @@
 .button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display:  flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   font-family: var(--third-family);
   font-weight: 300;
@@ -16,7 +16,7 @@
     #ffde00 15%,
     #f4a21a 35%,
     #ffde00 70%,
-		#f4a21a 83%,
+    #f4a21a 83%,
     #ffde00 100%
   );
 
@@ -29,6 +29,11 @@
 }
 
 .button span {
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  gap: 10px;
   position: relative;
 }
 
@@ -41,7 +46,7 @@
   height: 2px;
   background-color: var(--text-third);
   transform: scale(0);
-  transition: transform .4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 @media (hover: hover) {

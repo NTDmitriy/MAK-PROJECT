@@ -21,7 +21,7 @@ export const SupplementaryDescr: FC<PropsWithChildren<ISuplementaryDescr>> = ({
       <Container>
         <div className={styles.root}>
           <picture className={styles.img}>
-            <source srcSet={`/images/services/${image}-small.webp`} media="(max-width: 1024px)" />
+            <source srcSet={`/images/services/${image}-small.webp`} media="(max-width: 768px)" />
             <img
               src={`/images/services/${image}-large.webp`}
               alt={title}

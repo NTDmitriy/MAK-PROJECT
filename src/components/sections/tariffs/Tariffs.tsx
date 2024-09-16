@@ -17,7 +17,6 @@ import clsx from "clsx";
 import { FC, PropsWithChildren, useState } from "react";
 import { MyTooltip } from "../../ui/tooltip/Tooltip";
 import styles from "./Tariffs.module.css";
-import { TariffSlider } from "./tariffSlider/TariffSlider";
 
 interface ITariffs extends IGenericElementProps {
   tariffs: TTariffs;
@@ -47,12 +46,24 @@ export const Tariffs: FC<PropsWithChildren<ITariffs>> = ({ tariffs }) => {
           </BlockTitle>
 
           <Container>
-            <TariffSlider
-              items={plans.map((plan) => plan.title)}
-              onTabClick={handleTabClick}
-              activeTab={activeTab}
-            />
-            
+            <div className={styles.btn__tab__wrapper}>
+              {plans.map((item, index) => (
+                <button
+                  className={clsx(
+                    styles.btn,
+                    activeTab === index && styles.active
+                  )}
+                  onClick={() => handleTabClick(index)}
+                  inert={activeTab === index ? "" : undefined}
+                >
+                  {item.title}
+                  {item.title === "ПРЕМИУМ" && (
+                    <DynamicSvg name="IconShield" className={styles.shield} />
+                  )}
+                </button>
+              ))}
+            </div>
+
             <ul className={styles.tab__list}>
               {plans.map((plan, index) => (
                 <li
@@ -67,6 +78,7 @@ export const Tariffs: FC<PropsWithChildren<ITariffs>> = ({ tariffs }) => {
                     <div className={styles.tab__head}>
                       <p className={styles.head__descr}>{plan.description}</p>
                       <p className={styles.price}>
+                        <DynamicSvg name="IconMoney" />
                         {isNumber(plan.price) ? (
                           <>
                             от {plan.price.toLocaleString("ru-RU")} &#8381;/мес

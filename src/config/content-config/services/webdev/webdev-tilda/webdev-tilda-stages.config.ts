@@ -44,5 +44,5 @@ export const WEBDEV_TILDA_STAGES = {
       ],
     }
   ],
-  title: "Этапы работ:",
+  title: "Этапы работ",
 } satisfies TWorkStages;

@@ -22,8 +22,9 @@ export const ADVERTISEMENT_TELEGRAM_CONFIG = {
   hero: {
     basic: {
       title: {
-        accent: "Эффективная реклама",
-        accentAfter: "в Telegram Ads для вашего бизнеса",
+        accentBefore: "Эффективная реклама",
+        accent: "в Telegram Ads",
+        accentAfter: "для вашего бизнеса",
       },
       description:
         "Хотите заказать рекламу в одном из самых популярных мессенджеров? Telegram Ads предоставляет уникальные возможности для прямого взаимодействия с вашей целевой аудиторией. Наше агентство профессионально настроит и запустит рекламные кампании, которые помогут привлечь новых клиентов и увеличить узнаваемость бренда. Закажите настройку рекламы у нас и увидьте, как растут ваши показатели.",
@@ -81,7 +82,7 @@ export const ADVERTISEMENT_TELEGRAM_CONFIG = {
       },
     ],
 
-    blockTitle: "Как мы работаем и почему нас выбирают",
+    blockTitle: "Как мы работаем",
     blockTitleDescr:
       "Мы работаем по четко выстроенной схеме, которая гарантирует успешное продвижение вашего бизнеса:",
   } satisfies THowWorks,
@@ -114,7 +115,7 @@ export const ADVERTISEMENT_TELEGRAM_CONFIG = {
       },
     ],
 
-    blockTitle: "Почему нас выбирают:",
+    blockTitle: "Почему нас выбирают",
   } satisfies TWhyUs,
   includeService: ADVERTISEMENT_TELEGRAM_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

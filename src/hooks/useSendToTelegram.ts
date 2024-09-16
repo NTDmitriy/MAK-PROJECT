@@ -51,7 +51,7 @@ const formatMessageForTelegram = (data: IForm, pathname: string) => {
       const value = data[key as keyof IForm];
 
       if (!Array.isArray(value)) {
-        messageInfo += (value && `<b>${label}:</b> ${value?.trim()}\n`);
+        messageInfo += value && `<b>${label}:</b> ${value?.trim()}\n`;
       } else {
         const servicesList = value
           .map((service, index) => `${index + 1}) ${service}`)
@@ -65,16 +65,28 @@ const formatMessageForTelegram = (data: IForm, pathname: string) => {
   return `${messageInfo} \n ${messageServices} `;
 };
 
-export const useSendToTelegram = (data: IForm, pathname: string) => {
+export const useSendToTelegram = async (data: IForm, pathname: string) => {
   const formattedText = formatMessageForTelegram(data, pathname);
 
-  axios
-    .post(URI_API, {
+  try {
+    const response = await axios.post(URI_API, {
       chat_id: process.env.CHAT_ID,
       parse_mode: "HTML",
       text: formattedText,
-    })
-    .catch((error) => {
-      console.error("Ошибка при отправке запроса", error);
     });
+
+    if (response.status === 200) {
+      // await new Promise((resolve) => setTimeout(resolve, 3000));
+      return {
+        success: true,
+        message: "Заявка отправлена",
+        data: response.data,
+      };
+    } else {
+      return { success: false, message: "Запрос выполнен, но не успешен." };
+    }
+  } catch (error: any) {
+    console.error("Ошибка при отправке запроса", error);
+    return { success: false, message: error.message };
+  }
 };

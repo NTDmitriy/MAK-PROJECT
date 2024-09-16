@@ -20,7 +20,7 @@ export const SEO_EMAIL_CONFIG = {
   hero: {
     basic: {
       title: {
-        accent: "Профессиональные email-рассылки",
+        accent: "Профессиональные email\u2011рассылки",
         accentAfter: "по базам",
       },
       description:

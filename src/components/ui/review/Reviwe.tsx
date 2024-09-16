@@ -35,7 +35,7 @@ export const Reviwe: FC<IReviwe> = ({ reviwe, isFull }) => {
       </div>
       <div className={styles.btn__group}>
         {caseUrl && (
-          <SeconderyLinkButton className={styles.btn} href={caseUrl}>
+          <SeconderyLinkButton className={clsx(styles.btn, styles.inner)} href={caseUrl}>
             Смотреть кейс{" "}
           </SeconderyLinkButton>
         )}

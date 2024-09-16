@@ -1,9 +1,11 @@
 .hero {
-	margin-top: -140px;
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 1201px) {
+  .hero {
+    margin-top: -140px;
+  }
   .hero {
     padding-bottom: 30px;
   }

@@ -17,7 +17,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 60px;
+
   padding-left: 28px;
   padding-right: 10px;
 }
@@ -43,5 +43,6 @@
 @media screen and (max-width: 768px) {
   .list {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 }

@@ -22,12 +22,20 @@ export const MainForm: FC<IFormContent> = ({ title, text, ...rest }) => {
   } = useFormContext();
   const { closePopup } = usePopupStore();
 
-  const onSubmit = (data: IForm) => {
+  
+  const onSubmit = async (data: IForm) => {
     const pathname = window.location.pathname;
-    useSendToTelegram(data, pathname);
-    useNotification("Заявка отправлена", "success");
-    closePopup();
-    reset();
+    const response = await useSendToTelegram(data, pathname);
+    if (response?.success) {
+      useNotification(response?.message || "Заявка отправлена", "success");
+      closePopup();
+      reset();
+    } else {
+      useNotification(
+        response?.message || "Ошибка. Повторите попытку позже",
+        "error"
+      );
+    }
   };
 
   const onError = (errors: Record<string, any>) => {

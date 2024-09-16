@@ -58,6 +58,7 @@ export const WEBDEV_WORDPRESS_CONFIG = {
           "Подходит для сложных и многостраничных сайтов с большим объемом информации.",
       },
     ],
+    title: "Кому подойдёт сайт на WordPress",
   } satisfies TSuitableFor,
   workStages: WEBDEV_WORDPRESS_STAGES satisfies TWorkStages,
   allSiteTypes: {

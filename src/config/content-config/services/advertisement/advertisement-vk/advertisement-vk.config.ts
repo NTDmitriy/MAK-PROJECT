@@ -82,7 +82,7 @@ export const ADVERTISEMENT_VK_CONFIG = {
       },
     ],
 
-    blockTitle: "Как мы работаем и почему нас выбирают",
+    blockTitle: "Как мы работаем",
     blockTitleDescr:
       "Мы работаем по четко выстроенной схеме, которая гарантирует успешное продвижение вашего бизнеса:",
   } satisfies THowWorks,
@@ -114,7 +114,7 @@ export const ADVERTISEMENT_VK_CONFIG = {
         descrAfter: "и повышение эффективности вашего бизнеса. ",
       },
     ],
-    blockTitle: "Почему нас выбирают:",
+    blockTitle: "Почему нас выбирают",
     blockTitleDescr:
       "Наше агентство предлагает комплексный подход к настройке и управлению рекламными кампаниями в ВКонтакте:",
   } satisfies TWhyUs,

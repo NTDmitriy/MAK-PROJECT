@@ -19,8 +19,8 @@ export const SEO_COMMON_CONFIG = {
   hero: {
     basic: {
       title: {
-        accent: "эффективные решения для вашего бизнеса",
-        accentBefore: "Трафик и SEO-продвижение:",
+        accent: "Трафик и SEO-продвижение:",
+        accentAfter: "эффективные решения для вашего бизнеса",
       },
       description:
         "Ищете, где заказать рекламу в интернете? Наше рекламное агентство предоставляет комплексные услуги по настройке и запуску рекламных кампаний в Яндекс Директ, ВКонтакте, Google Ads, Telegram Ads и Meta: Facebook & Instagram. Мы поможем вам привлечь целевую аудиторию, увеличить конверсию и добиться максимального результата от рекламы. Доверьтесь профессионалам!",
@@ -99,7 +99,7 @@ export const SEO_COMMON_CONFIG = {
         descrAfter: "благодаря нашим решениям.",
       },
     ],
-    blockTitle: "Почему нас выбирают:",
+    blockTitle: "Почему нас выбирают",
   } satisfies TWhyUs,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
   reviwes: ALL_REVIWES satisfies TReviwe[],

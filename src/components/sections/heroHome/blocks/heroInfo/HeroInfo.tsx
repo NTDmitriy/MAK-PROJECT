@@ -16,28 +16,43 @@ export const HeroInfo: FC<PropsWithChildren<IGenericElementProps>> = ({
           <div className={styles.content}>
             <ul className={styles.list}>
               <li className={styles.item}>
-                <DynamicSvg className={styles.icon} name="IconCheck" />
-                <h5 className={styles.title}>Бесплатный аудит и прогноз</h5>
+                <div className={styles.item__head}>
+                  <DynamicSvg className={styles.icon} name="IconCheck" />
+                  <h5 className={styles.title}>Бесплатный аудит и прогноз</h5>
+                </div>
                 <p className={styles.descr}>
                   Проводим оценку и{" "}
-                  <span className="accent">спрогнозируем показатели</span>{" "}
+                  <span className={styles.accent}>
+                    спрогнозируем показатели
+                  </span>{" "}
                   до начала работ
                 </p>
               </li>
               <li className={styles.item}>
-                <DynamicSvg className={styles.icon} name="IconCheck" />
-                <h5 className={styles.title}>Персонализированные стратегии</h5>
+                <div className={styles.item__head}>
+                  <DynamicSvg className={styles.icon} name="IconCheck" />
+                  <h5 className={styles.title}>
+                    Персонализированные стратегии
+                  </h5>
+                </div>
                 <p className={styles.descr}>
-                  <span className="accent">Креативные и современные </span>{" "}
+                  <span className={styles.accent}>
+                    Креативные и современные{" "}
+                  </span>{" "}
                   решения под ваш бизнес и аудиторию
                 </p>
               </li>
               <li className={styles.item}>
-                <DynamicSvg className={styles.icon} name="IconCheck" />
-                <h5 className={styles.title}>Акцент на успех</h5>
+                <div className={styles.item__head}>
+                  <DynamicSvg className={styles.icon} name="IconCheck" />
+                  <h5 className={styles.title}>Акцент на успех</h5>
+                </div>
                 <p className={styles.descr}>
                   Наш главный фокус —
-                  <span className="accent"> увеличение вашей прибыли</span>
+                  <span className={styles.accent}>
+                    {" "}
+                    увеличение вашей прибыли
+                  </span>
                 </p>
               </li>
             </ul>

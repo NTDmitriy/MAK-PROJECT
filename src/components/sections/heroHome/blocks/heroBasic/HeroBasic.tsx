@@ -22,17 +22,16 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
               <span className={styles.opacity}>М</span>
               <span className={styles.small__text}>AKE ALL PERFECT</span>{" "}
               <span className={styles.opacity}>
-                аркетинговое агенство полного цикла
+                аркетинговое агентство полного цикла
               </span>
             </p>
             <h1 className={clsx(styles.title)}>
-              Маркетинговое <span className={styles.accent}>агенство</span>{" "}
+              Маркетинговое <span className={styles.accent}>агентство</span>{" "}
               полного&nbsp;цикла
             </h1>
           </div>
           <p className={styles.descr}>
-            Ваш <span className={styles.accent}>надежный партнер</span> в мире
-            digital маркетинга
+          Полный цикл маркетинговых услуг: от настройки рекламы до SEO-продвижения и создания сайтов. Ваш надежный партнер в мире digital маркетинга. Доверьтесь нам и наблюдайте за ростом своего бизнеса.
           </p>
           <div className={styles.btn_grop}>
             <Popup
@@ -61,10 +60,6 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
 
         <div className={styles.face__wrapper}>
           <picture>
-            <source
-              srcSet={`/images/faces/grafov-hero-954x460.webp`}
-              media="(max-width: 1024px)"
-            />
             <img
               className={styles.face__img}
               src={`/images/faces/grafov-hero-560x560.webp`}
@@ -84,7 +79,7 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
         <picture>
           <source
             srcSet={`/images/home-hero-295x191.webp`}
-            media="(max-width: 1024px)"
+            media="(max-width: 768px)"
           />
           <img
             className={styles.img}

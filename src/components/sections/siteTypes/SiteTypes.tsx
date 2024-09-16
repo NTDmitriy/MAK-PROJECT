@@ -29,7 +29,7 @@ export const AllSiteTypes: FC<PropsWithChildren<IAllSiteTypes>> = ({
       {items && (
         <Section className={className} {...rest}>
           <BlockTitle leftSide={true}>
-            Типы сайтов, с которыми мы работаем:
+            Типы сайтов, с которыми мы работаем
           </BlockTitle>
           <Container>
             <ul className={styles.list}>

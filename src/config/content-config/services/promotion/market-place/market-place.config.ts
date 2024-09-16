@@ -88,7 +88,7 @@ export const MARKET_PLACE_CONFIG = {
           "чтобы обеспечить всестороннее продвижение вашего магазина на маркетплейсах.",
       },
     ],
-    blockTitle: "Почему нас выбирают:",
+    blockTitle: "Почему нас выбирают",
   } satisfies TWhyUs,
   detialServices: MARKET_PLACE_DETAIL satisfies TDetialServices,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

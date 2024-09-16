@@ -118,7 +118,7 @@ import { TTariffs } from "@/interfaces/types/block/products.type";
       title: "ИНДИВИДУАЛЬНЫЙ",
       description:
         "Индивидуальное решение для крупных компаний с уникальными требованиями и высокими стандартами качества продвижения.",
-      price: 100000,
+        price: 'индивидуально, по запросу',
       items: [
         {
           description:

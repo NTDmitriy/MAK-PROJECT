@@ -2,8 +2,8 @@ import { PrimaryButton } from "@/components/ui/buttons/primaryButton/PrimaryButt
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { Container } from "@/components/ui/container/Container";
 import {
-    FORM_TYPE,
-    FormController,
+  FORM_TYPE,
+  FormController,
 } from "@/components/ui/forms/FormController";
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { Section } from "@/components/ui/section/Section";
@@ -54,11 +54,7 @@ export const DetailServices: FC<PropsWithChildren<IDetailServices>> = ({
               <div className={styles.sticky}>
                 <h5 className={styles.sticky__title}>ОБРАТИТЕ ВНИМАНИЕ!</h5>
                 <p className={styles.sticky__text}>
-                  Мы предлагаем как полный комплекс услуг по продвижению вашей
-                  онлайн-школы, так и отдельные решения по вашему выбору. Вы
-                  можете выбрать только те услуги, которые вам необходимы, или
-                  воспользоваться нашим полным пакетом для максимальной
-                  эффективности.
+                Мы предлагаем как полный комплекс услуг по продвижению вашего бизнеса, так и отдельные решения по вашему выбору. Вы можете выбрать только те услуги, которые вам необходимы, или воспользоваться нашим полным пакетом для максимальной эффективности.
                 </p>
 
                 <Popup

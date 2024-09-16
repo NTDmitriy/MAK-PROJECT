@@ -13,7 +13,8 @@ export const VACANCIES_CONFIG = {
   hero: {
     basic: {
       title: {
-        accentAfter: "Карьера в Make All Perfect",
+        accent: 'Карьера',
+        accentAfter: "в Make All Perfect",
       },
       description:
         "Присоединяйтесь к нашей команде! Узнайте о текущих вакансиях и возможностях карьерного роста в Make All Perfect. Мы ищем талантливых профессионалов, готовых расти вместе с нами.",

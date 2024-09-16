@@ -12,13 +12,13 @@ export const CASES_CONFIG = {
   hero: {
     basic: {
       title: {
-        accentAfter: "Наши проекты",
+        accent: "проекты",
+        accentBefore: "Наши",
       },
       description:
         "Посмотрите, как мы помогли различным компаниям добиться успеха. Реальные кейсы и истории успеха от Make All Perfect, демонстрирующие наш подход и результаты.",
-        image: "useful-cases-hero",
+      image: "useful-cases-hero",
       formBtnText: "Оставить отзыв",
-      
     } satisfies THeroBasic,
     infoUseful: [
       "Реальные примеры успешных решений для компаний из разных отраслей",
