@@ -61,7 +61,7 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
         <div className={styles.face__wrapper}>
           <picture>
           <source
-            srcSet={`/images/home-hero-360x360.webp`}
+            srcSet={`/images/faces/grafov-hero-360x360.webp`}
             media="(max-width: 768px)"
           />
             <img
