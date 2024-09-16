@@ -42,5 +42,5 @@ export const WEBDEV_JS_STAGES = {
       ],
     },
   ],
-  title: "Этапы работ:",
+  title: "Этапы работ",
 } satisfies TWorkStages;

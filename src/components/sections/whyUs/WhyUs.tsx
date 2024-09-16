@@ -31,10 +31,12 @@ export const WhyUs: FC<PropsWithChildren<IWhyUs>> = ({
           {items &&
             items.map((item, index) => (
               <li key={index} className={styles.card}>
-                <DynamicSvg className={styles.icon} name="IconCheck" />
-                <h3 className={styles.card_title}>
-                  {item.title && item.title}
-                </h3>
+                <div className={styles.item__head}>
+                  <DynamicSvg className={styles.icon} name="IconCheck" />
+                  <h3 className={styles.card_title}>
+                    {item.title && item.title}
+                  </h3>
+                </div>
                 <p className={styles.card_text}>
                   {item.descrBefore && item.descrBefore}
                   <span className={styles.accent}>

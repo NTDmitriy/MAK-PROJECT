@@ -90,7 +90,7 @@ export const MEDICAL_CONFIG = {
       },
     ],
 
-    blockTitle: "Почему нас выбирают:",
+    blockTitle: "Почему нас выбирают",
   } satisfies TWhyUs,
   detialServices: MEDICAL_DETAIL satisfies TDetialServices,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

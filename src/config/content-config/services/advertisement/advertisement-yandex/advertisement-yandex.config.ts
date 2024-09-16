@@ -22,8 +22,8 @@ export const ADVERTISEMENT_YANDEX_CONFIG = {
   hero: {
     basic: {
       title: {
-        accent: "Эффективная",
-        accentAfter: "контекстная реклама в Яндекс Директ",
+        accentBefore: "Эффективная контекстная реклама",
+        accent: "в Яндекс Директ",
       },
       description:
         "Ищете способы заказать рекламу в интернете? Яндекс Директ – это ваш ключ к успеху! Мы предлагаем комплексные услуги по настройке и управлению рекламными кампаниями в Яндекс Директ. Наша команда специалистов поможет вам привлечь целевую аудиторию и увеличить конверсию. Закажите рекламу у нас и ощутите результаты уже сегодня.",
@@ -115,7 +115,7 @@ export const ADVERTISEMENT_YANDEX_CONFIG = {
       },
     ],
 
-    blockTitle: "Почему нас выбирают:",
+    blockTitle: "Почему нас выбирают",
   } satisfies TWhyUs,
   includeService: ADVERTISEMENT_YANDEX_INCLUDE satisfies TIncludedInService,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

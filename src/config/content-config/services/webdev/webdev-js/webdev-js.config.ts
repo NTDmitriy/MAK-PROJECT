@@ -8,7 +8,7 @@ import {
   TServiceProducts,
   TSuitableFor,
   TSupplementaryDescr,
-  TWorkStages
+  TWorkStages,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { WEBDEV_PRODUCTS } from "../webdev-common/webdev-products.config";
@@ -58,6 +58,7 @@ export const WEBDEV_JS_CONFIG = {
           "Отличное решение для быстрого запуска и последующего масштабирования. ",
       },
     ],
+    title: "Кому подойдёт сайт на JavaScript",
   } satisfies TSuitableFor,
   technologyStack: true,
   workStages: WEBDEV_JS_STAGES satisfies TWorkStages,

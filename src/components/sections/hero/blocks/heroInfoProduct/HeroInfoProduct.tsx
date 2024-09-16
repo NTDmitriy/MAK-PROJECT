@@ -22,7 +22,7 @@ export const HeroInfoProduct: FC<IHeroInfoProduct> = ({ info }) => {
                 <source
                   type="image/webp"
                   srcSet={`/images/services/${info.image}-small.webp`}
-                  media="(max-width: 1200px)"
+                  media="(max-width:768px)"
                 />
                 <img
                   className={styles.image}

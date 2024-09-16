@@ -55,7 +55,7 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
         <picture>
           <source
             srcSet={`/images/services/${image}-small.webp`}
-            media="(max-width: 1024px)"
+            media="(max-width: 768px)"
           />
           <img
             className={styles.img}

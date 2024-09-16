@@ -1,7 +1,7 @@
 .root {
   display: flex;
   align-items: center;
-  gap: 70px;
+  gap: clamp(20px, 3.9dvw, 70px);
 }
 
 .descr {
@@ -26,26 +26,29 @@
   color: #cacaca;
 }
 
+.img {
+  max-width: clamp(260px, 24dvw, 335px);
+}
+
 @media screen and (max-width: 1024px) {
+  .img {
+    display: block;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 768px) {
   .root {
-    gap: 30px;
     flex-direction: column;
   }
 
   .img {
     display: block;
-    margin-left: auto;
-  }
+    height: 100%;
 
-}
-@media screen and (max-width: 768px) {
-  .img {
-    display: block;
-    width: 100%;
+    max-width: unset;
     margin-left: unset;
   }
 }
 
 @media screen and (max-width: 576px) {
-
 }

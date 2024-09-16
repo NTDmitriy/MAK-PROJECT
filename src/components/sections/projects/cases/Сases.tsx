@@ -1,10 +1,10 @@
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { TCases } from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
-import Link from "next/link";
 import { FC } from "react";
 
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
+import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import styles from "./Сases.module.css";
 
 interface ICases extends IGenericElementProps {
@@ -43,11 +43,17 @@ export const Cases: FC<ICases> = ({ cases }) => {
             </div>
             <h3 className={clsx(styles.case__title)}>{item.name}</h3>
             <p className={clsx(styles.case__text)}>{item.description}</p>
-
-            <Link href={`/cases${item.url}`} className={styles.btn}>
-              <span className={styles.btn__text}>Смотреть кейс</span>
-              <DynamicSvg name="IconRightArray" className={styles.btn__icon} />
-            </Link>
+            <div className={styles.btn__wrapper}>
+              <PrimaryLinkButton href={`/cases${item.url}`}>
+                <span className={clsx(styles.btn__text, styles.inner)}>
+                  Смотреть кейс
+                </span>
+                <DynamicSvg
+                  name="IconRightArray"
+                  className={styles.btn__icon}
+                />
+              </PrimaryLinkButton>
+            </div>
           </div>
         </li>
       ))}

@@ -68,7 +68,7 @@
   aspect-ratio: 1;
   margin-top: -3px;
   margin-bottom: -3px;
-  background: linear-gradient(90deg, #f4a21a 0%, #ffde00 50%, #f4a21a 100%);
+  background: var(--accent-color)
 }
 
 .sticky {

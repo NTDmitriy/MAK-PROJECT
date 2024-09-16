@@ -61,7 +61,7 @@
 
 .scale {
   opacity: 0;
-  content: ' ';
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
@@ -69,12 +69,12 @@
   height: 2px;
   background-color: #ffde00;
   z-index: 4;
-  transition:  all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .visible {
   opacity: 1;
   animation: scale 5.5s forwards linear;
-  transition:  width 8.5s linear;
+  transition: width 8.5s linear;
   width: 80%;
 }
 
@@ -88,25 +88,25 @@
 }
 
 .scale::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
-  transform: translate(0,-50%);
+  transform: translate(0, -50%);
   right: 0;
-  width: 12px;
+  width: 20px;
   height: 20px;
-  background-color: #ffde00;
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  background: var(--accent-color);
 }
-
 
 .progess_number {
   font-family: var(--second-family);
-font-weight: 700;
-font-size: 30px;
-line-height: 100%;
-text-align: center;
-color: #fff;
-width: 70px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-align: center;
+  color: #fff;
+  width: 70px;
 }
 
 .progress_grafs {
@@ -121,7 +121,7 @@ width: 70px;
   text-align: center;
   align-items: center;
   gap: 5px;
-  margin-top: -23px;
+  margin-top: -16px;
 }
 
 .proc20 {
@@ -130,9 +130,9 @@ width: 70px;
 
 .progress_graf_span {
   position: relative;
-  background-color:  #ffde00;
-  width: 7px;
-  height: 44px;
+  background-color: #ffde00;
+  width: 4px;
+  height: 30px;
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;
@@ -159,7 +159,7 @@ width: 70px;
   }
 }
 
-@media screen and (max-width:820px) {
+@media screen and (max-width: 820px) {
   .proc20 {
     margin-left: 11%;
   }
@@ -172,11 +172,10 @@ width: 70px;
     opacity: 1;
     width: 58%;
     animation: unset;
-    
   }
 }
 
-@media screen and (max-width:560px) {
+@media screen and (max-width: 560px) {
   .visible {
     opacity: 1;
     width: 65%;
@@ -189,4 +188,3 @@ width: 70px;
     margin-left: 0;
   }
 }
-

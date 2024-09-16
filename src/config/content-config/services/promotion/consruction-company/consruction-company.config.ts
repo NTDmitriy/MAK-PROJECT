@@ -90,7 +90,7 @@ export const CONSTRUCTION_COMPANY_CONFIG = {
       },
     ],
 
-    blockTitle: "Почему нас выбирают:",
+    blockTitle: "Почему нас выбирают",
   } satisfies TWhyUs,
   detialServices: CONSTRUCTION_COMPANY_DETAIL satisfies TDetialServices,
   projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],

@@ -11,7 +11,8 @@ export const BLOG_CONFIG = {
   hero: {
     basic: {
       title: {
-        accentAfter: "Блог: Полезные статьи и рекомендации",
+        accent: "Блог:",
+        accentAfter: "Полезные статьи и рекомендации",
       },
       description:
         "Читайте последние новости, советы и статьи о маркетинге, рекламе и digital-технологиях. Полезная информация от экспертов Make All Perfect.",

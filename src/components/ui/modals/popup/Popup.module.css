@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: calc(100% - 200px);
+  max-height: 99dvh;
   transform: translateY(100dvh);
   transition: transform 0.3s ease-in-out;
   z-index: 100;
