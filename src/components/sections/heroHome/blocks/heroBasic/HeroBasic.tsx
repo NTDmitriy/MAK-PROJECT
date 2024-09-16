@@ -60,10 +60,15 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
 
         <div className={styles.face__wrapper}>
           <picture>
+          <source
+            srcSet={`/images/home-hero-360x360.webp`}
+            media="(max-width: 768px)"
+          />
             <img
               className={styles.face__img}
               src={`/images/faces/grafov-hero-560x560.webp`}
               alt="Дмитрий Графов"
+              loading="lazy"
             />
           </picture>
           <div className={styles.face__descr}>
@@ -84,7 +89,7 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
           <img
             className={styles.img}
             src={`/images/home-hero-1360x870.webp`}
-            alt="Маркетинговое агенство полного цикла1"
+            alt="Маркетинговое агенство полного цикла"
             loading="lazy"
           />
         </picture>
