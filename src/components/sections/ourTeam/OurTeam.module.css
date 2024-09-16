@@ -251,7 +251,7 @@
   }
 
   .button.inner {
-    display: unset;
+    display: flex;
   }
   .accordion {
     display: grid;
