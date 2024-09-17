@@ -10,11 +10,11 @@ import { FC, PropsWithChildren, useState } from "react";
 import { FORM_TYPE, FormController } from "../../../ui/forms/FormController";
 import styles from "./ReviwesList.module.css";
 
-interface IReviwsList extends IGenericElementProps {
+interface IList extends IGenericElementProps {
   reviwes: TReviwe[];
 }
 
-export const ReviewsList: FC<PropsWithChildren<IReviwsList>> = ({
+export const List: FC<PropsWithChildren<IList>> = ({
   className,
   reviwes,
   ...rest
