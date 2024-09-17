@@ -9,9 +9,13 @@ interface IRatingStars {
 export const RatingStars: FC<IRatingStars> = ({ rating }) => {
   return (
     <div className={styles.rating}>
-      
-       <span>{rating.toFixed(1)}</span> <Rating initialValue={rating} readonly={true} size={28} fillColor={'#FFDE00'}/>
-  
+      <span>{rating.toFixed(1)}</span>
+      <Rating
+        initialValue={rating}
+        readonly={true}
+        size={28}
+        fillColor={"#FFDE00"}
+      />
     </div>
   );
 };
