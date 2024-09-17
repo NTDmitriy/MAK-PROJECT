@@ -1,10 +1,10 @@
-import { SeconderyLinkButton } from "@/components/ui/links/seconderyLinkButton/SeconderyLinkButton";
 import { TReviwe } from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
 import { FC } from "react";
+import { SeconderyLinkButton } from "../links/seconderyLinkButton/SeconderyLinkButton";
 import { ButtonMore } from "./buttonMore/ButtonMore";
 import { RatingStars } from "./rating/Rating";
-import styles from "./Reviwe.module.css";
+import styles from './Reviwe.module.css';
 
 interface IReviwe {
   reviwe: TReviwe;
