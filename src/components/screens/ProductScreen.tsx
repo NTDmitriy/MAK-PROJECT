@@ -7,7 +7,7 @@ import { IncludedInService } from "../sections/includedInService/IncludedInServi
 import { MaybeInteresting } from "../sections/maybeInteresting/MaybeInteresting";
 import { Projects } from "../sections/projects/Projects";
 import { ProjectTeam } from "../sections/projectTeam/ProjectTeam";
-import { Reviwes } from "../sections/reviwes/Reviwes";
+import { Reviwes } from "../sections/reviwesSlider/ReviwesSlider";
 import { AllSiteTypes } from "../sections/siteTypes/SiteTypes";
 import { SuitableFor } from "../sections/suitableFor/SuitableFor";
 import { Tariffs } from "../sections/tariffs/Tariffs";

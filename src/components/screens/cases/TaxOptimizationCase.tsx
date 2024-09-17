@@ -8,7 +8,7 @@ import { Section } from "@/components/ui/section/Section";
 import { CASES_DASHBOARD_PAGES } from "@/config/url-config/cases-pages.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { FC, PropsWithChildren } from "react";
-import styles from "./Cases.module.css";
+import styles from "./CasesPages.module.css";
 
 export const TaxOptimizationCase: FC<
   PropsWithChildren<IGenericElementProps>

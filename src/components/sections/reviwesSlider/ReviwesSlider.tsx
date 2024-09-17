@@ -4,15 +4,15 @@ import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { TReviwe } from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
-import styles from "./Reviwes.module.css";
+import styles from "./ReviwesSlider.module.css";
 import { Slider } from "./slider/Slider";
 
 
-export interface IReviwes extends IGenericElementProps {
+export interface IReviwesSlider extends IGenericElementProps {
   reviwes: TReviwe[];
 }
 
-export const Reviwes: FC<PropsWithChildren<IReviwes>> = ({
+export const Reviwes: FC<PropsWithChildren<IReviwesSlider>> = ({
   className,
   reviwes,
   ...rest

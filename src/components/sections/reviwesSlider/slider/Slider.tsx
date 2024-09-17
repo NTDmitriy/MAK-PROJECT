@@ -9,11 +9,11 @@ import { Mousewheel, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Reviwe } from "@/components/ui/review/Reviwe";
-import { IReviwes } from "../Reviwes";
+import { IReviwesSlider } from "../ReviwesSlider";
 import { NavigationButtons } from "./NavigationButtons";
 import "./Slider.css";
 
-export const Slider: FC<IReviwes> = ({ reviwes }) => {
+export const Slider: FC<IReviwesSlider> = ({ reviwes }) => {
   const sliderRef = useRef<any>(null);
   const [progress, setProgress] = useState(0);
 
