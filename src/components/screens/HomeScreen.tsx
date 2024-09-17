@@ -11,13 +11,18 @@ import { OurTeam } from "../sections/ourTeam/OurTeam";
 import { Projects } from "../sections/projects/Projects";
 import { Reviwes } from "../sections/reviwesSlider/ReviwesSlider";
 
-
 interface IHomeScreen {
   content: THomeScreen;
 }
 export const HomeScreen: FC<PropsWithChildren<IHomeScreen>> = ({ content }) => {
   return (
     <>
+      {/* <Section>
+        <Container>
+          <FormController formType={FORM_TYPE.MAIN_FORM} />
+        </Container>
+      </Section> */}
+
       <HeroHome />
       <AboutPrev/>
       <OurServices />
