@@ -71,7 +71,6 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
               className={styles.face__img}
               src={`/images/faces/grafov-hero-560x560.webp`}
               alt="Дмитрий Графов"
-              loading="lazy"
             />
           </picture>
           <div className={styles.face__descr}>
@@ -93,7 +92,6 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
             className={styles.img}
             src={`/images/home-hero-1360x870.webp`}
             alt="Маркетинговое агенство полного цикла"
-            loading="lazy"
           />
         </picture>
         <p className={styles.background__text__bot}>ALL PERFECT</p>
