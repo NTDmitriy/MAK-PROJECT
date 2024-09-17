@@ -4,7 +4,7 @@ import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { TReviwe } from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
-import { ReviewsList } from "./reviewsList/ReviwesList";
+import { List } from "./list/List";
 import styles from "./ReviwesList.module.css";
 
 
@@ -35,7 +35,7 @@ export const ReviwesList: FC<PropsWithChildren<IReviwesList>> = ({
           >
             Что говорят наши клиенты
           </BlockTitle>
-          <ReviewsList reviwes={reviwes} />
+          <List reviwes={reviwes} />
         </Section>
       )}
     </>
