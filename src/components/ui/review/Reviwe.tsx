@@ -15,7 +15,7 @@ export const Reviwe: FC<IReviwe> = ({ reviwe, isFull }) => {
   const { avatar, name, position, rating, text, caseUrl } = reviwe;
 
   return (
-    <div className={clsx(styles.reviwe, isFull ? styles.reviwe__full : "")}>
+    <div className={clsx(styles.reviwe, isFull && styles.reviwe__full)}>
       <div className={styles.head}>
         <img
           className={styles.avatar}
@@ -39,7 +39,7 @@ export const Reviwe: FC<IReviwe> = ({ reviwe, isFull }) => {
             className={clsx(styles.btn, styles.inner)}
             href={caseUrl}
           >
-            Смотреть кейс{" "}
+            Смотреть кейс
           </SeconderyLinkButton>
         )}
       </div>
