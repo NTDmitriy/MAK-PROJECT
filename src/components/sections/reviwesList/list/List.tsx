@@ -1,6 +1,5 @@
 "use client";
 
-import { PrimaryButton } from "@/components/ui/buttons/primaryButton/PrimaryButton";
 import { Container } from "@/components/ui/container/Container";
 import { Reviwe } from "@/components/ui/review/Reviwe";
 import { Section } from "@/components/ui/section/Section";
@@ -28,19 +27,25 @@ export const List: FC<PropsWithChildren<IList>> = ({
 
   const displayedReviews = reviwes.slice(0, reviwsToShow);
 
+
   return (
     <>
       {reviwes && reviwes.length > 0 && (
         <Section className={className} {...rest}>
           <Container>
             <div className={styles.root}>
-              <ul className={styles.list}>
+              {/* <ul className={styles.list}>
                 {displayedReviews.map((review, index) => (
+                  <Reviwe key={index} reviwe={review} />
+                ))}
+              </ul> */}
+              <ul className={styles.list}>
+                {reviwes.map((review, index) => (
                   <Reviwe key={index} reviwe={review} />
                 ))}
               </ul>
 
-              {reviwsToShow < reviwes.length && (
+              {/* {reviwsToShow < reviwes.length && (
                 <div className={styles.button__wrapper}>
                   <PrimaryButton
                     onClick={handleShowMore}
@@ -49,7 +54,7 @@ export const List: FC<PropsWithChildren<IList>> = ({
                     Показать еще
                   </PrimaryButton>
                 </div>
-              )}
+              )} */}
 
               <FormController formType={FORM_TYPE.MAIN_FORM} />
             </div>
