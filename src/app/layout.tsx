@@ -1,7 +1,6 @@
 import { METADATA, NO_INDEX_PAGE } from "@/seo/metadata";
 import "@/styles/fonts.css";
 import "@/styles/globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { Metadata } from "next";
 import { ReactNode } from "react";
 import { Footer } from "../components/layout/footer/Footer";
@@ -28,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body suppressHydrationWarning={true}>
+      <body suppressHydrationWarning>
         <div className="page">
           <Providers>
             <Header />
@@ -37,7 +36,6 @@ export default function RootLayout({
           </Providers>
         </div>
       </body>
-      <GoogleAnalytics gaId="GTM-WSL5TXVP" />
     </html>
   );
 }

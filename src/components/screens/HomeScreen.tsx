@@ -9,7 +9,7 @@ import { OurClients } from "../sections/ourClients/OurClients";
 import { OurServices } from "../sections/ourServices/OurServices";
 import { OurTeam } from "../sections/ourTeam/OurTeam";
 import { Projects } from "../sections/projects/Projects";
-import { Reviwes } from "../sections/reviwes/Reviwes";
+import { Reviwes } from "../sections/reviwesSlider/ReviwesSlider";
 
 
 interface IHomeScreen {

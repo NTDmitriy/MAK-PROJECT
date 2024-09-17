@@ -5,7 +5,7 @@ import Faq from "../sections/faq/Faq";
 import { Hero } from "../sections/hero/Hero";
 import { HowWorks } from "../sections/howWorks/HowWorks";
 import { Projects } from "../sections/projects/Projects";
-import { Reviwes } from "../sections/reviwes/Reviwes";
+import { Reviwes } from "../sections/reviwesSlider/ReviwesSlider";
 import { SiteServices } from "../sections/siteServices/SiteServices";
 import { SupplementaryDescr } from "../sections/supplementaryDescr/SupplementaryDescr";
 import { WhyUs } from "../sections/whyUs/WhyUs";

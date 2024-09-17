@@ -17,7 +17,7 @@ import styles from "./AllProductsService.module.css";
 
 interface IAllProductsService extends IGenericElementProps {
   productsConent: TServiceProducts;
-  formVisible?: boolean
+  formVisible?: boolean;
 }
 
 export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
@@ -58,7 +58,6 @@ export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
                       <div className={styles.prev}>
                         {item.deadline && (
                           <p className={styles.accent}>
-                            {" "}
                             <DynamicSvg name="IconClock" />
                             {item.deadline}
                           </p>
@@ -103,7 +102,7 @@ export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
                           }
                         />
                       )}
-                      {item.url  && (
+                      {item.url && (
                         <PrimaryLinkButton href={item.url}>
                           Узнать подробнее
                         </PrimaryLinkButton>
