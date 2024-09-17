@@ -2,7 +2,6 @@ import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { FC, PropsWithChildren } from "react";
 import { DetailServices } from "../sections/detailServices/DetailServices";
 import Faq from "../sections/faq/Faq";
-import { Hero } from "../sections/hero/Hero";
 import { HowWorks } from "../sections/howWorks/HowWorks";
 import { IncludedInService } from "../sections/includedInService/IncludedInService";
 import { MaybeInteresting } from "../sections/maybeInteresting/MaybeInteresting";
@@ -11,7 +10,6 @@ import { ProjectTeam } from "../sections/projectTeam/ProjectTeam";
 import { Reviwes } from "../sections/reviwes/Reviwes";
 import { AllSiteTypes } from "../sections/siteTypes/SiteTypes";
 import { SuitableFor } from "../sections/suitableFor/SuitableFor";
-import { SupplementaryDescr } from "../sections/supplementaryDescr/SupplementaryDescr";
 import { Tariffs } from "../sections/tariffs/Tariffs";
 import { TechnologyStack } from "../sections/technologyStack/TechnologyStack";
 import { WhyUs } from "../sections/whyUs/WhyUs";
@@ -27,7 +25,7 @@ export const ProductScreen: FC<PropsWithChildren<IProductScreen>> = ({
   return (
     <>
       {content.url && <Breadcrumbs pathname={content.url} />}
-      <Hero
+      {/* <Hero
         basicContent={content.hero.basic}
         productContent={content.hero.infoProduct}
         serviceContent={content.hero.infoService}
@@ -36,7 +34,7 @@ export const ProductScreen: FC<PropsWithChildren<IProductScreen>> = ({
       />
       {content.supplementaryDescr && (
         <SupplementaryDescr suppContent={content.supplementaryDescr} />
-      )}
+      )} */}
       {content.suitableFor && (
         <SuitableFor suitableForContent={content.suitableFor} />
       )}

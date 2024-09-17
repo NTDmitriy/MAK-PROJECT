@@ -12,7 +12,6 @@ import { OurClients } from "../sections/ourClients/OurClients";
 import { OurStatistic } from "../sections/ourStatistic/OurStatistic";
 import { OurTeam } from "../sections/ourTeam/OurTeam";
 import { Projects } from "../sections/projects/Projects";
-import { ReviwesList } from "../sections/reviwesList/ReviwesList";
 import { Vacancies } from "../sections/vacancies/Vacancies";
 import { VacanciesPrev } from "../sections/vacanciesPrev/VacanciesPrev";
 import { WhyUs } from "../sections/whyUs/WhyUs";
@@ -44,7 +43,7 @@ export const UsefulScreen: FC<PropsWithChildren<IUsefulScreen>> = ({
       {content.aboutUs && <AboutUs />}
       {content.ourStatistic && <OurStatistic />}
       {content.ourClients && <OurClients />}
-      {content.reviwesList && <ReviwesList reviwes={content.reviwesList} />}
+      {/* {content.reviwesList && <ReviwesList reviwes={content.reviwesList} />} */}
       {content.ourTeam && <OurTeam />}
       {content.projects && (
         <Projects cases={content.projects} formVisible={true} />
