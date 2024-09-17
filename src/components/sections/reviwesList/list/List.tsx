@@ -8,7 +8,7 @@ import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { TReviwe } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren, useState } from "react";
 import { FORM_TYPE, FormController } from "../../../ui/forms/FormController";
-import styles from "./ReviwesList.module.css";
+import styles from "./List.module.css";
 
 interface IList extends IGenericElementProps {
   reviwes: TReviwe[];
