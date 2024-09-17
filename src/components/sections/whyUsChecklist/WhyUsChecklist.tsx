@@ -24,9 +24,8 @@ export const WhyUsChecklist: FC = () => {
         <ul className={styles.list}>
           {whyUsServicesArr.map((item, index) => (
             <li key={index} className={styles.item}>
-              <span className={styles.icon}>
-                <DynamicSvg name="IconWhyUsServices" />
-              </span>
+              <DynamicSvg name="IconCheck" className={styles.icon} />
+
               <h3 className={styles.title}>{item}</h3>
             </li>
           ))}

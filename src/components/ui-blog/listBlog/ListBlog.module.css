@@ -1,0 +1,30 @@
+.root {
+  gap: clamp(20px, 3dvw, 50px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.margin {
+  margin-bottom: clamp(20px,3dvw,50px);
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    gap: 12px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

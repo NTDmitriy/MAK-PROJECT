@@ -39,14 +39,14 @@ class ADVERTISEMENT_DASHBOARD {
       "Telegram Ads — это возможность продвигать ваш бизнес в одном из самых популярных мессенджеров. Мы поможем создать эффективные рекламные кампании, которые донесут ваше сообщение до нужной аудитории. Наши услуги включают создание контента, настройку таргетинга и анализ результатов для постоянного улучшения эффективности рекламы.",
   } satisfies IDashboardItem;
 
-  ADVERTISEMENT_META = {
-    name: "Реклама в Meta: Facebook & Instagram",
-    smallName: "Meta: Facebook & Instagram",
-    url: `${this.root}/reklama-facebook-instagram`,
-    icon: "icon-nav-advertisement-meta",
-    description:
-      "Meta (Facebook/Instagram) — это мощный инструмент для продвижения вашего бизнеса в крупнейших социальных сетях мира. Мы настроим ваши рекламные кампании так, чтобы они привлекали целевую аудиторию и обеспечивали высокую вовлеченность. Наши услуги включают в себя точный таргетинг, создание креативных объявлений и настройку Facebook Pixel.",
-  } satisfies IDashboardItem;
+  // ADVERTISEMENT_META = {
+  //   name: "Реклама в Meta: Facebook & Instagram",
+  //   smallName: "Meta: Facebook & Instagram",
+  //   url: `${this.root}/reklama-facebook-instagram`,
+  //   icon: "icon-nav-advertisement-meta",
+  //   description:
+  //     "Meta (Facebook/Instagram) — это мощный инструмент для продвижения вашего бизнеса в крупнейших социальных сетях мира. Мы настроим ваши рекламные кампании так, чтобы они привлекали целевую аудиторию и обеспечивали высокую вовлеченность. Наши услуги включают в себя точный таргетинг, создание креативных объявлений и настройку Facebook Pixel.",
+  // } satisfies IDashboardItem;
 
   ADVERTISEMENT = {
     name: "Реклама",
@@ -59,7 +59,6 @@ class ADVERTISEMENT_DASHBOARD {
       this.ADVERTISEMENT_YANDEX,
       this.ADVERTISEMENT_GOOGLE,
       this.ADVERTISEMENT_TG,
-      this.ADVERTISEMENT_META,
     ],
   } satisfies IDashboardItem;
 }

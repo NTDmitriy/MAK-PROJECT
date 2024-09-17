@@ -10,6 +10,11 @@
   max-width: 1360px;
   z-index: -1;
 }
+.img {
+  opacity: 22%;
+  width: clamp(700px, 71dvw, 1360px);
+}
+
 
 .background__text__top,
 .background__text__bot {
@@ -55,10 +60,10 @@
   font-family: var(--third-family);
   font-weight: 900;
   font-size: 70px;
-  font-size: clamp(24px, 4.7dvw, 90px);
+  font-size: clamp(40px, 4.7dvw, 90px);
   line-height: 89%;
   max-width: 820px;
-  margin-bottom: clamp(10px, 2.65dvw, 50px);
+  margin-bottom: clamp(32px, 2.65dvw, 50px);
   z-index: 2;
 }
 
@@ -80,7 +85,7 @@
 .small__text {
   display: block;
   position: relative;
-  top: clamp(3px, 0.8dvw, 12px);
+  top: clamp(3px, 0.9dvw, 12px);
   font-family: var(--third-family);
   font-weight: 300;
   font-size: clamp(4px, 0.7dvw, 14px);
@@ -94,7 +99,7 @@
   position: relative;
   font-family: var(--font-family);
   font-weight: 100;
-  font-size: clamp(16px, 2dvw, 30px);
+  font-size: clamp(20px, 2dvw, 30px);
   line-height: 120%;
   color: var(--text-primary);
   max-width: 820px;
@@ -118,10 +123,6 @@
   max-width: 320px;
 }
 
-.img {
-  opacity: 54%;
-  width: clamp(700px, 71dvw, 1360px);
-}
 
 .face__wrapper {
   display: flex;
@@ -179,6 +180,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+
+  .small__text {
+    display: none;
+  } 
   .hero__container {
     display: flex;
     flex-direction: column;
@@ -202,7 +207,6 @@
     height: 100%;
     object-fit: cover;
     object-position: top center;
-    opacity: 30%;
   }
   .background__text__top,
   .background__text__bot {
