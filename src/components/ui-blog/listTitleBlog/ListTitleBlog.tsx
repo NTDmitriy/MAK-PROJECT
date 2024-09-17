@@ -8,5 +8,5 @@ export const ListTitleBlog: FC<PropsWithChildren<IGenericElementProps>> = ({
   className,
   ...rest
 }) => {
-  return <h3 className={clsx(styles.root, className)} {...rest}>{children}</h3>;
+  return <h4 className={clsx(styles.root, className)} {...rest}>{children}</h4>;
 };

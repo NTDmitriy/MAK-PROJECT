@@ -35,12 +35,12 @@ export const ADVERTISEMENT_PRODUCTS = {
       image: "advertisement-telegram-prev",
       url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_TG.url,
     },
-    {
-      name: 'Meta: Facebook & Instagram',
-      description: 'Meta (Facebook/Instagram) — это мощный инструмент для продвижения вашего бизнеса в крупнейших социальных сетях мира. Мы настроим ваши рекламные кампании так, чтобы они привлекали целевую аудиторию и обеспечивали высокую вовлеченность. Наши услуги включают в себя точный таргетинг, создание креативных объявлений и настройку Facebook Pixel.',
-      priceFrom: 50000,
-      image: "advertisement-meta-prev",
-      url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_META.url,
-    },
+    // {
+    //   name: 'Meta: Facebook & Instagram',
+    //   description: 'Meta (Facebook/Instagram) — это мощный инструмент для продвижения вашего бизнеса в крупнейших социальных сетях мира. Мы настроим ваши рекламные кампании так, чтобы они привлекали целевую аудиторию и обеспечивали высокую вовлеченность. Наши услуги включают в себя точный таргетинг, создание креативных объявлений и настройку Facebook Pixel.',
+    //   priceFrom: 50000,
+    //   image: "advertisement-meta-prev",
+    //   url: ADVERTISEMENT_DASHBOARD_PAGES.ADVERTISEMENT_META.url,
+    // },
   ],
 } satisfies TServiceProducts;

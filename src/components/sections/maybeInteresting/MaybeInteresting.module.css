@@ -55,3 +55,25 @@
 .link {
   margin-top: auto;
 }
+
+
+@media screen and (max-width: 768px) {
+  .img__wrapper::after {
+    display: none;
+  }
+
+  .list {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 480px;
+  }
+
+}

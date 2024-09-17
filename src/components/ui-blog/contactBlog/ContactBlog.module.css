@@ -1,0 +1,21 @@
+.root {
+  padding: 40px 90px;
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.title {
+  font-family: var(--third-family);
+  font-weight: 900;
+  font-size: clamp(24px, 2.8dvw, 50px);
+  text-align: center;
+  color: var(--text-third);
+}
+
+.btn__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 490px;
+}
