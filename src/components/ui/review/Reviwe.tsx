@@ -8,14 +8,14 @@ import styles from "./Reviwe.module.css";
 
 interface IReviwe {
   reviwe: TReviwe;
-	isFull?: boolean;
+  isFull?: boolean;
 }
 
 export const Reviwe: FC<IReviwe> = ({ reviwe, isFull }) => {
   const { avatar, name, position, rating, text, caseUrl } = reviwe;
 
   return (
-    <div className={clsx(styles.reviwe, isFull ? styles.reviwe__full : '')}>
+    <div className={clsx(styles.reviwe, isFull ? styles.reviwe__full : "")}>
       <div className={styles.head}>
         <img
           className={styles.avatar}
@@ -31,11 +31,14 @@ export const Reviwe: FC<IReviwe> = ({ reviwe, isFull }) => {
       <div className={styles.desrc}>
         <RatingStars rating={rating} />
         <div className={styles.reviwe__text}>{text}</div>
-				{!isFull &&  <ButtonMore reviwe={reviwe} />}	
+        {!isFull && <ButtonMore reviwe={reviwe} />}
       </div>
       <div className={styles.btn__group}>
         {caseUrl && (
-          <SeconderyLinkButton className={clsx(styles.btn, styles.inner)} href={caseUrl}>
+          <SeconderyLinkButton
+            className={clsx(styles.btn, styles.inner)}
+            href={caseUrl}
+          >
             Смотреть кейс{" "}
           </SeconderyLinkButton>
         )}
