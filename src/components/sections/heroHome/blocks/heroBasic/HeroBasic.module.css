@@ -128,8 +128,8 @@
   gap: 5px;
   flex-direction: column;
   position: relative;
-  aspect-ratio: 1;
-  width: clamp(360px, 30dvw, 560px);
+
+  max-width: clamp(360px, 30dvw, 560px);
   left: -7.5%;
   z-index: 1;
 }
@@ -221,6 +221,7 @@
   .face__wrapper {
     display: block;
     align-self: center;
+    aspect-ratio: unset;
   }
 
 }

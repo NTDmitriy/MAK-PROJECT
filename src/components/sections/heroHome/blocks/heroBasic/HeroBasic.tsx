@@ -31,7 +31,10 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
             </h1>
           </div>
           <p className={styles.descr}>
-          Полный цикл маркетинговых услуг: от настройки рекламы до SEO-продвижения и создания сайтов. Ваш надежный партнер в мире digital маркетинга. Доверьтесь нам и наблюдайте за ростом своего бизнеса.
+            Полный цикл маркетинговых услуг: от настройки рекламы до
+            SEO-продвижения и создания сайтов. Ваш надежный партнер в мире
+            digital маркетинга. Доверьтесь нам и наблюдайте за ростом своего
+            бизнеса.
           </p>
           <div className={styles.btn_grop}>
             <Popup
@@ -60,10 +63,10 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
 
         <div className={styles.face__wrapper}>
           <picture>
-          <source
-            srcSet={`/images/faces/grafov-hero-360x360.webp`}
-            media="(max-width: 768px)"
-          />
+            <source
+              srcSet={`/images/faces/grafov-hero-360x360.webp`}
+              media="(max-width: 768px)"
+            />
             <img
               className={styles.face__img}
               src={`/images/faces/grafov-hero-560x560.webp`}
