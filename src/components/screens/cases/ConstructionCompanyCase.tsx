@@ -170,19 +170,19 @@ export const ConstructionCompanyCase: FC<
               </p>
               <div className={styles.picture_content}>
                 <img
-                  src={`/images/cases/cases-karelskiy-dom-metrika3.webp`}
+                  src={`/images/cases/cases-candy-shop-metrika2.webp`}
                   className={styles.image__main}
                   alt=""
                   title=""
                 />
                 <img
-                  src={`/images/cases/cases-karelskiy-dom-metrika4.webp`}
+                  src={`/images/cases/cases-candy-shop-metrika2.webp`}
                   className={styles.image__main}
                   alt=""
                   title=""
                 />
                 <img
-                  src={`/images/cases/cases-karelskiy-dom-metrika5.webp`}
+                  src={`/images/cases/cases-candy-shop-metrika2.webp`}
                   className={styles.image__main}
                   alt=""
                   title=""
