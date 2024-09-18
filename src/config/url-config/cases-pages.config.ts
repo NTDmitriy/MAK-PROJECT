@@ -33,11 +33,29 @@ class CASES_DASHBOARD {
     url: `${this.root}/stomatologicheskaya-klinika-v-sankt-peterburge`,
   } satisfies IDashboardItem;
 
+  ROOM_DESTROY = {
+    name: "Комната ярости Udestroy в Москве",
+    url: `${this.root}/komnata-yarosti-udestroy-v-moskve`,
+  } satisfies IDashboardItem;
+
+  CANDY_SHOP = {
+    name: "Эффективное привлечение клиентов для кондитерской в Краснодаре",
+    url: `${this.root}/effektivnoye-privlecheniye-kliyentov-dlya-konditerskoy-v-krasnodare`,
+  } satisfies IDashboardItem;
+
+  SAINT_PETERSBURG_COMPANY = {
+    name: "Продажа элитных участков в Санкт-Петербурге и Ленинградской области",
+    url: `${this.root}/prodazha-elitnykh-uchastkov-v-sankt-peterburge-i-leningradskoy-oblasti`,
+  } satisfies IDashboardItem;
+
   CASES = {
     icon: "IconCasesNav",
     name: "Кейсы",
     url: this.root,
     childrens: [
+      this.SAINT_PETERSBURG_COMPANY,
+      this.CANDY_SHOP,
+      this.ROOM_DESTROY,
       this.FRONTEND_DEVELOPMENT_UNIVERSITY,
       this.STOMATOLOGY_CLINIC,
       this.TAX_OPTIMIZATION,
