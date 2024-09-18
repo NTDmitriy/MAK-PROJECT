@@ -17,23 +17,23 @@ export const BlogItem: FC<PropsWithChildren<IBlog>> = ({
 
   return (
     <>
-      <li className={styles.item} {...rest}>
-        <img
-          className={styles.img}
-          src={`/images/blog/${image}`}
-          alt={name}
-          title={name}
-          loading="lazy"
-        />
+      <li  {...rest}>
+        <Link href={url} className={styles.item}>
+          <img
+            className={styles.img}
+            src={`/images/blog/${image}`}
+            alt={name}
+            title={name}
+            loading="lazy"
+          />
 
-        <h5 className={styles.title}>{name}</h5>
-        <p className={styles.descr}>{description}</p>
-        <div className={styles.bot__wrapper}>
-          <Link className={styles.link} href={url}>
-            Читать полностью
-          </Link>
-          <p className={styles.date}>{date}</p>
-        </div>
+          <h5 className={styles.title}>{name}</h5>
+          <p className={styles.descr}>{description}</p>
+          <div className={styles.bot__wrapper}>
+            <p className={styles.link}>Читать полностью</p>
+            <p className={styles.date}>{date}</p>
+          </div>
+        </Link>
       </li>
     </>
   );
