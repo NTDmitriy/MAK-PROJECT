@@ -1,6 +1,6 @@
 import { type TCases } from "@/interfaces/types/block/products.type";
 
-class ALL_CASES {
+class PREV_CASES {
   WILDBERRIES_SHOP = {
     id: 1,
     name: "МАГАЗИН ЖЕНСКОЙ ОДЕЖДЫ НА WB",
@@ -66,4 +66,4 @@ class ALL_CASES {
   }
 }
 
-export const ALL_CASES_CONTENT = new ALL_CASES();
+export const ALL_CASES_CONTENT = new PREV_CASES();

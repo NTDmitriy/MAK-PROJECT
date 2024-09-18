@@ -1,25 +1,20 @@
+import { Box } from "@/components/ui-blog/box/Box";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs/Breadcrumbs";
-import { Container } from "@/components/ui/container/Container";
 import {
   FORM_TYPE,
   FormController,
 } from "@/components/ui/forms/FormController";
-import { Section } from "@/components/ui/section/Section";
 import { CASES_DASHBOARD_PAGES } from "@/config/url-config/cases-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
-import { FC, PropsWithChildren } from "react";
+import { FC } from "react";
 import styles from "./CasesPages.module.css";
 
-export const FrontentDevUniversityCase: FC<
-  PropsWithChildren<IGenericElementProps>
-> = ({ className, ...rest }) => {
+export const FrontentDevUniversityCase: FC = () => {
   return (
     <>
       <Breadcrumbs
         pathname={CASES_DASHBOARD_PAGES.FRONTEND_DEVELOPMENT_UNIVERSITY.url}
       />
-      <Section className={className} {...rest}>
-        <Container>
+      <Box>
           <div className={styles.content_hero}>
             <h2 className={styles.hero_title}>
               Увеличение числа заявок и повышение конверсии
@@ -46,11 +41,10 @@ export const FrontentDevUniversityCase: FC<
               </li>
             </ul>
           </div>
-        </Container>
-      </Section>
-      <Section>
+      </Box>
+      <Box>
         <div className={styles.tasks__problems}>
-          <Container className={styles.problems_content}>
+          <div className={styles.problems_content}>
             <h3 className={`${styles.title} ${styles.title_problems}`}>
               Проблематика
             </h3>
@@ -65,11 +59,10 @@ export const FrontentDevUniversityCase: FC<
                 Низкая конверсия посадочных страниц, составляющая около 1,2%.
               </li>
             </ul>
-          </Container>
+          </div>
         </div>
-      </Section>
-      <Section>
-        <Container>
+      </Box>
+      <Box>
           <div className={styles.tasks}>
             <h3 className={styles.title}>Решение</h3>
             <p className={styles.text_bg}>Реклама в Яндекс Директ</p>
@@ -102,32 +95,27 @@ export const FrontentDevUniversityCase: FC<
               <img
                 src={`/images/cases/cases-frontend-metrica1.webp`}
                 className={styles.image__main}
-                alt=""
-                title=""
+                alt="Увеличение числа заявок и повышение конверсии"
               />
               <img
                 src={`/images/cases/cases-frontend-metrica2.webp`}
                 className={styles.image__main}
-                alt=""
-                title=""
+                alt="Увеличение числа заявок и повышение конверсии"
               />
               <img
                 src={`/images/cases/cases-frontend-metrica3.webp`}
                 className={styles.image__main}
-                alt=""
-                title=""
+                alt="Увеличение числа заявок и повышение конверсии"
               />
               <img
                 src={`/images/cases/cases-frontend-metrica4.webp`}
                 className={styles.image__main}
-                alt=""
-                title=""
+                alt="Увеличение числа заявок и повышение конверсии"
               />
               <img
                 src={`/images/cases/cases-frontend-metrica5.webp`}
                 className={styles.image__main}
-                alt=""
-                title=""
+                alt="Увеличение числа заявок и повышение конверсии"
               />
               <p className={styles.text}>
                 Проект принес значительные улучшения:
@@ -162,20 +150,17 @@ export const FrontentDevUniversityCase: FC<
               <img
                 src={`/images/cases/cases-frontend-yandx1.webp`}
                 className={styles.image__main}
-                alt=""
-                title=""
+                alt="Увеличение числа заявок и повышение конверсии"
               />
               <img
                 src={`/images/cases/cases-frontend-yandx2.webp`}
                 className={styles.image__main}
-                alt=""
-                title=""
+                alt="Увеличение числа заявок и повышение конверсии"
               />
             </div>
             <FormController formType={FORM_TYPE.MAIN_FORM} />
           </div>
-        </Container>
-      </Section>
+      </Box>
     </>
   );
 };

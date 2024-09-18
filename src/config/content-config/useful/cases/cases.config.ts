@@ -5,7 +5,7 @@ import {
   THeroBasic,
 } from "@/interfaces/types/block/products.type";
 import { TUsefulScreen } from "@/interfaces/types/screens/screens.type";
-import { ALL_CASES_CONTENT } from "../../all-cases/all-cases.config";
+import { ALL_CASES_CONTENT } from "../../prev-cases/prev-cases.config";
 
 export const CASES_CONFIG = {
   url: DASHBOARD_PAGES.CASES.url,

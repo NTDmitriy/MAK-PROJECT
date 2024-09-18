@@ -8,10 +8,10 @@ class CONTACTS {
   EMAIL = "info@makeallperfect.ru";
   TELEGRAM = "https://t.me/makeallperfect_bot";
   TELEGRAM_PUBLIC = "https://t.me/makeallperfect";
-  WHATSAPP = "wa";
-  VK = "vk";
-  DZEN = "dzen";
-  YANDEX_REVIWES='qeqweqwe'
+  WHATSAPP = "https://wa.me/79255755155";
+  VK = "https://vk.com/makeallperfect";
+  DZEN = "https://dzen.ru/makeallperfect";
+  YANDEX_REVIWES = "https://yandex.ru/maps/org/make_all_perfect/79209203887";
   PRIVACY_POLICY = "privacy-policy.pdf";
 }
 
