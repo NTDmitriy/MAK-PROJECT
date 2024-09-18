@@ -31,7 +31,7 @@ export const WEBDEV_MODX_CONFIG = {
     infoWebdev: [
       "Уникальный дизайн",
       "Полная адаптивность",
-      "Быстрые сроки разработки",
+      "Высокая безопасность",
       "1 месяц бесплатной поддержки",
     ] satisfies THeroInfo,
   } satisfies THero,

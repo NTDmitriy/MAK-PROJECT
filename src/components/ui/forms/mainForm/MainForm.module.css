@@ -20,10 +20,11 @@
 
 .text {
   font-family: var(--font-family);
-  font-weight: 200;
+  font-weight: 300;
   font-size: clamp(14px,1.7dvw, 24px);
   line-height: 120%;
   color: #161616;
+  opacity: 0.6;
 }
 
 .form {

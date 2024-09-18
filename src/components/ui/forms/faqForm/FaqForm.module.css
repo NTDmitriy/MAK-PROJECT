@@ -31,8 +31,8 @@
 
 .descr {
   font-family: var(--font-family);
-  font-weight: 200;
-  font-size: clamp(14px, 3dvw, 20px);
+  font-weight: 300;
+  font-size: clamp(14px, 3dvw, 24px);
   line-height: 120%;
   color: #161616;
   margin-bottom: calc(30px - var(--gap));

@@ -1,5 +1,5 @@
-import { ALL_CASES_CONTENT } from "@/config/content-config/all-cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/all-reviwes/all-reviwes.config";
+import { ALL_CASES_CONTENT } from "@/config/content-config/prev-cases/prev-cases.config";
 import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
 import {
   TCases,

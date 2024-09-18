@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { ComplexForm } from "./complexForm/ComplexForm";
 import { FaqForm } from "./faqForm/FaqForm";
 import { HookFormProvider } from "./HookFormProvider";
@@ -15,8 +15,8 @@ export enum FORM_TYPE {
 }
 
 export interface IFormContent {
-	title?: string;
-	text?: string;
+	title?: string ;
+	text?: string | ReactNode;
 	areaVisible?: boolean;
 	subServices?: string[];
 }

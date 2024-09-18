@@ -23,9 +23,7 @@
   background-image: url(/images/cases/cases-saint-peterburg.webp);
   background-position: top right;
   min-height: 546px;
-  
 }
-
 
 .hero_title {
   font-family: var(--third-family);
@@ -204,14 +202,13 @@
     min-height: 546px;
   }
 
-  
-.destroy_room {
-  background-image: url(/images/cases/cases-destroy-room.webp);
-  background-position: top left;
-  background-size: cover;
-}
+  .destroy_room {
+    background-image: url(/images/cases/cases-destroy-room.webp);
+    background-position: top left;
+    background-size: cover;
+  }
 
-.destroy_room_content_block {
-  flex-direction: column;
-}
+  .destroy_room_content_block {
+    flex-direction: column;
+  }
 }

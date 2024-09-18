@@ -31,8 +31,11 @@ export const OurServices: FC<PropsWithChildren<IGenericElementProps>> = ({
         descrSideway={
           <>
             Наши решения адаптированы под различные ниши и помогают
-            <span className="accent"> эффективно привлекать клиентов</span> и
-            повышать узнаваемость вашего бренда
+            <span className={styles.accent}>
+              {" "}
+              эффективно привлекать клиентов
+            </span>{" "}
+            и повышать узнаваемость вашего бренда
           </>
         }
       >
@@ -83,7 +86,17 @@ export const OurServices: FC<PropsWithChildren<IGenericElementProps>> = ({
               </li>
             ))}
           <li className={styles.form}>
-            <FormController formType={FORM_TYPE.FAQ_FORM} />
+            <FormController
+              formType={FORM_TYPE.FAQ_FORM}
+              title="Не нашли подходящую услугу?"
+              text={
+                <>
+                  Оставьте свои контактные данные, и наш менеджер предложит
+                  идеальные решения для вашего бизнеса.{" "}
+                  <span style={{color:'#FF7A00'}}> Мы найдем то, что вам нужно!</span>
+                </>
+              }
+            />
           </li>
         </ul>
       </Container>

@@ -1,10 +1,9 @@
+import { Box } from "@/components/ui-blog/box/Box";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs/Breadcrumbs";
-import { Container } from "@/components/ui/container/Container";
 import {
   FORM_TYPE,
   FormController,
 } from "@/components/ui/forms/FormController";
-import { Section } from "@/components/ui/section/Section";
 import { CASES_DASHBOARD_PAGES } from "@/config/url-config/cases-pages.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { FC, PropsWithChildren } from "react";
@@ -16,46 +15,44 @@ export const StamotalogyClinicCase: FC<
   return (
     <>
       <Breadcrumbs pathname={CASES_DASHBOARD_PAGES.STOMATOLOGY_CLINIC.url} />
-      <Section className={className} {...rest}>
-        <Container>
-          <div className={styles.content_hero}>
-            <h2 className={styles.hero_title}>
-              Комплексное продвижение сети стоматологических клиник
-              в Санкт-Петербурге
-            </h2>
-            <p className={styles.text}>
-              Проект по привлечению новых пациентов и повышению узнаваемости
-              бренда стоматологических клиник через рекламу в Яндекс Директ,
-              ВКонтакте и разработку оптимизированного сайта.
-            </p>
-          </div>
-          <div className={styles.tasks}>
-            <h3 className={styles.title}>Задачи проекта</h3>
-            <p className={styles.text}>Основные задачи проекта включали: </p>
-            <ul className={styles.text_list}>
-              <li className={styles.text_info}>
-                Разработка современного и удобного сайта для сети
-                стоматологических клиник.
-              </li>
-              <li className={styles.text_info}>
-                Настройка и оптимизация рекламных кампаний в Яндекс Директ для
-                привлечения целевого трафика.
-              </li>
-              <li className={styles.text_info}>
-                Проведение рекламных кампаний в ВКонтакте для повышения
-                вовлеченности и привлечения новых клиентов.
-              </li>
-              <li className={styles.text_info}>
-                Минимальная SEO-оптимизация сайта под брендовые запросы для
-                улучшения видимости в поисковых системах.
-              </li>
-            </ul>
-          </div>
-        </Container>
-      </Section>
-      <Section>
+      <Box className={className} {...rest}>
+        <div className={styles.content_hero}>
+          <h2 className={styles.hero_title}>
+            Комплексное продвижение сети стоматологических клиник
+            в Санкт-Петербурге
+          </h2>
+          <p className={styles.text}>
+            Проект по привлечению новых пациентов и повышению узнаваемости
+            бренда стоматологических клиник через рекламу в Яндекс Директ,
+            ВКонтакте и разработку оптимизированного сайта.
+          </p>
+        </div>
+        <div className={styles.tasks}>
+          <h3 className={styles.title}>Задачи проекта</h3>
+          <p className={styles.text}>Основные задачи проекта включали: </p>
+          <ul className={styles.text_list}>
+            <li className={styles.text_info}>
+              Разработка современного и удобного сайта для сети
+              стоматологических клиник.
+            </li>
+            <li className={styles.text_info}>
+              Настройка и оптимизация рекламных кампаний в Яндекс Директ для
+              привлечения целевого трафика.
+            </li>
+            <li className={styles.text_info}>
+              Проведение рекламных кампаний в ВКонтакте для повышения
+              вовлеченности и привлечения новых клиентов.
+            </li>
+            <li className={styles.text_info}>
+              Минимальная SEO-оптимизация сайта под брендовые запросы для
+              улучшения видимости в поисковых системах.
+            </li>
+          </ul>
+        </div>
+      </Box>
+      <Box>
         <div className={styles.tasks__problems}>
-          <Container className={styles.problems_content}>
+          <div className={styles.problems_content}>
             <h3 className={`${styles.title} ${styles.title_problems}`}>
               Проблематика
             </h3>
@@ -77,118 +74,114 @@ export const StamotalogyClinicCase: FC<
                 органический трафик.
               </li>
             </ul>
-          </Container>
+          </div>
         </div>
-      </Section>
-      <Section>
-        <Container>
+      </Box>
+      <Box>
+        <div className={styles.tasks}>
+          <h3 className={styles.title}>Решение</h3>
+          <p className={styles.text_bg}>Разработка сайта</p>
+          <ul className={styles.text_list}>
+            <li className={styles.text_info}>
+              Создали современный, удобный и интуитивно понятный сайт, который
+              представляет услуги клиник и их преимущества.
+            </li>
+            <li className={styles.text_info}>
+              Внедрили удобную систему онлайн-записи, что упростило процесс
+              регистрации на прием для пациентов.
+            </li>
+            <li className={styles.text_info}>
+              Обеспечили мобильную адаптацию сайта, чтобы пользователи могли
+              удобно пользоваться им с любых устройств.
+            </li>
+          </ul>
+          <p className={styles.text_bg}>Реклама в Яндекс Директ</p>
+          <ul className={styles.text_list}>
+            <li className={styles.text_info}>
+              Настроили рекламные кампании, ориентированные на ключевые запросы,
+              связанные со стоматологическими услугами в Санкт-Петербурге.
+            </li>
+            <li className={styles.text_info}>
+              Запустили ретаргетинговые кампании, чтобы напоминать потенциальным
+              клиентам о клинике и побуждать их к записи на прием.
+            </li>
+            <li className={styles.text_info}>
+              Провели A/B тестирование объявлений и ключевых слов для повышения
+              CTR и уменьшения стоимости клика.
+            </li>
+          </ul>
+          <p className={styles.text_bg}>Реклама в ВКонтакте</p>
+          <ul className={styles.text_list}>
+            <li className={styles.text_info}>
+              Запустили таргетированные рекламные кампании, ориентированные на
+              жителей Санкт-Петербурга, интересующихся стоматологическими
+              услугами.
+            </li>
+            <li className={styles.text_info}>
+              Разработали контент-план для ведения страницы клиник в ВКонтакте,
+              включая публикации о преимуществах клиники, отзывы клиентов и
+              полезные советы по уходу за зубами.
+            </li>
+          </ul>
+          <p className={styles.text_bg}>
+            Минимальная SEO-оптимизация под брендовые запросы
+          </p>
+          <ul className={styles.text_list}>
+            <li className={styles.text_info}>
+              Оптимизировали сайт под брендовые запросы, улучшив его видимость в
+              поисковых системах.
+            </li>
+            <li className={styles.text_info}>
+              Провели базовую оптимизацию мета-тегов и контента на сайте.
+            </li>
+          </ul>
+
           <div className={styles.tasks}>
-            <h3 className={styles.title}>Решение</h3>
-            <p className={styles.text_bg}>Разработка сайта</p>
-            <ul className={styles.text_list}>
-              <li className={styles.text_info}>
-                Создали современный, удобный и интуитивно понятный сайт, который
-                представляет услуги клиник и их преимущества.
-              </li>
-              <li className={styles.text_info}>
-                Внедрили удобную систему онлайн-записи, что упростило процесс
-                регистрации на прием для пациентов.
-              </li>
-              <li className={styles.text_info}>
-                Обеспечили мобильную адаптацию сайта, чтобы пользователи могли
-                удобно пользоваться им с любых устройств.
-              </li>
-            </ul>
-            <p className={styles.text_bg}>Реклама в Яндекс Директ</p>
-            <ul className={styles.text_list}>
-              <li className={styles.text_info}>
-                Настроили рекламные кампании, ориентированные на ключевые
-                запросы, связанные со стоматологическими услугами в
-                Санкт-Петербурге.
-              </li>
-              <li className={styles.text_info}>
-                Запустили ретаргетинговые кампании, чтобы напоминать
-                потенциальным клиентам о клинике и побуждать их к записи на
-                прием.
-              </li>
-              <li className={styles.text_info}>
-                Провели A/B тестирование объявлений и ключевых слов для
-                повышения CTR и уменьшения стоимости клика.
-              </li>
-            </ul>
-            <p className={styles.text_bg}>Реклама в ВКонтакте</p>
-            <ul className={styles.text_list}>
-              <li className={styles.text_info}>
-                Запустили таргетированные рекламные кампании, ориентированные на
-                жителей Санкт-Петербурга, интересующихся стоматологическими
-                услугами.
-              </li>
-              <li className={styles.text_info}>
-                Разработали контент-план для ведения страницы клиник в
-                ВКонтакте, включая публикации о преимуществах клиники, отзывы
-                клиентов и полезные советы по уходу за зубами.
-              </li>
-            </ul>
-            <p className={styles.text_bg}>
-              Минимальная SEO-оптимизация под брендовые запросы
+            <h3 className={styles.title}>Результаты</h3>
+            <img
+              src={`/images/cases/cases-stamotologiya-metrica1.webp`}
+              className={styles.image__main}
+              alt="Комплексное продвижение сети стоматологических клиник
+            в Санкт-Петербурге"
+            />
+            <p className={styles.text}>
+              Реализация проекта принесла значительные улучшения:
             </p>
             <ul className={styles.text_list}>
               <li className={styles.text_info}>
-                Оптимизировали сайт под брендовые запросы, улучшив его видимость
-                в поисковых системах.
+                Количество целевых обращений через сайт увеличилось
+                <span className={styles.text_info_yellow}> на 250%, </span>
+                достигнув
+                <span className={styles.text_info_yellow}>
+                  {" "}
+                  500 заявок в месяц.
+                </span>
               </li>
               <li className={styles.text_info}>
-                Провели базовую оптимизацию мета-тегов и контента на сайте.
+                Узнаваемость бренда в интернете повысилась{" "}
+                <span className={styles.text_info_yellow}>на 40%,</span> что
+                способствовало росту органического трафика{" "}
+                <span className={styles.text_info_yellow}>на 60%,</span>
+              </li>
+              <li className={styles.text_info}>
+                Средняя стоимость заявки{" "}
+                <span className={styles.text_info_yellow}>
+                  снизилась более, чем в 2 раза
+                </span>
+                , что повысило рентабельность рекламных кампаний.
               </li>
             </ul>
-
-            <div className={styles.tasks}>
-              <h3 className={styles.title}>Результаты</h3>
-              <img
-                src={`/images/cases/cases-stamotologiya-metrica1.webp`}
-                className={styles.image__main}
-                alt=""
-                title=""
-              />
-              <p className={styles.text}>
-                Реализация проекта принесла значительные улучшения:
-              </p>
-              <ul className={styles.text_list}>
-                <li className={styles.text_info}>
-                  Количество целевых обращений через сайт увеличилось
-                  <span className={styles.text_info_yellow}> на 250%, </span>
-                  достигнув
-                  <span className={styles.text_info_yellow}>
-                    {" "}
-                    500 заявок в месяц.
-                  </span>
-                </li>
-                <li className={styles.text_info}>
-                  Узнаваемость бренда в интернете повысилась{" "}
-                  <span className={styles.text_info_yellow}>на 40%,</span> что
-                  способствовало росту органического трафика{" "}
-                  <span className={styles.text_info_yellow}>на 60%,</span>
-                </li>
-                <li className={styles.text_info}>
-                  Средняя стоимость заявки{" "}
-                  <span className={styles.text_info_yellow}>
-                    снизилась более, чем в 2 раза
-                  </span>
-                  , что повысило рентабельность рекламных кампаний.
-                </li>
-              </ul>
-              <p className={styles.text_full}>
-                Проект продемонстрировал, что комплексный подход к маркетингу,
-                включающий разработку современного сайта, настройку рекламных
-                кампаний и минимальную SEO-оптимизацию, может значительно
-                повысить эффективность маркетинговых усилий и обеспечить
-                стабильный рост показателей.
-              </p>
-            </div>
-            <FormController formType={FORM_TYPE.MAIN_FORM} />
+            <p className={styles.text_full}>
+              Проект продемонстрировал, что комплексный подход к маркетингу,
+              включающий разработку современного сайта, настройку рекламных
+              кампаний и минимальную SEO-оптимизацию, может значительно повысить
+              эффективность маркетинговых усилий и обеспечить стабильный рост
+              показателей.
+            </p>
           </div>
-        </Container>
-      </Section>
+          <FormController formType={FORM_TYPE.MAIN_FORM} />
+        </div>
+      </Box>
     </>
   );
 };
