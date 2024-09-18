@@ -1,16 +1,14 @@
 .imgs {
-  padding-top: 40px;
-  display: flex;
-  gap: 20px;
-  flex-shrink: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 .img {
   display: block;
-  flex: 1;
-  max-width: calc(50% - 10px);
-  object-fit: scale-down;
   margin-bottom: clamp(20px, 3dvw, 50px);
+  width: 100%;
+  max-width: 100%;
 }
 
 .img3 {
@@ -26,15 +24,8 @@
   gap: 20px;
 }
 
-
-@media screen and (max-width: 700px) {
-  .imgs {
-    flex-direction: column;
-  }
-  .img {
-    max-width: 100%;
-  }
-  .list{
+@media screen and (max-width: 768px) {
+  .list {
     flex-direction: column;
   }
 }

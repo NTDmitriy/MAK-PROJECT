@@ -12,8 +12,8 @@ export const CASES_CONFIG = {
   hero: {
     basic: {
       title: {
-        accent: "проекты",
-        accentBefore: "Наши",
+        accent: "Наши кейсы",
+        accentAfter: "и истории успеха",
       },
       description:
         "Посмотрите, как мы помогли различным компаниям добиться успеха. Реальные кейсы и истории успеха от Make All Perfect, демонстрирующие наш подход и результаты.",

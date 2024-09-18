@@ -12,6 +12,7 @@ class CONTACTS {
   VK = "vk";
   DZEN = "dzen";
   YANDEX_REVIWES='qeqweqwe'
+  PRIVACY_POLICY = "privacy-policy.pdf";
 }
 
 export const CONTACTS_PUBLIC = new CONTACTS();
