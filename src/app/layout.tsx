@@ -8,8 +8,6 @@ import { Footer } from "../components/layout/footer/Footer";
 import { Header } from "../components/layout/header/Header";
 import { Providers } from "./providers";
 
-
-
 export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
@@ -18,7 +16,7 @@ export const metadata: Metadata = {
   ...METADATA.HOME,
   openGraph: {
     ...METADATA.HOME,
-   
+
   },
 
   ...NO_INDEX_PAGE,

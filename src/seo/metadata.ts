@@ -2,12 +2,13 @@ export const NO_INDEX_PAGE = { robots: { index: false, follow: false } };
 
 export const IMAGES = [
   {
-    url: "/images/og.png",
+    url: `https://${process.env.SITE_URL}/images/og.png`,
     width: 1200,
     height: 630,
-    alt: "Default Open Graph Image",
+    alt: "Make All Perfect>",
   },
 ];
+
 
 type TMetadata = {
   title: string;
