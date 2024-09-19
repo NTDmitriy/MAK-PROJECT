@@ -54,9 +54,9 @@ export const OurStatistic: FC<PropsWithChildren<IGenericElementProps>> = ({
         </div>
         <div className={styles.progress_bar}>
           <div className={styles.progress_main}>
-            <div
-              className={clsx(styles.scale, { [styles.visible]: progressRef })}
-              ref={progressRef}
+            <div  ref={progressRef}
+  className={clsx(styles.scale, { [styles.visible]: progressInView })}
+              
             ></div>
           </div>
           <div className={styles.progress_grafs}>
