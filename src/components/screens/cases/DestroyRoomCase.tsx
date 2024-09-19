@@ -1,8 +1,8 @@
-import { Box } from "@/components/ui-blog/box/Box";
+import { Box } from "@/components/ui/box/Box";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs/Breadcrumbs";
 import {
-  FORM_TYPE,
-  FormController,
+    FORM_TYPE,
+    FormController,
 } from "@/components/ui/forms/FormController";
 import { CASES_DASHBOARD_PAGES } from "@/config/url-config/cases-pages.config";
 import clsx from "clsx";

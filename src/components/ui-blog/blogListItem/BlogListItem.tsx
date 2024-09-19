@@ -1,16 +1,16 @@
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
-import styles from "./TextTitleBlog.module.css";
+import styles from "./BlogListItem.module.css";
 
-export const TextTitleBlog: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const BlogListItem: FC<PropsWithChildren<IGenericElementProps>> = ({
   children,
   className,
   ...rest
 }) => {
   return (
-    <h3 className={clsx(styles.root, className)} {...rest}>
+    <li className={clsx(styles.root, className)} {...rest}>
       {children}
-    </h3>
+    </li>
   );
 };
