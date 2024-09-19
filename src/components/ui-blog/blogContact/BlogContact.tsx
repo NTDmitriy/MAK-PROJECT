@@ -1,8 +1,9 @@
 import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { FC, PropsWithChildren } from "react";
-import { Box } from "../box/Box";
-import styles from "./ContactBlog.module.css";
+
+import { Box } from "@/components/ui/box/Box";
+import styles from "./BlogContact.module.css";
 
 interface IContactBlog extends IGenericElementProps {
   blockTitle: string;

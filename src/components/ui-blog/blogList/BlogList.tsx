@@ -1,14 +1,14 @@
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
-import styles from "./ListBlog.module.css";
+import styles from "./BlogList.module.css";
 
-interface IListBlog extends IGenericElementProps {
+interface IBlogList extends IGenericElementProps {
   grid?: boolean;
   margin?: boolean;
 }
 
-export const ListBlog: FC<PropsWithChildren<IListBlog>> = ({
+export const BlogList: FC<PropsWithChildren<IBlogList>> = ({
   grid,
   children,
   className,

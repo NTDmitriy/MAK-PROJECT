@@ -131,7 +131,7 @@ export const Footer: FC<PropsWithChildren<IGenericElementProps>> = ({
                 </a>
                 <a
                   className={clsx(styles.footer__link, styles.ducument__link)}
-                  href={`sitemap`}
+                  href='/sitemap'
                   target="_blank"
                 >
                   <span>Карта сайта</span>

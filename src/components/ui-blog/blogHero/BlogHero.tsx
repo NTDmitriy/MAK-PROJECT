@@ -7,13 +7,13 @@ import { IBlogItem } from "@/config/url-config/blog-pages.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
-import styles from "./HeroBlog.module.css";
+import styles from "./BlogHero.module.css";
 
-interface IHeroBlog extends IGenericElementProps {
+interface IBlogHero extends IGenericElementProps {
   heroContent: IBlogItem;
 }
 
-export const HeroBlog: FC<PropsWithChildren<IHeroBlog>> = ({ heroContent }) => {
+export const BlogHero: FC<PropsWithChildren<IBlogHero>> = ({ heroContent }) => {
   const { name, date, time, author, thems } = heroContent;
   return (
     <Section>

@@ -1,4 +1,4 @@
-import { Box } from "@/components/ui-blog/box/Box";
+import { Box } from "@/components/ui/box/Box";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs/Breadcrumbs";
 import {
   FORM_TYPE,
