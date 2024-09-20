@@ -1,4 +1,4 @@
-import { RedesingGuideScreen } from "@/components/screens/blog/redesingGuide/RedesingGuideScreen";
+import { RedesingGuideScreen } from "@/components/screens/blogCases/redesingGuide/RedesingGuideScreen";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 

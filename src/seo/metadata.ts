@@ -288,7 +288,7 @@ export const METADATA = {
     images: IMAGES,
   },
 
-  SAINT_PETERSBURG_COMPANY: {
+  REAL_ESTATE_SALE: {
     title:
       "Кейс: Продвижение элитных участков в Санкт-Петербурге и Ленинградской области",
     description:

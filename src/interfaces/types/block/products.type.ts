@@ -40,13 +40,17 @@ export type TSupplementaryDescr = {
   image: string;
 };
 
-export type TCases = {
+export type TCase = {
   id: number | string;
-  name: string;
   url: string;
-  description: string;
+  name: string;
+  description: string | null;
+  prevDescription: string | null;
+  prevName: string;
+  category: string;
   image: string;
   instruments: string[];
+  isGlobal?: boolean;
 };
 
 export type TReviwe = {

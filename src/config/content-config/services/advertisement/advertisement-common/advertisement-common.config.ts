@@ -1,14 +1,14 @@
+import { ALL_CASES_CONTENT } from "@/config/content-config/all-cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/all-reviwes/all-reviwes.config";
-import { ALL_CASES_CONTENT } from "@/config/content-config/prev-cases/prev-cases.config";
 import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
 import {
-  TCases,
-  TFaq,
-  THero,
-  THeroBasic,
-  THeroInfo,
-  TReviwe,
-  TServiceProducts
+    TCase,
+    TFaq,
+    THero,
+    THeroBasic,
+    THeroInfo,
+    TReviwe,
+    TServiceProducts
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_FAQ } from "./advertisement-common-faq.config";
@@ -38,7 +38,7 @@ export const ADVERTISEMENT_COMMON_CONFIG = {
     ...ADVERTISEMENT_PRODUCTS,
   } satisfies TServiceProducts,
   whyUsChecklict: true,
-  projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
+  projects: ALL_CASES_CONTENT.toArray() satisfies TCase[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
   faq: ADVERTISEMENT_FAQ satisfies TFaq[],
 } satisfies TScreen;

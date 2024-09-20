@@ -1,4 +1,4 @@
-import { ConstructionCompanyCase } from "@/components/screens/cases/ConstructionCompanyCase";
+import { ConstructionCompanyCase } from "@/components/screens/casesScreens/ConstructionCompanyCase";
 import { NextPage } from "next";
 
 const CasesPage: NextPage = () => {

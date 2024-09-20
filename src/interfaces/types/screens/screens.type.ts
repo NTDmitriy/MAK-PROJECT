@@ -1,20 +1,20 @@
 import { IDashboardItem } from "@/config/url-config/all-pages.config";
 import type {
-  TCases,
-  TDetialServices,
-  TFaq,
-  THero,
-  THowWorks,
-  TIncludedInService,
-  TProjectTeam,
-  TReviwe,
-  TServiceProducts,
-  TSuitableFor,
-  TSupplementaryDescr,
-  TTariffs,
-  TVacancies,
-  TWhyUs,
-  TWorkStages,
+    TCase,
+    TDetialServices,
+    TFaq,
+    THero,
+    THowWorks,
+    TIncludedInService,
+    TProjectTeam,
+    TReviwe,
+    TServiceProducts,
+    TSuitableFor,
+    TSupplementaryDescr,
+    TTariffs,
+    TVacancies,
+    TWhyUs,
+    TWorkStages,
 } from "../block/products.type";
 
 export type TScreen = {
@@ -28,7 +28,7 @@ export type TScreen = {
   whyUs?: TWhyUs;
   whyUsChecklict?: boolean;
   whyUsSites?: boolean;
-  projects?: TCases[];
+  projects?: TCase[];
   reviwes?: TReviwe[];
   faq?: TFaq[];
   allSiteTypes?: TServiceProducts;
@@ -51,7 +51,7 @@ export type TAllServicesScreen = {
 
 export type THomeScreen = {
   services: IDashboardItem[];
-  projects: TCases[];
+  projects: TCase[];
   reviwes: TReviwe[];
   faq: TFaq[];
 };
@@ -67,7 +67,7 @@ export type TUsefulScreen = {
   ourTeam?: boolean;
   blog?: boolean;
   blogPrev?: boolean;
-  projects?: TCases[];
+  projects?: TCase[];
   vacancies?: TVacancies;
   aboutPrev?: boolean;
   affiliatePrev?: boolean;

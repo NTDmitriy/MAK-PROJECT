@@ -3,12 +3,13 @@ import { FC, PropsWithChildren } from "react";
 import { AboutPrev } from "../sections/aboutPrev/AboutPrev";
 import { AffiliatePreview } from "../sections/affiliatePreview/AffiliatePreview";
 import { Blog } from "../sections/blog/Blog";
+
+import { Cases } from "../sections/cases/Cases";
 import Faq from "../sections/faq/Faq";
 import { HeroHome } from "../sections/heroHome/HeroHome";
 import { OurClients } from "../sections/ourClients/OurClients";
 import { OurServices } from "../sections/ourServices/OurServices";
 import { OurTeam } from "../sections/ourTeam/OurTeam";
-import { Projects } from "../sections/projects/Projects";
 import { Reviwes } from "../sections/reviwesSlider/ReviwesSlider";
 
 interface IHomeScreen {
@@ -26,7 +27,7 @@ export const HomeScreen: FC<PropsWithChildren<IHomeScreen>> = ({ content }) => {
       <HeroHome />
       <AboutPrev/>
       <OurServices />
-      <Projects cases={content.projects} />
+      <Cases cases={content.projects} isPrev={true}/>
       <Reviwes reviwes={content.reviwes} />
       <OurTeam />
       <OurClients />

@@ -1,4 +1,4 @@
-import { CreativeAdvertisingScreen } from "@/components/screens/blog/creativeAdvertising/CreativeAdvertisingScreen";
+import { CreativeAdvertisingScreen } from "@/components/screens/blogCases/creativeAdvertising/CreativeAdvertisingScreen";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 

@@ -1,5 +1,5 @@
 
-import { SaintPeterburgCase } from "@/components/screens/cases/SaintPeterburgCase";
+import { SaintPeterburgCase } from "@/components/screens/casesScreens/SaintPeterburgCase";
 import { NextPage } from "next";
 
 

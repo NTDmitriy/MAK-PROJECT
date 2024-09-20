@@ -1,10 +1,10 @@
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { FC, PropsWithChildren } from "react";
 import { AllProductsService } from "../sections/allProductsService/AllProductsService";
+import { Cases } from "../sections/cases/Cases";
 import Faq from "../sections/faq/Faq";
 import { Hero } from "../sections/hero/Hero";
 import { HowWorks } from "../sections/howWorks/HowWorks";
-import { Projects } from "../sections/projects/Projects";
 import { Reviwes } from "../sections/reviwesSlider/ReviwesSlider";
 import { SiteServices } from "../sections/siteServices/SiteServices";
 import { SupplementaryDescr } from "../sections/supplementaryDescr/SupplementaryDescr";
@@ -46,7 +46,7 @@ export const ServiceScreen: FC<PropsWithChildren<IServiceScreen>> = ({
       {content.whyUsChecklict && <WhyUsChecklist />}
       {content.whyUsSites && <WhyUsSites />}
       {content.whyUs && <WhyUs whyUsContent={content.whyUs} />}
-      {content.projects && <Projects cases={content.projects} />}
+      {content.projects && <Cases cases={content.projects} />}
       {content.reviwes && <Reviwes reviwes={content.reviwes} />}
       {content.faq && <Faq faq={content.faq} />}
     </>
