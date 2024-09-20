@@ -1,15 +1,15 @@
+import { ALL_CASES_CONTENT } from "@/config/content-config/all-cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/all-reviwes/all-reviwes.config";
-import { ALL_CASES_CONTENT } from "@/config/content-config/prev-cases/prev-cases.config";
 import { PROMOTION_DASHBOARD_PAGES } from "@/config/url-config/promotion-pages.config";
 import {
-  TCases,
-  TDetialServices,
-  THero,
-  THeroBasic,
-  THeroInfoProduct,
-  THowWorks,
-  TReviwe,
-  TWhyUs,
+    TCase,
+    TDetialServices,
+    THero,
+    THeroBasic,
+    THeroInfoProduct,
+    THowWorks,
+    TReviwe,
+    TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { MARKET_PLACE_DETAIL } from "./market-place-detail.config";
@@ -91,6 +91,6 @@ export const MARKET_PLACE_CONFIG = {
     blockTitle: "Почему нас выбирают",
   } satisfies TWhyUs,
   detialServices: MARKET_PLACE_DETAIL satisfies TDetialServices,
-  projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
+  projects: ALL_CASES_CONTENT.toArray() satisfies TCase[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
 } satisfies TScreen;

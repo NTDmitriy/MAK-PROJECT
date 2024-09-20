@@ -1,11 +1,11 @@
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
 import {
-  TCases,
-  THero,
-  THeroBasic,
+    TCase,
+    THero,
+    THeroBasic,
 } from "@/interfaces/types/block/products.type";
 import { TUsefulScreen } from "@/interfaces/types/screens/screens.type";
-import { ALL_CASES_CONTENT } from "../../prev-cases/prev-cases.config";
+import { ALL_CASES_CONTENT } from "../../all-cases/all-cases.config";
 
 export const CASES_CONFIG = {
   url: DASHBOARD_PAGES.CASES.url,
@@ -25,5 +25,5 @@ export const CASES_CONFIG = {
       "Подробные описания наших стратегий, подходов и достигнутых результатов",
     ],
   } satisfies THero,
-  projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
+  projects: ALL_CASES_CONTENT.toArray() satisfies TCase[],
 } satisfies TUsefulScreen;

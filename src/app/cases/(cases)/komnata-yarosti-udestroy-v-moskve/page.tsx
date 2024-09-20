@@ -1,6 +1,6 @@
 
 
-import { DestroyRoomCase } from "@/components/screens/cases/DestroyRoomCase";
+import { DestroyRoomCase } from "@/components/screens/casesScreens/DestroyRoomCase";
 import { NextPage } from "next";
 
 const CasesPage: NextPage = () => {

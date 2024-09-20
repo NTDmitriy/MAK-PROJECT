@@ -1,4 +1,4 @@
-import { CASES_DASHBOARD_PAGES } from "./cases-pages.config";
+import { ALL_CASES_CONTENT } from "../content-config/all-cases/all-cases.config";
 import { SERVICES_DASHBOARD_PAGES } from "./services-pages.config";
 import { USEFUL_DASHBOARD_PAGES } from "./useful-pages.config";
 
@@ -19,7 +19,13 @@ class DASHBOARD {
     url: "/",
   } satisfies IDashboardItem;
 
-  CASES = CASES_DASHBOARD_PAGES.CASES satisfies IDashboardItem;
+  // CASES = CASES_DASHBOARD_PAGES.CASES satisfies IDashboardItem;
+   CASES = {
+    icon: "IconCasesNav",
+    name: "Кейсы",
+    url: '/cases',
+    childrens: ALL_CASES_CONTENT.toArrayForDashbord(),
+  } satisfies IDashboardItem;
 
   SERVICES = SERVICES_DASHBOARD_PAGES.SERVICES satisfies IDashboardItem;
 

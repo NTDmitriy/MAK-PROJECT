@@ -1,0 +1,23 @@
+.root {
+  gap: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.margin {
+  margin-bottom: clamp(20px,3dvw,50px);
+}
+
+.root li img {
+  max-width: 100%;
+  width: 100%;
+}
+

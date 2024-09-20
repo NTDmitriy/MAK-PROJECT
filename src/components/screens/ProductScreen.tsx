@@ -1,12 +1,12 @@
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { FC, PropsWithChildren } from "react";
+import { Cases } from "../sections/cases/Cases";
 import { DetailServices } from "../sections/detailServices/DetailServices";
 import Faq from "../sections/faq/Faq";
 import { Hero } from "../sections/hero/Hero";
 import { HowWorks } from "../sections/howWorks/HowWorks";
 import { IncludedInService } from "../sections/includedInService/IncludedInService";
 import { MaybeInteresting } from "../sections/maybeInteresting/MaybeInteresting";
-import { Projects } from "../sections/projects/Projects";
 import { ProjectTeam } from "../sections/projectTeam/ProjectTeam";
 import { Reviwes } from "../sections/reviwesSlider/ReviwesSlider";
 import { AllSiteTypes } from "../sections/siteTypes/SiteTypes";
@@ -60,7 +60,7 @@ export const ProductScreen: FC<PropsWithChildren<IProductScreen>> = ({
       {content.howWorks && <HowWorks howWorksContent={content.howWorks} />}
       {content.whyUs && <WhyUs whyUsContent={content.whyUs} />}
       {content.projects && (
-        <Projects cases={content.projects} formVisible={true} />
+        <Cases cases={content.projects} formVisible={true} />
       )}
       {content.reviwes && <Reviwes reviwes={content.reviwes} />}
       {content.faq && <Faq faq={content.faq} />}

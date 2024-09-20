@@ -1,17 +1,17 @@
+import { ALL_CASES_CONTENT } from "@/config/content-config/all-cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/all-reviwes/all-reviwes.config";
-import { ALL_CASES_CONTENT } from "@/config/content-config/prev-cases/prev-cases.config";
 import { ADVERTISEMENT_DASHBOARD_PAGES } from "@/config/url-config/advertisement-pages.config";
 import {
-  TCases,
-  THero,
-  THeroBasic,
-  THeroInfoAdvertisement,
-  THowWorks,
-  TIncludedInService,
-  TReviwe,
-  TSupplementaryDescr,
-  TTariffs,
-  TWhyUs,
+    TCase,
+    THero,
+    THeroBasic,
+    THeroInfoAdvertisement,
+    THowWorks,
+    TIncludedInService,
+    TReviwe,
+    TSupplementaryDescr,
+    TTariffs,
+    TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { ADVERTISEMENT_GOOGLE_INCLUDE } from "./advertisement-google-include.config";
@@ -116,7 +116,7 @@ export const ADVERTISEMENT_GOOGLE_CONFIG = {
     blockTitle: "Почему нас выбирают",
   } satisfies TWhyUs,
   includeService: ADVERTISEMENT_GOOGLE_INCLUDE satisfies TIncludedInService,
-  projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
+  projects: ALL_CASES_CONTENT.toArray() satisfies TCase[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
   tariffs: TARIFFS_GOOGLE satisfies TTariffs,
 } satisfies TScreen;

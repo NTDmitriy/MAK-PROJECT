@@ -1,15 +1,15 @@
+import { ALL_CASES_CONTENT } from "@/config/content-config/all-cases/all-cases.config";
 import { ALL_REVIWES } from "@/config/content-config/all-reviwes/all-reviwes.config";
-import { ALL_CASES_CONTENT } from "@/config/content-config/prev-cases/prev-cases.config";
 import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
 import {
-  TCases,
-  TFaq,
-  THero,
-  THeroBasic,
-  THeroInfoProduct,
-  TIncludedInService,
-  TReviwe,
-  TWhyUs,
+    TCase,
+    TFaq,
+    THero,
+    THeroBasic,
+    THeroInfoProduct,
+    TIncludedInService,
+    TReviwe,
+    TWhyUs,
 } from "@/interfaces/types/block/products.type";
 import { TScreen } from "@/interfaces/types/screens/screens.type";
 import { POSEVI_FAQ } from "./seo-posevy-faq";
@@ -72,7 +72,7 @@ export const SEO_POSEVY_CONFIG = {
       "Мы предлагаем уникальный подход к посевам рекламы, который базируется на нашем многолетнем опыте и глубоких знаниях рынка:",
   } satisfies TWhyUs,
   includeService: SEO_POSEVY_INCLUDE satisfies TIncludedInService,
-  projects: ALL_CASES_CONTENT.toArray() satisfies TCases[],
+  projects: ALL_CASES_CONTENT.toArray() satisfies TCase[],
   reviwes: ALL_REVIWES satisfies TReviwe[],
   faq: POSEVI_FAQ satisfies TFaq[],
 } satisfies TScreen;

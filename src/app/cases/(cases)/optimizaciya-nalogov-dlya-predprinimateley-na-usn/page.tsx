@@ -1,5 +1,5 @@
 
-import { TaxOptimizationCase } from "@/components/screens/cases/TaxOptimizationCase";
+import { TaxOptimizationCase } from "@/components/screens/casesScreens/TaxOptimizationCase";
 import { NextPage } from "next";
 
 const CasesPage: NextPage = () => {

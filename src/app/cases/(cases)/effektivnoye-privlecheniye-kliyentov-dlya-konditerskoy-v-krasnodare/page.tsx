@@ -1,6 +1,6 @@
 
 
-import { CandyShopCase } from "@/components/screens/cases/CandyShopCase";
+import { CandyShopCase } from "@/components/screens/casesScreens/CandyShopCase";
 import { NextPage } from "next";
 
 const CasesPage: NextPage = () => {
