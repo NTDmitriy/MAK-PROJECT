@@ -76,7 +76,7 @@
 }
 
 .link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   font-family: var(--font-family);
@@ -131,8 +131,11 @@
   max-height: 50px;
 }
 
-
-
+.text__wrapper {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
 
 .social__btns {
   display: flex;

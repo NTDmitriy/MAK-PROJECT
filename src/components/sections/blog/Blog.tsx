@@ -1,6 +1,6 @@
 "use client";
 
-import { BlogItem } from "@/components/ui/blogItem/BlogItem";
+import { BlogCard } from "@/components/ui/blogCard/BlogCard";
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { Container } from "@/components/ui/container/Container";
 import { SeconderyLinkButton } from "@/components/ui/links/seconderyLinkButton/SeconderyLinkButton";
@@ -43,7 +43,7 @@ export const Blog: FC<PropsWithChildren<IBlog>> = ({
           {headline && (
             <BlockTitle
               leftSide={true}
-              background="СТАТЬИ"
+              background="БЛОГ"
               descrSideway={
                 <>
                   Следите за нашими обновлениями и узнавайте последние тренды в
@@ -51,19 +51,19 @@ export const Blog: FC<PropsWithChildren<IBlog>> = ({
                 </>
               }
             >
-              Полезные статьи
+              Наш блог
             </BlockTitle>
           )}
           <Container>
             <ul className={styles.list}>
               {displayedArticles.map((article, index) => (
-                <BlogItem key={index} item={article} />
+                <BlogCard key={index} item={article} />
               ))}
             </ul>
             {isPreview ? (
               <div className={styles.button__wrapper}>
                 <SeconderyLinkButton href={USEFUL_DASHBOARD_PAGES.BLOG.url}>
-                  Все статьи
+                Перейти в блог
                 </SeconderyLinkButton>
               </div>
             ) : (

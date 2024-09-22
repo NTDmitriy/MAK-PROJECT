@@ -7,7 +7,7 @@ import { IBlogItem } from "@/config/url-config/blog-pages.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
-import styles from "./CasesHero.module.css";
+import styles from "./CaseHero.module.css";
 
 interface IBlogHero extends IGenericElementProps {
   heroContent: IBlogItem;

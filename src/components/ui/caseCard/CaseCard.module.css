@@ -1,4 +1,10 @@
 .root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 10px;
+  height: 100%;
+  padding: 30px;
   position: relative;
   min-height: 400px;
   background-color: #161616;
@@ -14,26 +20,7 @@
     transform: scale(1);
   }
 }
-.link {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  gap: 10px;
-  height: 100%;
-  padding: 30px;
-}
 
-.link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 3px;
-  height: 100%;
-  transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
-  transform-origin: bottom;
-  transform: scale(0);
-}
 
 .img {
   position: absolute;
@@ -86,7 +73,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   font-family: var(--third-family);
   font-weight: 300;
   font-size: clamp(14px, 1.3dvw, 19px);
@@ -116,21 +102,37 @@
   margin-left: auto;
 }
 
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  height: 100%;
+  transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  transform-origin: bottom;
+
+  transform: scale(0);
+}
+
 @media (hover: hover) {
   .btn:hover {
     color: var(--text-third);
     background-position: 100% 0;
   }
-  .link:hover .btn {
-    transform: scale(1.1);
-  }
 
-  .link:focus-visible::after {
+  .btn:focus-visible::before {
     transform: scale(1);
     background-color: #fff;
   }
 
-  .link:hover::after {
+  .btn:hover::before {
     transform: scale(1);
     background-color: var(--accent-color);
   }
