@@ -27,28 +27,36 @@ export const OurClients: FC<PropsWithChildren<IGenericElementProps>> = ({
       className={clsx(styles.ourclients, styles.inner, className)}
       {...rest}
     >
-      <BlockTitle
-        leftSide={true}
-        descrSideway="Познакомьтесь с компаниями, которые доверяют нашему маркетинговому агентству. Мы работаем с лидерами рынка и помогаем им достигать высоких результатов в digital маркетинге."
-      >
-        Наши клиенты
-      </BlockTitle>
-      <Container>
-        <div className={styles.container}>
-          {clients.map((icon, index) => (
-            <DynamicSvg
-              key={index}
-              name={icon as TSvgMapKeys}
-              className={styles.image}
-            />
-          ))}
-        </div>
-        <p className={styles.descr}>
-          И еще более тысячи довольных клиентов, которые доверяют нашему опыту и
-          профессионализму, ежедневно получая результаты от наших маркетинговых
-          стратегий
-        </p>
-      </Container>
+
+        <BlockTitle
+          leftSide={true}
+          descrSideway="Познакомьтесь с компаниями, которые доверяют нашему маркетинговому агентству. Мы работаем с лидерами рынка и помогаем им достигать высоких результатов в digital маркетинге."
+        >
+          Наши клиенты
+        </BlockTitle>
+        <Container>
+          <div className={styles.container}>
+            {clients.map((icon, index) => (
+              <DynamicSvg
+                key={index}
+                name={icon as TSvgMapKeys}
+                className={styles.image}
+              />
+            ))}
+          </div>
+          <p className={styles.descr}>
+            И еще более тысячи довольных клиентов, которые доверяют нашему опыту
+            и профессионализму, ежедневно получая результаты от наших
+            маркетинговых стратегий
+          </p>
+        </Container>
+        <img
+          src="/images/ourclients-bg.webp"
+          alt="background"
+          className={styles.bg}
+          loading="lazy"
+        />
+  
     </Section>
   );
 };

@@ -78,6 +78,7 @@ export const DropdownMenu: FC<PropsWithChildren<IDropdownMenu>> = ({
                             src={`/images/1x1.webp`}
                             alt={child.name}
                             title={child.name}
+                            loading="lazy"
                           />
                         </picture>
                         <div className={styles.item__descr__wrapper}>
