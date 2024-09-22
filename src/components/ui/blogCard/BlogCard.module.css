@@ -4,6 +4,7 @@
   transform-origin: top;
   height: 100%;
   animation: fadeIn 0.4s ease-in-out;
+  position: relative;
 }
 
 @keyframes fadeIn {
@@ -40,40 +41,58 @@
   margin-top: auto;
 }
 
-
 .bot__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-
+  position: static;
 }
 
-
 .link {
+  display: block;
   font-family: var(--font-family);
   font-weight: 200;
   font-size: clamp(16px, 1.3dvw, 20px);
   line-height: 120%;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
   color: #ffde00;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 20px;
-  transition: transform 0.4s ease-in-out;
-  transform-origin: left;
 }
 
-.item:focus-visible .link {
-	transform: scale(1.08);
+.link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.link__text {
+  position: relative;
+}
+
+.link__text::after {
+  content: "";
+  position: absolute;
+  background-color: #ffde00;
+  height: 2px;
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  transition: transform 0.4s ease-in-out;
+  transform: scale(0);
+  transform-origin: left;
 }
 
 
 
 @media (hover: hover) {
-  .item:hover .link {
-		transform: scale(1.15);
+
+  .link:focus-visible .link__text::after {
+    transform: scale(0.6);
+  }
+  .link:hover .link__text::after {
+    transform: scale(0.8);
   }
 }
 

@@ -23,46 +23,64 @@ export const Contacts: FC<PropsWithChildren<IGenericElementProps>> = (
           <address className={styles.cards_wrapper}>
             <div className={styles.card}>
               <h2 className={styles.title}>Реквизиты</h2>
-              <p className={styles.text}>
-                <span className={styles.accent}>Юр. лицо:</span>{" "}
-                {CONTACTS_PUBLIC.LEGAL_ENTRY_TYPE} {CONTACTS_PUBLIC.LEGAL_ENTRY}
+              <div className={styles.text__wrapper}>
+                <p className={styles.text}>
+                  <span className={styles.accent}>Юр. лицо:</span>{" "}
+                  {CONTACTS_PUBLIC.LEGAL_ENTRY_TYPE}{" "}
+                  {CONTACTS_PUBLIC.LEGAL_ENTRY}
+                </p>
                 <CopyButton
                   text={`${CONTACTS_PUBLIC.LEGAL_ENTRY_TYPE} ${CONTACTS_PUBLIC.LEGAL_ENTRY}`}
                 />
-              </p>
-              <p className={styles.text}>
-                <span className={styles.accent}>ОГРН:</span>{" "}
-                {CONTACTS_PUBLIC.OGRN}
+              </div>
+
+              <div className={styles.text__wrapper}>
+                <p className={styles.text}>
+                  <span className={styles.accent}>ОГРН:</span>{" "}
+                  {CONTACTS_PUBLIC.OGRN}
+                </p>
                 <CopyButton text={CONTACTS_PUBLIC.OGRN} />
-              </p>
-              <p className={styles.text}>
-                <span className={styles.accent}>ИНН:</span>{" "}
-                {CONTACTS_PUBLIC.INN}
+              </div>
+              <div className={styles.text__wrapper}>
+                <p className={styles.text}>
+                  <span className={styles.accent}>ИНН:</span>{" "}
+                  {CONTACTS_PUBLIC.INN}
+                </p>
                 <CopyButton text={CONTACTS_PUBLIC.INN} />
-              </p>
-              <p className={styles.text}>
-                <span className={styles.accent}>Адрес:</span>{" "}
-                {CONTACTS_PUBLIC.ADDRESS}
+              </div>
+              <div className={styles.text__wrapper}>
+                <p className={styles.text}>
+                  <span className={styles.accent}>Адрес:</span>{" "}
+                  {CONTACTS_PUBLIC.ADDRESS}
+                </p>
                 <CopyButton text={CONTACTS_PUBLIC.ADDRESS} />
-              </p>
+              </div>
             </div>
 
             <div className={styles.card}>
               <h2 className={styles.title}>НАШИ КОНТАКТЫ</h2>
-              <a
-                className={clsx(styles.link)}
-                href={`mailto:${CONTACTS_PUBLIC.EMAIL}`}
-              >
-                <DynamicSvg name="IconEMail" className={styles.svg} />
-                <span>{CONTACTS_PUBLIC.EMAIL}</span>
-              </a>
-              <a
-                className={clsx(styles.link)}
-                href={`tel:${CONTACTS_PUBLIC.PHONE}`}
-              >
-                <DynamicSvg name="IconPhone" className={styles.svg} />
-                <span>{CONTACTS_PUBLIC.PHONE}</span>
-              </a>
+              <div className={styles.text__wrapper}>
+                <a
+                  className={clsx(styles.link)}
+                  href={`mailto:${CONTACTS_PUBLIC.EMAIL}`}
+                >
+                  <DynamicSvg name="IconEMail" className={styles.svg} />
+                  <span>{CONTACTS_PUBLIC.EMAIL}</span>
+                </a>
+
+                <CopyButton text={CONTACTS_PUBLIC.EMAIL} />
+              </div>
+              <div className={styles.text__wrapper}>
+                <a
+                  className={clsx(styles.link)}
+                  href={`tel:${CONTACTS_PUBLIC.PHONE}`}
+                >
+                  <DynamicSvg name="IconPhone" className={styles.svg} />
+                  <span>{CONTACTS_PUBLIC.PHONE}</span>
+                </a>
+
+                <CopyButton text={CONTACTS_PUBLIC.PHONE} />
+              </div>
               <p className={clsx(styles.text, styles.text_nopointer)}>
                 <DynamicSvg name="IconDeadline" className={styles.svg} />
                 Пн-Пт, с 9:00 до 18:00 (МСК)

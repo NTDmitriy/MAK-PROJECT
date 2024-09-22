@@ -8,8 +8,8 @@ import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import { TCase } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren } from "react";
-import { CaseList } from "./caseList/СaseList";
 import styles from "./Cases.module.css";
+import { CaseList } from "./casesList/СasesList";
 
 interface IProjects extends IGenericElementProps {
   cases: TCase[];

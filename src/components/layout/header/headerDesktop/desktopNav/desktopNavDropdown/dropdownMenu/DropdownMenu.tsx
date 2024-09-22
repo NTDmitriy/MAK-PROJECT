@@ -1,15 +1,9 @@
 import { DynamicSvg, TSvgMapKeys } from "@/components/ui/dynamicSvg/DynamicSvg";
-import { IDashboardItem } from "@/config/url-config/all-pages.config";
+import { DASHBOARD_PAGES, IDashboardItem } from "@/config/url-config/all-pages.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import clsx from "clsx";
 import Link from "next/link";
-import {
-  FC,
-  PropsWithChildren,
-  ReactNode,
-  SyntheticEvent,
-  useState,
-} from "react";
+import { FC, PropsWithChildren, SyntheticEvent, useState } from "react";
 import DropdownLink from "../dropdownLink/DropdownLink";
 import styles from "./DropdownMenu.module.css";
 
@@ -22,12 +16,12 @@ export const DropdownMenu: FC<PropsWithChildren<IDropdownMenu>> = ({
   className,
   ...rest
 }) => {
-  const [value, setValue] = useState<number | null>(null);
+  const [value, setValue] = useState<number | null>(0);
   const { childrens, url } = page;
   const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
-  const isServices = url === "/services";
+  const isServices = url === DASHBOARD_PAGES.SERVICES.url;
 
   return (
     <>
@@ -53,17 +47,20 @@ export const DropdownMenu: FC<PropsWithChildren<IDropdownMenu>> = ({
               </li>
             ))}
         </ul>
-        {value !== null && (
-          <>
-            {childrens &&
-              isServices &&
-              childrens.map((item, index) => (
-                <CustomTabPanel
-                  className={styles.tab__panel}
-                  key={index}
-                  value={value}
-                  index={index}
-                >
+
+
+        <div className={styles.tab__panels}>
+          {childrens &&
+            isServices &&
+            childrens.map((item, index) => (
+              <div
+                className={clsx(
+                  styles.tab__panel,
+                  value === index && styles.active
+                )}
+                key={index}
+              >
+                <div className={styles.tab__panel__content}>
                   {item.childrens &&
                     item.childrens.map((child, childIndex) => (
                       <Link
@@ -71,11 +68,18 @@ export const DropdownMenu: FC<PropsWithChildren<IDropdownMenu>> = ({
                         key={childIndex}
                         className={styles.tab__panel__item}
                       >
-                        <img
-                          src={`/images/${child.icon}.webp`}
-                          alt={child.name}
-                          title={child.name}
-                        />
+                        <picture>
+                          <source
+                            srcSet={`/images/${child.icon}.webp`}
+                            type="image/webp"
+                            media="(min-width: 1025px)"
+                          />
+                          <img
+                            src={`/images/1x1.webp`}
+                            alt={child.name}
+                            title={child.name}
+                          />
+                        </picture>
                         <div className={styles.item__descr__wrapper}>
                           <h3 className={styles.item__descr__title}>
                             {child.name}
@@ -86,27 +90,11 @@ export const DropdownMenu: FC<PropsWithChildren<IDropdownMenu>> = ({
                         </div>
                       </Link>
                     ))}
-                </CustomTabPanel>
-              ))}
-          </>
-        )}
+                </div>
+              </div>
+            ))}
+        </div>
       </div>
     </>
-  );
-};
-
-interface ITabPanelProps {
-  children?: ReactNode;
-  className?: string;
-  index: number;
-  value: number;
-}
-
-const CustomTabPanel = (props: ITabPanelProps) => {
-  const { children, value, index, className, ...other } = props;
-  return (
-    <div className={clsx(className)} {...other}>
-      {value === index && <>{children} </>}
-    </div>
   );
 };

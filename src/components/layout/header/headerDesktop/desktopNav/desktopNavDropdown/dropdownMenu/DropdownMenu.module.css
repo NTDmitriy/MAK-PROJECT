@@ -10,7 +10,6 @@
       var(--tab-content-gap) + var(--tab-panel-item-gap)
   );
   gap: var(--tab-content-gap);
-
 }
 
 .tablist {
@@ -22,37 +21,55 @@
   width: 100%;
 }
 
+.tab__panels {
+  width: 100%;
+}
+
 .tab__panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr;
+  transition: transform 0.5s ease-in-out;
+  transform: scale(0);
+  transform-origin: left;
+}
+
+.tab__panel.active {
+  grid-template-rows: 1fr;
+  transform: scale(1);
+}
+
+.tab__panel__content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
   justify-items: start;
   align-items: center;
   width: 100%;
-	max-height: calc(100dvh - 200px);
-	height: 100%;
-	overflow-y: auto;
+  min-height: 0px;
+  max-height: calc(100dvh - 200px);
+  height: 100%;
+  overflow-y: auto;
   gap: var(--tab-panel-item-gap);
-	padding-right: 10px;
+  padding-right: 10px;
 }
 
-.tab__panel::-webkit-scrollbar {
+.tab__panel__content::-webkit-scrollbar {
   width: 6px;
-	padding-left: 6px;
+  padding-left: 6px;
 }
 
-.tab__panel::-webkit-scrollbar-track {
+.tab__panel__content::-webkit-scrollbar-track {
   background-color: #000;
   border-radius: 14px;
 }
-.tab__panel::-webkit-scrollbar-thumb {
+.tab__panel__content::-webkit-scrollbar-thumb {
   background-color: #fff;
   border-radius: 14px;
 }
 
-.tab__panel:empty {
+.tab__panel__content:empty {
   display: none;
 }
-
 
 .tab__panel__item {
   display: flex;
@@ -66,7 +83,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius);
   animation: appearance 1000ms;
-	transition: border-color .5s ease-in-out,   background-color .3s ease-in-out;
+  transition: border-color 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .tab__panel__item:active {
@@ -74,21 +91,18 @@
 }
 
 .icon {
-	max-width: 24px;
-	max-height: 24px;
+  max-width: 24px;
+  max-height: 24px;
 }
 
-
-@media (hover:hover) {
-	
-	.tab__panel__item:hover {
-		border-color: rgba(255, 255, 255, 0.5);
-	}
-	.tab__panel__item:focus-visible {
-		border-color: rgba(255, 255, 255, 0.4);
-	}
+@media (hover: hover) {
+  .tab__panel__item:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  .tab__panel__item:focus-visible {
+    border-color: rgba(255, 255, 255, 0.4);
+  }
 }
-
 
 .tab__panel__item img {
   border-radius: var(--border-radius);
@@ -109,16 +123,16 @@
   color: var(--text-primary);
 }
 .item__descr__text {
-	display: -webkit-box;
-	overflow: hidden;
+  display: -webkit-box;
+  overflow: hidden;
   font-family: var(--font-family);
   font-weight: 300;
   font-size: 18px;
   line-height: 120%;
   color: var(--text-secondery);
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3;
-	line-clamp: 3;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
 }
 
 @keyframes appearance {

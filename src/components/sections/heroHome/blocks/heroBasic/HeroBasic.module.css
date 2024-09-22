@@ -5,7 +5,7 @@
 .img__wrapper {
   position: absolute;
   overflow: hidden;
-  bottom: 0;
+  bottom: -4px;
   right: 0;
   max-width: 1360px;
   z-index: -1;
@@ -198,6 +198,7 @@
   }
 
   .img__wrapper {
+    bottom: 0;
     height: 100%;
     width: 100%;
   }
