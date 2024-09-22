@@ -9,6 +9,7 @@ import { Popup } from "@/components/ui/modals/popup/Popup";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { IGenericElementProps } from "@/interfaces/elements.interface";
 import clsx from "clsx";
+import Image from "next/image";
 import { FC, PropsWithChildren } from "react";
 import styles from "./HeroBasic.module.css";
 
@@ -62,7 +63,7 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
         </div>
 
         <div className={styles.face__wrapper}>
-          <picture>
+          {/* <picture>
             <source
               srcSet={`/images/faces/grafov-hero-360x360.webp`}
               media="(max-width: 768px)"
@@ -72,7 +73,17 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
               src={`/images/faces/grafov-hero-560x560.webp`}
               alt="Дмитрий Графов"
             />
-          </picture>
+          </picture> */}
+          <Image
+            className={styles.face__img}
+            width={560}
+            height={560}
+            src={`/images/faces/grafov-hero-560x560.webp`}
+            quality={100}
+            priority={true}
+            alt={"Дмитрий Графов"}
+          />
+
           <div className={styles.face__descr}>
             <p className={styles.name}>Дмитрий Графов</p>
             <p className={styles.position}>
@@ -83,7 +94,7 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
       </Container>
       <p className={styles.background__text__top}>MAKE</p>
       <div className={styles.img__wrapper}>
-        <picture>
+        {/* <picture>
           <source
             srcSet={`/images/home-hero-295x191.webp`}
             media="(max-width: 768px)"
@@ -93,7 +104,16 @@ export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
             src={`/images/home-hero-1360x870.webp`}
             alt="Маркетинговое агенство полного цикла"
           />
-        </picture>
+        </picture> */}
+        <Image
+          className={styles.img}
+          src="/images/home-hero-1360x870.webp"
+          alt="Маркетинговое агентство полного цикла"
+          width={1360} // Ширина оригинального изображения
+          height={870} // Высота оригинального изображения
+          priority={true} // Приоритет для ключевых изображений
+
+        />
         <p className={styles.background__text__bot}>ALL PERFECT</p>
       </div>
     </div>
