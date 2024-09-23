@@ -58,10 +58,7 @@
 }
 
 .accent {
-  background: linear-gradient(90deg, #f4a21a 0%, #ffde00 50%, #f4a21a 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent-color);
 }
 
 .title::first-letter {

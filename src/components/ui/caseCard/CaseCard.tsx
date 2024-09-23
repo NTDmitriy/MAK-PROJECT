@@ -10,13 +10,13 @@ interface ICase extends IGenericElementProps {
 }
 
 export const CaseCard: FC<ICase> = ({ caseData, ...rest }) => {
-  const { prevName, prevDescription, image, instruments, url } = caseData;
+  const { prevName, prevDescription, image, categories, url } = caseData;
   return (
     <li className={styles.root} {...rest}>
-        <ul className={styles.instruments}>
-          {instruments.map((instrument, index) => (
-            <li key={index} className={styles.instrument}>
-              {instrument}
+        <ul className={styles.categories}>
+          {categories.map((category, index) => (
+            <li key={index} className={styles.category}>
+              {category}
             </li>
           ))}
         </ul>

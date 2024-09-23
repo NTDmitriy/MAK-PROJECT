@@ -1,137 +1,146 @@
+import {
+  CaseBoxTitle,
+  CaseList,
+  CaseListItem,
+  CaseListTitle,
+  CaseText,
+  CaseTextAccent,
+} from "@/components/ui-case";
+import { CaseHero } from "@/components/ui-case/caseHero/CaseHero";
 import { Box } from "@/components/ui/box/Box";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs/Breadcrumbs";
 import {
-    FORM_TYPE,
-    FormController,
+  FORM_TYPE,
+  FormController,
 } from "@/components/ui/forms/FormController";
-import { CASES_DASHBOARD_PAGES } from "@/config/url-config/cases-pages.config";
-import clsx from "clsx";
+import { ALL_CASES_CONTENT } from "@/config/content-config/all-cases/all-cases.config";
 import { FC } from "react";
-import styles from "./CasesPages.module.css";
 
 export const DestroyRoomCase: FC = () => {
+  const caseData = ALL_CASES_CONTENT.ROOM_DESTROY;
+
   return (
     <>
-      <Breadcrumbs pathname={CASES_DASHBOARD_PAGES.ROOM_DESTROY.url} />
+      <Breadcrumbs pathname={caseData.url} />
+      <CaseHero heroContent={caseData} />
       <Box>
-        <div className={clsx(styles.content_hero, styles.destroy_room)}>
-          <h2 className={styles.hero_title}>
-            Комната ярости Udestroy в Москве
-          </h2>
-          <p className={`${styles.text} ${styles.text_hero}`}>
-            Проект по продвижению комнаты ярости "Udestroy" в Москве с помощью
-            лидогенерации в Яндекс Директ для увеличения количества бронирований
-            и привлечения целевой аудитории.
-          </p>
-        </div>
-        <div className={styles.tasks}>
-          <h3 className={styles.title}>Задачи проекта</h3>
-          <p className={styles.text}>
-            Увеличить количество бронирований и заявок, привлекая целевую
-            аудиторию с помощью эффективной лидогенерации в Яндекс Директ.
-          </p>
-        </div>
-        <div className={styles.tasks}>
-          <h3 className={styles.title}>Решение</h3>
-        </div>
-        <p className={styles.text_bg}>Анализ аудитории и конкурентов:</p>
-        <ul className={styles.text_list}>
-          <li className={styles.text_info}>
+        <CaseBoxTitle>Задачи проекта</CaseBoxTitle>
+        <CaseText>
+          Увеличить количество бронирований и заявок, привлекая целевую
+          аудиторию с помощью эффективной лидогенерации в Яндекс Директ.
+        </CaseText>
+      </Box>
+      <Box>
+        <CaseBoxTitle>Решение</CaseBoxTitle>
+
+        <CaseListTitle>Анализ аудитории и конкурентов:</CaseListTitle>
+        <CaseList marketed margin>
+          <CaseListItem>
             Определили портрет целевой аудитории: молодые активные люди 18-35
             лет, ищущие нестандартные развлечения.
-          </li>
-          <li className={styles.text_info}>
+          </CaseListItem>
+          <CaseListItem>
             Изучили конкурентов и выделили уникальные преимущества "Udestroy".
-          </li>
-        </ul>
-        <p className={styles.text_bg}>
+          </CaseListItem>
+        </CaseList>
+
+        <CaseListTitle>
           Настройка рекламной кампании в Яндекс Директ:
-        </p>
-        <ul className={styles.text_list}>
-          <li className={styles.text_info}>
-            <span className={styles.text_info_white}>Ключевые слова: </span>
-            Подобрали высококонверсионные запросы, связанные с комнатами ярости,
-            снятием стресса и необычными развлечениями в Москве.
-          </li>
-          <li className={styles.text_info}>
-            <span className={styles.text_info_white}>Объявления: </span>
-            Создали привлекательные заголовки и описания с чёткими призывами к
-            действию и указанием уникальных предложений.
-          </li>
-          <li className={styles.text_info}>
-            <span className={styles.text_info_white}>Таргетинг: </span>
-            Настроили географический таргетинг на Москву и ближайшие районы,
-            время показа объявлений — с учётом пиков активности целевой
-            аудитории.
-          </li>
-          <li className={styles.text_info}>
-            <span className={styles.text_info_white}>Ретаргетинг: </span>
-            Запустили кампании на пользователей, ранее посещавших сайт или
-            совершавших взаимодействия в социальных сетях.
-          </li>
-        </ul>
-        <p className={styles.text_bg}>Оптимизация и мониторинг:</p>
-        <ul className={styles.text_list}>
-          <li className={styles.text_info}>
+        </CaseListTitle>
+        <CaseList marketed margin>
+          <CaseListItem>
+            <CaseTextAccent>Ключевые слова:</CaseTextAccent> Подобрали
+            высококонверсионные запросы, связанные с комнатами ярости, снятием
+            стресса и необычными развлечениями в Москве.
+          </CaseListItem>
+          <CaseListItem>
+            <CaseTextAccent>Объявления:</CaseTextAccent> Создали привлекательные
+            заголовки и описания с чёткими призывами к действию и указанием
+            уникальных предложений.
+          </CaseListItem>
+          <CaseListItem>
+            <CaseTextAccent>Таргетинг:</CaseTextAccent> Настроили географический
+            таргетинг на Москву и ближайшие районы, время показа объявлений — с
+            учётом пиков активности целевой аудитории
+          </CaseListItem>
+          <CaseListItem>
+            <CaseTextAccent>Ретаргетинг:</CaseTextAccent> Запустили кампании на
+            пользователей, ранее посещавших сайт или совершавших взаимодействия
+            в социальных сетях.
+          </CaseListItem>
+        </CaseList>
+
+        <CaseListTitle>Оптимизация и мониторинг:</CaseListTitle>
+        <CaseList marketed>
+          <CaseListItem>
             Еженедельно анализировали показатели кампании (CPC, CTR, конверсия).
-          </li>
-          <li className={styles.text_info}>
+          </CaseListItem>
+          <CaseListItem>
             Вносили коррективы в объявления и ставки для улучшения результатов.
-          </li>
-        </ul>
-        <div className={styles.tasks}>
-          <h3 className={styles.title}>Результаты</h3>
-          <img
-            className={styles.image__main}
-            src="/images/cases/cases-destroy-room-metrica1.webp"
-            alt=""
-          />
-        </div>
-        <h3 className={styles.title}>Ключевые факторы успеха</h3>
-        <ul className={styles.text_list}>
-          <li className={styles.text_info}>
-            <span className={styles.text_info_white}>Точный таргетинг: </span>
-            на заинтересованную аудиторию с учётом её поведения и предпочтений.
-          </li>
-          <li className={styles.text_info}>
-            <span className={styles.text_info_white}>
-              Креативные и релевантные объявления,{" "}
-            </span>
+          </CaseListItem>
+        </CaseList>
+      </Box>
+
+      <Box>
+        <CaseBoxTitle>Результаты</CaseBoxTitle>
+        <CaseList margin>
+          <CaseListItem>
+            <img
+              src={`/images/cases/cases-destroy-room-metrica1.webp`}
+              alt="Комната ярости Udestroy в Москве"
+            />
+          </CaseListItem>
+        </CaseList>
+      </Box>
+      <Box>
+        <CaseBoxTitle>Ключевые факторы успеха</CaseBoxTitle>
+        <CaseList marketed gap>
+          <CaseListItem>
+            <CaseTextAccent>Точный таргетинг</CaseTextAccent> на
+            заинтересованную аудиторию с учётом её поведения и предпочтений.
+          </CaseListItem>
+          <CaseListItem>
+            <CaseTextAccent>
+              Креативные и релевантные объявления,
+            </CaseTextAccent>{" "}
             вызывающие интерес и побуждающие к действию.
-          </li>
-          <li className={styles.text_info}>
-            <span className={styles.text_info_white}>
-              Постоянная оптимизация{" "}
-            </span>
-            кампании на основе аналитики и результатов.
-          </li>
-        </ul>
-        <div className={styles.destroy_room_content_block}>
-          <div className={styles.tasks}>
-            <h3 className={styles.title}>Вывод</h3>
-            <p className={`${styles.text} ${styles.text_hero}`}>
+          </CaseListItem>
+
+          <CaseListItem>
+            <CaseTextAccent>Постоянная оптимизация</CaseTextAccent> кампании на
+            основе аналитики и результатов.
+          </CaseListItem>
+        </CaseList>
+      </Box>
+
+      <Box>
+        <CaseList grid margin>
+          <CaseListItem>
+            <CaseBoxTitle>Вывод</CaseBoxTitle>
+            <CaseText margin>
               Использование лидогенерации в Яндекс Директ с продуманной
               стратегией и регулярной оптимизацией позволило комнате ярости
               "Udestroy" значительно увеличить поток клиентов и занять прочные
               позиции на рынке развлечений Москвы.
-            </p>
-          </div>
-          <div className={styles.picture_content_destroy_room}>
-            <img
-              className={styles.image__main}
-              src="/images/cases/cases-destroy-room-metrika2.webp"
-              alt=""
-            />
-            <img
-              className={styles.image__main}
-              src="/images/cases/cases-destroy-room-metrika3.webp"
-              alt=""
-            />
-          </div>
-        </div>
-      </Box>
-
-      <Box>
+            </CaseText>
+          </CaseListItem>
+          <CaseListItem>
+            <CaseList grid>
+              <CaseListItem>
+                <img
+                  src={`/images/cases/cases-destroy-room-metrika2.webp`}
+                  alt="Комната ярости Udestroy в Москве"
+                />
+              </CaseListItem>
+              <CaseListItem>
+                <img
+                  src={`/images/cases/cases-destroy-room-metrika3.webp`}
+                  alt="Комната ярости Udestroy в Москве"
+                />
+              </CaseListItem>
+            </CaseList>
+          </CaseListItem>
+        </CaseList>
         <FormController formType={FORM_TYPE.MAIN_FORM} />
       </Box>
     </>

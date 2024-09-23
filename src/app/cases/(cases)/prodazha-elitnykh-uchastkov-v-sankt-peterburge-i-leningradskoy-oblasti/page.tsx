@@ -1,12 +1,12 @@
 
-import { SaintPeterburgCase } from "@/components/screens/casesScreens/SaintPeterburgCase";
+import { RealEstateCaseSale } from "@/components/screens/casesScreens/RealEstateCaseSale";
 import { NextPage } from "next";
 
 
 
 const CasesPage: NextPage = () => {
   return (
-      <SaintPeterburgCase />
+      <RealEstateCaseSale />
     );
 };
 

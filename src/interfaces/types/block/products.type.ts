@@ -47,9 +47,8 @@ export type TCase = {
   description: string | null;
   prevDescription: string | null;
   prevName: string;
-  category: string;
   image: string;
-  instruments: string[];
+  categories: string[];
   isGlobal?: boolean;
 };
 

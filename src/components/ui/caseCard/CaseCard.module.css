@@ -33,14 +33,14 @@
   z-index: -1;
 }
 
-.instruments {
+.categories {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 8px;
 }
 
-.instrument {
+.category {
   border: 1px solid var(--accent-color);
   padding: 5px 8px;
   font-family: var(--font-family);
@@ -139,14 +139,11 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .instruments {
+  .categories {
     gap: 10px;
   }
 }
 @media screen and (max-width: 768px) {
-  .instruments {
-    gap: 10px;
-  }
   .root {
     min-height: 350px;
   }

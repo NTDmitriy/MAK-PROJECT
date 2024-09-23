@@ -1,0 +1,15 @@
+.root {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: clamp(14px, 2dvw, 30px);
+  line-height: 120%;
+  color: #cacaca;
+}
+
+.root.black {
+  color: #161616;
+}
+
+.margin {
+  margin-bottom: clamp(20px, 3dvw, 50px);
+}
