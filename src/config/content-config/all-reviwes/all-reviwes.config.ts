@@ -1,5 +1,6 @@
-import { CASES_DASHBOARD_PAGES } from "@/config/url-config/cases-pages.config";
+
 import { TReviwe } from "@/interfaces/types/block/products.type";
+import { ALL_CASES_CONTENT } from "../all-cases/all-cases.config";
 
 export const ALL_REVIWES = [
   {
@@ -9,7 +10,7 @@ export const ALL_REVIWES = [
     avatar: "avatarNazarov",
     rating: 5,
     text: "Работа с маркетинговым агентством превзошла все наши ожидания. Внедрение сквозной аналитики, профессиональная настройка рекламных кампаний и эффективное SEO-продвижение позволили нам существенно увеличить продажи и повысить узнаваемость бренда. Особенно впечатлила их способность анализировать и оптимизировать трафик, что привело к значительному снижению затрат на рекламу при одновременном увеличении конверсий. Рекомендуем эту команду всем, кто хочет вывести свой бизнес на новый уровень!",
-    caseUrl: CASES_DASHBOARD_PAGES.FURNITURE_STORE.url,
+    caseUrl: ALL_CASES_CONTENT.FURNITURE_STORE.url,
   },
   {
     id: 2,
@@ -18,7 +19,7 @@ export const ALL_REVIWES = [
     avatar: "avatarSmirnov",
     rating: 5,
     text: "Спасибо ребятам из Make All Perfect! Агентство помогло нам значительно увеличить поток пациентов и повысить узнаваемость наших клиник. Разработка современного и удобного сайта, а также эффективная реклама в Яндекс Директ и ВКонтакте, принесли отличные результаты. Профессиональный подход команды и их готовность адаптироваться под наши нужды сделали сотрудничество легким и продуктивным. Мы очень довольны результатами и планируем продолжать работать вместе долгое время!",
-		caseUrl: CASES_DASHBOARD_PAGES.STOMATOLOGY_CLINIC.url,
+		caseUrl: ALL_CASES_CONTENT.STOMATOLOGY_CLINIC.url,
   },
   {
     id: 3,
@@ -27,7 +28,7 @@ export const ALL_REVIWES = [
     avatar: "avatarJuravlev",
     rating: 5,
     text: "Начали работать с парнями с мая, до это за три года сменили три маркетинговые компании из-за мягко говоря не лучших результатов. Последняя компания с нами отработало около двух лет и мы считали в целом их работу удовлетворительной - именно на троечку, думали ранее, как сейчас поняли, мы их даже переоценивали... А вот парни сразу на первом месяце показали результаты - качество и количество лидов на порядок лучше и больше!!! Надеемся, что будет и дальше так же!",
-    caseUrl: CASES_DASHBOARD_PAGES.CONSTRUCTION_COMPANY.url,
+    caseUrl: ALL_CASES_CONTENT.CONSTRUCTION_COMPANY.url,
   },
   {
     id: 4,
@@ -36,7 +37,7 @@ export const ALL_REVIWES = [
     avatar: "avatarKuznecov",
     rating: 5,
     text: "Работа с Дмитрием и его командой оказалась очень продуктивной. Они помогли нам настроить и оптимизировать рекламные кампании в Яндекс Директ и Google Ads, что привело к значительному увеличению количества заявок на наши услуги по оптимизации налогов. Особенно впечатлила их способность анализировать трафик и постоянно улучшать результаты кампаний. Мы рады, что выбрали именно это агентство и с уверенностью рекомендуем их другим компаниям!",
-		caseUrl: CASES_DASHBOARD_PAGES.TAX_OPTIMIZATION.url,
+		caseUrl: ALL_CASES_CONTENT.TAX_OPTIMIZATION.url,
   },
   {
     id: 5,
@@ -45,7 +46,7 @@ export const ALL_REVIWES = [
     avatar: "avatarEmira",
     rating: 5,
     text: "Качнули трафик х10 менее чем за месяц. Смогли заменить нам трех подрядчиков, внедрив одновременно горизонтальное и вертикальное масштабирование. Ранее о таких способах я никогда не слышала и эффект меня поразил. Результаты превзошли все наши ожидания!",
-    caseUrl: CASES_DASHBOARD_PAGES.FRONTEND_DEVELOPMENT_UNIVERSITY.url,
+    caseUrl: ALL_CASES_CONTENT.FRONTEND_DEVELOPMENT_UNIVERSITY.url,
   },
   {
     id: 6,
@@ -108,7 +109,7 @@ export const ALL_REVIWES = [
     avatar: "avatarPavlova",
     rating: 5,
     text: "Обратились в агентство для продвижения нашего магазина на Wildberries. Команда настроила эффективные рекламные кампании в ВКонтакте и Яндекс, что привело к значительному увеличению продаж. Их подход к работе и стремление к достижению лучших результатов заслуживают высокой оценки.",
-    caseUrl: CASES_DASHBOARD_PAGES.WILDBERRIES_SHOP.url,
+    caseUrl: ALL_CASES_CONTENT.WILDBERRIES_SHOP.url,
   },
   {
     id: 13,
