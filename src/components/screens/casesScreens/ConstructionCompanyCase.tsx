@@ -173,7 +173,7 @@ export const ConstructionCompanyCase: FC = () => {
         </CaseList>
 
         <CaseList margin> 
-          <CaseListItem>
+          <CaseListItem center>
             <img
               src={`/images/cases/cases-karelskiy-dom-metrika6.webp`}
               alt="Увеличение продаж и улучшение узнаваемости бренда"
