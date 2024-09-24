@@ -1,6 +1,13 @@
-
 import { TaxOptimizationCase } from "@/components/screens/casesScreens/TaxOptimizationCase";
-import { NextPage } from "next";
+import { METADATA } from "@/seo/metadata";
+import { Metadata, NextPage } from "next";
+
+export const metadata: Metadata = {
+  ...METADATA.TAX_OPTIMIZATION,
+  openGraph: {
+    ...METADATA.TAX_OPTIMIZATION,
+  },
+};
 
 const CasesPage: NextPage = () => {
   return (
