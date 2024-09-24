@@ -1,8 +1,13 @@
-
 import { RealEstateCaseSale } from "@/components/screens/casesScreens/RealEstateCaseSale";
-import { NextPage } from "next";
+import { METADATA } from "@/seo/metadata";
+import { Metadata, NextPage } from "next";
 
-
+export const metadata: Metadata = {
+  ...METADATA.REAL_ESTATE_SALE,
+  openGraph: {
+    ...METADATA.REAL_ESTATE_SALE,
+  },
+};
 
 const CasesPage: NextPage = () => {
   return (
