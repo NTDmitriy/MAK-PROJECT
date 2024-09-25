@@ -1,3 +1,5 @@
+'use server'
+
 import axios from "axios";
 
 const URI_API = `https://api.telegram.org/bot${process.env.TOKEN}/sendMessage`;
