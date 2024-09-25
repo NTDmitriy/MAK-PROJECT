@@ -15,11 +15,11 @@ import {
   FormController,
 } from "@/components/ui/forms/FormController";
 import { ALL_CASES_CONTENT } from "@/config/content-config/all-cases/all-cases.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { FC, PropsWithChildren } from "react";
 
 export const StamotalogyClinicCase: FC<
-  PropsWithChildren<IGenericElementProps>
+  PropsWithChildren<TGenericElementProps>
 > = ({ className, ...rest }) => {
   const caseData = ALL_CASES_CONTENT.STOMATOLOGY_CLINIC;
 

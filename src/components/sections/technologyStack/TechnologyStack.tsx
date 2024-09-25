@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/container/Container";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { FC, PropsWithChildren } from "react";
 import styles from "./TechnologyStack.module.css";
 
@@ -20,7 +20,7 @@ const technology = [
   "prisma",
 ];
 
-export const TechnologyStack: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const TechnologyStack: FC<PropsWithChildren<TGenericElementProps>> = ({
   className,
   ...rest
 }) => {

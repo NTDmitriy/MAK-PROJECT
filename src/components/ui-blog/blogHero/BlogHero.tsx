@@ -4,12 +4,12 @@ import { SocialLink } from "@/components/ui/links/socialLink/SocialLink";
 import { Section } from "@/components/ui/section/Section";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { IBlogItem } from "@/config/url-config/blog-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./BlogHero.module.css";
 
-interface IBlogHero extends IGenericElementProps {
+interface IBlogHero extends TGenericElementProps {
   heroContent: IBlogItem;
 }
 

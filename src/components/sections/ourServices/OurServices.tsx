@@ -12,11 +12,11 @@ import {
   FormController,
 } from "@/components/ui/forms/FormController";
 import { MyTooltip } from "@/components/ui/tooltip/Tooltip";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import styles from "./OurServices.module.css";
 
-export const OurServices: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const OurServices: FC<PropsWithChildren<TGenericElementProps>> = ({
   className,
   ...rest
 }) => {

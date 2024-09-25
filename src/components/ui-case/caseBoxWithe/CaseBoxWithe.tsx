@@ -1,9 +1,9 @@
 import { Container } from "@/components/ui/container/Container";
 import { Section } from "@/components/ui/section/Section";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { FC, PropsWithChildren } from "react";
 
-export const CaseBoxWithe: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const CaseBoxWithe: FC<PropsWithChildren<TGenericElementProps>> = ({
   children,
   ...rest
 }) => {

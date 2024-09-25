@@ -1,59 +1,30 @@
 "use client";
 
-import { useNotification } from "@/hooks/useNotification";
-import { useSendToTelegram } from "@/hooks/useSendToTelegram";
-import { usePopupStore } from "@/store/popup.store";
 import clsx from "clsx";
 import { FC } from "react";
-import { useFormContext } from "react-hook-form";
 import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
 import { IFormContent } from "../FormController";
-import { IForm } from "../HookFormProvider";
-import { NameInput, PhoneInput } from "../inputs/MaskedInputs";
+import { useHandlerFormContext } from "../HandleFormProvider";
+import {
+  HiddenInput,
+  INPUT_NAMES,
+  NameInput,
+  PhoneInput,
+} from "../inputs/MaskedInputs";
 import styles from "./ComplexForm.module.css";
 
 export const ComplexForm: FC<IFormContent> = ({ title, text }) => {
-  const {
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useFormContext();
-  const { closePopup } = usePopupStore();
-
-  const onSubmit = (data: IForm) => {
-    const pathname = window.location.pathname;
-    if (title) data.product = title;
-    useSendToTelegram(data, pathname);
-    useNotification("Заявка отправлена", "success");
-    closePopup();
-    reset();
-  };
-
-  const onError = (errors: Record<string, any>) => {
-    const errorsArray = Object.entries(errors).map(([field, error]) => ({
-      field,
-      ...error,
-    }));
-
-    if (errorsArray.length > 1) {
-      useNotification("Заполните все обязательные поля", "error");
-    } else {
-      useNotification(errorsArray[0].message, "error");
-    }
-  };
+  const { handleForm } = useHandlerFormContext();
 
   return (
     <div className={styles.content}>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
+      <form className={styles.form} onSubmit={handleForm}>
         <div className={clsx(styles.form__content)}>
-          {title ? (
-            <h5 className={styles.title}> {title}</h5>
-          ) : (
-            <h5 className={styles.title}>ЗАКАЗАТЬ КОМПЛЕКС УСЛУГ</h5>
-          )}
-          {text ? (
-            <p className={styles.descr}>{text}</p>
-          ) : (
+          {title && <h5 className={styles.title}> {title}</h5>}
+          {!title && <h5 className={styles.title}>ЗАКАЗАТЬ КОМПЛЕКС УСЛУГ</h5>}
+
+          {text && <p className={styles.descr}>{text}</p>}
+          {!text && (
             <p className={styles.descr}>
               Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее
               время для проведения первичной консультации. Ответим на все ваши
@@ -67,6 +38,9 @@ export const ComplexForm: FC<IFormContent> = ({ title, text }) => {
           <div className={styles.input__group}>
             <NameInput />
             <PhoneInput />
+            {title && (
+              <HiddenInput name={INPUT_NAMES.REQUEST} value={title} />
+            )}
           </div>
 
           <div className={styles.btn__group}>

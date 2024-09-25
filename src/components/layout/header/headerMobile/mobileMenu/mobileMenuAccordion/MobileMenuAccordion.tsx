@@ -1,12 +1,12 @@
 import { IDashboardItem } from "@/config/url-config/all-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { useMobileMenu } from "@/store/mobile-menu.store";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 import styles from "./MobileMenuAccordion.module.css";
 
-interface IMobileMenuAccordion extends IGenericElementProps {
+interface IMobileMenuAccordion extends TGenericElementProps {
   isOpen: boolean;
   className?: string;
   page: IDashboardItem;

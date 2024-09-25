@@ -9,7 +9,7 @@ import { Popup } from "@/components/ui/modals/popup/Popup";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { WEBDEV_DASHBOARD_PAGES } from "@/config/url-config/webdev-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg, TSvgMapKeys } from "../../ui/dynamicSvg/DynamicSvg";
 import styles from "./SiteServices.module.css";
@@ -60,7 +60,7 @@ const Card: FC<ICard> = ({ image, name, url, description }) => {
   );
 };
 
-export const SiteServices: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const SiteServices: FC<PropsWithChildren<TGenericElementProps>> = ({
   className,
   ...rest
 }) => {

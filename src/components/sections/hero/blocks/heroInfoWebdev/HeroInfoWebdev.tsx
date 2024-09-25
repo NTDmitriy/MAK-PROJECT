@@ -1,10 +1,10 @@
 import { Container } from "@/components/ui/container/Container";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { THeroInfo } from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./HeroInfoWebdev.module.css";
-interface IHeroInfoWebdev extends IGenericElementProps {
+interface IHeroInfoWebdev extends TGenericElementProps {
   info: THeroInfo;
 }
 

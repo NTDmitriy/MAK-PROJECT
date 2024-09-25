@@ -1,7 +1,7 @@
 "use client";
 
 import { useStopScroll } from "@/hooks/useStopScroll";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { usePopupStore } from "@/store/popup.store";
 import clsx from "clsx";
 
@@ -17,7 +17,7 @@ import { createPortal } from "react-dom";
 import { DynamicSvg } from "../../dynamicSvg/DynamicSvg";
 import styles from "./Popup.module.css";
 
-interface IPopup extends IGenericElementProps {
+interface IPopup extends TGenericElementProps {
   initComponent: ReactNode;
   contentComponent: ReactNode;
 }

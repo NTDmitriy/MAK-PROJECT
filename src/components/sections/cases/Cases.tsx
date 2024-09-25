@@ -5,13 +5,13 @@ import {
 } from "@/components/ui/forms/FormController";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { TCase } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren } from "react";
 import styles from "./Cases.module.css";
 import { CaseList } from "./casesList/СasesList";
 
-interface IProjects extends IGenericElementProps {
+interface IProjects extends TGenericElementProps {
   cases: TCase[];
   formVisible?: boolean;
   isPrev?: boolean;

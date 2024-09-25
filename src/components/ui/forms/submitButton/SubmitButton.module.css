@@ -1,0 +1,17 @@
+.loader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+}
+
+.text,
+.loader {
+  opacity: 0;
+  transition: opacity .1s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+}

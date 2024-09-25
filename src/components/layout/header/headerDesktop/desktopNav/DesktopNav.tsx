@@ -1,11 +1,11 @@
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./DesktopNav.module.css";
 import { DesktopNavItem } from "./desktopNavItem/DesktopNavItem";
 
-export const DesktopNav: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const DesktopNav: FC<PropsWithChildren<TGenericElementProps>> = ({
   className,
   ...rest
 }) => {

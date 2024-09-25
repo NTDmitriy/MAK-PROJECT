@@ -1,6 +1,6 @@
 import { DynamicSvg, TSvgMapKeys } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { IDashboardItem } from "@/config/url-config/all-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { useMobileMenu } from "@/store/mobile-menu.store";
 import clsx from "clsx";
 import Link from "next/link";
@@ -10,7 +10,7 @@ import { MobileMenuAccordion } from "../mobileMenuAccordion/MobileMenuAccordion"
 import { SubButton } from "../subButton/SubButton";
 import styles from "./MobileMenuItem.module.css";
 
-interface IMobileMenuItem extends IGenericElementProps {
+interface IMobileMenuItem extends TGenericElementProps {
   page: IDashboardItem;
   isSubMenuItem?: boolean;
   index: number;

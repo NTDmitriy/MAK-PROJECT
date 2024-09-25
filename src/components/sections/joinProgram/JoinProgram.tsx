@@ -4,14 +4,14 @@ import {
   FormController,
 } from "@/components/ui/forms/FormController";
 import { Section } from "@/components/ui/section/Section";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import { PrimaryButton } from "../../ui/buttons/primaryButton/PrimaryButton";
 import { Popup } from "../../ui/modals/popup/Popup";
 import styles from "./JoinProgram.module.css";
 
-export const JoinProgram: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const JoinProgram: FC<PropsWithChildren<TGenericElementProps>> = ({
   className,
   ...rest
 }) => {

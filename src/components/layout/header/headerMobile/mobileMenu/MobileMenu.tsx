@@ -2,7 +2,7 @@
 
 import { IDashboardItem } from "@/config/url-config/all-pages.config";
 import { useStopScroll } from "@/hooks/useStopScroll";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { useMobileMenu } from "@/store/mobile-menu.store";
 import clsx from "clsx";
 import {
@@ -18,7 +18,7 @@ import { MobileMenuHead } from "./mobileMenuHead/MobileMenuHead";
 import { MobileMenuItem } from "./mobileMenuItem/MobileMenuItem";
 import { MobileMenuSocials } from "./mobileMenuSocials/MobileMenuSocials";
 
-interface IMobileMenu extends IGenericElementProps {
+interface IMobileMenu extends TGenericElementProps {
   pages?: IDashboardItem[];
   menuName?: string;
   isSubMenu?: boolean;

@@ -1,9 +1,9 @@
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./CaseList.module.css";
 
-interface ICaseList extends IGenericElementProps {
+interface ICaseList extends TGenericElementProps {
   grid?: boolean;
   margin?: boolean;
   marketed?: boolean;

@@ -1,50 +1,18 @@
 "use client";
 
-import { useNotification } from "@/hooks/useNotification";
-import { useSendToTelegram } from "@/hooks/useSendToTelegram";
 
-import { usePopupStore } from "@/store/popup.store";
 import clsx from "clsx";
 import { FC, useState } from "react";
-import { useFormContext } from "react-hook-form";
 import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
 import { IFormContent } from "../FormController";
-import { IForm } from "../HookFormProvider";
+import { useHandlerFormContext } from "../HandleFormProvider";
 import { Checkbox } from "../inputs/checkbox/Checkbox";
 import { NameInput, PhoneInput } from "../inputs/MaskedInputs";
 import styles from "./StepForm.module.css";
 
 export const StepForm: FC<IFormContent> = ({ subServices }) => {
-  const {
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useFormContext();
-
-  const { closePopup } = usePopupStore();
-
   const [step, setStep] = useState<number>(1);
-
-  const onSubmit = (data: IForm) => {
-    const pathname = window.location.pathname;
-    useSendToTelegram(data, pathname);
-    useNotification("Заявка отправлена", "success");
-    closePopup();
-    reset();
-  };
-
-  const onError = (errors: Record<string, any>) => {
-    const errorsArray = Object.entries(errors).map(([field, error]) => ({
-      field,
-      ...error,
-    }));
-
-    if (errorsArray.length > 1) {
-      useNotification("Заполните все обязательные поля", "error");
-    } else {
-      useNotification(errorsArray[0].message, "error");
-    }
-  };
+  const { handleForm } = useHandlerFormContext();
 
   const toggleStep = (e: any) => {
     e.preventDefault();
@@ -53,7 +21,7 @@ export const StepForm: FC<IFormContent> = ({ subServices }) => {
 
   return (
     <div className={styles.content}>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
+      <form className={styles.form} onSubmit={handleForm}>
         <div
           className={clsx(styles.step__one, step === 1 && styles.in__step)}
           inert={step !== 1 ? "" : undefined}

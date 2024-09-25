@@ -1,11 +1,11 @@
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { TCase } from "@/interfaces/types/block/products.type";
 import Link from "next/link";
 import { FC } from "react";
 import { DynamicSvg } from "../dynamicSvg/DynamicSvg";
 import styles from "./CaseCard.module.css";
 
-interface ICase extends IGenericElementProps {
+interface ICase extends TGenericElementProps {
   caseData: TCase;
 }
 

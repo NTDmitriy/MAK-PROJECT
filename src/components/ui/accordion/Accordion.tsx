@@ -1,13 +1,13 @@
 "use client";
 
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { TAccordionItem } from "@/interfaces/types/block/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { DynamicSvg } from "../dynamicSvg/DynamicSvg";
 import styles from "./Accordion.module.css";
 
-interface IAccordion extends IGenericElementProps {
+interface IAccordion extends TGenericElementProps {
   items: TAccordionItem[];
 }
 

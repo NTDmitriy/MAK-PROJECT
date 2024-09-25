@@ -4,11 +4,11 @@ import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { SERVICES_DASHBOARD_PAGES } from "@/config/url-config/services-pages.config";
 import { useFindParent } from "@/hooks/useFindParent";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { FC } from "react";
 import styles from "./MaybeInteresting.module.css";
 
-interface IMaybeInteresting extends IGenericElementProps {
+interface IMaybeInteresting extends TGenericElementProps {
   pathname: string;
 }
 

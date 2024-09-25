@@ -4,7 +4,7 @@ import { FC } from "react";
 import { SeconderyLinkButton } from "../links/seconderyLinkButton/SeconderyLinkButton";
 import { ButtonMore } from "./buttonMore/ButtonMore";
 import { RatingStars } from "./rating/Rating";
-import styles from './Reviwe.module.css';
+import styles from "./Reviwe.module.css";
 
 interface IReviwe {
   reviwe: TReviwe;
@@ -17,12 +17,23 @@ export const Reviwe: FC<IReviwe> = ({ reviwe, isFull }) => {
   return (
     <div className={clsx(styles.reviwe, isFull && styles.reviwe__full)}>
       <div className={styles.head}>
-        <img
-          className={styles.avatar}
-          src={`/images/avatars/${avatar}.webp`}
-          alt="avatar"
-          loading="lazy"
-        />
+        {avatar && (
+          <img
+            className={styles.avatar}
+            src={`/images/avatars/${avatar}.webp`}
+            alt="avatar"
+            loading="lazy"
+          />
+        )}
+        {!avatar && (
+          <img
+            className={styles.avatar}
+            src={`/images/avatars/avatar-default.webp`}
+            alt="avatar"
+            loading="lazy"
+          />
+        )}
+
         <div className={styles.head__info}>
           <p className={styles.head__name}>{name}</p>
           <p className={styles.position}>{position}</p>

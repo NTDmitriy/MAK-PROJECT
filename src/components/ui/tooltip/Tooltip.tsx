@@ -1,12 +1,12 @@
 "use client";
 
-import { IButton } from "@/interfaces/button.interface";
+import { TButton } from "@/interfaces/button.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren, ReactNode } from "react";
 import { DynamicSvg } from "../dynamicSvg/DynamicSvg";
 import styles from "./Tooltip.module.css";
 
-interface ITooltip extends IButton {
+interface ITooltip extends TButton {
   text?: string | ReactNode;
   side?: "left" | "right";
 }

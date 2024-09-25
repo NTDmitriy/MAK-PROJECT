@@ -4,7 +4,6 @@ import { ALL_CASES_CONTENT } from "../all-cases/all-cases.config";
 
 export const ALL_REVIWES = [
   {
-    id: 1,
     name: "Иван Назаров",
     position: "Генеральный директор компании",
     avatar: "avatarNazarov",
@@ -13,7 +12,6 @@ export const ALL_REVIWES = [
     caseUrl: ALL_CASES_CONTENT.FURNITURE_STORE.url,
   },
   {
-    id: 2,
     name: "Александр Смирнов",
     position: "Cобственник сети стоматологических клиник",
     avatar: "avatarSmirnov",
@@ -22,7 +20,6 @@ export const ALL_REVIWES = [
 		caseUrl: ALL_CASES_CONTENT.STOMATOLOGY_CLINIC.url,
   },
   {
-    id: 3,
     name: "Карельский дом",
     position: "Генеральный директор ООО “Карельский Дом”",
     avatar: "avatarJuravlev",
@@ -31,7 +28,6 @@ export const ALL_REVIWES = [
     caseUrl: ALL_CASES_CONTENT.CONSTRUCTION_COMPANY.url,
   },
   {
-    id: 4,
     name: "Геннадий Кузнецов",
     position: "Владелец компании",
     avatar: "defaultAvatar",
@@ -40,16 +36,14 @@ export const ALL_REVIWES = [
 		caseUrl: ALL_CASES_CONTENT.TAX_OPTIMIZATION.url,
   },
   {
-    id: 5,
     name: "Эмира Эдельвейн",
     position: "Директор по маркетингу",
-    avatar: "avatarEmira",
+    avatar: null,
     rating: 5,
     text: "Качнули трафик х10 менее чем за месяц. Смогли заменить нам трех подрядчиков, внедрив одновременно горизонтальное и вертикальное масштабирование. Ранее о таких способах я никогда не слышала и эффект меня поразил. Результаты превзошли все наши ожидания!",
     caseUrl: ALL_CASES_CONTENT.FRONTEND_DEVELOPMENT_UNIVERSITY.url,
   },
   {
-    id: 6,
     name: "Олег Сергеев",
     position: 'Маркетолог в компании "ЭкоПродукт"',
     avatar: "avatarSergeev",
@@ -58,7 +52,6 @@ export const ALL_REVIWES = [
     caseUrl: null,
   },
   {
-    id: 7,
     name: "Татьяна Крылова",
     position: 'Руководитель проекта "Здоровье семьи"',
     avatar: "avatarKrilova",
@@ -67,7 +60,6 @@ export const ALL_REVIWES = [
     caseUrl: null,
   },
   {
-    id: 8,
     name: "Сергей Волков",
     position: 'Генеральный директор "ТехноДом"',
     avatar: "defaultAvatar",
@@ -76,7 +68,6 @@ export const ALL_REVIWES = [
     caseUrl: null,
   },
   {
-    id: 9,
     name: "Наталья Романова",
     position: 'Владелец "Арт-галереи"',
     avatar: "avatarRomanova",
@@ -85,7 +76,6 @@ export const ALL_REVIWES = [
     caseUrl: null,
   },
   {
-    id: 10,
     name: "Анна Смирнова",
     position: 'Руководитель "Детского развивающего центра"',
     avatar: "defaultAvatar",
@@ -94,7 +84,6 @@ export const ALL_REVIWES = [
     caseUrl: null,
   },
   {
-    id: 11,
     name: "Владимир Зайцев",
     position: 'Директор курьерской службы доставки в Краснодаре',
     avatar: "avatarZaicev",
@@ -103,7 +92,6 @@ export const ALL_REVIWES = [
     caseUrl: null,
   },
   {
-    id: 12,
     name: "Елизавета Павлова",
     position: 'Владелец "Магазина женской одежды на WB"',
     avatar: "avatarPavlova",
@@ -112,7 +100,6 @@ export const ALL_REVIWES = [
     caseUrl: ALL_CASES_CONTENT.WILDBERRIES_SHOP.url,
   },
   {
-    id: 13,
     name: "Михаил Соколов",
     position: 'Генеральный директор Строительной компании',
     avatar: "avatarSokolov",
@@ -121,7 +108,6 @@ export const ALL_REVIWES = [
     caseUrl: null,
   },
   {
-    id: 14,
     name: "Ирина Козлова",
     position: 'Директор по маркетингу Туристического агентства',
     avatar: "defaultAvatar",
@@ -130,7 +116,6 @@ export const ALL_REVIWES = [
     caseUrl: null,
   },
   {
-    id: 15,
     name: "Алексей Морозов",
     position: 'Владелец Фермерского хозяйства',
     avatar: "avatarMorozov",
@@ -139,7 +124,6 @@ export const ALL_REVIWES = [
     caseUrl: null,
   },
   {
-    id: 16,
     name: "Алексей Краузе",
     position: 'Генеральный директор "ТехноСервис"',
     avatar: "avatarKrauze",
@@ -148,7 +132,6 @@ export const ALL_REVIWES = [
     caseUrl: null,
   },
   {
-    id: 17,
     name: "Надежда Веденина",
     position: 'Владелец Магазина цветов',
     avatar: "defaultAvatar",
@@ -157,10 +140,9 @@ export const ALL_REVIWES = [
     caseUrl: null,
   },
   {
-    id: 18,
-    name: " Дмитрий Соколов",
+    name: "Дмитрий Соколов",
     position: 'Директор Логистической компании',
-    avatar: "avatarPadre",
+    avatar: null,
     rating: 5,
     text: "Разработали для нас сайт, который стал важным инструментом в привлечении новых клиентов и продвижении наших услуг. Сайт отличается высоким качеством, удобной навигацией и современным дизайном. Рекомендуем это агентство всем, кто нуждается в качественной разработке веб-сайта.",
     caseUrl: null,

@@ -3,13 +3,15 @@
 import { useFormContext } from "react-hook-form";
 import { PrimaryInput } from "./primaryInput/PrimaryInput";
 
-enum INPUT_NAMES {
+export enum INPUT_NAMES {
   NAME = "NAME",
   EMAIL = "EMAIL",
   NICHE = "NICHE",
   PHONE = "PHONE",
   MESSAGE = "MESSAGE",
+  REQUEST = "REQUEST",
 }
+
 
 export const PhoneInput = () => {
   const {
@@ -133,6 +135,23 @@ export const MessageInput = () => {
           ...register(INPUT_NAMES.MESSAGE),
         }}
       />
+    </>
+  );
+};
+
+
+export const HiddenInput = ({
+  name,
+  value,
+}: {
+  name: INPUT_NAMES;
+  value: string;
+}) => {
+  const { register } = useFormContext();
+
+  return (
+    <>
+      <input type="hidden" {...register(name)} value={value} />
     </>
   );
 };

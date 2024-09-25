@@ -1,4 +1,4 @@
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg } from "../../../ui/dynamicSvg/DynamicSvg";
@@ -6,7 +6,7 @@ import styles from "./HeaderDesktop.module.css";
 import { DesktopBtnGroup } from "./desktopBtnGroup/DesktopBtnGroup";
 import { DesktopNav } from "./desktopNav/DesktopNav";
 
-export const HeaderDesktop: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const HeaderDesktop: FC<PropsWithChildren<TGenericElementProps>> = ({
   className,
   ...rest
 }) => {

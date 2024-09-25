@@ -2,7 +2,7 @@ import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController"
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg } from "../../../../ui/dynamicSvg/DynamicSvg";
@@ -10,7 +10,7 @@ import { MobileMenu } from "../mobileMenu/MobileMenu";
 import styles from "./BottomNavigation.module.css";
 
 export const BottomNavigation: FC<
-  PropsWithChildren<IGenericElementProps>
+  PropsWithChildren<TGenericElementProps>
 > = () => {
   const pages = DASHBOARD_PAGES.toArray();
 

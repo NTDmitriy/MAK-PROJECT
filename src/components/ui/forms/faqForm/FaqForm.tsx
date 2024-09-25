@@ -1,16 +1,12 @@
 "use client";
 
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
-import { useNotification } from "@/hooks/useNotification";
-import { useSendToTelegram } from "@/hooks/useSendToTelegram";
-import { usePopupStore } from "@/store/popup.store";
 import { FC } from "react";
-import { useFormContext } from "react-hook-form";
 import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
 import { PhoneLinkButton } from "../../links/phoneLinkButton/PhoneLinkButton";
 import { TelegramLinkButton } from "../../links/telegramLinkButton/TelegramLinkButton";
 import { IFormContent } from "../FormController";
-import { IForm } from "../HookFormProvider";
+import { useHandlerFormContext } from "../HandleFormProvider";
 import { MessageInput, NameInput, PhoneInput } from "../inputs/MaskedInputs";
 import styles from "./FaqForm.module.css";
 
@@ -20,42 +16,17 @@ export const FaqForm: FC<IFormContent> = ({
   areaVisible,
   ...rest
 }) => {
-  const {
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useFormContext();
-  const { closePopup } = usePopupStore();
-
-  const onSubmit = (data: IForm) => {
-    const pathname = window.location.pathname;
-    useSendToTelegram(data, pathname);
-    useNotification("Заявка отправлена", "success");
-    closePopup();
-    reset();
-  };
-
-  const onError = (errors: Record<string, any>) => {
-    const errorsArray = Object.entries(errors).map(([field, error]) => ({
-      field,
-      ...error,
-    }));
-
-    if (errorsArray.length > 1) {
-      useNotification("Заполните все обязательные поля", "error");
-    } else {
-      useNotification(errorsArray[0].message, "error");
-    }
-  };
+  const { handleForm } = useHandlerFormContext();
 
   return (
     <div className={styles.root} {...rest}>
-      <h5 className={styles.title}>
-        {title ? title : "Не нашли ответ на свой вопрос?"}
-      </h5>
-      {text ? (
-        <p className={styles.descr}>{text}</p>
-      ) : (
+      {title && <h5 className={styles.title}>{title}</h5>}
+      {!title && (
+        <h5 className={styles.title}>Не нашли ответ на свой вопрос?</h5>
+      )}
+
+      {text && <p className={styles.descr}>{text}</p>}
+      {!text && (
         <p className={styles.descr}>
           Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее
           время для проведения первичной консультации. Ответим на все ваши
@@ -66,7 +37,7 @@ export const FaqForm: FC<IFormContent> = ({
         </p>
       )}
 
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
+      <form className={styles.form} onSubmit={handleForm}>
         <NameInput />
         <PhoneInput />
         {areaVisible && <MessageInput />}

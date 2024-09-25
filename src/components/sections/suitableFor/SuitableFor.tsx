@@ -1,12 +1,12 @@
 import { Container } from "@/components/ui/container/Container";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { TSuitableFor } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren } from "react";
 import styles from "./SuitableFor.module.css";
 
-interface ISuitableFor extends IGenericElementProps {
+interface ISuitableFor extends TGenericElementProps {
   suitableForContent: TSuitableFor;
 }
 

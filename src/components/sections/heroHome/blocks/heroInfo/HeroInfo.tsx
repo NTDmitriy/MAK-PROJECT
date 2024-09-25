@@ -1,11 +1,11 @@
 import { Container } from "@/components/ui/container/Container";
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./HeroInfo.module.css";
 
-export const HeroInfo: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const HeroInfo: FC<PropsWithChildren<TGenericElementProps>> = ({
   className,
   ...rest
 }) => {

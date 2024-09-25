@@ -1,13 +1,13 @@
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
 import { useFindParent } from "@/hooks/useFindParent";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC } from "react";
 import { Container } from "../container/Container";
 import styles from "./Breadcrumbs.module.css";
 
-interface IBreadcrumbs extends IGenericElementProps {
+interface IBreadcrumbs extends TGenericElementProps {
   pathname: string;
 }
 

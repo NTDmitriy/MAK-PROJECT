@@ -1,68 +1,28 @@
 "use client";
 
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
-import { useNotification } from "@/hooks/useNotification";
-import { useSendToTelegram } from "@/hooks/useSendToTelegram";
-import { usePopupStore } from "@/store/popup.store";
 import { FC } from "react";
-import { useFormContext } from "react-hook-form";
-import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
 import { PhoneLinkButton } from "../../links/phoneLinkButton/PhoneLinkButton";
 import { TelegramLinkButton } from "../../links/telegramLinkButton/TelegramLinkButton";
 import { IFormContent } from "../FormController";
-import { IForm } from "../HookFormProvider";
+import { useHandlerFormContext } from "../HandleFormProvider";
 import { NameInput, NicheInput, PhoneInput } from "../inputs/MaskedInputs";
+import { SubmitButton } from "../submitButton/SubmitButton";
 import styles from "./MainForm.module.css";
 
 export const MainForm: FC<IFormContent> = ({ title, text, ...rest }) => {
-  const {
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useFormContext();
-  const { closePopup } = usePopupStore();
-
-  
-  const onSubmit = async (data: IForm) => {
-    const pathname = window.location.pathname;
-    const response = await useSendToTelegram(data, pathname);
-    if (response?.success) {
-      useNotification(response?.message || "Заявка отправлена", "success");
-      closePopup();
-      reset();
-    } else {
-      useNotification(
-        response?.message || "Ошибка. Повторите попытку позже",
-        "error"
-      );
-    }
-  };
-
-  const onError = (errors: Record<string, any>) => {
-    const errorsArray = Object.entries(errors).map(([field, error]) => ({
-      field,
-      ...error,
-    }));
-
-    if (errorsArray.length > 1) {
-      useNotification("Заполните все обязательные поля", "error");
-    } else {
-      useNotification(errorsArray[0].message, "error");
-    }
-  };
+  const { handleForm } = useHandlerFormContext();
 
   return (
     <div className={styles.content} {...rest}>
       <div className={styles.descr}>
-        {title ? (
-          <h5 className={styles.title}>{title}</h5>
-        ) : (
+        {title && <h5 className={styles.title}>{title}</h5>}
+        {!title && (
           <h5 className={styles.title}>Хотите обсудить ваш проект?</h5>
         )}
 
-        {text ? (
-          <p className={styles.text}>{text}</p>
-        ) : (
+        {text && <p className={styles.text}>{text}</p>}
+        {!text && (
           <p className={styles.text}>
             Оставьте свои контактные данные, и наш менеджер свяжется с вами,
             чтобы обсудить все детали вашего проекта и предложить наилучшие
@@ -73,11 +33,11 @@ export const MainForm: FC<IFormContent> = ({ title, text, ...rest }) => {
           </p>
         )}
       </div>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
+      <form className={styles.form} onSubmit={handleForm}>
         <NameInput />
         <PhoneInput />
         <NicheInput />
-        <PrimaryButton className={styles.submit}>Отправить</PrimaryButton>
+        <SubmitButton />
       </form>
       <p className={styles.contact__text}>
         Также можно оставить заявку через{" "}

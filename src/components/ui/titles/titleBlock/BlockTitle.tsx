@@ -1,4 +1,4 @@
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren, ReactNode } from "react";
 
@@ -6,7 +6,7 @@ import { Container } from "../../container/Container";
 import { DynamicSvg } from "../../dynamicSvg/DynamicSvg";
 import styles from "./BlockTitle.module.css";
 
-interface IBlockTitle extends IGenericElementProps {
+interface IBlockTitle extends TGenericElementProps {
   leftSide: boolean;
   descrBottom?: string | ReactNode;
   descrSideway?: string | ReactNode;

@@ -2,12 +2,12 @@ import { Container } from "@/components/ui/container/Container";
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { TWhyUs } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren } from "react";
 import styles from "./WhyUs.module.css";
 
-interface IWhyUs extends IGenericElementProps {
+interface IWhyUs extends TGenericElementProps {
   whyUsContent: TWhyUs;
 }
 

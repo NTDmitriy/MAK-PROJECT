@@ -1,9 +1,9 @@
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./BlogListTitle.module.css";
 
-export const BlogListTitle: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const BlogListTitle: FC<PropsWithChildren<TGenericElementProps>> = ({
   children,
   className,
   ...rest

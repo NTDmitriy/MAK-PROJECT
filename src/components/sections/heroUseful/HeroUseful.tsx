@@ -1,5 +1,5 @@
 import { Section } from "@/components/ui/section/Section";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import {
   THeroInfo,
   type THeroBasic
@@ -10,7 +10,7 @@ import styles from "./HeroUseful.module.css";
 import { HeroBasic } from "./blocks/heroBasicUseful/HeroBasicUseful";
 import { HeroInfoUseful } from "./blocks/heroInfoUseful/HeroInfoUseful";
 
-interface IHero extends IGenericElementProps {
+interface IHero extends TGenericElementProps {
   basicContent: THeroBasic;
   usefulInfo?: THeroInfo;
 }
