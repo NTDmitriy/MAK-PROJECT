@@ -13,9 +13,15 @@ const client = new Client({
   },
 });
 
-export const sendToAmo = async (data: IForm, page: string | null) => {
+interface ISendToAmo {
+  data: IForm;
+  page: string | null;
+  coockie: Record<string, string>;
+}
+
+export const sendToAmo = async ({ data, page, coockie }: ISendToAmo) => {
   try {
-    const leadData = processData(data, page);
+    const leadData = processData({ data, page, coockie });
 
     if (
       !leadData.custom_fields_values ||
@@ -30,7 +36,7 @@ export const sendToAmo = async (data: IForm, page: string | null) => {
   }
 };
 
-const processData = (data: IForm, page: string | null) => {
+const processData = ({ data, page, coockie }: ISendToAmo) => {
   const customFields = [];
 
   if (data.PHONE) {
@@ -38,7 +44,7 @@ const processData = (data: IForm, page: string | null) => {
       field_id: 1151127, // ID поля Телефон
       values: [
         {
-          value: data.PHONE.trim(), // Телефон клиента
+          value: data.PHONE.trim(),
         },
       ],
     });
@@ -49,7 +55,7 @@ const processData = (data: IForm, page: string | null) => {
       field_id: 1151129, // ID поля Имя
       values: [
         {
-          value: data.NAME.trim(), // Имя клиента
+          value: data.NAME.trim(),
         },
       ],
     });
@@ -60,7 +66,7 @@ const processData = (data: IForm, page: string | null) => {
       field_id: 1151131, // ID поля Ниша
       values: [
         {
-          value: data.NICHE.trim(), // Ниша клиента
+          value: data.NICHE.trim(),
         },
       ],
     });
@@ -71,29 +77,19 @@ const processData = (data: IForm, page: string | null) => {
       field_id: 1151133, // ID поля запрос
       values: [
         {
-          value: data.REQUEST.trim(), // запрос клиента
+          value: data.REQUEST.trim(),
         },
       ],
     });
   }
 
-  if (data.REQUEST) {
-    customFields.push({
-      field_id: 1151133, // ID поля запрос
-      values: [
-        {
-          value: data.REQUEST.trim(), // запрос клиента
-        },
-      ],
-    });
-  }
 
   if (data.CHECKBOXES) {
     customFields.push({
       field_id: 1151139, // ID поля услуги
       values: [
         {
-          value: data.CHECKBOXES.join(", ").trim(), // услуги
+          value: data.CHECKBOXES.join(", ").trim(),
         },
       ],
     });
@@ -104,11 +100,112 @@ const processData = (data: IForm, page: string | null) => {
       field_id: 1151141, // ID поля Сообщение
       values: [
         {
-          value: data.MESSAGE.trim(), // Сообщение клиента
+          value: data.MESSAGE.trim(),
         },
       ],
     });
   }
+
+  // analytics
+
+  customFields.push({
+    field_id: 857949, // ID поля utm_content
+    values: [
+      {
+        value: coockie.utm_content || "",
+      },
+    ],
+  });
+
+  customFields.push({
+    field_id: 857951, // ID поля utm_medium
+    values: [
+      {
+        value: coockie.utm_medium || "",
+      },
+    ],
+  });
+
+  customFields.push({
+    field_id: 857953, // ID поля utm_campaign
+    values: [
+      {
+        value: coockie.utm_campaign || "",
+      },
+    ],
+  });
+
+  customFields.push({
+    field_id: 857955, // ID поля utm_source
+    values: [
+      {
+        value: coockie.utm_source || "",
+      },
+    ],
+  });
+
+  customFields.push({
+    field_id: 857957, // ID поля utm_term
+    values: [
+      {
+        value: coockie.utm_term || "",
+      },
+    ],
+  });
+
+  customFields.push({
+    field_id: 857959, // ID поля utm_referrer
+    values: [
+      {
+        value: coockie.utm_referrer || "",
+      },
+    ],
+  });
+
+  customFields.push({
+    field_id: 857979, // ID поля _ym_counter
+    values: [
+      {
+        value: coockie._ym_counter || "",
+      },
+    ],
+  });
+
+  customFields.push({
+    field_id: 857977, // ID поля _ym_uid
+    values: [
+      {
+        value: coockie._ym_uid || "",
+      },
+    ],
+  });
+
+  customFields.push({
+    field_id: 857975, // ID поля gclientid
+    values: [
+      {
+        value: coockie.gclientid || "",
+      },
+    ],
+  });
+
+  customFields.push({
+    field_id: 857983, // ID поля yclid
+    values: [
+      {
+        value: coockie.yclid || "",
+      },
+    ],
+  });
+
+  customFields.push({
+    field_id: 857981, // ID поля gclid
+    values: [
+      {
+        value: coockie.gclid || "",
+      },
+    ],
+  });
 
   return {
     name: page || "Неизвестная страница", // Название лида

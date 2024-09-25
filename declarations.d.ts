@@ -3,3 +3,7 @@ declare namespace React {
     inert?: ''
   }
 }
+
+interface Window {
+  dataLayer: any[];
+}

@@ -1,8 +1,9 @@
-'use client'
+"use client";
 
 import { useNotification } from "@/hooks/useNotification";
 import { useSendForm } from "@/hooks/useSendForm";
 import { usePopupStore } from "@/store/popup.store";
+import { getCookies } from "@/utils/cookies";
 import { createContext, ReactNode, useContext, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { IForm } from "./FormProviders";
@@ -28,12 +29,19 @@ export const HandlerFormProvider = ({ children }: { children: ReactNode }) => {
 
     try {
       setLoading(true);
-      const response = await useSendForm(data, pathname);
+
+      const coockie = getCookies();
+      const response = await useSendForm({ data, pathname, coockie });
 
       if (response?.success) {
         useNotification(response?.message || "Заявка отправлена", "success");
         closePopup();
         reset();
+        if (typeof window !== "undefined" && window.dataLayer) {
+          window.dataLayer.push({
+            event: "formSubmitSuccess",
+          });
+        }
       } else {
         useNotification(
           response?.message || "Ошибка. Повторите попытку позже",
