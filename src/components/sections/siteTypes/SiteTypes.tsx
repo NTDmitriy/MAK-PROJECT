@@ -5,13 +5,13 @@ import {
 } from "@/components/ui/forms/FormController";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { TServiceProducts } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg } from "../../ui/dynamicSvg/DynamicSvg";
 import styles from "./SiteTypes.module.css";
 
-interface IAllSiteTypes extends IGenericElementProps {
+interface IAllSiteTypes extends TGenericElementProps {
   productsConent: TServiceProducts;
 }
 

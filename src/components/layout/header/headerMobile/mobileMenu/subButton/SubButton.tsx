@@ -1,9 +1,9 @@
-import { IButton } from "@/interfaces/button.interface";
+import { TButton } from "@/interfaces/button.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./SubButton.module.css";
 
-interface ISubButton extends IButton {
+interface ISubButton extends TButton {
   shadowBtn?: boolean;
 }
 

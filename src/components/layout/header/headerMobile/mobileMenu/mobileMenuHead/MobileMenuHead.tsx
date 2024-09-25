@@ -1,12 +1,12 @@
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { useMobileMenu } from "@/store/mobile-menu.store";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import { SubButton } from "../subButton/SubButton";
 import styles from "./MobileMenuHead.module.css";
 
-interface IMobileMenuHead extends IGenericElementProps {
+interface IMobileMenuHead extends TGenericElementProps {
   closeSubMenu: () => void;
 }
 

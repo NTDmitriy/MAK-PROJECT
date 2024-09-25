@@ -1,11 +1,11 @@
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { FC, PropsWithChildren } from "react";
 import { Contacts } from "../sections/contacts/Contacts";
 import { Breadcrumbs } from "../ui/breadcrumbs/Breadcrumbs";
 
 export const ContactsScreen: FC<
-  PropsWithChildren<IGenericElementProps>
+  PropsWithChildren<TGenericElementProps>
 > = () => {
   return (
     <>

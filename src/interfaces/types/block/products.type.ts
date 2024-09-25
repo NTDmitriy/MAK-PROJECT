@@ -53,10 +53,10 @@ export type TCase = {
 };
 
 export type TReviwe = {
-  id: number | string;
+  id?: number | string;
   name: string;
   position: string;
-  avatar: string;
+  avatar: string | null;
   rating: number;
   text: string;
   caseUrl?: string | null;

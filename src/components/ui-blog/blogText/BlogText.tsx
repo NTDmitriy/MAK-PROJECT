@@ -1,9 +1,9 @@
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./BlogText.module.css";
 
-export const BlogText: FC<PropsWithChildren<IGenericElementProps & { margin?: boolean }>> = ({
+export const BlogText: FC<PropsWithChildren<TGenericElementProps & { margin?: boolean }>> = ({
   children,
   className,
   margin,

@@ -1,11 +1,11 @@
 import { useFormContext } from "react-hook-form";
 
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { FC } from "react";
 import styles from "./Checkbox.module.css";
 
-interface ICheckbox extends IGenericElementProps {
+interface ICheckbox extends TGenericElementProps {
   value: string;
 }
 

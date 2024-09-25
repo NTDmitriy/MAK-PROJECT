@@ -4,13 +4,13 @@ import { PrimaryButton } from "@/components/ui/buttons/primaryButton/PrimaryButt
 import { Container } from "@/components/ui/container/Container";
 import { Reviwe } from "@/components/ui/review/Reviwe";
 import { Section } from "@/components/ui/section/Section";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { TReviwe } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren, useState } from "react";
 import { FORM_TYPE, FormController } from "../../../ui/forms/FormController";
 import styles from "./ReviwesListContent.module.css";
 
-interface IReviwesListContent extends IGenericElementProps {
+interface IReviwesListContent extends TGenericElementProps {
   reviwes: TReviwe[];
 }
 

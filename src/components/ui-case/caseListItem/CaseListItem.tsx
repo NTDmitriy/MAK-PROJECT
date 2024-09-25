@@ -1,9 +1,9 @@
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./CaseListItem.module.css";
 
-interface ICaseListItem extends IGenericElementProps {
+interface ICaseListItem extends TGenericElementProps {
   center?: boolean;
 }
 

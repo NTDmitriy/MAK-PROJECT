@@ -7,12 +7,12 @@ import {
 import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { CONTACTS_PUBLIC } from "@/config/contact.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./HeroBasic.module.css";
 
-export const HeroBasic: FC<PropsWithChildren<IGenericElementProps>> = () => {
+export const HeroBasic: FC<PropsWithChildren<TGenericElementProps>> = () => {
   return (
     <div className={styles.content}>
       <Container className={styles.hero__container}>

@@ -2,13 +2,13 @@ import { Container } from "@/components/ui/container/Container";
 import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import { Section } from "@/components/ui/section/Section";
 import { USEFUL_DASHBOARD_PAGES } from "@/config/url-config/useful-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import { BlockTitle } from "../../ui/titles/titleBlock/BlockTitle";
 import styles from "./VacanciesPrev.module.css";
 
-export const VacanciesPrev: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const VacanciesPrev: FC<PropsWithChildren<TGenericElementProps>> = ({
   className,
   ...rest
 }) => {

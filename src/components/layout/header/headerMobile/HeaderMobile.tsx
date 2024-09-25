@@ -1,7 +1,7 @@
 import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
@@ -9,7 +9,7 @@ import { DynamicSvg } from "../../../ui/dynamicSvg/DynamicSvg";
 import styles from "./HeaderMobile.module.css";
 import { BottomNavigation } from "./bottomNavigation/BottomNavigation";
 
-export const HeaderMobile: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const HeaderMobile: FC<PropsWithChildren<TGenericElementProps>> = ({
   className,
   ...rest
 }) => {

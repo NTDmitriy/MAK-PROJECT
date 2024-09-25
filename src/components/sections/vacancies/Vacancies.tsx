@@ -5,7 +5,7 @@ import {
 } from "@/components/ui/forms/FormController";
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { Section } from "@/components/ui/section/Section";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { TVacancies } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren } from "react";
 import { SeconderyButton } from "../../ui/buttons/seconderyButton/SeconderyButton";
@@ -13,7 +13,7 @@ import { DynamicSvg } from "../../ui/dynamicSvg/DynamicSvg";
 import { BlockTitle } from "../../ui/titles/titleBlock/BlockTitle";
 import styles from "./Vacancies.module.css";
 
-interface IVacancies extends IGenericElementProps {
+interface IVacancies extends TGenericElementProps {
   vacancies: TVacancies;
 }
 

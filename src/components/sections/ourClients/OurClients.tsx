@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/container/Container";
 import { DynamicSvg, TSvgMapKeys } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./OurClients.module.css";
@@ -18,7 +18,7 @@ const clients = [
   "IconClient8",
 ];
 
-export const OurClients: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const OurClients: FC<PropsWithChildren<TGenericElementProps>> = ({
   className,
   ...rest
 }) => {

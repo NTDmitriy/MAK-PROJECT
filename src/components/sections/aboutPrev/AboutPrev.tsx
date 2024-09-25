@@ -3,12 +3,12 @@ import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { SeconderyLinkButton } from "@/components/ui/links/seconderyLinkButton/SeconderyLinkButton";
 import { Section } from "@/components/ui/section/Section";
 import { USEFUL_DASHBOARD_PAGES } from "@/config/url-config/useful-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./AboutPrev.module.css";
 
-export const AboutPrev: FC<PropsWithChildren<IGenericElementProps>> = ({
+export const AboutPrev: FC<PropsWithChildren<TGenericElementProps>> = ({
   className,
   ...rest
 }) => {

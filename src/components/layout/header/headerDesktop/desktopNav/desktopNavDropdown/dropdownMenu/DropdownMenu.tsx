@@ -1,13 +1,13 @@
 import { DynamicSvg, TSvgMapKeys } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { DASHBOARD_PAGES, IDashboardItem } from "@/config/url-config/all-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC, PropsWithChildren, SyntheticEvent, useState } from "react";
 import DropdownLink from "../dropdownLink/DropdownLink";
 import styles from "./DropdownMenu.module.css";
 
-interface IDropdownMenu extends IGenericElementProps {
+interface IDropdownMenu extends TGenericElementProps {
   page: IDashboardItem;
 }
 

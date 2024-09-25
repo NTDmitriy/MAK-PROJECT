@@ -4,12 +4,12 @@ import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/Seconde
 import { CaseCard } from "@/components/ui/caseCard/CaseCard";
 import { SeconderyLinkButton } from "@/components/ui/links/seconderyLinkButton/SeconderyLinkButton";
 import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { TCase } from "@/interfaces/types/block/products.type";
 import { FC, useState } from "react";
 import styles from "./СasesList.module.css";
 
-interface ICases extends IGenericElementProps {
+interface ICases extends TGenericElementProps {
   cases: TCase[];
   isPrev?: boolean;
 }

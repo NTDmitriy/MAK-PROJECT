@@ -1,11 +1,11 @@
 import { Container } from "@/components/ui/container/Container";
 import { Section } from "@/components/ui/section/Section";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { TSupplementaryDescr } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren } from "react";
 import styles from "./SupplementaryDescr.module.css";
 
-interface ISuplementaryDescr extends IGenericElementProps {
+interface ISuplementaryDescr extends TGenericElementProps {
   suppContent: TSupplementaryDescr;
 }
 

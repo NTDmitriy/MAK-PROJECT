@@ -1,18 +1,18 @@
 import { Container } from "@/components/ui/container/Container";
 import {
-	FORM_TYPE,
-	FormController,
+  FORM_TYPE,
+  FormController,
 } from "@/components/ui/forms/FormController";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { USEFUL_DASHBOARD_PAGES } from "@/config/url-config/useful-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg } from "../../ui/dynamicSvg/DynamicSvg";
 import { PrimaryLinkButton } from "../../ui/links/primaryLinkButton/PrimaryLinkButton";
 import styles from "./AffiliatePreview.module.css";
 
-interface IAffiliatePreview extends IGenericElementProps {
+interface IAffiliatePreview extends TGenericElementProps {
   formVisible?: boolean;
 }
 

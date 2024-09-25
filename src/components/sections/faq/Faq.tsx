@@ -6,12 +6,12 @@ import {
 } from "@/components/ui/forms/FormController";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { TAccordionItem } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren } from "react";
 import styles from "./Faq.module.css";
 
-interface IFaq extends IGenericElementProps {
+interface IFaq extends TGenericElementProps {
   faq: TAccordionItem[];
 }
 

@@ -1,10 +1,10 @@
 import { IBlogItem } from "@/config/url-config/blog-pages.config";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 import styles from "./BlogCard.module.css";
 
-interface IBlogCard extends IGenericElementProps {
+interface IBlogCard extends TGenericElementProps {
   item: IBlogItem;
 }
 

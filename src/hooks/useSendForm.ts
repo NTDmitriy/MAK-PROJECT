@@ -1,4 +1,4 @@
-"use server"
+"use server";
 
 import { sendToAmo } from "@/amo";
 import { IForm } from "@/components/ui/forms/FormProviders";
@@ -12,7 +12,7 @@ export const useSendForm = async (data: IForm, pathname: string) => {
   const formattedText = formatMessageForTelegram(data, foundPage);
 
   await sendToAmo(data, foundPage);
-  const response = await sendToTelegram(formattedText); 
+  const response = await sendToTelegram(formattedText);
 
   return response;
 };

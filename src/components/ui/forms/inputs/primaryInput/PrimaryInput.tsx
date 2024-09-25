@@ -1,4 +1,4 @@
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { InputMask } from "@react-input/mask";
 import clsx from "clsx";
 import {
@@ -15,7 +15,7 @@ type TMaskParams = {
   replacement: Record<string, RegExp>;
 };
 
-export interface IInput extends IGenericElementProps {
+export interface IInput extends TGenericElementProps {
   InputProps: InputHTMLAttributes<HTMLInputElement>;
   TextareaProps?: TextareaHTMLAttributes<HTMLTextAreaElement>;
   id: string;

@@ -1,13 +1,13 @@
 "use client";
 
 import { useNotification } from "@/hooks/useNotification";
-import { IButton } from "@/interfaces/button.interface";
+import { TButton } from "@/interfaces/button.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg } from "../../dynamicSvg/DynamicSvg";
 import styles from "./CopyButton.module.css";
 
-interface ICopyButton extends IButton {
+interface ICopyButton extends TButton {
   text: string;
 }
 

@@ -1,13 +1,13 @@
 import { Container } from "@/components/ui/container/Container";
 import { DynamicSvg, TSvgMapKeys } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { Section } from "@/components/ui/section/Section";
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import { TProjectTeam } from "@/interfaces/types/block/products.type";
 import { FC, PropsWithChildren } from "react";
 import { BlockTitle } from "../../ui/titles/titleBlock/BlockTitle";
 import styles from "./ProjectTeam.module.css";
 
-interface IProjectTeam extends IGenericElementProps {
+interface IProjectTeam extends TGenericElementProps {
   projectTeamContent: TProjectTeam[];
 }
 

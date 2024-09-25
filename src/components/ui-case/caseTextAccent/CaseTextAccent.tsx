@@ -1,9 +1,9 @@
-import { IGenericElementProps } from "@/interfaces/elements.interface";
+import { TGenericElementProps } from "@/interfaces/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./CaseTextAccent.module.css";
 
-interface ICaseTextAccent extends IGenericElementProps {
+interface ICaseTextAccent extends TGenericElementProps {
   yellow?: boolean;
 }
 

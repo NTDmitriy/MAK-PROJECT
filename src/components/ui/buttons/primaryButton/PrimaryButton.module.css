@@ -29,7 +29,7 @@
   transition: all 0.4s ease-in-out;
 }
 
-.button span {
+.span {
   display:  flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +38,7 @@
   position: relative;
 }
 
-.button span:after {
+.span:after {
   content: "";
   position: absolute;
   bottom: 0;
