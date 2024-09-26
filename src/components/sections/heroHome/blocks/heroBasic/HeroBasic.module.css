@@ -124,7 +124,8 @@
 .img__wrapper {
   position: absolute;
   overflow: hidden;
-  bottom: -4px;
+  bottom: 0;
+  transform: translateY(4px);
   right: 0;
   max-width: 1360px;
   z-index: -1;
