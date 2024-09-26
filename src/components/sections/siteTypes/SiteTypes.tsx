@@ -5,8 +5,8 @@ import {
 } from "@/components/ui/forms/FormController";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TServiceProducts } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TServiceProducts } from "@/typing/products.type";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg } from "../../ui/dynamicSvg/DynamicSvg";
 import styles from "./SiteTypes.module.css";

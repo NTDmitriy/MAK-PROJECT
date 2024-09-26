@@ -1,5 +1,5 @@
 import { Popup } from "@/components/ui/modals/popup/Popup";
-import { TReviwe } from "@/interfaces/types/block/products.type";
+import { TReviwe } from "@/typing/products.type";
 import { FC, PropsWithChildren } from "react";
 import { Reviwe } from "../Reviwe";
 import styles from "./ButtonMore.module.css";

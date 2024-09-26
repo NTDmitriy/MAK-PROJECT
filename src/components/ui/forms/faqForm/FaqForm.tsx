@@ -1,6 +1,6 @@
 "use client";
 
-import { CONTACTS_PUBLIC } from "@/config/contact.config";
+import { CONTACTS_PUBLIC } from "@/content/contacts.data";
 import { FC } from "react";
 import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
 import { PhoneLinkButton } from "../../links/phoneLinkButton/PhoneLinkButton";

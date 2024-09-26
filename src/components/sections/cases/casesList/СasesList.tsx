@@ -3,9 +3,9 @@
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { CaseCard } from "@/components/ui/caseCard/CaseCard";
 import { SeconderyLinkButton } from "@/components/ui/links/seconderyLinkButton/SeconderyLinkButton";
-import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TCase } from "@/interfaces/types/block/products.type";
+import { DASHBOARD_PAGES } from "@/dashboard/app.dashboard";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TCase } from "@/typing/products.type";
 import { FC, useState } from "react";
 import styles from "./СasesList.module.css";
 

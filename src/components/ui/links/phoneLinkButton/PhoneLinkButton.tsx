@@ -1,4 +1,4 @@
-import { CONTACTS_PUBLIC } from "@/config/contact.config";
+import { CONTACTS_PUBLIC } from "@/content/contacts.data";
 import clsx from "clsx";
 import { AnchorHTMLAttributes, FC, PropsWithChildren } from "react";
 import { DynamicSvg } from "../../dynamicSvg/DynamicSvg";

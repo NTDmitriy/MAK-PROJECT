@@ -1,6 +1,6 @@
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
-import { TGenericElementProps } from "@/interfaces/elements.type";
 import { useMobileMenu } from "@/store/mobile-menu.store";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import { SubButton } from "../subButton/SubButton";

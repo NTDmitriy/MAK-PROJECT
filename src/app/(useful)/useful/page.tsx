@@ -1,5 +1,5 @@
 import { UsefulScreen } from "@/components/screens/UsefulScreen";
-import { USEFUL_CONFIG } from "@/config/content-config/useful/useful.config";
+import { USEFUL_CONTENT } from "@/content/useful/useful.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const UsefulPage: NextPage = () => {
-  return <UsefulScreen content={USEFUL_CONFIG} />;
+  return <UsefulScreen content={USEFUL_CONTENT} />;
 };
 
 export default UsefulPage;

@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { WEBDEV_WORDPRESS_CONFIG } from "@/config/content-config/services/webdev/webdev-wordpress/webdev-wordpress.config";
+import { WEBDEV_WORDPRESS_CONTENT } from "@/content/services/webdev/webdev-wordpress/webdev-wordpress.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const ProductPage: NextPage = () => {
-	const content = WEBDEV_WORDPRESS_CONFIG;
+	const content = WEBDEV_WORDPRESS_CONTENT;
 	return (
 		<>
 			{content && <ProductScreen content={content} />}

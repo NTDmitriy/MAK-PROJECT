@@ -1,5 +1,5 @@
-import { IBlogItem } from "@/config/url-config/blog-pages.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { IBlogItem } from "@/content/all-blog/all-blog.content";
+import { TGenericElementProps } from "@/typing/elements.type";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 import styles from "./BlogCard.module.css";
@@ -17,7 +17,6 @@ export const BlogCard: FC<PropsWithChildren<IBlogCard>> = ({
 
   return (
     <>
-
       <li className={styles.item} {...rest}>
         <img
           className={styles.img}

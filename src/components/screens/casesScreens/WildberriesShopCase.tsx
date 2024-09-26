@@ -14,7 +14,7 @@ import {
   FORM_TYPE,
   FormController,
 } from "@/components/ui/forms/FormController";
-import { ALL_CASES_CONTENT } from "@/config/content-config/all-cases/all-cases.config";
+import { ALL_CASES_CONTENT } from "@/content/all-cases/all-cases.content";
 import { FC } from "react";
 
 export const WildberriesShopCase: FC = () => {

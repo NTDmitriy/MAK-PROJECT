@@ -5,24 +5,24 @@
 .background__text__top,
 .background__text__bot {
   position: absolute;
-  font-family: var(--second-family);
-  font-weight: 400;
-  font-size: clamp(200px, 17dvw, 300px);
-  -webkit-text-stroke: 1px #353535;
-  color: transparent;
 
-  opacity: 1;
 }
 
 .background__text__top {
-  top: 8%;
+  top: 0;
   left: 0;
+  transform: translate(3%, 30%);
   z-index: -1;
+  aspect-ratio: auto 499 / 213;
+  max-width: clamp(300px, 24dvw, 499px);
 }
 
 .background__text__bot {
-  bottom: -50px;
+  bottom: 0;
   right: 0;
+  transform: translateY(-10px);
+  aspect-ratio: auto 997 / 188;
+  max-width: clamp(600px, 60dvw, 997px);
 }
 
 .hero__container {
@@ -165,6 +165,16 @@
     flex-direction: column;
     justify-content: flex-end;
   }
+
+  .background__text__top {
+    transform: translate(3%, 0%); 
+  }
+ 
+
+  .background__text__bot {
+    transform: translateY(10px);
+  }
+
 }
 
 @media screen and (max-width: 1200px) {

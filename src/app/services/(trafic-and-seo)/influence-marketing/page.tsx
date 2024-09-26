@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { SEO_INFLUENCE_CONFIG } from "@/config/content-config/services/seo/seo-influence/seo-influence.config";
+import { SEO_INFLUENCE_CONTENT } from "@/content/services/seo/seo-influence/seo-influence.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 
 const ProductPage: NextPage = () => {
-	const content = SEO_INFLUENCE_CONFIG;
+	const content = SEO_INFLUENCE_CONTENT;
 	return (
 		<>
 			{content && <ProductScreen content={content} />}

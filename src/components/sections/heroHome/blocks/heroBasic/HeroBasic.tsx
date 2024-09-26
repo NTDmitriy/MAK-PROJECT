@@ -6,8 +6,8 @@ import {
 } from "@/components/ui/forms/FormController";
 import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import { Popup } from "@/components/ui/modals/popup/Popup";
-import { CONTACTS_PUBLIC } from "@/config/contact.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { CONTACTS_PUBLIC } from "@/content/contacts.data";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./HeroBasic.module.css";
@@ -85,7 +85,13 @@ export const HeroBasic: FC<PropsWithChildren<TGenericElementProps>> = () => {
           </p>
         </div>
       </Container>
-      <p className={styles.background__text__top}>MAKE</p>
+      <img
+        width="499"
+        height="213"
+        src="/images/make.svg"
+        alt="All Perfect"
+        className={styles.background__text__top}
+      />
       <div className={styles.img__wrapper}>
         <picture>
           <source
@@ -102,7 +108,14 @@ export const HeroBasic: FC<PropsWithChildren<TGenericElementProps>> = () => {
             height={990}
           />
         </picture>
-        <p className={styles.background__text__bot}>ALL PERFECT</p>
+
+        <img
+          width="997"
+          height="188"
+          src="/images/allperfect.svg"
+          alt="All Perfect"
+          className={styles.background__text__bot}
+        />
       </div>
     </div>
   );

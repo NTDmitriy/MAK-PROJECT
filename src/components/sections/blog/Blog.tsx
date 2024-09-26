@@ -6,9 +6,9 @@ import { Container } from "@/components/ui/container/Container";
 import { SeconderyLinkButton } from "@/components/ui/links/seconderyLinkButton/SeconderyLinkButton";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { BLOG_DASHBOARD_PAGES } from "@/config/url-config/blog-pages.config";
-import { USEFUL_DASHBOARD_PAGES } from "@/config/url-config/useful-pages.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { ALL_BLOG_CONTENT } from "@/content/all-blog/all-blog.content";
+import { USEFUL_DASHBOARD_PAGES } from "@/dashboard/useful.dashboard";
+import { TGenericElementProps } from "@/typing/elements.type";
 import { FC, PropsWithChildren, useState } from "react";
 import styles from "./Blog.module.css";
 
@@ -26,15 +26,15 @@ export const Blog: FC<PropsWithChildren<IBlog>> = ({
   const initialArticlesToShow = 6;
   const [articlesToShow, setArticlesToShow] = useState(initialArticlesToShow);
 
-  const articles = BLOG_DASHBOARD_PAGES.toArray();
+  const articles = ALL_BLOG_CONTENT.toArray();
 
   const handleShowMore = () => {
     setArticlesToShow((prev) => prev + initialArticlesToShow);
   };
 
   const displayedArticles = isPreview
-    ? articles.slice(0, 2)
-    : articles.slice(0, articlesToShow);
+    ? articles.reverse().slice(0, 2)
+    : articles.reverse().slice(0, articlesToShow);
 
   return (
     <>
@@ -63,7 +63,7 @@ export const Blog: FC<PropsWithChildren<IBlog>> = ({
             {isPreview ? (
               <div className={styles.button__wrapper}>
                 <SeconderyLinkButton href={USEFUL_DASHBOARD_PAGES.BLOG.url}>
-                Перейти в блог
+                  Перейти в блог
                 </SeconderyLinkButton>
               </div>
             ) : (

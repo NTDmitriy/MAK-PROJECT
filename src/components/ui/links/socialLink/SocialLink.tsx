@@ -1,4 +1,4 @@
-import { ILink } from "@/interfaces/link.interface";
+import { ILink } from "@/typing/link.interface";
 import clsx from "clsx";
 import { FC, PropsWithChildren, ReactNode } from "react";
 import styles from "./SocialLink.module.css";

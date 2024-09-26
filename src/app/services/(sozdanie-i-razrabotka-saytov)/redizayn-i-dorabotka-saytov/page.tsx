@@ -1,5 +1,5 @@
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { WEBDEV_REDESIGN_CONFIG } from "@/config/content-config/services/webdev/webdev-redesign/webdev-redesign.config";
+import { WEBDEV_REDESIGN_CONTENT } from "@/content/services/webdev/webdev-redesign/webdev-redesign.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const ProductPage: NextPage = () => {
-  const content = WEBDEV_REDESIGN_CONFIG;
+  const content = WEBDEV_REDESIGN_CONTENT;
   return <>{content && <ProductScreen content={content} />}</>;
 };
 

@@ -1,6 +1,6 @@
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
-import { IDashboardItem } from "@/config/url-config/all-pages.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { IDashboardItem } from "@/dashboard/app.dashboard";
+import { TGenericElementProps } from "@/typing/elements.type";
 import { FC, PropsWithChildren } from "react";
 import { DesktopNavDropdown } from "../desktopNavDropdown/DesktopNavDropdown";
 import DesktopNavLink from "../desktopNavLink/DesktopNavLink";

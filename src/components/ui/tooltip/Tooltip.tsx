@@ -1,6 +1,6 @@
 "use client";
 
-import { TButton } from "@/interfaces/button.type";
+import { TButton } from "@/typing/button.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren, ReactNode } from "react";
 import { DynamicSvg } from "../dynamicSvg/DynamicSvg";

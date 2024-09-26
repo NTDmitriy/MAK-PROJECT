@@ -1,7 +1,7 @@
 "use client";
 
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TAccordionItem } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TAccordionItem } from "@/typing/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { DynamicSvg } from "../dynamicSvg/DynamicSvg";

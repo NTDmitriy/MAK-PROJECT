@@ -1,4 +1,4 @@
-import { TUsefulScreen } from "@/interfaces/types/screens/screens.type";
+import { TUsefulScreen } from "@/typing/screens.type";
 import { FC, PropsWithChildren } from "react";
 import { AboutPrev } from "../sections/aboutPrev/AboutPrev";
 import { AboutUs } from "../sections/aboutUs/AboutUs";

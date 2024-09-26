@@ -1,5 +1,5 @@
 import { UsefulScreen } from "@/components/screens/UsefulScreen";
-import { BLOG_CONFIG } from "@/config/content-config/useful/blog/blog.config";
+import { BLOG_CONTENT } from "@/content/useful/blog/blog.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const UsefulPage: NextPage = () => {
 	return (
-		<UsefulScreen content={BLOG_CONFIG} />
+		<UsefulScreen content={BLOG_CONTENT} />
 	);
 };
 

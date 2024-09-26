@@ -1,5 +1,5 @@
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { MEDICAL_CONFIG } from "@/config/content-config/services/promotion/medical/medical.config";
+import { MEDICAL_CONTENT } from "@/content/services/promotion/medical/medical.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const ProductPage: NextPage = () => {
-	const content = MEDICAL_CONFIG;
+	const content = MEDICAL_CONTENT;
 	return (
 		<>
 			{content && <ProductScreen content={content} />}

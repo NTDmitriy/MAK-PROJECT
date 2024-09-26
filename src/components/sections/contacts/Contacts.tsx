@@ -7,8 +7,8 @@ import {
 } from "@/components/ui/forms/FormController";
 import { SocialLink } from "@/components/ui/links/socialLink/SocialLink";
 import { Section } from "@/components/ui/section/Section";
-import { CONTACTS_PUBLIC } from "@/config/contact.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { CONTACTS_PUBLIC } from "@/content/contacts.data";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./Contacts.module.css";

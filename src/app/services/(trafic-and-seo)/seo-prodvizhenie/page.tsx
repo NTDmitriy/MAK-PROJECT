@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { SEO_PROMOTION_CONFIG } from "@/config/content-config/services/seo/seo-promotion/seo-promotion.config";
+import { SEO_PROMOTION_CONTENT } from "@/content/services/seo/seo-promotion/seo-promotion.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const ProductPage: NextPage = () => {
-	const content = SEO_PROMOTION_CONFIG;
+	const content = SEO_PROMOTION_CONTENT;
 	return (
 		<>
 			{content && <ProductScreen content={content} />}

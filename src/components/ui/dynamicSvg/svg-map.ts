@@ -1,3 +1,4 @@
+import TextAllPerfect from "@/assets/svg/allperfect.svg";
 import IconClient1 from "@/assets/svg/client1.svg";
 import IconClient2 from "@/assets/svg/client2.svg";
 import IconClient3 from "@/assets/svg/client3.svg";
@@ -69,8 +70,11 @@ import IconWhatsApp from "@/assets/svg/iconWhatsApp.svg";
 import IconCheck from "@/assets/svg/iconWhyUs.svg";
 import IconWordPress from "@/assets/svg/iconWordPress.svg";
 import IconСopywriterTeam from "@/assets/svg/iconСopywriterTeam.svg";
+import TextMake from "@/assets/svg/make.svg";
 
 export const svgMap = {
+  TextMake,
+  TextAllPerfect,
   IconWhyUsServices,
   IconShield,
   IconCalendar,
@@ -142,5 +146,4 @@ export const svgMap = {
   IconVacanciesNav,
   IconWebDevNav,
   IconWhatsApp,
- 
 } as const;

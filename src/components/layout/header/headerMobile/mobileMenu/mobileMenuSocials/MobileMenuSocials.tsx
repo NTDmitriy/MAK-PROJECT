@@ -1,6 +1,6 @@
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { SocialLink } from "@/components/ui/links/socialLink/SocialLink";
-import { CONTACTS_PUBLIC } from "@/config/contact.config";
+import { CONTACTS_PUBLIC } from "@/content/contacts.data";
 import Link from "next/link";
 import { FC } from "react";
 import styles from "./MobileMenuSocials.module.css";

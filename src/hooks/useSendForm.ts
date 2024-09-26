@@ -1,6 +1,6 @@
 import { sendToAmo } from "@/amo";
 import { IForm } from "@/components/ui/forms/FormProviders";
-import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
+import { DASHBOARD_PAGES } from "@/dashboard/app.dashboard";
 import { findPageByPathname } from "@/utils/findPageByPathname";
 import { formatMessageForTelegram } from "@/utils/formatMessageForTelegram";
 import { sendToTelegram } from "@/utils/sendToTelegram";

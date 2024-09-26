@@ -8,8 +8,8 @@ import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/Prima
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { WEBDEV_DASHBOARD_PAGES } from "@/config/url-config/webdev-pages.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { WEBDEV_DASHBOARD_PAGES } from "@/dashboard/webdev.dashboard";
+import { TGenericElementProps } from "@/typing/elements.type";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg, TSvgMapKeys } from "../../ui/dynamicSvg/DynamicSvg";
 import styles from "./SiteServices.module.css";

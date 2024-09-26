@@ -1,5 +1,5 @@
 import { UsefulScreen } from "@/components/screens/UsefulScreen";
-import { VACANCIES_CONFIG } from "@/config/content-config/useful/vacancies/vacancies.config";
+import { VACANCIES_CONTENT } from "@/content/useful/vacancies/vacancies.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const UsefulPage: NextPage = () => {
 	return (
-		<UsefulScreen content={VACANCIES_CONFIG} />
+		<UsefulScreen content={VACANCIES_CONTENT} />
 	);
 };
 

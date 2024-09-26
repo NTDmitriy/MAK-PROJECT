@@ -5,9 +5,9 @@ import {
   FormController,
 } from "@/components/ui/forms/FormController";
 import { SocialLink } from "@/components/ui/links/socialLink/SocialLink";
-import { CONTACTS_PUBLIC } from "@/config/contact.config";
-import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { CONTACTS_PUBLIC } from "@/content/contacts.data";
+import { DASHBOARD_PAGES } from "@/dashboard/app.dashboard";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";

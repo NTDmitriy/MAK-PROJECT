@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { ONLINE_SCHOOL_CONFIG } from "@/config/content-config/services/promotion/online-schools/online-schools.config";
+import { ONLINE_SCHOOL_CONTENT } from "@/content/services/promotion/online-schools/online-schools.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 
 const ProductPage: NextPage = () => {
-	const content = ONLINE_SCHOOL_CONFIG;
+	const content = ONLINE_SCHOOL_CONTENT;
 	return (
 		<>
 			{content && <ProductScreen content={content} />}

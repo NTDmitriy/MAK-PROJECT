@@ -1,4 +1,4 @@
-import { TReviwe } from "@/interfaces/types/block/products.type";
+import { TReviwe } from "@/typing/products.type";
 import clsx from "clsx";
 import { FC } from "react";
 import { SeconderyLinkButton } from "../links/seconderyLinkButton/SeconderyLinkButton";

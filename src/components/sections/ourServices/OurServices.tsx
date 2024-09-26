@@ -2,8 +2,8 @@ import { Container } from "@/components/ui/container/Container";
 import { DynamicSvg, TSvgMapKeys } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { SEO_DASHBOARD_PAGES } from "@/config/url-config/seo-pages.config";
-import { SERVICES_DASHBOARD_PAGES } from "@/config/url-config/services-pages.config";
+import { SEO_DASHBOARD_PAGES } from "@/dashboard/seo.dashboard";
+import { SERVICES_DASHBOARD_PAGES } from "@/dashboard/services.dashboard";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 
@@ -12,7 +12,7 @@ import {
   FormController,
 } from "@/components/ui/forms/FormController";
 import { MyTooltip } from "@/components/ui/tooltip/Tooltip";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import styles from "./OurServices.module.css";
 

@@ -1,5 +1,5 @@
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TCase } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TCase } from "@/typing/products.type";
 import Link from "next/link";
 import { FC } from "react";
 import { DynamicSvg } from "../dynamicSvg/DynamicSvg";

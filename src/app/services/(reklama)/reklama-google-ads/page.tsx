@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { ADVERTISEMENT_GOOGLE_CONFIG } from "@/config/content-config/services/advertisement/advertisement-google/advertisement-google.config";
+import { ADVERTISEMENT_GOOGLE_CONTENT } from "@/content/services/advertisement/advertisement-google/advertisement-google.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 
 const ProductPage: NextPage = () => {
-	const content = ADVERTISEMENT_GOOGLE_CONFIG;
+	const content = ADVERTISEMENT_GOOGLE_CONTENT;
 	return (
 		<>
 			{content && <ProductScreen content={content} />}

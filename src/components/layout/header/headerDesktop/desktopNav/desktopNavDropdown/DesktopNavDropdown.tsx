@@ -1,17 +1,17 @@
 "use client";
 
-import { IDashboardItem } from "@/config/url-config/all-pages.config";
+import { IDashboardItem } from "@/dashboard/app.dashboard";
 import { useStopScroll } from "@/hooks/useStopScroll";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import {
-	FC,
-	PropsWithChildren,
-	useCallback,
-	useEffect,
-	useLayoutEffect,
-	useRef,
-	useState,
+  FC,
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
 } from "react";
 import styles from "./DesktopNavDropdown.module.css";
 import { DropdownMenu } from "./dropdownMenu/DropdownMenu";

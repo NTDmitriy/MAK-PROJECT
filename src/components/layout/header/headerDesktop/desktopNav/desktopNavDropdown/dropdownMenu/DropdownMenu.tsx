@@ -1,6 +1,6 @@
 import { DynamicSvg, TSvgMapKeys } from "@/components/ui/dynamicSvg/DynamicSvg";
-import { DASHBOARD_PAGES, IDashboardItem } from "@/config/url-config/all-pages.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { DASHBOARD_PAGES, IDashboardItem } from "@/dashboard/app.dashboard";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC, PropsWithChildren, SyntheticEvent, useState } from "react";

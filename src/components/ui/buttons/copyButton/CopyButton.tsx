@@ -1,7 +1,7 @@
 "use client";
 
 import { useNotification } from "@/hooks/useNotification";
-import { TButton } from "@/interfaces/button.type";
+import { TButton } from "@/typing/button.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg } from "../../dynamicSvg/DynamicSvg";

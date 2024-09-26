@@ -1,8 +1,8 @@
 import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
 import { Popup } from "@/components/ui/modals/popup/Popup";
-import { CONTACTS_PUBLIC } from "@/config/contact.config";
-import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { CONTACTS_PUBLIC } from "@/content/contacts.data";
+import { DASHBOARD_PAGES } from "@/dashboard/app.dashboard";
+import { TGenericElementProps } from "@/typing/elements.type";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg } from "../../../../ui/dynamicSvg/DynamicSvg";

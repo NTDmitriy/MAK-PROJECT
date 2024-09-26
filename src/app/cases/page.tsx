@@ -1,5 +1,5 @@
 import { UsefulScreen } from "@/components/screens/UsefulScreen";
-import { CASES_CONFIG } from "@/config/content-config/useful/cases/cases.config";
+import { CASES_CONTENT } from "@/content/useful/cases/cases.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const UsefulPage: NextPage = () => {
 	return (
-		<UsefulScreen content={CASES_CONFIG} />
+		<UsefulScreen content={CASES_CONTENT} />
 	);
 };
 
