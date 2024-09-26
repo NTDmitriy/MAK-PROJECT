@@ -55,7 +55,7 @@ export type TCase = {
 export type TReviwe = {
   id?: number | string;
   name: string;
-  position: string;
+  position: string | null;
   avatar: string | null;
   rating: number;
   text: string;

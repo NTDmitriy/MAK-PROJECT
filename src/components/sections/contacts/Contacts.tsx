@@ -48,13 +48,15 @@ export const Contacts: FC<PropsWithChildren<TGenericElementProps>> = (
                 </p>
                 <CopyButton text={CONTACTS_PUBLIC.INN} />
               </div>
-              <div className={styles.text__wrapper}>
-                <p className={styles.text}>
-                  <span className={styles.accent}>Адрес:</span>{" "}
-                  {CONTACTS_PUBLIC.ADDRESS}
-                </p>
-                <CopyButton text={CONTACTS_PUBLIC.ADDRESS} />
-              </div>
+              {CONTACTS_PUBLIC.ADDRESS && (
+                <div className={styles.text__wrapper}>
+                  <p className={styles.text}>
+                    <span className={styles.accent}>Адрес:</span>{" "}
+                    {CONTACTS_PUBLIC.ADDRESS}
+                  </p>
+                  <CopyButton text={CONTACTS_PUBLIC.ADDRESS} />
+                </div>
+              )}
             </div>
 
             <div className={styles.card}>

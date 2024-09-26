@@ -36,7 +36,7 @@ export const Reviwe: FC<IReviwe> = ({ reviwe, isFull }) => {
 
         <div className={styles.head__info}>
           <p className={styles.head__name}>{name}</p>
-          <p className={styles.position}>{position}</p>
+          {position && <p className={styles.position}>{position}</p>}
         </div>
       </div>
       <div className={styles.desrc}>

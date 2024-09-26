@@ -148,7 +148,7 @@ export const Footer: FC<PropsWithChildren<TGenericElementProps>> = ({
                   <p>ОГРН: {CONTACTS_PUBLIC.OGRN} </p>
                   <p>ИНН: {CONTACTS_PUBLIC.INN} </p>
                 </div>
-                <p className={styles.location}>{CONTACTS_PUBLIC.ADDRESS}</p>
+                {CONTACTS_PUBLIC.ADDRESS && <p className={styles.location}>{CONTACTS_PUBLIC.ADDRESS}</p> } 
               </address>
               <p className={styles.small__descr}>
                 Данный сайт носит информационно-справочный характер и не
