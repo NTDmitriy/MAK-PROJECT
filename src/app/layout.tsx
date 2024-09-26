@@ -27,17 +27,19 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="ru">
-      <Gtag />
-      <body suppressHydrationWarning>
-        <div className="page">
-          <Providers>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          </Providers>
-        </div>
-      </body>
-    </html>
+    <>
+      <html lang="ru">
+        <Gtag />
+        <body suppressHydrationWarning>
+          <div className="page">
+            <Providers>
+              <Header />
+              <main>{children}</main>
+              <Footer />
+            </Providers>
+          </div>
+        </body>
+      </html>
+    </>
   );
 }

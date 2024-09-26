@@ -66,8 +66,8 @@ export const HeroBasic: FC<PropsWithChildren<TGenericElementProps>> = () => {
             <source
               srcSet={`/images/faces/grafov-hero-360x360.webp`}
               media="(max-width: 768px)"
-              width={560}
-              height={560}
+              width={360}
+              height={360}
             />
             <img
               className={styles.face__img}
