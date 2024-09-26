@@ -1,5 +1,5 @@
-import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { DASHBOARD_PAGES } from "@/dashboard/app.dashboard";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./DesktopNav.module.css";

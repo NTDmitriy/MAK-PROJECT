@@ -1,5 +1,5 @@
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { ADVERTISEMENT_YANDEX_CONFIG } from "@/config/content-config/services/advertisement/advertisement-yandex/advertisement-yandex.config";
+import { ADVERTISEMENT_YANDEX_CONTENT } from "@/content/services/advertisement/advertisement-yandex/advertisement-yandex.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const ProductPage: NextPage = () => {
-  const content = ADVERTISEMENT_YANDEX_CONFIG;
+  const content = ADVERTISEMENT_YANDEX_CONTENT;
   return <>{content && <ProductScreen content={content} />}</>;
 };
 

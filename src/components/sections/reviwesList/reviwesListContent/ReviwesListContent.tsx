@@ -4,8 +4,8 @@ import { PrimaryButton } from "@/components/ui/buttons/primaryButton/PrimaryButt
 import { Container } from "@/components/ui/container/Container";
 import { Reviwe } from "@/components/ui/review/Reviwe";
 import { Section } from "@/components/ui/section/Section";
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TReviwe } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TReviwe } from "@/typing/products.type";
 import { FC, PropsWithChildren, useState } from "react";
 import { FORM_TYPE, FormController } from "../../../ui/forms/FormController";
 import styles from "./ReviwesListContent.module.css";

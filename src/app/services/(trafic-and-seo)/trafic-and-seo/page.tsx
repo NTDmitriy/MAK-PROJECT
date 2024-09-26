@@ -1,5 +1,5 @@
 import { ServiceScreen } from "@/components/screens/ServiceScreen";
-import { SEO_COMMON_CONFIG } from "@/config/content-config/services/seo/seo-common/seo-common.config";
+import { SEO_COMMON_CONTENT } from "@/content/services/seo/seo-common/seo-common.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 
 const ServisePage: NextPage = () => {
-  const content = SEO_COMMON_CONFIG;
+  const content = SEO_COMMON_CONTENT;
 
   return <>{content && <ServiceScreen content={content} />}</>;
 };

@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/section/Section";
 import {
   DASHBOARD_PAGES,
   IDashboardItem,
-} from "@/config/url-config/all-pages.config";
+} from "@/dashboard/app.dashboard";
 import { FC } from "react";
 import styles from "./Sitemap.module.css";
 

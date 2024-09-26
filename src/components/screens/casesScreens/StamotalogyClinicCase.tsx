@@ -14,8 +14,8 @@ import {
   FORM_TYPE,
   FormController,
 } from "@/components/ui/forms/FormController";
-import { ALL_CASES_CONTENT } from "@/config/content-config/all-cases/all-cases.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { ALL_CASES_CONTENT } from "@/content/all-cases/all-cases.content";
+import { TGenericElementProps } from "@/typing/elements.type";
 import { FC, PropsWithChildren } from "react";
 
 export const StamotalogyClinicCase: FC<

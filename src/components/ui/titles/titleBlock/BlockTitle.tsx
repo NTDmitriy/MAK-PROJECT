@@ -1,4 +1,4 @@
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren, ReactNode } from "react";
 

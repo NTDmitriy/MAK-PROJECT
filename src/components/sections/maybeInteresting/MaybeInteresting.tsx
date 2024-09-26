@@ -2,9 +2,9 @@ import { Container } from "@/components/ui/container/Container";
 import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { SERVICES_DASHBOARD_PAGES } from "@/config/url-config/services-pages.config";
+import { SERVICES_DASHBOARD_PAGES } from "@/dashboard/services.dashboard";
 import { useFindParent } from "@/hooks/useFindParent";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { TGenericElementProps } from "@/typing/elements.type";
 import { FC } from "react";
 import styles from "./MaybeInteresting.module.css";
 

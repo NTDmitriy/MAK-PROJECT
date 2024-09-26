@@ -1,7 +1,7 @@
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TReviwe } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TReviwe } from "@/typing/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./ReviwesSlider.module.css";

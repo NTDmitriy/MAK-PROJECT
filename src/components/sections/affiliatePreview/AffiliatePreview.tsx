@@ -5,8 +5,8 @@ import {
 } from "@/components/ui/forms/FormController";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { USEFUL_DASHBOARD_PAGES } from "@/config/url-config/useful-pages.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { USEFUL_DASHBOARD_PAGES } from "@/dashboard/useful.dashboard";
+import { TGenericElementProps } from "@/typing/elements.type";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg } from "../../ui/dynamicSvg/DynamicSvg";
 import { PrimaryLinkButton } from "../../ui/links/primaryLinkButton/PrimaryLinkButton";

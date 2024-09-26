@@ -1,5 +1,5 @@
 import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { TGenericElementProps } from "@/typing/elements.type";
 import { FC, PropsWithChildren } from "react";
 
 import { Box } from "@/components/ui/box/Box";

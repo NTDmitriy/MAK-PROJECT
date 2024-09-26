@@ -1,5 +1,5 @@
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { MARKET_PLACE_CONFIG } from "@/config/content-config/services/promotion/market-place/market-place.config";
+import { MARKET_PLACE_CONTENT } from "@/content/services/promotion/market-place/market-place.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const ProductPage: NextPage = () => {
-	const content = MARKET_PLACE_CONFIG;
+	const content = MARKET_PLACE_CONTENT;
 	return (
 		<>
 			{content && <ProductScreen content={content} />}

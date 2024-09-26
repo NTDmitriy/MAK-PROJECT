@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/container/Container";
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { THeroInfo } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { THeroInfo } from "@/typing/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./HeroInfoUseful.module.css";

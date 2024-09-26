@@ -10,8 +10,8 @@ import {
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TTariffs } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TTariffs } from "@/typing/products.type";
 import { isNumber } from "@/utils/isNumber";
 import clsx from "clsx";
 import { FC, PropsWithChildren, useState } from "react";

@@ -1,6 +1,6 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { WEBDEV_MODX_CONFIG } from "@/config/content-config/services/webdev/webdev-modx/webdev-modx.config";
+import { WEBDEV_MODX_CONTENT } from "@/content/services/webdev/webdev-modx/webdev-modx.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const ProductPage: NextPage = () => {
-	const content = WEBDEV_MODX_CONFIG;
+	const content = WEBDEV_MODX_CONTENT;
 	return (
 		<>
 			{content && <ProductScreen content={content} />}

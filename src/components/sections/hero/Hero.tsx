@@ -1,11 +1,11 @@
 import { Section } from "@/components/ui/section/Section";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { TGenericElementProps } from "@/typing/elements.type";
 import {
   THeroInfo,
   THeroInfoAdvertisement,
   THeroInfoProduct,
   type THeroBasic
-} from "@/interfaces/types/block/products.type";
+} from "@/typing/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./Hero.module.css";

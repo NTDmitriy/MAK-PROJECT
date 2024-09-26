@@ -10,11 +10,11 @@ export const Providers = ({ children }: PropsWithChildren) => {
   const [cookies] = useCookies(["cookieBaner"]);
   const [isClient, setClient] = useState(false);
 
-
   useEffect(() => {
     setClient(true);
-    processUTMParams()
+    processUTMParams();
   }, []);
+
 
   return (
     <>

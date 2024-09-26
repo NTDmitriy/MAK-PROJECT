@@ -1,9 +1,9 @@
 "use client";
 
-import { IDashboardItem } from "@/config/url-config/all-pages.config";
+import { IDashboardItem } from "@/dashboard/app.dashboard";
 import { useStopScroll } from "@/hooks/useStopScroll";
-import { TGenericElementProps } from "@/interfaces/elements.type";
 import { useMobileMenu } from "@/store/mobile-menu.store";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import {
   cloneElement,

@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/container/Container";
 import { Section } from "@/components/ui/section/Section";
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TSupplementaryDescr } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TSupplementaryDescr } from "@/typing/products.type";
 import { FC, PropsWithChildren } from "react";
 import styles from "./SupplementaryDescr.module.css";
 

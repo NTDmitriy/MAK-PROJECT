@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/container/Container";
-import { THeroInfoProduct } from "@/interfaces/types/block/products.type";
+import { THeroInfoProduct } from "@/typing/products.type";
 import { FC } from "react";
 import styles from "./HeroInfoProduct.module.css";
 

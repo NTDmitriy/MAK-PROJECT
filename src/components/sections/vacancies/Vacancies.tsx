@@ -5,8 +5,8 @@ import {
 } from "@/components/ui/forms/FormController";
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { Section } from "@/components/ui/section/Section";
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TVacancies } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TVacancies } from "@/typing/products.type";
 import { FC, PropsWithChildren } from "react";
 import { SeconderyButton } from "../../ui/buttons/seconderyButton/SeconderyButton";
 import { DynamicSvg } from "../../ui/dynamicSvg/DynamicSvg";

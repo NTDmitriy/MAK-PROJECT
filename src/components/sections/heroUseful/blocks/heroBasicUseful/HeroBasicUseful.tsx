@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/forms/FormController";
 import { SeconderyLinkButton } from "@/components/ui/links/seconderyLinkButton/SeconderyLinkButton";
 import { Popup } from "@/components/ui/modals/popup/Popup";
-import { THeroBasic } from "@/interfaces/types/block/products.type";
+import { THeroBasic } from "@/typing/products.type";
 import { FC } from "react";
 import styles from "./HeroBasicUseful.module.css";
 

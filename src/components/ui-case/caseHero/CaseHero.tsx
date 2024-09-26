@@ -1,6 +1,6 @@
 import { Box } from "@/components/ui/box/Box";
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TCase } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TCase } from "@/typing/products.type";
 import { FC, PropsWithChildren } from "react";
 import styles from "./CaseHero.module.css";
 interface ICaseHero extends TGenericElementProps {

@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/container/Container";
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
 import styles from "./HeroInfo.module.css";

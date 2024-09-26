@@ -3,7 +3,7 @@ import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
 import { FC, PropsWithChildren } from "react";
-import { TGenericElementProps } from "../../../interfaces/elements.type";
+import { TGenericElementProps } from "../../../typing/elements.type";
 import styles from "./AboutUs.module.css";
 
 export const AboutUs: FC<PropsWithChildren<TGenericElementProps>> = ({

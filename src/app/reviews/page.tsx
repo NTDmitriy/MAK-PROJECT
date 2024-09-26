@@ -1,5 +1,6 @@
 import { UsefulScreen } from "@/components/screens/UsefulScreen";
-import { REVIEWS_CONFIG } from "@/config/content-config/useful/reviews/reviews.config";
+import { REVIEWS_CONTENT } from "@/content/useful/reviews/reviews.content";
+
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const UsefulPage: NextPage = () => {
-  return <UsefulScreen content={REVIEWS_CONFIG} />;
+  return <UsefulScreen content={REVIEWS_CONTENT} />;
 };
 
 export default UsefulPage;

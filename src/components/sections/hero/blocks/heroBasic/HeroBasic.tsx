@@ -6,8 +6,8 @@ import {
 } from "@/components/ui/forms/FormController";
 import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/PrimaryLinkButton";
 import { Popup } from "@/components/ui/modals/popup/Popup";
-import { CONTACTS_PUBLIC } from "@/config/contact.config";
-import { THeroBasic } from "@/interfaces/types/block/products.type";
+import { CONTACTS_PUBLIC } from "@/content/contacts.data";
+import { THeroBasic } from "@/typing/products.type";
 import { FC } from "react";
 import styles from "./HeroBasic.module.css";
 

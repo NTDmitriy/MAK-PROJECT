@@ -1,6 +1,6 @@
 
 import { ServiceScreen } from "@/components/screens/ServiceScreen";
-import { WEBDEV_COMMON_CONFIG } from "@/config/content-config/services/webdev/webdev-common/webdev-common.config";
+import { WEBDEV_COMMON_CONTENT } from "@/content/services/webdev/webdev-common/webdev-common.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 
 const ServisePage: NextPage = () => {
-  const content = WEBDEV_COMMON_CONFIG;
+  const content = WEBDEV_COMMON_CONTENT;
 
   return <>{content && <ServiceScreen content={content} />}</>;
 };

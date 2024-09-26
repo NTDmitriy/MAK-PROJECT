@@ -1,9 +1,8 @@
 
 import { ProductScreen } from "@/components/screens/ProductScreen";
-import { ADVERTISEMENT_TELEGRAM_CONFIG } from "@/config/content-config/services/advertisement/advertisement-telegram/advertisement-telegram.config";
+import { ADVERTISEMENT_TELEGRAM_CONTENT } from "@/content/services/advertisement/advertisement-telegram/advertisement-telegram.content";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
-
 
 export const metadata: Metadata = {
   ...METADATA.ADVERTISEMENT_TG,
@@ -12,9 +11,8 @@ export const metadata: Metadata = {
   },
 };
 
-
 const ProductPage: NextPage = () => {
-	const content = ADVERTISEMENT_TELEGRAM_CONFIG;
+	const content = ADVERTISEMENT_TELEGRAM_CONTENT;
 	return (
 		<>
 			{content && <ProductScreen content={content} />}

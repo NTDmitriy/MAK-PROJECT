@@ -1,8 +1,8 @@
 import { Container } from "@/components/ui/container/Container";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TSuitableFor } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TSuitableFor } from "@/typing/products.type";
 import { FC, PropsWithChildren } from "react";
 import styles from "./SuitableFor.module.css";
 

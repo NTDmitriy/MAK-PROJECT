@@ -11,7 +11,7 @@ import {
   FORM_TYPE,
   FormController,
 } from "@/components/ui/forms/FormController";
-import { WEBDEV_DASHBOARD_PAGES } from "@/config/url-config/webdev-pages.config";
+import { WEBDEV_DASHBOARD_PAGES } from "@/dashboard/webdev.dashboard";
 import { FC } from "react";
 
 export const RedesingGuide: FC = () => {

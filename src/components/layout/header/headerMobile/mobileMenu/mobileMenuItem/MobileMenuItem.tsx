@@ -1,7 +1,7 @@
 import { DynamicSvg, TSvgMapKeys } from "@/components/ui/dynamicSvg/DynamicSvg";
-import { IDashboardItem } from "@/config/url-config/all-pages.config";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { IDashboardItem } from "@/dashboard/app.dashboard";
 import { useMobileMenu } from "@/store/mobile-menu.store";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";

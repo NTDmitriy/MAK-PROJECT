@@ -1,6 +1,6 @@
-import { DASHBOARD_PAGES } from "@/config/url-config/all-pages.config";
+import { DASHBOARD_PAGES } from "@/dashboard/app.dashboard";
 import { useFindParent } from "@/hooks/useFindParent";
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC } from "react";

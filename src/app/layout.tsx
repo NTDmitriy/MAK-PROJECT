@@ -16,7 +16,6 @@ export const metadata: Metadata = {
   ...METADATA.HOME,
   openGraph: {
     ...METADATA.HOME,
-
   },
 
   ...NO_INDEX_PAGE,

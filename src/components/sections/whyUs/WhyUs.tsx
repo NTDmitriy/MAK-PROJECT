@@ -2,8 +2,8 @@ import { Container } from "@/components/ui/container/Container";
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TWhyUs } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TWhyUs } from "@/typing/products.type";
 import { FC, PropsWithChildren } from "react";
 import styles from "./WhyUs.module.css";
 

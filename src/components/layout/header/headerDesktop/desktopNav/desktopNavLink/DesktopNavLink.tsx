@@ -1,6 +1,6 @@
 'use client';
 
-import { ILink } from "@/interfaces/link.interface";
+import { ILink } from "@/typing/link.interface";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

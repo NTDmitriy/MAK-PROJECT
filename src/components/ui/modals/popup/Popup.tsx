@@ -1,8 +1,8 @@
 "use client";
 
 import { useStopScroll } from "@/hooks/useStopScroll";
-import { TGenericElementProps } from "@/interfaces/elements.type";
 import { usePopupStore } from "@/store/popup.store";
+import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 
 import {

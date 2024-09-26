@@ -1,4 +1,4 @@
-import { TGenericElementProps } from "@/interfaces/elements.type";
+import { TGenericElementProps } from "@/typing/elements.type";
 import { InputMask } from "@react-input/mask";
 import clsx from "clsx";
 import {

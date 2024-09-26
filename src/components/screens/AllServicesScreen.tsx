@@ -1,4 +1,4 @@
-import { TAllServicesScreen } from "@/interfaces/types/screens/screens.type";
+import { TAllServicesScreen } from "@/typing/screens.type";
 import { FC, PropsWithChildren } from "react";
 import { AllProductsService } from "../sections/allProductsService/AllProductsService";
 import { Hero } from "../sections/hero/Hero";

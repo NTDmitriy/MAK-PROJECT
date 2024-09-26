@@ -9,7 +9,6 @@ export const IMAGES = [
   },
 ];
 
-
 type TMetadata = {
   title: string;
   description: string;
@@ -315,6 +314,22 @@ export const METADATA = {
     images: IMAGES,
   },
 
+  WHY_ADS_EXPENSIVE: {
+    title: "Почему дорожает реклама? Альтернативные методы продвижения бизнеса",
+    description:
+      "Узнайте причины роста стоимости рекламы и эффективные альтернативы: SEO-продвижение, посевы и инфлюенс-маркетинг. Оптимизируйте бюджет и привлекайте клиентов с Make All Perfect.",
+    author: "Make All Perfect",
+    images: IMAGES,
+  },
+
+  ADS_GOOGLE_GUIDE: {
+    title: "SEO в Google 2024: эффективные стратегии продвижения без контекста",
+    description: "Узнайте, как продвигаться в Google в 2024 году без контекстной рекламы. Ключевые SEO-стратегии, технические аспекты и аналитика для достижения высоких позиций в органической выдаче.",
+    author: "Make All Perfect",
+    images: IMAGES,
+  },
+
+  // Blog end
   NOTFOUND: {
     title: "404 — Страница не найдена",
     description:

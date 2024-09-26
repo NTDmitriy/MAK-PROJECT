@@ -9,8 +9,8 @@ import { PrimaryLinkButton } from "@/components/ui/links/primaryLinkButton/Prima
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { Section } from "@/components/ui/section/Section";
 import { BlockTitle } from "@/components/ui/titles/titleBlock/BlockTitle";
-import { TGenericElementProps } from "@/interfaces/elements.type";
-import { TServiceProducts } from "@/interfaces/types/block/products.type";
+import { TGenericElementProps } from "@/typing/elements.type";
+import { TServiceProducts } from "@/typing/products.type";
 import { isNumber } from "@/utils/isNumber";
 import { FC, PropsWithChildren } from "react";
 import styles from "./AllProductsService.module.css";

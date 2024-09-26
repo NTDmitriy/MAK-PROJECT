@@ -1,4 +1,4 @@
-import { ILinkButton } from "@/interfaces/link.interface";
+import { ILinkButton } from "@/typing/link.interface";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
