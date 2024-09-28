@@ -55,7 +55,7 @@ export const BlogHero: FC<PropsWithChildren<IBlogHero>> = ({ heroContent }) => {
           )}
           <div className={styles.bottom}>
             <p className={styles.text}>
-              Подпишитесь и читайте ещё больше полезных статей и свежих новостей
+              Подпишитесь и читайте ещё больше полезных статей и свежих новостей
             </p>
             <div className={styles.btn__group}>
               <SocialLink

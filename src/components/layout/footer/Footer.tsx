@@ -32,7 +32,7 @@ export const Footer: FC<PropsWithChildren<TGenericElementProps>> = ({
                 Make All Perfect
               </div>
               <p className={styles.logo__descr}>
-                <span className={styles.accent}>Ваш надежный партнер</span> в мире
+                <span className={styles.accent}>Ваш надежный партнер</span> в мире
                 digital&nbsp;маркетинга
               </p>
             </div>
@@ -59,8 +59,7 @@ export const Footer: FC<PropsWithChildren<TGenericElementProps>> = ({
               </div>
               <div className={styles.head__social__text}>
                 Подписывайтесь! Мы отправляем только полезные письма – кейсы,
-                собственные разработки в digital, лайфхаки при работе с
-                агентством, анонсы вебинаров и конференций
+                собственные разработки в digital, лайфхаки при работе с агентством, анонсы вебинаров и конференций
               </div>
             </div>
             <div className={clsx(styles.head__item, styles.contact__item)}>
@@ -151,7 +150,7 @@ export const Footer: FC<PropsWithChildren<TGenericElementProps>> = ({
                 {CONTACTS_PUBLIC.ADDRESS && <p className={styles.location}>{CONTACTS_PUBLIC.ADDRESS}</p> } 
               </address>
               <p className={styles.small__descr}>
-                Данный сайт носит информационно-справочный характер и не
+                Данный сайт носит информационно-справочный характер и не
                 является публичной офертой
               </p>
             </div>

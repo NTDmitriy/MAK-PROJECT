@@ -1,4 +1,4 @@
-import { RedesingGuideScreen } from "@/components/screens/blogCases/redesingGuide/RedesingGuideScreen";
+import { WhyAdsExpensiveScreen } from "@/components/screens/blogCases/whyAdsExpensive/WhyAdsExpensiveScreen";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const Blog: NextPage = () => {
-  return <RedesingGuideScreen />;
+  return <WhyAdsExpensiveScreen />;
 };
 
 export default Blog;

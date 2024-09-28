@@ -85,7 +85,7 @@ export const Contacts: FC<PropsWithChildren<TGenericElementProps>> = (
               </div>
               <p className={clsx(styles.text, styles.text_nopointer)}>
                 <DynamicSvg name="IconDeadline" className={styles.svg} />
-                Пн-Пт, с 9:00 до 18:00 (МСК)
+                Пн-Пт, с 9:00 до 18:00 (МСК)
               </p>
             </div>
 
@@ -116,7 +116,7 @@ export const Contacts: FC<PropsWithChildren<TGenericElementProps>> = (
               formType={FORM_TYPE.FAQ_FORM}
               areaVisible={true}
               title="Есть вопросы? Мы поможем!"
-              text="Задайте свой вопрос в поле ниже, и наш менеджер свяжется с вами в ближайшее время, чтобы предоставить подробный и развернутый ответ."
+              text="Задайте свой вопрос в поле ниже, и наш менеджер свяжется с вами в ближайшее время, чтобы предоставить подробный и развернутый ответ."
             />
           </div>
         </div>

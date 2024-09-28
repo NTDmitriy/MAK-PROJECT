@@ -1,3 +1,4 @@
+
 import { Gtag } from "@/seo/Gtag";
 import { METADATA, NO_INDEX_PAGE } from "@/seo/metadata";
 import "@/styles/fonts.css";
@@ -26,18 +27,19 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
+
   return (
     <>
       <html lang="ru">
         <Gtag />
         <body suppressHydrationWarning>
-          <div className="page">
-            <Providers>
+          <Providers>
+            <div className="page">
               <Header />
               <main>{children}</main>
               <Footer />
-            </Providers>
-          </div>
+            </div>
+          </Providers>
         </body>
       </html>
     </>

@@ -46,8 +46,7 @@ export const Blog: FC<PropsWithChildren<IBlog>> = ({
               background="БЛОГ"
               descrSideway={
                 <>
-                  Следите за нашими обновлениями и узнавайте последние тренды в
-                  мире цифрового маркетинга.
+                  Следите за нашими обновлениями и узнавайте последние тренды в мире цифрового маркетинга.
                 </>
               }
             >
@@ -63,7 +62,7 @@ export const Blog: FC<PropsWithChildren<IBlog>> = ({
             {isPreview ? (
               <div className={styles.button__wrapper}>
                 <SeconderyLinkButton href={USEFUL_DASHBOARD_PAGES.BLOG.url}>
-                  Перейти в блог
+                  Перейти в блог
                 </SeconderyLinkButton>
               </div>
             ) : (

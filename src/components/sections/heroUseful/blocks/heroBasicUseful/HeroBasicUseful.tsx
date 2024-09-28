@@ -39,13 +39,13 @@ export const HeroBasic: FC<IHeroBasicUseful> = ({ basicContent }) => {
             <Popup
               initComponent={
                 <SeconderyButton className={styles.button}>
-                  {formBtnText ? formBtnText : "Связаться с нами"}
+                  {formBtnText ? formBtnText : "Связаться с нами"}
                 </SeconderyButton>
               }
               contentComponent={
                 <FormController
                   formType={FORM_TYPE.COMPLEX_FORM}
-                  title={formTitle ? formTitle : "Свяжитесь с нами"}
+                  title={formTitle ? formTitle : "Свяжитесь с нами"}
                   text={formText && formText}
                 />
               }
@@ -59,7 +59,7 @@ export const HeroBasic: FC<IHeroBasicUseful> = ({ basicContent }) => {
               target="_blank"
               className={styles.button}
             >
-              {formBtnText ? formBtnText : "Связаться с нами"}
+              {formBtnText ? formBtnText : "Связаться с нами"}
             </SeconderyLinkButton>
           )}
         </div>

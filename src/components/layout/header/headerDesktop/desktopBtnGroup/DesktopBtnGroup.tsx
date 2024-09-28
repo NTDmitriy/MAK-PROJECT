@@ -23,12 +23,12 @@ export const DesktopBtnGroup: FC<PropsWithChildren<TGenericElementProps>> = ({
         />
         <SocialLink
           href={`${CONTACTS_PUBLIC.WHATSAPP}`}
-          tooltip={"Написать в WhatsApp"}
+          tooltip={"Написать в WhatsApp"}
           icon={<DynamicSvg name="IconWhatsApp" />}
         />
         <SocialLink
           href={`mailto:${CONTACTS_PUBLIC.EMAIL}`}
-          tooltip={"Написать на E-mail"}
+          tooltip={"Написать на E-mail"}
           icon={<DynamicSvg name="IconEMail" />}
         />
         <SocialLink

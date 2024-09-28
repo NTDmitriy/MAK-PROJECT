@@ -16,17 +16,17 @@ export const MobileMenuSocials: FC = () => {
         />
         <SocialLink
           href={`${CONTACTS_PUBLIC.WHATSAPP}`}
-          tooltip={"Написать в WhatsApp"}
+          tooltip={"Написать в WhatsApp"}
           icon={<DynamicSvg name="IconWhatsApp" />}
         />
         <SocialLink
           href={`mailto:${CONTACTS_PUBLIC.EMAIL}`}
-          tooltip={"Написать на E-mail"}
+          tooltip={"Написать на E-mail"}
           icon={<DynamicSvg name="IconEMail" />}
         />
       </div>
       <div className={styles.contact__info}>
-        <p className={styles.work__schedule}>с 09:00 до 21:00 МСК</p>
+        <p className={styles.work__schedule}>с 09:00 до 21:00 МСК</p>
         <Link className={styles.phone} href={`tel:${CONTACTS_PUBLIC.PHONE}`}>
           {CONTACTS_PUBLIC.PHONE}
         </Link>

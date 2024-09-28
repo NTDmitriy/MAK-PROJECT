@@ -22,7 +22,7 @@ const Faq: FC<PropsWithChildren<IFaq>> = ({ faq }) => {
         <Section>
           <BlockTitle
             leftSide={false}
-            descrSideway="Ответы на самые распространенные вопросы наших клиентов"
+            descrSideway="Ответы на самые распространенные вопросы наших клиентов"
             background="Faq"
           >
             Часто задаваемые вопросы

@@ -25,7 +25,7 @@ export const Reviwes: FC<PropsWithChildren<IReviwesSlider>> = ({
             leftSide={true}
             descrSideway={
               <span className={styles.black}>
-                Отзывы и оценки от наших клиентов{" "}
+                Отзывы и оценки от наших клиентов{" "}
               </span>
             }
             background="ОТЗЫВЫ"

@@ -74,7 +74,7 @@ export const Vacancies: FC<PropsWithChildren<IVacancies>> = ({ vacancies }) => {
                             title={
                               formTitle
                                 ? formTitle
-                                : `ОТКЛИКНУТЬСЯ НА ВАКАНСИЮ «${item.position}»`
+                                : `ОТКЛИКНУТЬСЯ НА ВАКАНСИЮ «${item.position}»`
                             }
                             text={formText && formText}
                           />

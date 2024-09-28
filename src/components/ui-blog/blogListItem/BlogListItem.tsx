@@ -10,7 +10,7 @@ export const BlogListItem: FC<PropsWithChildren<TGenericElementProps>> = ({
 }) => {
   return (
     <li className={clsx(styles.root, className)} {...rest}>
-      {children}
+      <div className={styles.flex}> {children}</div>
     </li>
   );
 };

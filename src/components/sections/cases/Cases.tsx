@@ -31,7 +31,7 @@ export const Cases: FC<PropsWithChildren<IProjects>> = ({
           {isPrev && (
             <BlockTitle
               leftSide={false}
-              descrSideway="Примеры кейсов и результатов, которых мы достигли для наших клиентов"
+              descrSideway="Примеры кейсов и результатов, которых мы достигли для наших клиентов"
             >
               Наши проекты
             </BlockTitle>

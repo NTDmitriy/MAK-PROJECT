@@ -21,7 +21,7 @@ export const sendToTelegram = async (formattedText: string) => {
       return { success: false, message: "Запрос выполнен, но не успешен." };
     }
   } catch (error: any) {
-    console.error("Ошибка при отправке запроса в Telegram", error);
+    console.error("Ошибка при отправке запроса в Telegram", error);
     return { success: false, message: error.message };
   }
 };

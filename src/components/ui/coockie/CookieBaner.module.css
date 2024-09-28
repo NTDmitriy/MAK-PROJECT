@@ -1,60 +1,68 @@
 .root {
   position: fixed;
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+right: 0;
+  left: 0;
   bottom: 0;
-  background-color: var(--background-loyout);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  color: #fff;
+  /* transform: translate(10px, -10px); */
+  transform: translateY( -10px);
+  margin: 0 auto;
 
-  z-index: 4;
+  padding: 10px;
+  max-width: 540px;
+  z-index: 5;
+  background: #1e1e1e;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    90deg,
+    #f4a21a 0%,
+    #ffde00 50%,
+    #f4a21a 100%
+  );
 }
 
 .cookie__wrapper {
   display: flex;
-  gap: 15px;
-}
-
-.cookie__text {
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-family);
   font-weight: 300;
-  font-size: clamp(14px, 1.35dvw, 20px);
-  line-height: 120%;
-  color: var(--text-secondery);
-  padding-right: 40px;
+  font-size: clamp(12px, 2dvw, 16px);
+  line-height: 130%;
+  color: var(--text-primary);
+  z-index: 1;
 }
 
-.cookie__link {
-  display: inline-block;
-  border-bottom: 1px solid #fff;
-  transition: transform 0.3s ease-in-out;
-}
 .btn__wrapper {
-  max-width: 300px;
-  width: 100%;
+  width: 80px;
+  min-width: 80px;
 }
 
-@media (hover: hover) {
-  .cookie__link:hover {
-    transform: scale(1.01);
-  }
+.btn__wrapper .button {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 @media screen and (max-width: 1024px) {
   .root {
-    padding-bottom: 90px;
+    border-radius: var(--border-radius);
+    right: 0;
+    transform: translateY(-90px);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: inset 2px 2px 12px 0 rgba(0, 0, 0, 0.1);
+    background: var(--background-loyout);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
+
   .cookie__wrapper {
-    flex-direction: column;
-  }
-  .btn__wrapper {
-    margin-left: auto;
+    font-size: clamp(12px, 2dvw, 14px);
   }
 }
-@media screen and (max-width: 768px) {
-  .btn__wrapper {
-    max-width: 100%;
+
+@media screen and (max-width: 576px) {
+  .root {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }

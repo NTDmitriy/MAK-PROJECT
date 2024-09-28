@@ -1,11 +1,10 @@
 "use client";
 
-import { CONTACTS_PUBLIC } from "@/content/contacts.data";
 import { FC } from "react";
 import { useCookies } from "react-cookie";
 import { SeconderyButton } from "../buttons/seconderyButton/SeconderyButton";
 import { Container } from "../container/Container";
-import style from "./CookieBaner.module.css";
+import styles from "./CookieBaner.module.css";
 
 export const CookieBaner: FC = () => {
   const [cookies, setCookie] = useCookies(["cookieBaner"]);
@@ -16,27 +15,17 @@ export const CookieBaner: FC = () => {
 
   return (
     <>
-      <div className={style.root}>
+      <div className={styles.root}>
         <Container>
-          <div className={style.cookie__wrapper}>
-            <div className={style.cookie__text}>
+          <div className={styles.cookie__wrapper}>
+            <div className={styles.cookie__text}>
               <p>
-                Мы используем файлы cookies для улучшения работы нашего сайта и
-                персонализации контента. Продолжая пользоваться сайтом, вы
-                соглашаетесь с нашей{" "}
-                <a
-                  target="_blank"
-                  className={style.cookie__link}
-                  href={CONTACTS_PUBLIC.PRIVACY_POLICY}
-                >
-                  политикой использования cookies
-                </a>
-                .
+              Продолжая пользоваться сайтом, вы соглашаетесь с нашей политикой использования cookies.
               </p>
             </div>
-            <div className={style.btn__wrapper}>
-              <SeconderyButton type="button" onClick={giveCookei}>
-                Понятно
+            <div className={styles.btn__wrapper}>
+              <SeconderyButton type="button" onClick={giveCookei} className={styles.button}>
+                Ок
               </SeconderyButton>
             </div>
           </div>

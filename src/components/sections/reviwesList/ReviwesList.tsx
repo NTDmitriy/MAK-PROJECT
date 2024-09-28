@@ -26,7 +26,7 @@ export const ReviwesList: FC<PropsWithChildren<IReviwesList>> = ({
             leftSide={true}
             descrSideway={
               <span className={styles.black}>
-                Отзывы и оценки от наших клиентов{" "}
+                Отзывы и оценки от наших клиентов{" "}
               </span>
             }
             background="ОТЗЫВЫ"

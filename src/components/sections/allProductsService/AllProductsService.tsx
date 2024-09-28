@@ -68,7 +68,7 @@ export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
                             <DynamicSvg name="IconMoney" />
                             {isNumber(item.priceFrom) ? (
                               <>
-                                от {item.priceFrom.toLocaleString("ru-RU")}{" "}
+                                от {item.priceFrom.toLocaleString("ru-RU")}{" "}
                                 &#8381;
                               </>
                             ) : (

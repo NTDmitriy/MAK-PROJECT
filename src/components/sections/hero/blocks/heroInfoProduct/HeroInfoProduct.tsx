@@ -27,7 +27,7 @@ export const HeroInfoProduct: FC<IHeroInfoProduct> = ({ info }) => {
                 <img
                   className={styles.image}
                   src={`/images/services/${info.image}-large.webp`}
-                  alt="Онлайн-школы и инфобизнес"
+                  alt="Онлайн-школы и инфобизнес"
                 />
               </picture>
             </div>

@@ -30,7 +30,7 @@ export const AffiliatePreview: FC<PropsWithChildren<IAffiliatePreview>> = ({
         <Container>
           <div className={styles.content}>
             <h3 className={styles.title}>
-              <span className="accent">Присоединяйтесь</span> к нашей
+              <span className="accent">Присоединяйтесь</span> к нашей
               партнерской программе{" "}
               <span className="accent"> и зарабатывайте</span>, рекомендуя наши
               услуги.
@@ -46,7 +46,7 @@ export const AffiliatePreview: FC<PropsWithChildren<IAffiliatePreview>> = ({
               </li>
               <li className={styles.item}>
                 <DynamicSvg className={styles.icon} name="IconCheck" />
-                Поддержка на каждом этапе
+                Поддержка на каждом этапе
               </li>
             </ul>
 
@@ -63,8 +63,8 @@ export const AffiliatePreview: FC<PropsWithChildren<IAffiliatePreview>> = ({
           <Container>
             <FormController
               formType={FORM_TYPE.MAIN_FORM}
-              title="Хотите с нами сотрудничать?"
-              text="Оставьте свои контактные данные для связи, и наш менеджер свяжется с вами, чтобы обсудить все детали и предложить оптимальные решения для вашего бизнеса."
+              title="Хотите с нами сотрудничать?"
+              text="Оставьте свои контактные данные для связи, и наш менеджер свяжется с вами, чтобы обсудить все детали и предложить оптимальные решения для вашего бизнеса."
             />
           </Container>
         </Section>

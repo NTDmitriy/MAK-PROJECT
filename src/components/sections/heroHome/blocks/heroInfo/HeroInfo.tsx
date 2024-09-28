@@ -18,7 +18,7 @@ export const HeroInfo: FC<PropsWithChildren<TGenericElementProps>> = ({
               <li className={styles.item}>
                 <div className={styles.item__head}>
                   <DynamicSvg className={styles.icon} name="IconCheck" />
-                  <h5 className={styles.title}>Бесплатный аудит и прогноз</h5>
+                  <h5 className={styles.title}>Бесплатный аудит и прогноз</h5>
                 </div>
                 <p className={styles.descr}>
                   Проводим оценку и{" "}
@@ -37,15 +37,15 @@ export const HeroInfo: FC<PropsWithChildren<TGenericElementProps>> = ({
                 </div>
                 <p className={styles.descr}>
                   <span className={styles.accent}>
-                    Креативные и современные{" "}
+                    Креативные и современные{" "}
                   </span>{" "}
-                  решения под ваш бизнес и аудиторию
+                  решения под ваш бизнес и аудиторию
                 </p>
               </li>
               <li className={styles.item}>
                 <div className={styles.item__head}>
                   <DynamicSvg className={styles.icon} name="IconCheck" />
-                  <h5 className={styles.title}>Акцент на успех</h5>
+                  <h5 className={styles.title}>Акцент на успех</h5>
                 </div>
                 <p className={styles.descr}>
                   Наш главный фокус —
