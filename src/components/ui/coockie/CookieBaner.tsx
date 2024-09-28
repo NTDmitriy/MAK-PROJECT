@@ -3,7 +3,6 @@
 import { FC } from "react";
 import { useCookies } from "react-cookie";
 import { SeconderyButton } from "../buttons/seconderyButton/SeconderyButton";
-import { Container } from "../container/Container";
 import styles from "./CookieBaner.module.css";
 
 export const CookieBaner: FC = () => {
@@ -16,7 +15,7 @@ export const CookieBaner: FC = () => {
   return (
     <>
       <div className={styles.root}>
-        <Container>
+
           <div className={styles.cookie__wrapper}>
             <div className={styles.cookie__text}>
               <p>
@@ -29,7 +28,7 @@ export const CookieBaner: FC = () => {
               </SeconderyButton>
             </div>
           </div>
-        </Container>
+  
       </div>
     </>
   );
