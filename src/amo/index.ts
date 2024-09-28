@@ -5,7 +5,7 @@ import { findPageByPathname } from "@/utils/findPageByPathname";
 import { Client } from "amocrm-js";
 
 const client = new Client({
-  domain: `${process.env.AMO_DOMAIN}`,
+  domain: `${process.env.AMO_DOMAIN_NAME}`,
   auth: {
     client_id: `${process.env.AMO_CLIENT_ID}`,
     client_secret: `${process.env.AMO_CLIENT_SECRET}`,
