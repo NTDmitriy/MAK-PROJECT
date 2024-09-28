@@ -27,9 +27,9 @@ export const formatMessageForTelegram = async (
   const pageTitle =
     findPageByPathname(DASHBOARD_PAGES, pathname) || "Неизвестная страница";
 
-  const linkInMessage = `<a href="${leadUrl ? leadUrl : null}">${
-    leadUrl ? "Открыть заявку в CRM" : "Заявка не попала в CRM"
-  }</a>`;
+    const linkInMessage = leadUrl
+    ? `<a href="${leadUrl}">Открыть заявку в CRM</a>`
+    : "<b>Заявка не попала в CRM</b>";
 
   let messageInfo = `<i><b><u>ЗАЯВКА С САЙТА (${pageTitle})</u></b></i>\n${linkInMessage}\n\n`;
   let messageServices = "";
