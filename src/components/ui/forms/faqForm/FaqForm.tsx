@@ -2,12 +2,12 @@
 
 import { CONTACTS_PUBLIC } from "@/content/contacts.data";
 import { FC } from "react";
-import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
 import { PhoneLinkButton } from "../../links/phoneLinkButton/PhoneLinkButton";
 import { TelegramLinkButton } from "../../links/telegramLinkButton/TelegramLinkButton";
 import { IFormContent } from "../FormController";
 import { useHandlerFormContext } from "../HandleFormProvider";
 import { MessageInput, NameInput, PhoneInput } from "../inputs/MaskedInputs";
+import { SubmitButton } from "../submitButton/SubmitButton";
 import styles from "./FaqForm.module.css";
 
 export const FaqForm: FC<IFormContent> = ({
@@ -41,7 +41,10 @@ export const FaqForm: FC<IFormContent> = ({
         <NameInput />
         <PhoneInput />
         {areaVisible && <MessageInput />}
-        <PrimaryButton className={styles.submit}>Отправить</PrimaryButton>
+        <div className={styles.submit}>
+        <SubmitButton />
+        </div>
+
       </form>
       <p className={styles.contact__text}>
         Также можно оставить заявку через{" "}

@@ -1,4 +1,8 @@
+"use server";
+
 import { IForm } from "@/components/ui/forms/FormProviders";
+import { DASHBOARD_PAGES } from "@/dashboard/app.dashboard";
+import { findPageByPathname } from "./findPageByPathname";
 
 const fieldLabels: Record<string, string> = {
   NAME: "Имя",
@@ -8,14 +12,20 @@ const fieldLabels: Record<string, string> = {
   MESSAGE: "Сообщение",
   PRODUCT: "Продукт",
   REQUEST: "Запрос",
+  SIGNUP: "Подписался на новостную рассылку",
 };
 
-export const formatMessageForTelegram = (
+export const formatMessageForTelegram = async (
   data: IForm,
   pathname: string | null,
   leadUrl: string | null
 ) => {
-  const pageTitle = pathname || "Неизвестная страница";
+  if (data.SIGNUP) {
+    return `<i><b><u>Пользователь подписался на новости:</u></b></i>\nEmail: ${data.EMAIL}`;
+  }
+
+  const pageTitle =
+    findPageByPathname(DASHBOARD_PAGES, pathname) || "Неизвестная страница";
 
   const linkInMessage = `<a href="${leadUrl ? leadUrl : null}">${
     leadUrl ? "Открыть заявку в CRM" : "Заявка не попала в CRM"

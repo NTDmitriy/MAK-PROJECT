@@ -12,6 +12,7 @@ export interface IForm {
   CHECKBOXES?: string[];
   REQUEST?: string;
   MESSAGE?: string;
+  SIGNUP?: string;
 }
 
 export const FormProviders: FC<PropsWithChildren> = ({ children }) => {
