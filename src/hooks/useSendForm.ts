@@ -15,12 +15,6 @@ export const useSendForm = async ({ data, pathname, cookie }: IUseSendForm) => {
     leadUrl = await sendToAmo({ data, pathname, cookie });
   }
 
-  if(leadUrl) {
-    console.log(leadUrl)
-  } else {
-    console.log('no lead url')
-  }
-
   const response = await sendToTelegram(data, pathname, leadUrl);
   return response;
 };

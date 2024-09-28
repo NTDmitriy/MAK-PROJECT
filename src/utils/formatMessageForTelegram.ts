@@ -20,7 +20,6 @@ export const formatMessageForTelegram = async (
   pathname: string | null,
   leadUrl: string | null
 ) => {
-
   if (data.SIGNUP) {
     return `<i><b><u>Пользователь подписался на новости:</u></b></i>\nEmail: ${data.EMAIL}`;
   }
@@ -28,9 +27,8 @@ export const formatMessageForTelegram = async (
   const pageTitle =
     findPageByPathname(DASHBOARD_PAGES, pathname) || "Неизвестная страница";
 
-    const linkInMessage = leadUrl
-    // ? `<a href="${leadUrl}">Открыть заявку в CRM!</a>`
-    ? `${leadUrl}`
+  const linkInMessage = leadUrl
+    ? `<a href="${leadUrl}">Открыть заявку в CRM!</a>`
     : "Заявка не попала в CRM";
 
   let messageInfo = `<i><b><u>ЗАЯВКА С САЙТА (${pageTitle})</u></b></i>\n${linkInMessage}\n\n`;
