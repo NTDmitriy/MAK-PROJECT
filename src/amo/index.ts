@@ -1,5 +1,4 @@
 "use server";
-
 import { IForm } from "@/components/ui/forms/FormProviders";
 import { Client } from "amocrm-js";
 
@@ -12,6 +11,26 @@ const client = new Client({
     bearer: `${process.env.AMO_BEARER}`,
   },
 });
+
+const FIELD_IDS = {
+  PHONE: 1151127,
+  NAME: 1151129,
+  NICHE: 1151131,
+  REQUEST: 1151133,
+  CHECKBOXES: 1151139,
+  MESSAGE: 1151141,
+  UTM_CONTENT: 857949,
+  UTM_MEDIUM: 857951,
+  UTM_CAMPAIGN: 857953,
+  UTM_SOURCE: 857955,
+  UTM_TERM: 857957,
+  UTM_REFERRER: 857959,
+  YM_COUNTER: 857979,
+  YM_UID: 857977,
+  GCLIENTID: 857975,
+  YCLID: 857983,
+  GCLID: 857981,
+};
 
 interface ISendToAmo {
   data: IForm;
@@ -31,201 +50,51 @@ export const sendToAmo = async ({ data, page, coockie }: ISendToAmo) => {
     }
 
     const response = await client.request.post("/api/v4/leads", [leadData]);
-    // Проверка на наличие данных в ответе
-    if (
-      response &&
-      response.data &&
+   
       //@ts-ignore
-      response.data._embedded &&
-      //@ts-ignore
-      response.data._embedded.leads
-    ) {
-      //@ts-ignore
-      const createdLead = response.data._embedded.leads[0]; // Получаем первый созданный лид
-
+      const createdLead = response?.data?._embedded?.leads[0]; 
+      if (createdLead) {
       const leadId = createdLead.id;
-      const leadUrl = `https://${process.env.AMO_DOMAIN}/leads/detail/${leadId}` ;
+      const leadUrl = `https://${process.env.AMO_DOMAIN}/leads/detail/${leadId}`;
       return leadUrl;
     } else {
-      console.log("Не удалось создать лид или получить данные о лиде.");
+      console.log("Не удалось создать лид или получить данные о лиде.");
     }
   } catch (error: any) {
     console.error("API Request Error:", error.message);
   }
 };
 
+const createCustomField = (field_id: number, value: string) => ({
+  field_id,
+  values: [{ value: value.trim() }],
+});
+
 const processData = ({ data, page, coockie }: ISendToAmo) => {
   const customFields = [];
 
-  if (data.PHONE) {
-    customFields.push({
-      field_id: 1151127, // ID поля Телефон
-      values: [
-        {
-          value: data.PHONE.trim(),
-        },
-      ],
-    });
-  }
+  if (data.PHONE) customFields.push(createCustomField(FIELD_IDS.PHONE, data.PHONE));
+  if (data.NAME) customFields.push(createCustomField(FIELD_IDS.NAME, data.NAME));
+  if (data.NICHE) customFields.push(createCustomField(FIELD_IDS.NICHE, data.NICHE));
+  if (data.REQUEST) customFields.push(createCustomField(FIELD_IDS.REQUEST, data.REQUEST));
+  if (data.CHECKBOXES) customFields.push(createCustomField(FIELD_IDS.CHECKBOXES, data.CHECKBOXES.join(", ")));
+  if (data.MESSAGE) customFields.push(createCustomField(FIELD_IDS.MESSAGE, data.MESSAGE));
 
-  if (data.NAME) {
-    customFields.push({
-      field_id: 1151129, // ID поля Имя
-      values: [
-        {
-          value: data.NAME.trim(),
-        },
-      ],
-    });
-  }
 
-  if (data.NICHE) {
-    customFields.push({
-      field_id: 1151131, // ID поля Ниша
-      values: [
-        {
-          value: data.NICHE.trim(),
-        },
-      ],
-    });
-  }
-
-  if (data.REQUEST) {
-    customFields.push({
-      field_id: 1151133, // ID поля запрос
-      values: [
-        {
-          value: data.REQUEST.trim(),
-        },
-      ],
-    });
-  }
-
-  if (data.CHECKBOXES) {
-    customFields.push({
-      field_id: 1151139, // ID поля услуги
-      values: [
-        {
-          value: data.CHECKBOXES.join(", ").trim(),
-        },
-      ],
-    });
-  }
-
-  if (data.MESSAGE) {
-    customFields.push({
-      field_id: 1151141, // ID поля Сообщение
-      values: [
-        {
-          value: data.MESSAGE.trim(),
-        },
-      ],
-    });
-  }
-
-  // analytics
-
-  customFields.push({
-    field_id: 857949, // ID поля utm_content
-    values: [
-      {
-        value: coockie.utm_content || "",
-      },
-    ],
-  });
-
-  customFields.push({
-    field_id: 857951, // ID поля utm_medium
-    values: [
-      {
-        value: coockie.utm_medium || "",
-      },
-    ],
-  });
-
-  customFields.push({
-    field_id: 857953, // ID поля utm_campaign
-    values: [
-      {
-        value: coockie.utm_campaign || "",
-      },
-    ],
-  });
-
-  customFields.push({
-    field_id: 857955, // ID поля utm_source
-    values: [
-      {
-        value: coockie.utm_source || "",
-      },
-    ],
-  });
-
-  customFields.push({
-    field_id: 857957, // ID поля utm_term
-    values: [
-      {
-        value: coockie.utm_term || "",
-      },
-    ],
-  });
-
-  customFields.push({
-    field_id: 857959, // ID поля utm_referrer
-    values: [
-      {
-        value: coockie.utm_referrer || "",
-      },
-    ],
-  });
-
-  customFields.push({
-    field_id: 857979, // ID поля _ym_counter
-    values: [
-      {
-        value: coockie._ym_counter || "",
-      },
-    ],
-  });
-
-  customFields.push({
-    field_id: 857977, // ID поля _ym_uid
-    values: [
-      {
-        value: coockie._ym_uid || "",
-      },
-    ],
-  });
-
-  customFields.push({
-    field_id: 857975, // ID поля gclientid
-    values: [
-      {
-        value: coockie.gclientid || "",
-      },
-    ],
-  });
-
-  customFields.push({
-    field_id: 857983, // ID поля yclid
-    values: [
-      {
-        value: coockie.yclid || "",
-      },
-    ],
-  });
-
-  customFields.push({
-    field_id: 857981, // ID поля gclid
-    values: [
-      {
-        value: coockie.gclid || "",
-      },
-    ],
-  });
+  customFields.push(createCustomField(FIELD_IDS.UTM_CONTENT, coockie.utm_content || ""));
+  customFields.push(createCustomField(FIELD_IDS.UTM_MEDIUM, coockie.utm_medium || ""));
+  customFields.push(createCustomField(FIELD_IDS.UTM_CAMPAIGN, coockie.utm_campaign || ""));
+  customFields.push(createCustomField(FIELD_IDS.UTM_SOURCE, coockie.utm_source || ""));
+  customFields.push(createCustomField(FIELD_IDS.UTM_TERM, coockie.utm_term || ""));
+  customFields.push(createCustomField(FIELD_IDS.UTM_REFERRER, coockie.utm_referrer || ""));
+  customFields.push(createCustomField(FIELD_IDS.YM_COUNTER, coockie._ym_counter || ""));
+  customFields.push(createCustomField(FIELD_IDS.YM_UID, coockie._ym_uid || ""));
+  customFields.push(createCustomField(FIELD_IDS.GCLIENTID, coockie.gclientid || ""));
+  customFields.push(createCustomField(FIELD_IDS.YCLID, coockie.yclid || ""));
+  customFields.push(createCustomField(FIELD_IDS.GCLID, coockie.gclid || ""));
 
   return {
-    name: page || "Неизвестная страница", // Название лида
+    name: page || "Неизвестная страница",
     custom_fields_values: customFields,
   };
 };
