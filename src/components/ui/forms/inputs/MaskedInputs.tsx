@@ -10,8 +10,8 @@ export enum INPUT_NAMES {
   PHONE = "PHONE",
   MESSAGE = "MESSAGE",
   REQUEST = "REQUEST",
+  SIGNUP = "SIGNUP",
 }
-
 
 export const PhoneInput = () => {
   const {

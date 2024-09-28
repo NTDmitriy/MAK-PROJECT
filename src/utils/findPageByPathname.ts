@@ -1,7 +1,8 @@
 export const findPageByPathname = (
   pages: Record<string, any>,
-  pathname: string
+  pathname: string | null
 ): string | null => {
+  if (!pathname) return null;
   for (const key in pages) {
     const page = pages[key];
 

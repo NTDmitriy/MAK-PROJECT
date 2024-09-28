@@ -31,7 +31,7 @@ export const HandlerFormProvider = ({ children }: { children: ReactNode }) => {
       setLoading(true);
 
       const coockie = getCookies();
-      const response = await useSendForm({ data, pathname, coockie });
+      const response = await useSendForm({ data, pathname, cookie: coockie });
 
       if (response?.success) {
         useNotification(response?.message || "Заявка отправлена", "success");

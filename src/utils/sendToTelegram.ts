@@ -1,9 +1,17 @@
 "use server";
 
+import { IForm } from "@/components/ui/forms/FormProviders";
 import axios from "axios";
+import { formatMessageForTelegram } from "./formatMessageForTelegram";
 const URI_API = `https://api.telegram.org/bot${process.env.TOKEN}/sendMessage`;
 
-export const sendToTelegram = async (formattedText: string) => {
+export const sendToTelegram = async (
+  data: IForm,
+  pathname: string,
+  leadUrl: string | null
+) => {
+  const formattedText = await formatMessageForTelegram(data, pathname, leadUrl);
+
   try {
     const response = await axios.post(URI_API, {
       chat_id: process.env.CHAT_ID,
@@ -14,7 +22,9 @@ export const sendToTelegram = async (formattedText: string) => {
     if (response.status === 200) {
       return {
         success: true,
-        message: "Заявка отправлена",
+        message: data.SIGNUP
+          ? "Вы подписались на новостную рассылку"
+          : "Заявка отправлена",
         data: response.data,
       };
     } else {

@@ -4,7 +4,7 @@ import { FaqForm } from "./faqForm/FaqForm";
 
 import { FormProviders } from "./FormProviders";
 import { MainForm } from "./mainForm/MainForm";
-import { SingUpFrom } from "./singUpFrom/SingUpFrom";
+import { SignUpFrom } from "./signUpFrom/SignUpFrom";
 import { StepForm } from "./stepForm/StepForm";
 
 export enum FORM_TYPE {
@@ -47,7 +47,7 @@ export const FormController: FC<IFormController> = ({
       case FORM_TYPE.COMPLEX_FORM:
         return <ComplexForm title={title} text={text} />;
       case FORM_TYPE.SING_UP_FORM:
-        return <SingUpFrom />;
+        return <SignUpFrom />;
       case FORM_TYPE.FAQ_FORM:
         return <FaqForm areaVisible={areaVisible} title={title} text={text} />;
       default:

@@ -8,6 +8,7 @@ import { IFormContent } from "../FormController";
 import { useHandlerFormContext } from "../HandleFormProvider";
 import { Checkbox } from "../inputs/checkbox/Checkbox";
 import { NameInput, PhoneInput } from "../inputs/MaskedInputs";
+import { SubmitButton } from '../submitButton/SubmitButton';
 import styles from "./StepForm.module.css";
 
 export const StepForm: FC<IFormContent> = ({ subServices }) => {
@@ -67,7 +68,7 @@ export const StepForm: FC<IFormContent> = ({ subServices }) => {
             >
               Назад
             </PrimaryButton>
-            <PrimaryButton className={styles.submit}>Отправить</PrimaryButton>
+            <SubmitButton />
           </div>
           <p className={styles.notice}>
             Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих

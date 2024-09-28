@@ -1,5 +1,7 @@
 "use server";
 import { IForm } from "@/components/ui/forms/FormProviders";
+import { DASHBOARD_PAGES } from "@/dashboard/app.dashboard";
+import { findPageByPathname } from "@/utils/findPageByPathname";
 import { Client } from "amocrm-js";
 
 const client = new Client({
@@ -34,13 +36,13 @@ const FIELD_IDS = {
 
 interface ISendToAmo {
   data: IForm;
-  page: string | null;
-  coockie: Record<string, string>;
+  pathname: string | null;
+  cookie: Record<string, string>;
 }
 
-export const sendToAmo = async ({ data, page, coockie }: ISendToAmo) => {
+export const sendToAmo = async ({ data, pathname, cookie }: ISendToAmo) => {
   try {
-    const leadData = processData({ data, page, coockie });
+    const leadData = processData({ data, pathname, cookie });
 
     if (
       !leadData.custom_fields_values ||
@@ -50,18 +52,20 @@ export const sendToAmo = async ({ data, page, coockie }: ISendToAmo) => {
     }
 
     const response = await client.request.post("/api/v4/leads", [leadData]);
-   
-      //@ts-ignore
-      const createdLead = response?.data?._embedded?.leads[0]; 
-      if (createdLead) {
+
+    //@ts-ignore
+    const createdLead = response?.data?._embedded?.leads[0];
+    if (createdLead) {
       const leadId = createdLead.id;
       const leadUrl = `https://${process.env.AMO_DOMAIN}/leads/detail/${leadId}`;
       return leadUrl;
     } else {
-      console.log("Не удалось создать лид или получить данные о лиде.");
+      console.log("Не удалось создать лид или получить данные о лиде.");
+      return null;
     }
   } catch (error: any) {
     console.error("API Request Error:", error.message);
+    return null;
   }
 };
 
@@ -70,28 +74,53 @@ const createCustomField = (field_id: number, value: string) => ({
   values: [{ value: value.trim() }],
 });
 
-const processData = ({ data, page, coockie }: ISendToAmo) => {
+const processData = ({ data, pathname, cookie }: ISendToAmo) => {
+  const page =
+    findPageByPathname(DASHBOARD_PAGES, pathname) || "Неизвестная страница";
   const customFields = [];
 
-  if (data.PHONE) customFields.push(createCustomField(FIELD_IDS.PHONE, data.PHONE));
-  if (data.NAME) customFields.push(createCustomField(FIELD_IDS.NAME, data.NAME));
-  if (data.NICHE) customFields.push(createCustomField(FIELD_IDS.NICHE, data.NICHE));
-  if (data.REQUEST) customFields.push(createCustomField(FIELD_IDS.REQUEST, data.REQUEST));
-  if (data.CHECKBOXES) customFields.push(createCustomField(FIELD_IDS.CHECKBOXES, data.CHECKBOXES.join(", ")));
-  if (data.MESSAGE) customFields.push(createCustomField(FIELD_IDS.MESSAGE, data.MESSAGE));
+  if (data.PHONE)
+    customFields.push(createCustomField(FIELD_IDS.PHONE, data.PHONE));
+  if (data.NAME)
+    customFields.push(createCustomField(FIELD_IDS.NAME, data.NAME));
+  if (data.NICHE)
+    customFields.push(createCustomField(FIELD_IDS.NICHE, data.NICHE));
+  if (data.REQUEST)
+    customFields.push(createCustomField(FIELD_IDS.REQUEST, data.REQUEST));
+  if (data.CHECKBOXES)
+    customFields.push(
+      createCustomField(FIELD_IDS.CHECKBOXES, data.CHECKBOXES.join(", "))
+    );
+  if (data.MESSAGE)
+    customFields.push(createCustomField(FIELD_IDS.MESSAGE, data.MESSAGE));
 
-
-  customFields.push(createCustomField(FIELD_IDS.UTM_CONTENT, coockie.utm_content || ""));
-  customFields.push(createCustomField(FIELD_IDS.UTM_MEDIUM, coockie.utm_medium || ""));
-  customFields.push(createCustomField(FIELD_IDS.UTM_CAMPAIGN, coockie.utm_campaign || ""));
-  customFields.push(createCustomField(FIELD_IDS.UTM_SOURCE, coockie.utm_source || ""));
-  customFields.push(createCustomField(FIELD_IDS.UTM_TERM, coockie.utm_term || ""));
-  customFields.push(createCustomField(FIELD_IDS.UTM_REFERRER, coockie.utm_referrer || ""));
-  customFields.push(createCustomField(FIELD_IDS.YM_COUNTER, coockie._ym_counter || ""));
-  customFields.push(createCustomField(FIELD_IDS.YM_UID, coockie._ym_uid || ""));
-  customFields.push(createCustomField(FIELD_IDS.GCLIENTID, coockie.gclientid || ""));
-  customFields.push(createCustomField(FIELD_IDS.YCLID, coockie.yclid || ""));
-  customFields.push(createCustomField(FIELD_IDS.GCLID, coockie.gclid || ""));
+  customFields.push(
+    createCustomField(FIELD_IDS.UTM_CONTENT, cookie.utm_content || "")
+  );
+  customFields.push(
+    createCustomField(FIELD_IDS.UTM_MEDIUM, cookie.utm_medium || "")
+  );
+  customFields.push(
+    createCustomField(FIELD_IDS.UTM_CAMPAIGN, cookie.utm_campaign || "")
+  );
+  customFields.push(
+    createCustomField(FIELD_IDS.UTM_SOURCE, cookie.utm_source || "")
+  );
+  customFields.push(
+    createCustomField(FIELD_IDS.UTM_TERM, cookie.utm_term || "")
+  );
+  customFields.push(
+    createCustomField(FIELD_IDS.UTM_REFERRER, cookie.utm_referrer || "")
+  );
+  customFields.push(
+    createCustomField(FIELD_IDS.YM_COUNTER, cookie._ym_counter || "")
+  );
+  customFields.push(createCustomField(FIELD_IDS.YM_UID, cookie._ym_uid || ""));
+  customFields.push(
+    createCustomField(FIELD_IDS.GCLIENTID, cookie.gclientid || "")
+  );
+  customFields.push(createCustomField(FIELD_IDS.YCLID, cookie.yclid || ""));
+  customFields.push(createCustomField(FIELD_IDS.GCLID, cookie.gclid || ""));
 
   return {
     name: page || "Неизвестная страница",
