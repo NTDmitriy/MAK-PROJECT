@@ -42,7 +42,7 @@ export const Tariffs: FC<PropsWithChildren<ITariffs>> = ({ tariffs }) => {
           >
             {blockTitle
               ? blockTitle
-              : "Тарифы и команда, работающая над вашим проектом"}
+              : "Тарифы и команда, работающая над вашим проектом"}
           </BlockTitle>
 
           <Container>
@@ -81,7 +81,7 @@ export const Tariffs: FC<PropsWithChildren<ITariffs>> = ({ tariffs }) => {
                         <DynamicSvg name="IconMoney" />
                         {isNumber(plan.price) ? (
                           <>
-                            от {plan.price.toLocaleString("ru-RU")} &#8381;/мес
+                            от {plan.price.toLocaleString("ru-RU")} &#8381;/мес
                           </>
                         ) : (
                           <>{plan.price}</>
@@ -142,23 +142,23 @@ export const Tariffs: FC<PropsWithChildren<ITariffs>> = ({ tariffs }) => {
                   Не уверены, какой тариф выбрать?
                 </p>
                 <p className={styles.bottom__text}>
-                  Запишитесь на консультацию, и наши специалисты помогут вам
+                  Запишитесь на консультацию, и наши специалисты помогут вам
                   подобрать оптимальный тариф для достижения ваших целей. Мы
-                  ответим на все ваши вопросы и предложим лучшее решение для
+                  ответим на все ваши вопросы и предложим лучшее решение для
                   вашего бизнеса.
                 </p>
               </div>
               <Popup
                 initComponent={
                   <PrimaryButton className={styles.bottom__btn}>
-                    Записаться на консультацию
+                    Записаться на консультацию
                   </PrimaryButton>
                 }
                 contentComponent={
                   <FormController
                     formType={FORM_TYPE.MAIN_FORM}
                     title="Не уверены, какой тариф выбрать?"
-                    text="Запишитесь на консультацию, и наши специалисты помогут вам подобрать оптимальный тариф для достижения ваших целей. Мы ответим на все ваши вопросы и предложим лучшее решение для вашего бизнеса."
+                    text="Запишитесь на консультацию, и наши специалисты помогут вам подобрать оптимальный тариф для достижения ваших целей. Мы ответим на все ваши вопросы и предложим лучшее решение для вашего бизнеса."
                   />
                 }
               />

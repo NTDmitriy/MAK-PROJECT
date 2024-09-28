@@ -29,7 +29,7 @@ export const IncludedInService: FC<PropsWithChildren<IIncludedInService>> = ({
           leftSide={true}
           descrBottom={blockTitleDescr && blockTitleDescr}
         >
-          {blockTitle ? <>{blockTitle}</> : "Что выходит в услугу"}
+          {blockTitle ? <>{blockTitle}</> : "Что выходит в услугу"}
         </BlockTitle>
         <Container>
           <div className={styles.root}>

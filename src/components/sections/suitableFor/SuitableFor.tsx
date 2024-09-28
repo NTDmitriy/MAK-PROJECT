@@ -20,7 +20,7 @@ export const SuitableFor: FC<PropsWithChildren<ISuitableFor>> = ({
   return (
     <Section className={className} {...rest}>
       <BlockTitle leftSide={true}>
-        {title ? <>{title}</> : "Кому подойдет редизайн и доработка"}
+        {title ? <>{title}</> : "Кому подойдет редизайн и доработка"}
       </BlockTitle>
       <Container>
         <ul className={styles.card_container}>

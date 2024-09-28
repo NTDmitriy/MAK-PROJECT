@@ -42,7 +42,7 @@ export const HowAffiliateWork: FC<PropsWithChildren<IhowAffiliateWork>> = ({
         <div className={styles.descr}>
           <p className={styles.title__question}>Что получают ваши клиенты?</p>
           <p className={clsx(styles.text, styles.response)}>
-            Ваши клиенты получают качественные услуги и бесплатную консультацию.
+            Ваши клиенты получают качественные услуги и бесплатную консультацию.
             Мы предлагаем широкий спектр маркетинговых услуг
           </p>
         </div>

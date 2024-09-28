@@ -14,7 +14,7 @@ interface ICopyButton extends TButton {
 const copyTextToClipboard = async (text: any) => {
   try {
     await navigator.clipboard.writeText(text);
-    useNotification("Текст скопирован в буфер обмена", "default");
+    useNotification("Текст скопирован в буфер обмена", "default");
   } catch (err) {
     console.error("Ошибка:", err);
   }

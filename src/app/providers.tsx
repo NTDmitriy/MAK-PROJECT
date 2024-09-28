@@ -15,7 +15,6 @@ export const Providers = ({ children }: PropsWithChildren) => {
     processUTMParams();
   }, []);
 
-
   return (
     <>
       <SnackbarProvider

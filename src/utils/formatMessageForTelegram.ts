@@ -12,11 +12,16 @@ const fieldLabels: Record<string, string> = {
 
 export const formatMessageForTelegram = (
   data: IForm,
-  pathname: string | null
+  pathname: string | null,
+  leadUrl: string | null
 ) => {
   const pageTitle = pathname || "Неизвестная страница";
 
-  let messageInfo = `<i><b><u>ЗАЯВКА С САЙТА (${pageTitle})</u></b></i>\n\n`;
+  const linkInMessage = `<a href="${leadUrl ? leadUrl : null}">${
+    leadUrl ? "Открыть заявку в CRM" : "Заявка не попала в CRM"
+  }</a>`;
+
+  let messageInfo = `<i><b><u>ЗАЯВКА С САЙТА (${pageTitle})</u></b></i>\n${linkInMessage}\n\n`;
   let messageServices = "";
 
   for (const key in data) {

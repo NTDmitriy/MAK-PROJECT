@@ -26,9 +26,9 @@ export const ComplexForm: FC<IFormContent> = ({ title, text }) => {
           {text && <p className={styles.descr}>{text}</p>}
           {!text && (
             <p className={styles.descr}>
-              Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее
-              время для проведения первичной консультации. Ответим на все ваши
-              вопросы и предложим{" "}
+              Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее
+              время для проведения первичной консультации. Ответим на все ваши
+              вопросы и предложим{" "}
               <span className={styles.accent}>
                 идеальные решения для вашего бизнеса!
               </span>
@@ -47,8 +47,8 @@ export const ComplexForm: FC<IFormContent> = ({ title, text }) => {
             <PrimaryButton className={styles.submit}>Отправить</PrimaryButton>
           </div>
           <p className={styles.notice}>
-            Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
-            персональных данных и соглашаетесь с условиями{" "}
+            Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
+            персональных данных и соглашаетесь с условиями{" "}
             <a className={styles.privacy} href={`/privacy-policy.pdf`}>
               Политики конфиденциальности
             </a>

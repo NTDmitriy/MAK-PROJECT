@@ -30,7 +30,25 @@ export const sendToAmo = async ({ data, page, coockie }: ISendToAmo) => {
       throw new Error("Отсутствуют данные для передачи");
     }
 
-    await client.request.post("/api/v4/leads", [leadData]);
+    const response = await client.request.post("/api/v4/leads", [leadData]);
+    // Проверка на наличие данных в ответе
+    if (
+      response &&
+      response.data &&
+      //@ts-ignore
+      response.data._embedded &&
+      //@ts-ignore
+      response.data._embedded.leads
+    ) {
+      //@ts-ignore
+      const createdLead = response.data._embedded.leads[0]; // Получаем первый созданный лид
+
+      const leadId = createdLead.id;
+      const leadUrl = `https://${process.env.AMO_DOMAIN}/leads/detail/${leadId}` ;
+      return leadUrl;
+    } else {
+      console.log("Не удалось создать лид или получить данные о лиде.");
+    }
   } catch (error: any) {
     console.error("API Request Error:", error.message);
   }
@@ -82,7 +100,6 @@ const processData = ({ data, page, coockie }: ISendToAmo) => {
       ],
     });
   }
-
 
   if (data.CHECKBOXES) {
     customFields.push({

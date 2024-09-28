@@ -18,16 +18,16 @@ export const AboutPrev: FC<PropsWithChildren<TGenericElementProps>> = ({
         <div className={clsx(styles.content, className)} {...rest}>
           <div className={styles.descr}>
             <p className={styles.text}>
-              Мы - digital маркетинговое агентство с многолетним и успешным
-              опытом в оказании маркетинговых услуг. Наша миссия - помогать
+              Мы - digital маркетинговое агентство с многолетним и успешным
+              опытом в оказании маркетинговых услуг. Наша миссия - помогать
               бизнесам{" "}
               <span className={styles.accent}>
-                расти и достигать своих целей{" "}
+                расти и достигать своих целей{" "}
               </span>{" "}
-              в онлайн-пространстве
+              в онлайн-пространстве
             </p>
 
-            <SeconderyLinkButton href={USEFUL_DASHBOARD_PAGES.ABOUT.url} className={styles.link}> Подробнее о нас</SeconderyLinkButton>
+            <SeconderyLinkButton href={USEFUL_DASHBOARD_PAGES.ABOUT.url} className={styles.link}> Подробнее о нас</SeconderyLinkButton>
           </div>
           <div className={styles.logo__wrapper}>
             <DynamicSvg name="IconHeroLogo" className={styles.logo} />

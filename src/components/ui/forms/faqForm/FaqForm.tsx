@@ -22,15 +22,15 @@ export const FaqForm: FC<IFormContent> = ({
     <div className={styles.root} {...rest}>
       {title && <h5 className={styles.title}>{title}</h5>}
       {!title && (
-        <h5 className={styles.title}>Не нашли ответ на свой вопрос?</h5>
+        <h5 className={styles.title}>Не нашли ответ на свой вопрос?</h5>
       )}
 
       {text && <p className={styles.descr}>{text}</p>}
       {!text && (
         <p className={styles.descr}>
-          Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее
-          время для проведения первичной консультации. Ответим на все ваши
-          вопросы и предложим{" "}
+          Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее
+          время для проведения первичной консультации. Ответим на все ваши
+          вопросы и предложим{" "}
           <span className={styles.accent}>
             идеальные решения для вашего бизнеса!
           </span>
@@ -56,8 +56,8 @@ export const FaqForm: FC<IFormContent> = ({
         <PhoneLinkButton className={styles.contact__btn} />
       </div>
       <p className={styles.notice}>
-        Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
-        персональных данных и соглашаетесь с условиями{" "}
+        Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
+        персональных данных и соглашаетесь с условиями{" "}
         <a className={styles.privacy} href={`/privacy-policy.pdf`}>
           Политики конфиденциальности
         </a>

@@ -37,7 +37,7 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
             contentComponent={
               <FormController
                 formType={FORM_TYPE.COMPLEX_FORM}
-                title="Свяжитесь с нами"
+                title="Свяжитесь с нами"
               />
             }
           />

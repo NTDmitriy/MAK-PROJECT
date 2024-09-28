@@ -8,7 +8,7 @@ import styles from "./AffiliateAvantages.module.css";
 const avantages = [
   {
     name: "Высокие вознаграждения",
-    description: "10-20% от суммы сделки ежемесячно",
+    description: "10-20% от суммы сделки ежемесячно",
     image: "affiliate-avantages-1",
   },
   {
@@ -18,7 +18,7 @@ const avantages = [
   },
   {
     name: "Бонусы для клиентов",
-    description: "Бесплатная консультация и аудит и другие бонусы для привлеченных клиентов",
+    description: "Бесплатная консультация и аудит и другие бонусы для привлеченных клиентов",
     image: "affiliate-avantages-3",
   },
 ];

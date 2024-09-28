@@ -27,7 +27,7 @@ export const TechnologyStack: FC<PropsWithChildren<TGenericElementProps>> = ({
   return (
     <Section className={className} {...rest}>
       <BlockTitle leftSide={false}>
-        Технологии, с которыми мы работаем
+        Технологии, с которыми мы работаем
       </BlockTitle>
       <Container>
         <ul className={styles.list}>

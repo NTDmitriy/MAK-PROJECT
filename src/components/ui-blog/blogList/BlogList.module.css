@@ -1,5 +1,6 @@
 .root {
   gap: clamp(20px, 3dvw, 50px);
+  color: #cacaca;
 }
 
 .grid {
@@ -12,17 +13,26 @@
   flex-direction: column;
 }
 
-
-
 .margin {
-  margin-bottom: clamp(20px,3dvw,50px);
+  margin-bottom: clamp(20px, 3dvw, 50px);
+}
+
+.marketed li {
+  margin-left: 30px;
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: clamp(16px, 2dvw, 30px);
+  line-height: 120%;
+  list-style:square;
+  font-weight: 300;
+  color: var(--accent-color)
 }
 
 @media screen and (max-width: 768px) {
   .root {
     gap: 12px;
   }
-  
+
   .grid {
     display: grid;
     grid-template-columns: 1fr;

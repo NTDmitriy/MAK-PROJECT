@@ -6,6 +6,7 @@ import styles from "./BlogList.module.css";
 interface IBlogList extends TGenericElementProps {
   grid?: boolean;
   margin?: boolean;
+  marketed?: boolean;
 }
 
 export const BlogList: FC<PropsWithChildren<IBlogList>> = ({
@@ -13,13 +14,19 @@ export const BlogList: FC<PropsWithChildren<IBlogList>> = ({
   children,
   className,
   margin,
+  marketed,
   ...rest
 }) => {
+  const gridClass = grid ? styles.grid : styles.flex;
+  const marginClass = margin && styles.margin;
+  const marketedClass = marketed && styles.marketed;
+
   const classes = clsx(
     styles.root,
     className,
-    grid ? styles.grid : styles.flex,
-    margin && styles.margin
+    gridClass,
+    marketedClass,
+    marginClass
   );
 
   return (

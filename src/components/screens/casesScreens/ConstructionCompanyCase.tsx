@@ -28,17 +28,17 @@ export const ConstructionCompanyCase: FC = () => {
       <Box>
         <CaseBoxTitle>Задачи проекта</CaseBoxTitle>
         <CaseText margin>
-          Основная цель проекта заключалась в увеличении продаж и расширении
-          клиентской базы компании "Карельский дом". В рамках проекта перед нами
+          Основная цель проекта заключалась в увеличении продаж и расширении
+          клиентской базы компании "Карельский дом". В рамках проекта перед нами
           стояли следующие задачи:
         </CaseText>
         <CaseList marketed>
           <CaseListItem>
             Проведение маркетингового аудита текущих рекламных кампаний.
           </CaseListItem>
-          <CaseListItem>Анализ ниши и конкурентной среды.</CaseListItem>
+          <CaseListItem>Анализ ниши и конкурентной среды.</CaseListItem>
           <CaseListItem>
-            Разработка и внедрение эффективных рекламных стратегий.
+            Разработка и внедрение эффективных рекламных стратегий.
           </CaseListItem>
           <CaseListItem>
             Оптимизация сайта для улучшения пользовательского опыта.
@@ -49,17 +49,16 @@ export const ConstructionCompanyCase: FC = () => {
       <CaseBoxWithe>
         <CaseBoxTitle black>Проблематика</CaseBoxTitle>
         <CaseText margin black>
-          Перед началом работы с нами, "Карельский дом" сталкивался с рядом
+          Перед началом работы с нами, "Карельский дом" сталкивался с рядом
           проблем:
         </CaseText>
         <CaseList marketed black>
           <CaseListItem>
-            Низкий уровень продаж, который составлял в среднем 10 заказов в
-            месяц.
+            Низкий уровень продаж, который составлял в среднем 10 заказов в месяц.
           </CaseListItem>
-          <CaseListItem>Низкая узнаваемость бренда на рынке.</CaseListItem>
+          <CaseListItem>Низкая узнаваемость бренда на рынке.</CaseListItem>
           <CaseListItem>
-            Неоптимизированный сайт, что приводило к высокому показателю отказов
+            Неоптимизированный сайт, что приводило к высокому показателю отказов
             (более 45%).
           </CaseListItem>
         </CaseList>
@@ -71,13 +70,11 @@ export const ConstructionCompanyCase: FC = () => {
         <CaseList margin>
           <CaseListItem>
             <CaseTextAccent>Аудит:</CaseTextAccent> Мы провели детальный аудит
-            текущих рекламных кампаний и сайта. Это позволило выявить основные
-            проблемы и определить точки роста.
+            текущих рекламных кампаний и сайта. Это позволило выявить основные
+            проблемы и определить точки роста.
           </CaseListItem>
           <CaseListItem>
-            <CaseTextAccent>Анализ ниши:</CaseTextAccent> Исследование ниши и
-            конкурентной среды помогло понять поведение целевой аудитории и
-            выявить уникальные торговые предложения (УТП) конкурентов.
+            <CaseTextAccent>Анализ ниши:</CaseTextAccent> Исследование ниши и конкурентной среды помогло понять поведение целевой аудитории и выявить уникальные торговые предложения (УТП) конкурентов.
           </CaseListItem>
         </CaseList>
 
@@ -85,14 +82,13 @@ export const ConstructionCompanyCase: FC = () => {
         <CaseList marketed margin>
           <CaseListItem>
             <CaseTextAccent>Контекстная реклама:</CaseTextAccent> Настроили
-            эффективные кампании в Яндекс.Директ, ориентированные на
-            высокочастотные и низкочастотные запросы.
+            эффективные кампании в Яндекс.Директ, ориентированные на высокочастотные и низкочастотные запросы.
           </CaseListItem>
           <CaseListItem>
             <CaseTextAccent>
-              Таргетированная реклама в социальных сетях:
+              Таргетированная реклама в социальных сетях:
             </CaseTextAccent>{" "}
-            Создали таргетированные кампании в ВКонтакте, нацеленные на ключевую
+            Создали таргетированные кампании в ВКонтакте, нацеленные на ключевую
             аудиторию.
           </CaseListItem>
         </CaseList>
@@ -100,12 +96,11 @@ export const ConstructionCompanyCase: FC = () => {
         <CaseListTitle>Оптимизация сайта</CaseListTitle>
         <CaseList marketed >
           <CaseListItem>
-            Улучшили структуру и дизайн сайта, что сократило показатель отказов
-            до 16%.
+            Улучшили структуру и дизайн сайта, что сократило показатель отказов
+            до 16%.
           </CaseListItem>
           <CaseListItem>
-            Оптимизировали мобильную версию сайта, что увеличило конверсию на
-            мобильных устройствах на 20%.
+            Оптимизировали мобильную версию сайта, что увеличило конверсию на мобильных устройствах на 20%.
           </CaseListItem>
         </CaseList>
       </Box>
@@ -116,13 +111,13 @@ export const ConstructionCompanyCase: FC = () => {
           <CaseListItem>
             <img
               src={`/images/cases/cases-karelskiy-dom-metrika1.webp`}
-              alt="Увеличение продаж и улучшение узнаваемости бренда"
+              alt="Увеличение продаж и улучшение узнаваемости бренда"
             />
           </CaseListItem>
           <CaseListItem>
             <img
               src={`/images/cases/cases-karelskiy-dom-metrika2.webp`}
-              alt="Увеличение продаж и улучшение узнаваемости бренда"
+              alt="Увеличение продаж и улучшение узнаваемости бренда"
             />
           </CaseListItem>
         </CaseList>
@@ -135,7 +130,7 @@ export const ConstructionCompanyCase: FC = () => {
           <CaseListItem>
             Объем продаж увеличился{" "}
             <CaseTextAccent yellow>на 193%,</CaseTextAccent>, достигнув{" "}
-            <CaseTextAccent yellow>29 заказов в месяц.</CaseTextAccent>
+            <CaseTextAccent yellow>29 заказов в месяц.</CaseTextAccent>
           </CaseListItem>
           <CaseListItem>
             Узнаваемость бренда повысилась{" "}
@@ -147,28 +142,28 @@ export const ConstructionCompanyCase: FC = () => {
           </CaseListItem>
         </CaseList>
         <CaseText margin>
-          Проект продемонстрировал, что комплексный подход к маркетингу может
-          значительно улучшить ключевые показатели бизнеса и укрепить его
-          позиции на рынке.
+          Проект продемонстрировал, что комплексный подход к маркетингу может
+          значительно улучшить ключевые показатели бизнеса и укрепить его
+          позиции на рынке.
         </CaseText>
 
         <CaseList grid margin threeСolumns>
           <CaseListItem>
             <img
               src={`/images/cases/cases-karelskiy-dom-metrika3.webp`}
-              alt="Увеличение продаж и улучшение узнаваемости бренда"
+              alt="Увеличение продаж и улучшение узнаваемости бренда"
             />
           </CaseListItem>
           <CaseListItem>
             <img
               src={`/images/cases/cases-karelskiy-dom-metrika4.webp`}
-              alt="Увеличение продаж и улучшение узнаваемости бренда"
+              alt="Увеличение продаж и улучшение узнаваемости бренда"
             />
           </CaseListItem>
           <CaseListItem>
             <img
               src={`/images/cases/cases-karelskiy-dom-metrika5.webp`}
-              alt="Увеличение продаж и улучшение узнаваемости бренда"
+              alt="Увеличение продаж и улучшение узнаваемости бренда"
             />
           </CaseListItem>
         </CaseList>
@@ -177,7 +172,7 @@ export const ConstructionCompanyCase: FC = () => {
           <CaseListItem center>
             <img
               src={`/images/cases/cases-karelskiy-dom-metrika6.webp`}
-              alt="Увеличение продаж и улучшение узнаваемости бренда"
+              alt="Увеличение продаж и улучшение узнаваемости бренда"
             />
           </CaseListItem>
         </CaseList>

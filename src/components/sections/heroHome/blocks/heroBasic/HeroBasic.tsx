@@ -31,9 +31,8 @@ export const HeroBasic: FC<PropsWithChildren<TGenericElementProps>> = () => {
             </h1>
           </div>
           <p className={styles.descr}>
-            Полный цикл маркетинговых услуг: от настройки рекламы до
-            SEO-продвижения и создания сайтов. Ваш надежный партнер в мире
-            digital маркетинга. Доверьтесь нам и наблюдайте за ростом своего
+            Полный цикл маркетинговых услуг: от настройки рекламы до SEO-продвижения и создания сайтов. Ваш надежный партнер в мире
+            digital маркетинга. Доверьтесь нам и наблюдайте за ростом своего
             бизнеса.
           </p>
           <div className={styles.btn_grop}>
@@ -46,7 +45,7 @@ export const HeroBasic: FC<PropsWithChildren<TGenericElementProps>> = () => {
               contentComponent={
                 <FormController
                   formType={FORM_TYPE.COMPLEX_FORM}
-                  title="Свяжитесь с нами"
+                  title="Свяжитесь с нами"
                 />
               }
             />

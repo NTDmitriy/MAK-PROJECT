@@ -17,9 +17,8 @@ export const useSendForm = async ({
   coockie,
 }: IUseSendForm) => {
   const foundPage = findPageByPathname(DASHBOARD_PAGES, pathname);
-  const formattedText = formatMessageForTelegram(data, foundPage);
-
-  await sendToAmo({ data, page: foundPage, coockie });
+  const leadUrl = (await sendToAmo({ data, page: foundPage, coockie })) || null;
+  const formattedText = formatMessageForTelegram(data, foundPage, leadUrl);
   const response = await sendToTelegram(formattedText);
 
   return response;

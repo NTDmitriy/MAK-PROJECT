@@ -16,7 +16,7 @@ export const VacanciesPrev: FC<PropsWithChildren<TGenericElementProps>> = ({
     <Section>
       <BlockTitle
         leftSide={true}
-        descrSideway="Make All Perfect — это целый мир возможностей, где можно зарабатывать деньги благодаря своей смекалке и трудолюбию. "
+        descrSideway="Make All Perfect — это целый мир возможностей, где можно зарабатывать деньги благодаря своей смекалке и трудолюбию. "
       >
         Наши вакансии
       </BlockTitle>
@@ -27,10 +27,10 @@ export const VacanciesPrev: FC<PropsWithChildren<TGenericElementProps>> = ({
               Ищете новые возможности для профессионального развития?{" "}
             </p>
             <p className={styles.text}>
-              В Make All Perfect мы всегда рады талантливым и амбициозным людям,
+              В Make All Perfect мы всегда рады талантливым и амбициозным людям,
               которые готовы расти и достигать новых высот. Мы предлагаем
-              интересные задачи, возможность работы с ведущими брендами
-              и проектами, а также поддержку и развитие в динамичной и дружной
+              интересные задачи, возможность работы с ведущими брендами
+              и проектами, а также поддержку и развитие в динамичной и дружной
               команде.
             </p>
             <div className={styles.btn__wrapper}>
@@ -38,7 +38,7 @@ export const VacanciesPrev: FC<PropsWithChildren<TGenericElementProps>> = ({
                 className={styles.btn}
                 href={USEFUL_DASHBOARD_PAGES.VACANCIES.url}
               >
-                Узнать о вакансиях
+                Узнать о вакансиях
               </PrimaryLinkButton>
             </div>
           </div>

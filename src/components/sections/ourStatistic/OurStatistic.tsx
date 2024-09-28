@@ -27,7 +27,7 @@ export const OurStatistic: FC<PropsWithChildren<TGenericElementProps>> = ({
     <Section className={className} {...rest}>
       <BlockTitle
         leftSide={true}
-        descrSideway="Мы нацелены на долгосрочное сотрудничество"
+        descrSideway="Мы нацелены на долгосрочное сотрудничество"
         className=""
       >
         Наш подход
@@ -36,13 +36,13 @@ export const OurStatistic: FC<PropsWithChildren<TGenericElementProps>> = ({
         <div className={styles.content_main} ref={ref}>
           <div className={styles.text_content}>
             <p className={styles.text}>
-              Наши клиенты остаются с нами в среднем на 835 календарных дней,
-              доверяя нам свои проекты и видя стабильные результаты. Мы
-              стремимся к тому, чтобы каждая наша работа приносила ощутимые
-              результаты и способствовала росту вашего бизнеса.
+              Наши клиенты остаются с нами в среднем на 835 календарных дней,
+              доверяя нам свои проекты и видя стабильные результаты. Мы
+              стремимся к тому, чтобы каждая наша работа приносила ощутимые
+              результаты и способствовала росту вашего бизнеса.
             </p>
             <p className={styles.big_text}>
-              Клиенты в среднем работают с нами:
+              Клиенты в среднем работают с нами:
             </p>
           </div>
           <div className={styles.data_counter}>

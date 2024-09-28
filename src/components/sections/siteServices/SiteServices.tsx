@@ -69,7 +69,7 @@ export const SiteServices: FC<PropsWithChildren<TGenericElementProps>> = ({
   return (
     <Section className={className} {...rest}>
       <BlockTitle leftSide={true}>
-        Создание сайтов на популярных фреймворках и CMS
+        Создание сайтов на популярных фреймворках и CMS
       </BlockTitle>
       <Container>
         <div className={styles.content}>
@@ -78,9 +78,9 @@ export const SiteServices: FC<PropsWithChildren<TGenericElementProps>> = ({
           <div className={styles.sticky}>
             <h5 className={styles.sticky__title}>ОБРАТИТЕ ВНИМАНИЕ!</h5>
             <p className={styles.sticky__text}>
-              Если вы не уверены в выборе платформы для вашего сайта, мы
+              Если вы не уверены в выборе платформы для вашего сайта, мы
               предлагаем вам бесплатную консультацию. Наши эксперты помогут вам
-              подобрать платформу, которая идеально подойдет и будет
+              подобрать платформу, которая идеально подойдет и будет
               соответствовать требованиям вашего бизнеса. Мы предложим вам
               оптимальное решение, обеспечив лучшее качество и соответствие
               вашим нуждам.
