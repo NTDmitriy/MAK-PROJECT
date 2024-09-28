@@ -57,7 +57,7 @@ export const sendToAmo = async ({ data, pathname, cookie }: ISendToAmo) => {
     const createdLead = response?.data?._embedded?.leads[0];
     if (createdLead) {
       const leadId = createdLead.id;
-      const leadUrl = `https://${process.env.AMO_DOMAIN}/leads/detail/${leadId}`;
+      const leadUrl = `https://${process.env.AMO_DOMAIN_NAME}.amocrm.ru/leads/detail/${leadId}`;
       return leadUrl;
     } else {
       console.log("Не удалось создать лид или получить данные о лиде.");
