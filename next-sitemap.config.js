@@ -1,19 +1,18 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl:
-    `https://${process.env.SITE_URL}` || "https://test.makeallperfect.ru",
+    `https://${process.env.SITE_URL}` || "https://makeallperfect.ru",
   generateRobotsTxt: true,
   sitemapSize: 7000,
   robotsTxtOptions: {
     policies: [
-      // {
-      //   userAgent: '*',
-      //   allow: '/',
-      // },
+      {
+        userAgent: '*',
+        allow: '/',
+      },
       {
         userAgent: "*",
         disallow: [
-          "/",
           "/*?*",
           "/*&*",
           "/*=*",
