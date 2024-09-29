@@ -10,6 +10,7 @@ export const sendToTelegram = async (
   pathname: string,
   leadUrl: string | null
 ) => {
+  
   const formattedText = await formatMessageForTelegram(data, pathname, leadUrl);
 
   try {
