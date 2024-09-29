@@ -10,6 +10,7 @@
       var(--tab-content-gap) + var(--tab-panel-item-gap)
   );
   gap: var(--tab-content-gap);
+  
 }
 
 .tablist {
@@ -32,6 +33,7 @@
   transition: transform 0.5s ease-in-out;
   transform: scale(0);
   transform-origin: left;
+    max-height: calc(100dvh - 180px);
 }
 
 .tab__panel.active {
@@ -46,7 +48,7 @@
   align-items: center;
   width: 100%;
   min-height: 0px;
-  max-height: calc(100dvh - 200px);
+
   height: 100%;
   overflow-y: auto;
   gap: var(--tab-panel-item-gap);
