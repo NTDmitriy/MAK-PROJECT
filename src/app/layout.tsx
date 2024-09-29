@@ -1,6 +1,6 @@
 
 import { Gtag } from "@/seo/Gtag";
-import { METADATA, NO_INDEX_PAGE } from "@/seo/metadata";
+import { METADATA } from "@/seo/metadata";
 import "@/styles/fonts.css";
 import "@/styles/globals.css";
 import { Metadata } from "next";
@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     ...METADATA.HOME,
   },
 
-  ...NO_INDEX_PAGE,
 };
 
 export default function RootLayout({
