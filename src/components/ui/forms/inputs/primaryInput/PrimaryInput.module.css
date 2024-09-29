@@ -26,7 +26,6 @@
 }
 
 .input.textarea {
-
 	resize: none;
 }
 
@@ -48,6 +47,7 @@
   transition: top 0.3s ease-in-out, transform 0.3s ease-in-out,
     color 0.3s ease-in-out;
 		z-index: 5;
+    cursor: text;
 }
 
 .fieldset {
