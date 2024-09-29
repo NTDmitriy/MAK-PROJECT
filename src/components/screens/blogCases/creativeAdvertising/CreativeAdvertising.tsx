@@ -22,10 +22,16 @@ export const CreativeAdvertisingContent: FC = () => {
 
         <BlogImageList grid>
           <BlogListItem>
-            <img src="/images/blog/blog_state1_img1.webp" alt="Картинка" />
+            <img
+              src="/images/blog/blog_state1_img1.webp"
+              alt="Как привлечь внимание клиентов в условиях перенасыщенного рынка: креативные подходы к рекламе"
+            />
           </BlogListItem>
           <BlogListItem>
-            <img src="/images/blog/blog_state1_img2.webp" alt="Картинка" />
+            <img
+              src="/images/blog/blog_state1_img2.webp"
+              alt="Как привлечь внимание клиентов в условиях перенасыщенного рынка: креативные подходы к рекламе"
+            />
           </BlogListItem>
         </BlogImageList>
       </Box>
@@ -100,7 +106,10 @@ export const CreativeAdvertisingContent: FC = () => {
 
         <BlogImageList margin>
           <BlogListItem>
-            <img src="/images/blog/blog_state1_img3.webp" alt="Картинка" />
+            <img
+              src="/images/blog/blog_state1_img3.webp"
+              alt="Как привлечь внимание клиентов в условиях перенасыщенного рынка: креативные подходы к рекламе"
+            />
           </BlogListItem>
         </BlogImageList>
         <BlogList grid>
@@ -155,7 +164,8 @@ export const CreativeAdvertisingContent: FC = () => {
           Разработка уникального торгового предложения (УТП)
         </BlogBoxTitle>
         <BlogText margin>
-          Уникальное торговое предложение — это то, что отличает ваш продукт от конкурентов.
+          Уникальное торговое предложение — это то, что отличает ваш продукт
+          от конкурентов.
         </BlogText>
         <BlogList>
           <BlogListItem>
@@ -194,7 +204,8 @@ export const CreativeAdvertisingContent: FC = () => {
       <Box>
         <BlogBoxTitle>Тестирование и оценка</BlogBoxTitle>
         <BlogText margin>
-          Уникальное торговое предложение — это то, что отличает ваш продукт от конкурентов.
+          Уникальное торговое предложение — это то, что отличает ваш продукт
+          от конкурентов.
         </BlogText>
         <BlogList>
           <BlogListItem>
@@ -237,6 +248,7 @@ export const CreativeAdvertisingContent: FC = () => {
               </BlogListItem>
             </BlogList>
           </BlogListItem>
+
           <BlogListItem>
             <BlogImageList grid>
               <BlogListItem>
@@ -261,7 +273,8 @@ export const CreativeAdvertisingContent: FC = () => {
           Использование нестандартных рекламных форматов
         </BlogBoxTitle>
         <BlogText margin>
-          Уникальное торговое предложение — это то, что отличает ваш продукт от конкурентов.
+          Уникальное торговое предложение — это то, что отличает ваш продукт
+          от конкурентов.
         </BlogText>
         <BlogList>
           <BlogListItem>
@@ -318,7 +331,8 @@ export const CreativeAdvertisingContent: FC = () => {
           <BlogListItem>
             <BlogListTitle>3. Мониторинг показателей:</BlogListTitle>
             <BlogText>
-              Отслеживание ключевых метрик, таких как стоимость за клик и возврат инвестиций.
+              Отслеживание ключевых метрик, таких как стоимость за клик
+              и возврат инвестиций.
             </BlogText>
           </BlogListItem>
         </BlogList>
@@ -374,7 +388,8 @@ export const CreativeAdvertisingContent: FC = () => {
       <Box>
         <BlogBoxTitle>Заключение</BlogBoxTitle>
         <BlogText margin>
-          Для привлечения покупателей важно использовать инновационные подходы и решения. Применение уникальных торговых предложений, использование
+          Для привлечения покупателей важно использовать инновационные подходы
+          и решения. Применение уникальных торговых предложений, использование
           нестандартных форматов рекламы и тщательное изучение целевой аудитории
           помогают выделиться среди конкурентов. Успешные рекламные кампании
           демонстрируют, что правильные стратегии приводят к значительным
@@ -383,7 +398,8 @@ export const CreativeAdvertisingContent: FC = () => {
         <BlogText>
           Постоянный анализ и оптимизация кампаний, учет потребностей аудитории
           и адаптация к изменениям рынка являются ключевыми факторами успеха.
-          Экспериментируйте с новыми идеями, анализируйте результаты и адаптируйтесь, чтобы оставаться конкурентоспособными и эффективно
+          Экспериментируйте с новыми идеями, анализируйте результаты
+          и адаптируйтесь, чтобы оставаться конкурентоспособными и эффективно
           развивать свой бизнес.
         </BlogText>
       </Box>
