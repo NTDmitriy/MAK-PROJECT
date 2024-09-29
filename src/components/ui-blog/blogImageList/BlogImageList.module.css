@@ -16,7 +16,7 @@
   margin-bottom: clamp(20px,3dvw,50px);
 }
 
-.root li img {
+.root img {
   max-width: 100%;
   width: 100%;
 }

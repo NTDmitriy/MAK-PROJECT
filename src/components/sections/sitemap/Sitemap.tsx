@@ -1,9 +1,6 @@
 import { Container } from "@/components/ui/container/Container";
 import { Section } from "@/components/ui/section/Section";
-import {
-  DASHBOARD_PAGES,
-  IDashboardItem,
-} from "@/dashboard/app.dashboard";
+import { DASHBOARD_PAGES, IDashboardItem } from "@/dashboard/app.dashboard";
 import { FC } from "react";
 import styles from "./Sitemap.module.css";
 
@@ -29,7 +26,7 @@ const ListItem: FC<IListItem> = ({ item }) => {
     <>
       <li className={styles.item}>
         <a className={styles.link} href={item.url}>
-          {item.name}
+          <span>{item.name}</span>
         </a>
         {item.childrens && <List items={item.childrens} />}
       </li>

@@ -22,8 +22,8 @@ export const HeroBasic: FC<IHeroBasic> = ({ basicContent }) => {
     <div className={styles.root}>
       <Container className={styles.hero__container}>
         <h1 className={styles.title}>
-          <span>{title.accentBefore && title.accentBefore}</span>
-          <span className={styles.accent}>{title.accent && title.accent}</span>
+          <span>{title.accentBefore && title.accentBefore}</span>{" "}
+          <span className={styles.accent}>{title.accent && title.accent}</span>{" "}
           <span>{title.accentAfter && title.accentAfter}</span>
         </h1>
         <p className={styles.descr}>{description}</p>

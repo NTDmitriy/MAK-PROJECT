@@ -15,7 +15,7 @@ class USEFUL_DASHBOARD {
     name: "Блог",
     url: `${this.root}/blog`,
     icon: "IconArticlesNav",
-    childrens: ALL_BLOG_CONTENT.toArray(),
+    childrens: ALL_BLOG_CONTENT.toArrayForDashbord(),
   } satisfies IDashboardItem;
 
   VACANCIES = {

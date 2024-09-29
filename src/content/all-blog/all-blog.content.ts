@@ -1,7 +1,9 @@
 import { IDashboardItem } from "@/dashboard/app.dashboard";
-
-
-export interface IBlogItem extends IDashboardItem {
+export interface IBlogItem {
+  name: string;
+  description: string;
+  url: string;
+  image: string;
   date: string;
   time?: string;
   author?: string;
@@ -35,11 +37,10 @@ class ALL_BLOG {
     thems: ["Маркетинг", "Веб-дизайн", "Оптимизация сайтов"],
   } satisfies IBlogItem;
 
-
-
   WHY_ADS_EXPENSIVE = {
     name: "Почему реклама дорожает из года в год?",
-    description: "Узнайте о факторах, влияющих на рост стоимости рекламы, и эффективных альтернативных стратегиях продвижения. SEO, посевы и инфлюенс-маркетинг помогут оптимизировать бюджет и привлечь клиентов в новых условиях.",
+    description:
+      "Узнайте о факторах, влияющих на рост стоимости рекламы, и эффективных альтернативных стратегиях продвижения. SEO, посевы и инфлюенс-маркетинг помогут оптимизировать бюджет и привлечь клиентов в новых условиях.",
     url: `${this.root}/pochemu-reklama-dorozhayet-iz-goda-v-god`,
     image: "why-ads-expensive-prev.webp",
     date: "26.09.2024",
@@ -63,6 +64,13 @@ class ALL_BLOG {
     return Object.values(this).filter((item) => {
       return (item as IBlogItem).name !== undefined;
     }) as IBlogItem[];
+  }
+
+  toArrayForDashbord(): IDashboardItem[] {
+    return this.toArray().map((blogItem) => ({
+      name: blogItem.name,
+      url: blogItem.url,
+    }));
   }
 }
 
