@@ -2,7 +2,6 @@
 
 import clsx from "clsx";
 import { FC } from "react";
-import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
 import { IFormContent } from "../FormController";
 import { useHandlerFormContext } from "../HandleFormProvider";
 import {
@@ -11,6 +10,7 @@ import {
   NameInput,
   PhoneInput,
 } from "../inputs/MaskedInputs";
+import { SubmitButton } from "../submitButton/SubmitButton";
 import styles from "./ComplexForm.module.css";
 
 export const ComplexForm: FC<IFormContent> = ({ title, text }) => {
@@ -44,7 +44,7 @@ export const ComplexForm: FC<IFormContent> = ({ title, text }) => {
           </div>
 
           <div className={styles.btn__group}>
-            <PrimaryButton className={styles.submit}>Отправить</PrimaryButton>
+            <SubmitButton className={styles.submit}/>
           </div>
           <p className={styles.notice}>
             Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
