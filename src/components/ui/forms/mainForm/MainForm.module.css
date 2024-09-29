@@ -59,43 +59,7 @@
 	
 }
 
-.notice {
-  font-family: var(--font-family);
-  font-weight: 200;
-  font-size: clamp(10px, 1dvw,14px);
-  line-height: 130%;
-  color: #161616;
-}
-.privacy {
-  display: inline-block;
-  position: relative;
-  color: #ff7a00;
-  transform-origin: left;
-  transition: transform 0.3s ease-in-out;
-}
 
-.privacy::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  width: 100%;
-  background-color: #ff7a00;
-  transition: transform 0.3s ease-in-out;
-  transform-origin: left;
-  transform: scale(0);
-}
-
-@media (hover: hover) {
-  .privacy:hover {
-    transform: scale(1.05);
-  }
-}
-
-.privacy:focus-visible::after {
-  transform: scale(1);
-}
 @media screen and (max-width: 1200px) {
   .form {
     grid-template-columns: repeat(2, 1fr);

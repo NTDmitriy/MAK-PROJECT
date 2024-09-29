@@ -9,8 +9,9 @@ import {
   INPUT_NAMES,
   NameInput,
   PhoneInput,
-} from "../inputs/MaskedInputs";
-import { SubmitButton } from "../submitButton/SubmitButton";
+} from "../ui-form/MaskedInputs/MaskedInputs";
+import { PrivacyNotice } from "../ui-form/privacyNotice/PrivacyNotice";
+import { SubmitButton } from "../ui-form/submitButton/SubmitButton";
 import styles from "./ComplexForm.module.css";
 
 export const ComplexForm: FC<IFormContent> = ({ title, text }) => {
@@ -38,21 +39,15 @@ export const ComplexForm: FC<IFormContent> = ({ title, text }) => {
           <div className={styles.input__group}>
             <NameInput />
             <PhoneInput />
-            {title && (
-              <HiddenInput name={INPUT_NAMES.REQUEST} value={title} />
-            )}
+            {title && <HiddenInput name={INPUT_NAMES.REQUEST} value={title} />}
           </div>
 
           <div className={styles.btn__group}>
-            <SubmitButton className={styles.submit}/>
+            <SubmitButton className={styles.submit} />
           </div>
-          <p className={styles.notice}>
-            Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
-            персональных данных и соглашаетесь с условиями{" "}
-            <a className={styles.privacy} href={`/privacy-policy.pdf`}>
-              Политики конфиденциальности
-            </a>
-          </p>
+          <div className={styles.notice}>
+            <PrivacyNotice />
+          </div>
         </div>
       </form>
     </div>

@@ -12,7 +12,7 @@ class CONTACTS {
   VK = "https://vk.com/makeallperfect";
   DZEN = "https://dzen.ru/makeallperfect";
   YANDEX_REVIWES = "https://yandex.ru/maps/org/make_all_perfect/79209203887";
-  PRIVACY_POLICY = "privacy-policy.pdf";
+  PRIVACY_POLICY = "/privacy-policy.pdf";
 }
 
 export const CONTACTS_PUBLIC = new CONTACTS();
