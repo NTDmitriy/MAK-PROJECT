@@ -1,14 +1,14 @@
 "use client";
 
-
 import clsx from "clsx";
 import { FC, useState } from "react";
 import { PrimaryButton } from "../../buttons/primaryButton/PrimaryButton";
 import { IFormContent } from "../FormController";
 import { useHandlerFormContext } from "../HandleFormProvider";
-import { Checkbox } from "../inputs/checkbox/Checkbox";
-import { NameInput, PhoneInput } from "../inputs/MaskedInputs";
-import { SubmitButton } from '../submitButton/SubmitButton';
+import { Checkbox } from "../ui-form/checkbox/Checkbox";
+import { NameInput, PhoneInput } from "../ui-form/MaskedInputs/MaskedInputs";
+import { PrivacyNotice } from "../ui-form/privacyNotice/PrivacyNotice";
+import { SubmitButton } from "../ui-form/submitButton/SubmitButton";
 import styles from "./StepForm.module.css";
 
 export const StepForm: FC<IFormContent> = ({ subServices }) => {
@@ -70,13 +70,10 @@ export const StepForm: FC<IFormContent> = ({ subServices }) => {
             </PrimaryButton>
             <SubmitButton />
           </div>
-          <p className={styles.notice}>
-            Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
-            персональных данных и соглашаетесь с условиями{" "}
-            <a className={styles.privacy} href={`/privacy-policy.pdf`}>
-              Политики конфиденциальности
-            </a>
-          </p>
+
+          <div className={styles.notice}>
+            <PrivacyNotice />
+          </div>
         </div>
       </form>
     </div>

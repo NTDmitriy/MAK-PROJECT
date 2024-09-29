@@ -1,7 +1,7 @@
 "use client";
 
 import { useFormContext } from "react-hook-form";
-import { PrimaryInput } from "./primaryInput/PrimaryInput";
+import { PrimaryInput } from "../primaryInput/PrimaryInput";
 
 export enum INPUT_NAMES {
   NAME = "NAME",

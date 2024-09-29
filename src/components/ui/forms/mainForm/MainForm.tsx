@@ -6,8 +6,9 @@ import { PhoneLinkButton } from "../../links/phoneLinkButton/PhoneLinkButton";
 import { TelegramLinkButton } from "../../links/telegramLinkButton/TelegramLinkButton";
 import { IFormContent } from "../FormController";
 import { useHandlerFormContext } from "../HandleFormProvider";
-import { NameInput, NicheInput, PhoneInput } from "../inputs/MaskedInputs";
-import { SubmitButton } from "../submitButton/SubmitButton";
+import { NameInput, NicheInput, PhoneInput } from "../ui-form/MaskedInputs/MaskedInputs";
+import { PrivacyNotice } from "../ui-form/privacyNotice/PrivacyNotice";
+import { SubmitButton } from "../ui-form/submitButton/SubmitButton";
 import styles from "./MainForm.module.css";
 
 export const MainForm: FC<IFormContent> = ({ title, text, ...rest }) => {
@@ -50,13 +51,7 @@ export const MainForm: FC<IFormContent> = ({ title, text, ...rest }) => {
         <TelegramLinkButton className={styles.contact__btn} />
         <PhoneLinkButton className={styles.contact__btn} />
       </div>
-      <p className={styles.notice}>
-        Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
-        персональных данных и соглашаетесь с условиями{" "}
-        <a className={styles.privacy} href={`/privacy-policy.pdf`}>
-          Политики конфиденциальности
-        </a>
-      </p>
+     <PrivacyNotice />
     </div>
   );
 };

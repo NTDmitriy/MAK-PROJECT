@@ -6,8 +6,13 @@ import { PhoneLinkButton } from "../../links/phoneLinkButton/PhoneLinkButton";
 import { TelegramLinkButton } from "../../links/telegramLinkButton/TelegramLinkButton";
 import { IFormContent } from "../FormController";
 import { useHandlerFormContext } from "../HandleFormProvider";
-import { MessageInput, NameInput, PhoneInput } from "../inputs/MaskedInputs";
-import { SubmitButton } from "../submitButton/SubmitButton";
+import {
+  MessageInput,
+  NameInput,
+  PhoneInput,
+} from "../ui-form/MaskedInputs/MaskedInputs";
+import { PrivacyNotice } from "../ui-form/privacyNotice/PrivacyNotice";
+import { SubmitButton } from "../ui-form/submitButton/SubmitButton";
 import styles from "./FaqForm.module.css";
 
 export const FaqForm: FC<IFormContent> = ({
@@ -42,9 +47,8 @@ export const FaqForm: FC<IFormContent> = ({
         <PhoneInput />
         {areaVisible && <MessageInput />}
         <div className={styles.submit}>
-        <SubmitButton />
+          <SubmitButton />
         </div>
-
       </form>
       <p className={styles.contact__text}>
         Также можно оставить заявку через{" "}
@@ -58,13 +62,9 @@ export const FaqForm: FC<IFormContent> = ({
         <TelegramLinkButton className={styles.contact__btn} />
         <PhoneLinkButton className={styles.contact__btn} />
       </div>
-      <p className={styles.notice}>
-        Нажимая на кнопку "Отправить" Вы даете согласие на обработку своих
-        персональных данных и соглашаетесь с условиями{" "}
-        <a className={styles.privacy} href={`/privacy-policy.pdf`}>
-          Политики конфиденциальности
-        </a>
-      </p>
+
+        <PrivacyNotice />
+
     </div>
   );
 };
