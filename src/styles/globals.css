@@ -84,8 +84,8 @@ footer {
   font-weight: 300;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .notistack-Snackbar {
     display: none;
   }
-}
+} */
