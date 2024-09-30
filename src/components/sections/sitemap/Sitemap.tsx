@@ -42,6 +42,7 @@ export const Sitemap: FC = () => {
       <Section>
         <Container>
           <div className={styles.root}>
+            <h1 className={styles.title}>Карта сайта</h1>
             <List items={allPages} />
           </div>
         </Container>

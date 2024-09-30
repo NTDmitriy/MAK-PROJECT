@@ -1,6 +1,7 @@
 "use client";
 
 import { CONTACTS_PUBLIC } from "@/content/contacts.data";
+import clsx from "clsx";
 import { FC } from "react";
 import { PhoneLinkButton } from "../../links/phoneLinkButton/PhoneLinkButton";
 import { TelegramLinkButton } from "../../links/telegramLinkButton/TelegramLinkButton";
@@ -33,7 +34,7 @@ export const MainForm: FC<IFormContent> = ({ title, text, ...rest }) => {
           </p>
         )}
       </div>
-      <form className={styles.form} onSubmit={handleForm}>
+      <form className={clsx(styles.form, 'form')} onSubmit={handleForm}>
         <NameInput />
         <PhoneInput />
         <NicheInput />

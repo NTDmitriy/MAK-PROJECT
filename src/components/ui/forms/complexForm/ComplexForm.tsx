@@ -19,7 +19,7 @@ export const ComplexForm: FC<IFormContent> = ({ title, text }) => {
 
   return (
     <div className={styles.content}>
-      <form className={styles.form} onSubmit={handleForm}>
+      <form className={clsx(styles.form, 'form')} onSubmit={handleForm}>
         <div className={clsx(styles.form__content)}>
           {title && <h5 className={styles.title}> {title}</h5>}
           {!title && <h5 className={styles.title}>ЗАКАЗАТЬ КОМПЛЕКС УСЛУГ</h5>}

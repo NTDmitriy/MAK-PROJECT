@@ -21,6 +21,35 @@ export const Contacts: FC<PropsWithChildren<TGenericElementProps>> = (
       <Container>
         <div className={styles.content}>
           <address className={styles.cards_wrapper}>
+          <div className={styles.card}>
+              <h1 className={styles.title}>НАШИ КОНТАКТЫ</h1>
+              <div className={styles.text__wrapper}>
+                <a
+                  className={clsx(styles.link)}
+                  href={`mailto:${CONTACTS_PUBLIC.EMAIL}`}
+                >
+                  <DynamicSvg name="IconEMail" className={styles.svg} />
+                  <span>{CONTACTS_PUBLIC.EMAIL}</span>
+                </a>
+
+                <CopyButton text={CONTACTS_PUBLIC.EMAIL} />
+              </div>
+              <div className={styles.text__wrapper}>
+                <a
+                  className={clsx(styles.link)}
+                  href={`tel:${CONTACTS_PUBLIC.PHONE}`}
+                >
+                  <DynamicSvg name="IconPhone" className={styles.svg} />
+                  <span>{CONTACTS_PUBLIC.PHONE}</span>
+                </a>
+
+                <CopyButton text={CONTACTS_PUBLIC.PHONE} />
+              </div>
+              <p className={clsx(styles.text, styles.text_nopointer)}>
+                <DynamicSvg name="IconDeadline" className={styles.svg} />
+                Пн-Пт, с 9:00 до 18:00 (МСК)
+              </p>
+            </div>
             <div className={styles.card}>
               <h2 className={styles.title}>Реквизиты</h2>
               <div className={styles.text__wrapper}>
@@ -59,35 +88,7 @@ export const Contacts: FC<PropsWithChildren<TGenericElementProps>> = (
               )}
             </div>
 
-            <div className={styles.card}>
-              <h2 className={styles.title}>НАШИ КОНТАКТЫ</h2>
-              <div className={styles.text__wrapper}>
-                <a
-                  className={clsx(styles.link)}
-                  href={`mailto:${CONTACTS_PUBLIC.EMAIL}`}
-                >
-                  <DynamicSvg name="IconEMail" className={styles.svg} />
-                  <span>{CONTACTS_PUBLIC.EMAIL}</span>
-                </a>
-
-                <CopyButton text={CONTACTS_PUBLIC.EMAIL} />
-              </div>
-              <div className={styles.text__wrapper}>
-                <a
-                  className={clsx(styles.link)}
-                  href={`tel:${CONTACTS_PUBLIC.PHONE}`}
-                >
-                  <DynamicSvg name="IconPhone" className={styles.svg} />
-                  <span>{CONTACTS_PUBLIC.PHONE}</span>
-                </a>
-
-                <CopyButton text={CONTACTS_PUBLIC.PHONE} />
-              </div>
-              <p className={clsx(styles.text, styles.text_nopointer)}>
-                <DynamicSvg name="IconDeadline" className={styles.svg} />
-                Пн-Пт, с 9:00 до 18:00 (МСК)
-              </p>
-            </div>
+      
 
             <div className={styles.card}>
               <h2 className={styles.title}>СОЦИАЛЬНЫЕ СЕТИ</h2>

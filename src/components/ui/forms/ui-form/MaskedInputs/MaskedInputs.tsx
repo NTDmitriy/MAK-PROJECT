@@ -24,10 +24,11 @@ export const PhoneInput = () => {
       <PrimaryInput
         label="Телефон"
         id={INPUT_NAMES.PHONE}
-        maskParams={{ mask: "+_ (___) ___-__-__", replacement: { _: /\d/ } }}
+        maskParams={{ mask: "+_ (___) ___-__-__", replacement: { _: /\d/ }}}
         InputProps={{
           placeholder: "+7 (___) ___-__-__",
           autoComplete: "tel",
+          className: "phone",
           type: "tel",
           ...register(INPUT_NAMES.PHONE, {
             required: `Поле "Телефон" не может быть пустым`,
@@ -86,6 +87,7 @@ export const NameInput = () => {
         InputProps={{
           placeholder: "Ваше имя",
           autoComplete: "name",
+          className: "name",
           type: "text",
           ...register(INPUT_NAMES.NAME, {
             required: `Поле "Ваше Имя" не может быть пустым`,
@@ -138,7 +140,6 @@ export const MessageInput = () => {
     </>
   );
 };
-
 
 export const HiddenInput = ({
   name,
