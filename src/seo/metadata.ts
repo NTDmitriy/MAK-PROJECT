@@ -23,7 +23,7 @@ interface IMetadata {
 export const METADATA = {
   HOME: {
     title:
-      "Make All Perfect – маркетинговое агентство полного цикла | Digital маркетинг",
+      "Make All Perfect – Маркетинговое агентство полного цикла | Digital маркетинг",
     description:
       "Цифровое маркетинговое агентство полного цикла. Оказываем комплексные услуги по digital и интернет маркетингу под ключ.",
     images: IMAGES,
