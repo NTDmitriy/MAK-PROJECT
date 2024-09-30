@@ -1,6 +1,9 @@
 # *
 User-agent: *
-Disallow: /
+Allow: /
+
+# *
+User-agent: *
 Disallow: /*?*
 Disallow: /*&*
 Disallow: /*=*
@@ -15,7 +18,7 @@ Disallow: /*type*
 Disallow: /*id*
 
 # Host
-Host: https://test.makeallperfect.ru
+Host: https://makeallperfect.ru
 
 # Sitemaps
-Sitemap: https://test.makeallperfect.ru/sitemap.xml
+Sitemap: https://makeallperfect.ru/sitemap.xml

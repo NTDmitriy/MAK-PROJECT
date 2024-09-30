@@ -18,7 +18,7 @@ export const WhyUsChecklist: FC = () => {
   return (
     <Section>
       <BlockTitle leftSide={false}>
-        Почему выбирают нас для продвижения
+      Почему рекламу доверяют нам
       </BlockTitle>
       <Container>
         <ul className={styles.list}>
