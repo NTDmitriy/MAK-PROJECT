@@ -1,3 +1,12 @@
+.title {
+  font-family: var(--third-family);
+  font-weight: 900;
+  font-size: 70px;
+  font-size: clamp(24px, 3.7dvw, 70px);
+  line-height: 114%;
+  margin-bottom: clamp(10px, 2.65dvw, 50px);
+}
+
 .list {
   font-family: var(--font-family);
   font-weight: 300;

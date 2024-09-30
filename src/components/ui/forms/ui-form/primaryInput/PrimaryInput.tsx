@@ -39,10 +39,11 @@ export const PrimaryInput: FC<IInput> = ({
   const [uniqueId, setUniqueId] = useState(id);
 
   useEffect(() => {
-    const randomHash = Math.random().toString(36).substring(2, 7)
+    const randomHash = Math.random().toString(36).substring(2, 7);
     setUniqueId(`${id}-${randomHash}`);
   }, [id]);
 
+  const { className: inputClassName, ...inputProps } = InputProps;
 
   return (
     <div className={clsx(styles.root, className)} {...rest}>
@@ -52,22 +53,24 @@ export const PrimaryInput: FC<IInput> = ({
             <InputMask
               className={clsx(
                 styles.input,
-                label && styles.hidden__placeholder
+                label && styles.hidden__placeholder,
+                inputClassName
               )}
               mask={maskParams.mask}
               replacement={maskParams.replacement}
               id={uniqueId}
-              {...InputProps}
+              {...inputProps}
             />
           )}
           {!maskParams && (
             <input
               className={clsx(
                 styles.input,
-                label && styles.hidden__placeholder
+                label && styles.hidden__placeholder,
+                inputClassName
               )}
               id={uniqueId}
-              {...InputProps}
+              {...inputProps}
             />
           )}
         </>

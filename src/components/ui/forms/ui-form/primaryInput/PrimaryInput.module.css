@@ -40,10 +40,10 @@
   transform: translateY(-50%);
   font-family: var(--font-family);
   border-radius: 14px;
-  font-weight: 100;
+  font-weight: 300;
 	font-size: clamp(18px, 2dvw, 20px);
   line-height: 130%;
-  color: rgba(22, 22, 22, 0.5);
+  color: hsla(0, 0%, 9%, .8);
   transition: top 0.3s ease-in-out, transform 0.3s ease-in-out,
     color 0.3s ease-in-out;
 		z-index: 5;

@@ -22,7 +22,7 @@ export const StepForm: FC<IFormContent> = ({ subServices }) => {
 
   return (
     <div className={styles.content}>
-      <form className={styles.form} onSubmit={handleForm}>
+      <form className={clsx(styles.form, 'form')} onSubmit={handleForm}>
         <div
           className={clsx(styles.step__one, step === 1 && styles.in__step)}
           inert={step !== 1 ? "" : undefined}
