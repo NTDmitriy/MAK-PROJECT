@@ -8,7 +8,6 @@ import {
 } from "@/components/ui-case";
 import { CaseHero } from "@/components/ui-case/caseHero/CaseHero";
 import { Box } from "@/components/ui/box/Box";
-import { Breadcrumbs } from "@/components/ui/breadcrumbs/Breadcrumbs";
 import {
   FORM_TYPE,
   FormController,
@@ -21,7 +20,7 @@ export const RealEstateCaseSale: FC = () => {
 
   return (
     <>
-      <Breadcrumbs pathname={caseData.url} />
+  
       <CaseHero heroContent={caseData} />
 
       <Box>

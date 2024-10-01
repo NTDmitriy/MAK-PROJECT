@@ -7,11 +7,8 @@ module.exports = {
   robotsTxtOptions: {
     policies: [
       {
-        userAgent: '*',
-        allow: '/',
-      },
-      {
         userAgent: "*",
+        allow: '/',
         disallow: [
           "/*?*",
           "/*&*",

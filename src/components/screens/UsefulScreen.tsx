@@ -16,7 +16,6 @@ import { ReviwesList } from "../sections/reviwesList/ReviwesList";
 import { Vacancies } from "../sections/vacancies/Vacancies";
 import { VacanciesPrev } from "../sections/vacanciesPrev/VacanciesPrev";
 import { WhyUs } from "../sections/whyUs/WhyUs";
-import { Breadcrumbs } from "../ui/breadcrumbs/Breadcrumbs";
 
 
 interface IUsefulScreen {
@@ -29,11 +28,12 @@ export const UsefulScreen: FC<PropsWithChildren<IUsefulScreen>> = ({
 
   return (
     <>
-      {content.url && <Breadcrumbs pathname={content.url} />}
+ 
       {content.hero && (
         <HeroUseful
           basicContent={content.hero.basic}
           usefulInfo={content.hero.infoUseful}
+          pathname={content.url} 
         />)}
       {content.howAffiliateWork && (<HowAffiliateWork howAffiliateWorkContent={content.howAffiliateWork} />)}
       {content.affiliateAvantages && <AffiliateAvantages />}

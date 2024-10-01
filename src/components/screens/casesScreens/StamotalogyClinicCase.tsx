@@ -9,7 +9,6 @@ import {
   CaseTextAccent,
 } from "@/components/ui-case";
 import { Box } from "@/components/ui/box/Box";
-import { Breadcrumbs } from "@/components/ui/breadcrumbs/Breadcrumbs";
 import {
   FORM_TYPE,
   FormController,
@@ -25,7 +24,7 @@ export const StamotalogyClinicCase: FC<
 
   return (
     <>
-      <Breadcrumbs pathname={caseData.url} />
+  
       <CaseHero heroContent={caseData} />
 
       <Box>

@@ -14,7 +14,7 @@ import styles from "./HeroBasic.module.css";
 
 export const HeroBasic: FC<PropsWithChildren<TGenericElementProps>> = () => {
   return (
-    <div className={styles.content}>
+    <div className={styles.root}>
       <Container className={styles.hero__container}>
         <div className={styles.left__side}>
           <div className={styles.title__wrapper}>

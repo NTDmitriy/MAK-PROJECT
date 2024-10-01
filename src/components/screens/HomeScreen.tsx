@@ -18,12 +18,6 @@ interface IHomeScreen {
 export const HomeScreen: FC<PropsWithChildren<IHomeScreen>> = ({ content }) => {
   return (
     <>
-      {/* <Section>
-        <Container>
-          <FormController formType={FORM_TYPE.MAIN_FORM} />
-        </Container>
-      </Section> */}
-
       <HeroHome />
       <AboutPrev/>
       <OurServices />
