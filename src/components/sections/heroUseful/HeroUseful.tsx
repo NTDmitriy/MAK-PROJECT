@@ -13,17 +13,19 @@ import { HeroInfoUseful } from "./blocks/heroInfoUseful/HeroInfoUseful";
 interface IHero extends TGenericElementProps {
   basicContent: THeroBasic;
   usefulInfo?: THeroInfo;
+  pathname?: string;
 }
 
 export const HeroUseful: FC<PropsWithChildren<IHero>> = ({
   className,
   basicContent,
   usefulInfo,
+  pathname,
   ...rest
 }) => {
   return (
-    <Section {...rest} className={clsx(styles.hero, className)}>
-      {basicContent && <HeroBasic basicContent={basicContent} />}
+    <Section {...rest} className={clsx(styles.hero, styles.inner, className)}>
+      {basicContent && <HeroBasic basicContent={basicContent}  pathname={pathname} />}
       {usefulInfo && <HeroInfoUseful info={usefulInfo} />}
     </Section>
   );

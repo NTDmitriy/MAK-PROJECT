@@ -2,11 +2,20 @@
   overflow-x: hidden;
 }
 
+.hero.inner {
+  padding-top: 0;
+}
+
+.hero {
+  margin-top: -110px;
+}
+
+
 @media screen and (min-width: 1201px) {
-  .hero {
-    margin-top: -100px;
-  }
+
   .hero {
     padding-bottom: 30px;
   }
 }
+
+

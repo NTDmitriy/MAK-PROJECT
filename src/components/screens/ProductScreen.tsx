@@ -16,7 +16,6 @@ import { Tariffs } from "../sections/tariffs/Tariffs";
 import { TechnologyStack } from "../sections/technologyStack/TechnologyStack";
 import { WhyUs } from "../sections/whyUs/WhyUs";
 import { WorkStages } from "../sections/workStages/WorkStages";
-import { Breadcrumbs } from "../ui/breadcrumbs/Breadcrumbs";
 
 interface IProductScreen {
   content: TScreen;
@@ -26,13 +25,13 @@ export const ProductScreen: FC<PropsWithChildren<IProductScreen>> = ({
 }) => {
   return (
     <>
-      {content.url && <Breadcrumbs pathname={content.url} />}
       <Hero
         basicContent={content.hero.basic}
         productContent={content.hero.infoProduct}
         serviceContent={content.hero.infoService}
         advertisementContent={content.hero.infoAdvertisement}
         webdewContent={content.hero.infoWebdev}
+        pathname={content.url}
       />
       {content.supplementaryDescr && (
         <SupplementaryDescr suppContent={content.supplementaryDescr} />

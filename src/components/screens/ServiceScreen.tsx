@@ -12,7 +12,6 @@ import { WhyUs } from "../sections/whyUs/WhyUs";
 import { WhyUsChecklist } from "../sections/whyUsChecklist/WhyUsChecklist";
 import { WhyUsSites } from "../sections/whyUsSites/whyUsSites";
 import { WorkStages } from "../sections/workStages/WorkStages";
-import { Breadcrumbs } from "../ui/breadcrumbs/Breadcrumbs";
 
 interface IServiceScreen {
   content: TScreen;
@@ -23,8 +22,9 @@ export const ServiceScreen: FC<PropsWithChildren<IServiceScreen>> = ({
 }) => {
   return (
     <>
-      <Breadcrumbs pathname={content.url} />
+  
       <Hero
+        pathname={content.url}
         basicContent={content.hero.basic}
         productContent={content.hero.infoProduct}
         serviceContent={content.hero.infoService}

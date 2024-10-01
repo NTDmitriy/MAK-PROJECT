@@ -36,7 +36,9 @@ export const ReviwesListContent: FC<PropsWithChildren<IReviwesListContent>> = ({
             <div className={styles.root}>
               <ul className={styles.list}>
                 {displayedReviews.map((review, index) => (
-                  <Reviwe key={index} reviwe={review} />
+                  <li key={index}>
+                    <Reviwe  reviwe={review} />
+                  </li>
                 ))}
               </ul>
 

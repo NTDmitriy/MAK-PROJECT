@@ -1,12 +1,11 @@
 .root {
-  /* position: absolute; */
   position: relative;
   z-index: 1;
   width: 100%;
+  margin-bottom: clamp(20px, 4.2vw, 80px);
 }
 
 .list {
-  padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -27,6 +26,10 @@
   top: 50%;
   transform: translateY(-50%);
   right: -2.5px;
+}
+
+.item:first-child .link {
+  padding-left: 0;
 }
 
 .item:last-child {
@@ -70,7 +73,7 @@
   .link:hover {
     color: var(--accent-color);
   }
- .link:hover span:before {
+  .link:hover span:before {
     transform: scaleX(0.8);
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     background-color: var(--accent-color);

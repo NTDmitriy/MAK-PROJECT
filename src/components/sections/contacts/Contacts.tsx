@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/ui/breadcrumbs/Breadcrumbs";
 import { CopyButton } from "@/components/ui/buttons/copyButton/CopyButton";
 import { Container } from "@/components/ui/container/Container";
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
@@ -8,6 +9,7 @@ import {
 import { SocialLink } from "@/components/ui/links/socialLink/SocialLink";
 import { Section } from "@/components/ui/section/Section";
 import { CONTACTS_PUBLIC } from "@/content/contacts.data";
+import { DASHBOARD_PAGES } from "@/dashboard/app.dashboard";
 import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
@@ -19,6 +21,7 @@ export const Contacts: FC<PropsWithChildren<TGenericElementProps>> = (
   return (
     <Section {...props} className={clsx(styles.contacts, props.className)}>
       <Container>
+      <Breadcrumbs pathname={DASHBOARD_PAGES.CONTACTS.url} />
         <div className={styles.content}>
           <address className={styles.cards_wrapper}>
           <div className={styles.card}>

@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/ui/breadcrumbs/Breadcrumbs";
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { Container } from "@/components/ui/container/Container";
 import {
@@ -12,9 +13,10 @@ import styles from "./HeroBasicUseful.module.css";
 
 interface IHeroBasicUseful {
   basicContent: THeroBasic;
+  pathname?: string;
 }
 
-export const HeroBasic: FC<IHeroBasicUseful> = ({ basicContent }) => {
+export const HeroBasic: FC<IHeroBasicUseful> = ({ basicContent, pathname }) => {
   const {
     title,
     description,
@@ -28,6 +30,9 @@ export const HeroBasic: FC<IHeroBasicUseful> = ({ basicContent }) => {
   return (
     <div className={styles.root}>
       <Container className={styles.hero__container}>
+      {pathname && (
+          <Breadcrumbs pathname={pathname} className={styles.breadcrumbs} />
+        )}
         <h1 className={styles.title}>
           <span>{title.accentBefore && title.accentBefore}</span>{" "}
           <span className={styles.accent}>{title.accent && title.accent}</span>{" "}

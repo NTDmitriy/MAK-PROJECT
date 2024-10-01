@@ -3,7 +3,6 @@ import { FC, PropsWithChildren } from "react";
 import { AllProductsService } from "../sections/allProductsService/AllProductsService";
 import { Hero } from "../sections/hero/Hero";
 import { SiteServices } from "../sections/siteServices/SiteServices";
-import { Breadcrumbs } from "../ui/breadcrumbs/Breadcrumbs";
 
 
 interface IAllServicesScreen {
@@ -16,13 +15,13 @@ export const AllServiceScreen: FC<PropsWithChildren<IAllServicesScreen>> = ({
 
   return (
     <>
-      <Breadcrumbs pathname={content.url}/>
       <Hero
         basicContent={content.hero.basic}
         productContent={content.hero.infoProduct}
         serviceContent={content.hero.infoService}
         advertisementContent={content.hero.infoAdvertisement}
         webdewContent={content.hero.infoWebdev}
+        pathname={content.url}
       />
       {content.detialServicesAdvertusement && <AllProductsService productsConent={content.detialServicesAdvertusement} />}
       {content.detialServicesWebdev && <SiteServices />}

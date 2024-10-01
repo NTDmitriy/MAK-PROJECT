@@ -4,7 +4,6 @@ import { TGenericElementProps } from "@/typing/elements.type";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC } from "react";
-import { Container } from "../container/Container";
 import styles from "./Breadcrumbs.module.css";
 
 interface IBreadcrumbs extends TGenericElementProps {
@@ -21,21 +20,19 @@ export const Breadcrumbs: FC<IBreadcrumbs> = ({
     <>
       {parents && (
         <div className={clsx(styles.root, className)} {...rest}>
-          <Container>
-            <ul className={styles.list}>
-              {parents.map((item, index) => (
-                <li key={index} className={styles.item}>
-                  <Link
-                    href={item.url}
-                    className={styles.link}
-                    inert={index === parents.length - 1 ? "" : undefined}
-                  >
-                    <span>{item.name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </Container>
+          <ul className={styles.list}>
+            {parents.map((item, index) => (
+              <li key={index} className={styles.item}>
+                <Link
+                  href={item.url}
+                  className={styles.link}
+                  inert={index === parents.length - 1 ? "" : undefined}
+                >
+                  <span>{item.name}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </>

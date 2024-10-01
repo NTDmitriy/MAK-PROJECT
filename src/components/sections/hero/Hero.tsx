@@ -4,7 +4,7 @@ import {
   THeroInfo,
   THeroInfoAdvertisement,
   THeroInfoProduct,
-  type THeroBasic
+  type THeroBasic,
 } from "@/typing/products.type";
 import clsx from "clsx";
 import { FC, PropsWithChildren } from "react";
@@ -21,6 +21,7 @@ interface IHero extends TGenericElementProps {
   serviceContent?: THeroInfo;
   advertisementContent?: THeroInfoAdvertisement[];
   webdewContent?: THeroInfo;
+  pathname?: string;
 }
 
 export const Hero: FC<PropsWithChildren<IHero>> = ({
@@ -30,12 +31,13 @@ export const Hero: FC<PropsWithChildren<IHero>> = ({
   productContent,
   advertisementContent,
   webdewContent,
+  pathname,
   ...rest
 }) => {
   return (
-    <Section {...rest} className={clsx(styles.hero, className)}>
- 
-      {basicContent && <HeroBasic basicContent={basicContent} />}
+    <Section {...rest} className={clsx(styles.hero, styles.inner, className)}>
+
+      {basicContent && <HeroBasic basicContent={basicContent}  pathname={pathname} />}
       {productContent && <HeroInfoProduct info={productContent} />}
       {serviceContent && <HeroInfoService info={serviceContent} />}
       {advertisementContent && (

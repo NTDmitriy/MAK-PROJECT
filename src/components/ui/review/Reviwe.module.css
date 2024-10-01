@@ -28,6 +28,7 @@
 .avatar {
   aspect-ratio: 1;
   width: 80px;
+  max-height: 80px;
 }
 
 .head__info {
