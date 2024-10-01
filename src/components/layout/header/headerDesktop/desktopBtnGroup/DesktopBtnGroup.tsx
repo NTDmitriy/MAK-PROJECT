@@ -1,6 +1,9 @@
 import { SeconderyButton } from "@/components/ui/buttons/seconderyButton/SeconderyButton";
 import { DynamicSvg } from "@/components/ui/dynamicSvg/DynamicSvg";
-import { FORM_TYPE, FormController } from "@/components/ui/forms/FormController";
+import {
+  FORM_TYPE,
+  FormController,
+} from "@/components/ui/forms/FormController";
 import { SocialLink } from "@/components/ui/links/socialLink/SocialLink";
 import { Popup } from "@/components/ui/modals/popup/Popup";
 import { CONTACTS_PUBLIC } from "@/content/contacts.data";
@@ -17,7 +20,7 @@ export const DesktopBtnGroup: FC<PropsWithChildren<TGenericElementProps>> = ({
     <div {...rest} className={clsx(styles.btn__group, className)}>
       <div className={styles.social__btns}>
         <SocialLink
-          href={`${CONTACTS_PUBLIC.TELEGRAM_PUBLIC}`}
+          href={`${CONTACTS_PUBLIC.TELEGRAM}`}
           tooltip={"Telegram"}
           icon={<DynamicSvg name="IconTelegram" />}
         />
