@@ -3,7 +3,6 @@ import { Popup } from "@/components/ui/modals/popup/Popup";
 import { CONTACTS_PUBLIC } from "@/content/contacts.data";
 import { DASHBOARD_PAGES } from "@/dashboard/app.dashboard";
 import { TGenericElementProps } from "@/typing/elements.type";
-import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 import { DynamicSvg } from "../../../../ui/dynamicSvg/DynamicSvg";
 import { MobileMenu } from "../mobileMenu/MobileMenu";
@@ -34,10 +33,10 @@ export const BottomNavigation: FC<
           contentComponent={<FormController formType={FORM_TYPE.MAIN_FORM} />}
         />
 
-        <Link href={`tel:${CONTACTS_PUBLIC.PHONE}`} className={styles.button}>
+        <a href={`tel:${CONTACTS_PUBLIC.PHONE}`} className={styles.button}>
           <DynamicSvg name="IconPhone" className={styles.icon} />
           Позвонить
-        </Link>
+        </a>
       </div>
     </div>
   );
