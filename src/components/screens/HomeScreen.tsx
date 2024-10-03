@@ -19,9 +19,9 @@ export const HomeScreen: FC<PropsWithChildren<IHomeScreen>> = ({ content }) => {
   return (
     <>
       <HeroHome />
-      <AboutPrev/>
+      <AboutPrev />
       <OurServices />
-      <Cases cases={content.projects} isPrev={true}/>
+      <Cases cases={content.projects} isPrev={true} />
       <Reviwes reviwes={content.reviwes} />
       <OurTeam />
       <OurClients />

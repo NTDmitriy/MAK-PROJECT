@@ -83,3 +83,28 @@ footer {
   font-weight: 300;
 }
 
+
+
+
+
+div.callibri-module-area#callibri-module-area .callibri_input_chat_div_bg,
+div.callibri-module-area#callibri-module-area .callibri_input_chat_div,
+div.callibri-module-area#callibri-module-area .callibri-select-field-wrapper,
+div.callibri-module-area#callibri-module-area #callibri_request_message, 
+div.callibri-module-area#callibri-module-area .callibri_phone_callme_phone, 
+div.callibri-module-area#callibri-module-area .callibri_req_inp, 
+div.callibri-module-area#callibri-module-area input.callibri_textarea, 
+div.callibri-module-area#callibri-module-area textarea.callibri_textarea{
+    border-radius: var(--border-radius) !important;
+transition: .3s ease-in-out;
+}
+
+#callibri-module-area.callibri-module-area * {
+    font-family: var(--third-family) !important;
+ 
+}
+
+div.callibri-module-area#callibri-module-area button.callibri_button{
+    border-radius: var(--border-radius) !important;
+    transition: .3s ease-in-out;
+}
