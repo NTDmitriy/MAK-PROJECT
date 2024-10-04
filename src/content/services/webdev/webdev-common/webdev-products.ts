@@ -1,7 +1,7 @@
 import { TServiceProducts } from "@/typing/products.type";
 
 export const WEBDEV_PRODUCTS = {
-  blockTitle: "Виды сайтов, мы разрабатываем",
+  blockTitle: "Виды сайтов, которые мы разрабатываем",
   items: [
     {
       name: "Сайт-визитка",
