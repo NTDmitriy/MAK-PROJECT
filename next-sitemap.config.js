@@ -25,7 +25,6 @@ module.exports = {
       },
     ],
   },
-  // Вывод всех автоматически генерируемых путей
   transform: async (config, path) => {
     if (path === '/') {
       priority = 1.0;
@@ -39,6 +38,11 @@ module.exports = {
 
     else if (path.split('/').length === 3) {
       priority = 0.8;
+      changefreq = 'daily';
+    }
+    
+    else {
+      priority = 0.7;
       changefreq = 'daily';
     }
 
