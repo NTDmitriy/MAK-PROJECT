@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/ui/breadcrumbs/Breadcrumbs";
 import { Container } from "@/components/ui/container/Container";
 import { Section } from "@/components/ui/section/Section";
 import { DASHBOARD_PAGES, IDashboardItem } from "@/dashboard/app.dashboard";
@@ -41,6 +42,8 @@ export const Sitemap: FC = () => {
     <>
       <Section>
         <Container>
+          <Breadcrumbs pathname={"/sitemap"} />
+
           <div className={styles.root}>
             <h1 className={styles.title}>Карта сайта</h1>
             <List items={allPages} />
