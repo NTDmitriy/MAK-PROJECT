@@ -108,3 +108,8 @@ div.callibri-module-area#callibri-module-area button.callibri_button{
     border-radius: var(--border-radius) !important;
     transition: .3s ease-in-out;
 }
+
+
+div.callibri_bot_reaction {
+  color: #000
+}
