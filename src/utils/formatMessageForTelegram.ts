@@ -12,7 +12,7 @@ const fieldLabels: Record<string, string> = {
   MESSAGE: "Сообщение",
   PRODUCT: "Продукт",
   REQUEST: "Запрос",
-  SIGNUP: "Подписался на новостную рассылку",
+  SIGNUP: "Подписался на новостную рассылку",
 };
 
 export const formatMessageForTelegram = async (
@@ -21,7 +21,7 @@ export const formatMessageForTelegram = async (
   leadUrl: string | null
 ) => {
   if (data.SIGNUP) {
-    return `<i><b><u>Пользователь подписался на новости:</u></b></i>\nEmail: ${data.EMAIL}`;
+    return `<i><b><u>Пользователь подписался на новости:</u></b></i>\nEmail: ${data.EMAIL}`;
   }
 
   const pageTitle =

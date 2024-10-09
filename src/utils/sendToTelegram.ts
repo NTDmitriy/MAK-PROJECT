@@ -24,7 +24,7 @@ export const sendToTelegram = async (
       return {
         success: true,
         message: data.SIGNUP
-          ? "Вы подписались на новостную рассылку"
+          ? "Вы подписались на новостную рассылку"
           : "Заявка отправлена",
         data: response.data,
       };
