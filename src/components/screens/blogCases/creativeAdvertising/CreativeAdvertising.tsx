@@ -24,13 +24,13 @@ export const CreativeAdvertisingContent: FC = () => {
           <BlogListItem>
             <img
               src="/images/blog/blog_state1_img1.webp"
-              alt="Как привлечь внимание клиентов в условиях перенасыщенного рынка: креативные подходы к рекламе"
+              alt="Как привлечь внимание клиентов в условиях перенасыщенного рынка: креативные подходы к рекламе"
             />
           </BlogListItem>
           <BlogListItem>
             <img
               src="/images/blog/blog_state1_img2.webp"
-              alt="Как привлечь внимание клиентов в условиях перенасыщенного рынка: креативные подходы к рекламе"
+              alt="Как привлечь внимание клиентов в условиях перенасыщенного рынка: креативные подходы к рекламе"
             />
           </BlogListItem>
         </BlogImageList>
@@ -108,7 +108,7 @@ export const CreativeAdvertisingContent: FC = () => {
           <BlogListItem>
             <img
               src="/images/blog/blog_state1_img3.webp"
-              alt="Как привлечь внимание клиентов в условиях перенасыщенного рынка: креативные подходы к рекламе"
+              alt="Как привлечь внимание клиентов в условиях перенасыщенного рынка: креативные подходы к рекламе"
             />
           </BlogListItem>
         </BlogImageList>

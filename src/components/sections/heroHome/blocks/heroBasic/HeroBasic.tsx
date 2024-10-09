@@ -78,7 +78,7 @@ export const HeroBasic: FC<PropsWithChildren<TGenericElementProps>> = () => {
 
           <p className={styles.name}>Дмитрий Графов</p>
           <p className={styles.position}>
-            Основатель <span className={styles.accent}>Make All Perfect</span>
+            Основатель <span className={styles.accent__small}>Make All Perfect</span>
           </p>
         </div>
       </Container>

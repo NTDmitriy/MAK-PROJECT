@@ -15,7 +15,7 @@ import {
 import { ALL_CASES_CONTENT } from "@/content/all-cases/all-cases.content";
 import { FC } from "react";
 
-export const RealEstateCaseSale: FC = () => {
+export const RealEstateSaleCase: FC = () => {
   const caseData = ALL_CASES_CONTENT.REAL_ESTATE_SALE;
 
   return (

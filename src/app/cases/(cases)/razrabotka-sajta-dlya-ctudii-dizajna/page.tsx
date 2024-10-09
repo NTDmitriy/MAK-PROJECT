@@ -1,18 +1,16 @@
-import { RealEstateSaleCase } from "@/components/screens/casesScreens/RealEstateSaleCase";
+import { InteriorDesignStudio } from "@/components/screens/casesScreens/InteriorDesignStudio";
 import { METADATA } from "@/seo/metadata";
 import { Metadata, NextPage } from "next";
 
 export const metadata: Metadata = {
-  ...METADATA.REAL_ESTATE_SALE,
+  ...METADATA.INTERIOR_DESIGN_STUDIO,
   openGraph: {
-    ...METADATA.REAL_ESTATE_SALE,
+    ...METADATA.INTERIOR_DESIGN_STUDIO,
   },
 };
 
 const CasesPage: NextPage = () => {
-  return (
-      <RealEstateSaleCase />
-    );
+  return <InteriorDesignStudio />;
 };
 
 export default CasesPage;
