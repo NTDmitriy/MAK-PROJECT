@@ -26,7 +26,7 @@ export const Tariffs: FC<PropsWithChildren<ITariffs>> = ({ tariffs }) => {
   if (!tariffs) return null;
 
   const { blockTitle, blickTitleDescr, plans } = tariffs;
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState<number>(0);
 
   const handleTabClick = (index: number) => {
     setActiveTab(index);
