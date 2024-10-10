@@ -51,7 +51,7 @@ const Card: FC<ICard> = ({ image, name, url, description }) => {
         <div className={styles.title__wrapper}>
           <h2 className={styles.title}>{name}</h2>
           <PrimaryLinkButton href={url} className={styles.link}>
-            Подробнее
+            Перейти к услуге
           </PrimaryLinkButton>
         </div>
       </div>
