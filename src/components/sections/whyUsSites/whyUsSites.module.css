@@ -20,16 +20,20 @@
   color: #000;
   background: #ffde00;
   padding: 20px 20px;
-  margin-bottom: 20px;
   width: 100%;
 }
 
 .text {
   font-family: var(--font-family);
-  font-weight: 200;
+  font-weight: 300;
   font-size: clamp(18px, 1.3dvw, 24px);
   line-height: 108%;
   color: #cacaca;
+  padding: 20px;
+  border-left: 1px solid #ffde00;
+  border-right: 1px solid #ffde00;
+  border-bottom: 1px solid #ffde00;
+  height: 100%;
 }
 
 @media screen and (max-width: 1024px) {

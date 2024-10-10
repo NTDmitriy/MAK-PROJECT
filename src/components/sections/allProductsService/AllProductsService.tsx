@@ -34,7 +34,7 @@ export const AllProductsService: FC<PropsWithChildren<IAllProductsService>> = ({
       {productsConent && (
         <Section className={className} {...rest}>
           <BlockTitle
-            leftSide={true}
+            leftSide={false}
             descrBottom={blockTitleDescr && blockTitleDescr}
           >
             {blockTitle && blockTitle}
