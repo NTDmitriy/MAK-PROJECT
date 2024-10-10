@@ -11,7 +11,7 @@ export const WhyUsSites: FC<PropsWithChildren<TGenericElementProps>> = ({
 }) => {
   return (
     <Section className={className} {...rest}>
-      <BlockTitle leftSide={true}>Почему выбирают нас?</BlockTitle>
+      <BlockTitle leftSide={false}>Почему выбирают нас?</BlockTitle>
       <Container>
         <div className={styles.cards_content}>
           <ul className={styles.card_list}>

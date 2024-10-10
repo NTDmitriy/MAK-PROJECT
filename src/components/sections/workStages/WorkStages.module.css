@@ -37,7 +37,7 @@
 
 .title {
   font-family: var(--second-family);
-  font-weight: 100;
+  font-weight: 400;
   font-size: clamp(24px, 2dvw, 34px);
   color: #fff;
   line-height: 135%;
@@ -55,7 +55,7 @@
   align-items: center;
   position: relative;
   font-family: var(--font-family);
-  font-weight: 100;
+  font-weight: 300;
   font-size: clamp(16px, 1.3dvw, 20px);
   line-height: 138%;
   color: #cacaca;

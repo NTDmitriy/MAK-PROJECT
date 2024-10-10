@@ -1,6 +1,8 @@
+import { ALL_CASES_CONTENT } from "@/content/all-cases/all-cases.content";
 import { ALL_REVIWES } from "@/content/all-reviwes/all-reviwes.content";
 import { WEBDEV_DASHBOARD_PAGES } from "@/dashboard/webdev.dashboard";
 import type {
+  TCase,
   THero,
   THeroBasic,
   THeroInfo,
@@ -32,6 +34,7 @@ export const WEBDEV_COMMON_CONTENT = {
   products: WEBDEV_PRODUCTS satisfies TServiceProducts,
   workStages: WEBDEV_COMMON_STAGES satisfies TWorkStages,
   whyUsSites: true,
+  projects: ALL_CASES_CONTENT.toArray() satisfies TCase[],
   siteServices: true,
   reviwes: ALL_REVIWES satisfies TReviwe[],
 } satisfies TScreen;
